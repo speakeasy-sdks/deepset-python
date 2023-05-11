@@ -40,12 +40,12 @@ s = deepset_cloud.DeepsetCloud()
 
 req = operations.InviteUserToOrganizationAPIV1OrganizationOrganizationIDInvitationPostRequest(
     request_body=operations.InviteUserToOrganizationAPIV1OrganizationOrganizationIDInvitationPostUserInvitation(
-        email='Garfield.Bernier@gmail.com',
-        family_name='tempora',
-        given_name='debitis',
-        role=shared.RolesToDBEnum.ONE,
+        email='Stuart.Kautzer69@gmail.com',
+        family_name='occaecati',
+        given_name='minima',
+        role=shared.RolesToDBEnum.THREE,
     ),
-    organization_id='aspernatur',
+    organization_id='eligendi',
 )
 
 res = s.organization.invite(req, operations.InviteUserToOrganizationAPIV1OrganizationOrganizationIDInvitationPostSecurity(

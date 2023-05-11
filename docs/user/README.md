@@ -21,7 +21,7 @@ from deepset_cloud.models import operations
 s = deepset_cloud.DeepsetCloud()
 
 req = operations.DeleteUserAPIV1UsersUserIDDeleteRequest(
-    user_id='10421813-d520-48ec-a7e2-53b668451c6c',
+    user_id='8d162309-fb09-4299-a1ae-fb9f58c4d86e',
 )
 
 res = s.user.delete(req, operations.DeleteUserAPIV1UsersUserIDDeleteSecurity(
@@ -45,7 +45,7 @@ from deepset_cloud.models import operations
 s = deepset_cloud.DeepsetCloud()
 
 req = operations.GetUserAPIV1UsersUserIDGetRequest(
-    user_id='6e205e16-deab-43fe-8957-8a64584273a8',
+    user_id='68e4be05-6013-4f59-9a75-7a59ecfef66e',
 )
 
 res = s.user.get(req, operations.GetUserAPIV1UsersUserIDGetSecurity(
@@ -69,11 +69,11 @@ from deepset_cloud.models import operations
 s = deepset_cloud.DeepsetCloud()
 
 req = operations.ListUsersAPIV1UsersGetRequest(
-    after='418d1623-09fb-4092-9921-aefb9f58c4d8',
-    before='6e68e4be-0560-413f-99da-757a59ecfef6',
+    after='f1caa338-3c2b-4eb4-b737-3c8d72f64d1d',
+    before='b1f2c431-0661-4e96-b49e-1cf9e06e3a43',
     include_deleted=False,
-    limit=376741,
-    page_number=895346,
+    limit=483394,
+    page_number=24753,
 )
 
 res = s.user.list(req, operations.ListUsersAPIV1UsersGetSecurity(
@@ -119,9 +119,9 @@ s = deepset_cloud.DeepsetCloud()
 
 req = operations.UpdateUserPermissionAPIV1UsersUserIDPatchRequest(
     request_body=operations.UpdateUserPermissionAPIV1UsersUserIDPatchUserRole(
-        role=shared.RolesToDBEnum.FOUR,
+        role=shared.RolesToDBEnum.ZERO,
     ),
-    user_id='1caa3383-c2be-4b47-b373-c8d72f64d1db',
+    user_id='0ae6b6bc-9b8f-4759-aac5-5a9741d31135',
 )
 
 res = s.user.update_permission(req, operations.UpdateUserPermissionAPIV1UsersUserIDPatchSecurity(

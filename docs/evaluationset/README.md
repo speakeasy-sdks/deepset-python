@@ -22,8 +22,8 @@ from deepset_cloud.models import operations
 s = deepset_cloud.DeepsetCloud()
 
 req = operations.DeleteEvaluationSetAPIV1WorkspacesWorkspaceNameEvaluationSetsEvaluationSetNameDeleteRequest(
-    evaluation_set_name='maiores',
-    workspace_name='quidem',
+    evaluation_set_name='qui',
+    workspace_name='ipsum',
 )
 
 res = s.evaluation_set.delete(req, operations.DeleteEvaluationSetAPIV1WorkspacesWorkspaceNameEvaluationSetsEvaluationSetNameDeleteSecurity(
@@ -47,8 +47,8 @@ from deepset_cloud.models import operations
 s = deepset_cloud.DeepsetCloud()
 
 req = operations.GetEvaluationSetAPIV1WorkspacesWorkspaceNameEvaluationSetsEvaluationSetNameGetRequest(
-    evaluation_set_name='ipsam',
-    workspace_name='voluptate',
+    evaluation_set_name='hic',
+    workspace_name='excepturi',
 )
 
 res = s.evaluation_set.get(req, operations.GetEvaluationSetAPIV1WorkspacesWorkspaceNameEvaluationSetsEvaluationSetNameGetSecurity(
@@ -72,8 +72,8 @@ from deepset_cloud.models import operations
 s = deepset_cloud.DeepsetCloud()
 
 req = operations.GetEvaluationSetCsvFileAPIV1WorkspacesWorkspaceNameEvaluationSetsEvaluationSetNameCsvGetRequest(
-    evaluation_set_name='autem',
-    workspace_name='nam',
+    evaluation_set_name='cum',
+    workspace_name='voluptate',
 )
 
 res = s.evaluation_set.get_csv(req, operations.GetEvaluationSetCsvFileAPIV1WorkspacesWorkspaceNameEvaluationSetsEvaluationSetNameCsvGetSecurity(
@@ -99,11 +99,11 @@ s = deepset_cloud.DeepsetCloud()
 req = operations.ImportEvaluationSetAPIV1WorkspacesWorkspaceNameEvaluationSetsImportPostRequest(
     body_import_evaluation_set_api_v1_workspaces_workspace_name_evaluation_sets_import_post=shared.BodyImportEvaluationSetAPIV1WorkspacesWorkspaceNameEvaluationSetsImportPost(
         file=shared.BodyImportEvaluationSetAPIV1WorkspacesWorkspaceNameEvaluationSetsImportPostFile(
-            file='eaque',
-            content='pariatur'.encode(),
+            file='dignissimos',
+            content='reiciendis'.encode(),
         ),
     ),
-    workspace_name='nemo',
+    workspace_name='amet',
 )
 
 res = s.evaluation_set.import_evaluation_set(req, operations.ImportEvaluationSetAPIV1WorkspacesWorkspaceNameEvaluationSetsImportPostSecurity(
@@ -127,12 +127,12 @@ from deepset_cloud.models import operations
 s = deepset_cloud.DeepsetCloud()
 
 req = operations.ListEvaluationSetsAPIV1WorkspacesWorkspaceNameEvaluationSetsGetRequest(
-    after='f0d30c5f-bb25-4870-9320-2c73d5fe9b90',
-    before='c28909b3-fe49-4a8d-9cbf-48633323f9b7',
-    limit=490459,
-    name='Allen Parisian Jr.',
-    page_number=56418,
-    workspace_name='iure',
+    after='a4100674-ebf6-4928-8d1b-a77a89ebf737',
+    before='ae4203ce-5e6a-495d-8a0d-446ce2af7a73',
+    limit=788740,
+    name='Marvin Renner',
+    page_number=313692,
+    workspace_name='dolorem',
 )
 
 res = s.evaluation_set.list(req, operations.ListEvaluationSetsAPIV1WorkspacesWorkspaceNameEvaluationSetsGetSecurity(
@@ -156,8 +156,8 @@ from deepset_cloud.models import operations
 s = deepset_cloud.DeepsetCloud()
 
 req = operations.RetriggerLabelMatchingAPIV1WorkspacesWorkspaceNameEvaluationSetsEvaluationSetNameLabelMatchingPostRequest(
-    evaluation_set_name='odio',
-    workspace_name='quaerat',
+    evaluation_set_name='sapiente',
+    workspace_name='totam',
 )
 
 res = s.evaluation_set.retrigger(req, operations.RetriggerLabelMatchingAPIV1WorkspacesWorkspaceNameEvaluationSetsEvaluationSetNameLabelMatchingPostSecurity(

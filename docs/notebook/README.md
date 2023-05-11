@@ -20,11 +20,11 @@ s = deepset_cloud.DeepsetCloud()
 
 req = operations.PostNotebookAPIV1NotebookPostRequest(
     request_body={
-        "assumenda": 'nulla',
-        "voluptas": 'libero',
-        "quasi": 'tempora',
+        "commodi": 'sapiente',
+        "dolores": 'deserunt',
+        "molestiae": 'accusantium',
     },
-    pipeline_id='42907474-778a-47bd-866d-28c10ab3cdca',
+    pipeline_id='c688282a-a482-4562-b222-e9817ee17cbe',
 )
 
 res = s.notebook.create(req, operations.PostNotebookAPIV1NotebookPostSecurity(
@@ -69,7 +69,7 @@ from deepset_cloud.models import operations, shared
 s = deepset_cloud.DeepsetCloud()
 
 req = shared.NotebookServerPost(
-    server_type=shared.NotebookServerPostServerTypeEnum.CPU_SERVER,
+    server_type=shared.NotebookServerPostServerTypeEnum.GPU_SERVER,
 )
 
 res = s.notebook.start(req, operations.StartJupyterLabAPIV1NotebookServerPostSecurity(

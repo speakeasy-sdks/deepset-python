@@ -22,8 +22,8 @@ from deepset_cloud.models import operations
 s = deepset_cloud.DeepsetCloud()
 
 req = operations.CheckConnectionAPIV1WorkspacesWorkspaceNameIndexesIndexNameGetRequest(
-    index_name='minima',
-    workspace_name='excepturi',
+    index_name='quidem',
+    workspace_name='molestias',
 )
 
 res = s.document_store.check_connection(req, operations.CheckConnectionAPIV1WorkspacesWorkspaceNameIndexesIndexNameGetSecurity(
@@ -49,13 +49,15 @@ s = deepset_cloud.DeepsetCloud()
 req = operations.CountDocumentsStreamAPIV1WorkspacesWorkspaceNameIndexesIndexNameDocumentsCountPostRequest(
     count_documents_params=shared.CountDocumentsParams(
         filters={
-            "iure": 'culpa',
+            "pariatur": 'modi',
+            "praesentium": 'rem',
+            "voluptates": 'quasi',
         },
         only_documents_without_embedding=False,
         use_prefiltering=False,
     ),
-    index_name='doloribus',
-    workspace_name='sapiente',
+    index_name='repudiandae',
+    workspace_name='sint',
 )
 
 res = s.document_store.count_documents(req, operations.CountDocumentsStreamAPIV1WorkspacesWorkspaceNameIndexesIndexNameDocumentsCountPostSecurity(
@@ -79,9 +81,9 @@ from deepset_cloud.models import operations
 s = deepset_cloud.DeepsetCloud()
 
 req = operations.GetDocumentAPIV1WorkspacesWorkspaceNameIndexesIndexNameDocumentsDocumentIDGetRequest(
-    document_id='architecto',
-    index_name='mollitia',
-    workspace_name='dolorem',
+    document_id='veritatis',
+    index_name='itaque',
+    workspace_name='incidunt',
 )
 
 res = s.document_store.get(req, operations.GetDocumentAPIV1WorkspacesWorkspaceNameIndexesIndexNameDocumentsDocumentIDGetSecurity(
@@ -107,15 +109,14 @@ s = deepset_cloud.DeepsetCloud()
 req = operations.GetAllDocumentsStreamAPIV1WorkspacesWorkspaceNameIndexesIndexNameDocumentsStreamPostRequest(
     fetch_documents_params=shared.FetchDocumentsParams(
         filters={
-            "consequuntur": 'repellat',
-            "mollitia": 'occaecati',
-            "numquam": 'commodi',
+            "consequatur": 'est',
+            "quibusdam": 'explicabo',
         },
         return_embedding=False,
         use_prefiltering=False,
     ),
-    index_name='quam',
-    workspace_name='molestiae',
+    index_name='deserunt',
+    workspace_name='distinctio',
 )
 
 res = s.document_store.list_document_streams(req, operations.GetAllDocumentsStreamAPIV1WorkspacesWorkspaceNameIndexesIndexNameDocumentsStreamPostSecurity(
@@ -139,9 +140,9 @@ from deepset_cloud.models import operations
 s = deepset_cloud.DeepsetCloud()
 
 req = operations.GetAllDocumentsAPIV1WorkspacesWorkspaceNameIndexesIndexNameDocumentsGetRequest(
-    index_name='velit',
+    index_name='quibusdam',
     return_embedding=False,
-    workspace_name='error',
+    workspace_name='labore',
 )
 
 res = s.document_store.list_documents(req, operations.GetAllDocumentsAPIV1WorkspacesWorkspaceNameIndexesIndexNameDocumentsGetSecurity(
@@ -167,24 +168,20 @@ s = deepset_cloud.DeepsetCloud()
 req = operations.QueryDocumentsStreamAPIV1WorkspacesWorkspaceNameIndexesIndexNameDocumentsQueryPostRequest(
     query_documents_params=shared.QueryDocumentsParams(
         all_terms_must_match=False,
-        custom_query='quia',
+        custom_query='modi',
         filters={
-            "vitae": 'laborum',
-            "animi": 'enim',
+            "aliquid": 'cupiditate',
         },
-        query='odit',
+        query='quos',
         query_emb=[
-            1965.82,
-            9495.72,
-            3687.25,
-            6625.27,
+            1649.4,
         ],
         return_embedding=False,
-        top_k=820994,
+        top_k=828940,
         use_prefiltering=False,
     ),
-    index_name='aut',
-    workspace_name='quasi',
+    index_name='ipsam',
+    workspace_name='alias',
 )
 
 res = s.document_store.search(req, operations.QueryDocumentsStreamAPIV1WorkspacesWorkspaceNameIndexesIndexNameDocumentsQueryPostSecurity(
