@@ -5,9 +5,9 @@ management:
   speakeasyVersion: 1.30.0
   generationVersion: 2.26.3
 generation:
-  telemetryEnabled: false
   sdkClassName: deepset-cloud
   singleTagPerOp: false
+  telemetryEnabled: false
 python:
   version: 1.0.2
   author: deepset
