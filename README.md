@@ -1,4 +1,4 @@
-# deepset-cloud
+# Deepset Cloud Python SDK
 
 <!-- Start SDK Installation -->
 ## SDK Installation
