@@ -10,11 +10,11 @@ from typing import Optional
 
 
 @dataclasses.dataclass
-class ListEvalRunsAPIV1WorkspacesWorkspaceNameEvalRunsGetSecurity:
+class ListEvalRunsSecurity:
     
     http_bearer: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
-class ListEvalRunsAPIV1WorkspacesWorkspaceNameEvalRunsGetFieldFieldEnum(str, Enum):
+class ListEvalRunsFieldFieldEnum(str, Enum):
     r"""The name of the entity you want to sort by."""
     NAME = 'name'
     CREATED_AT = 'created_at'
@@ -31,14 +31,14 @@ class ListEvalRunsAPIV1WorkspacesWorkspaceNameEvalRunsGetFieldFieldEnum(str, Enu
     INTEGRATED_NORMAL_DISCOUNTED_CUMULATIVE_GAIN = 'integrated_normal_discounted_cumulative_gain'
     INTEGRATED_PRECISION = 'integrated_precision'
 
-class ListEvalRunsAPIV1WorkspacesWorkspaceNameEvalRunsGetOrderOrderEnum(str, Enum):
+class ListEvalRunsOrderOrderEnum(str, Enum):
     r"""Choose how you want to sort the results."""
     ASC = 'ASC'
     DESC = 'DESC'
 
 
 @dataclasses.dataclass
-class ListEvalRunsAPIV1WorkspacesWorkspaceNameEvalRunsGetRequest:
+class ListEvalRunsRequest:
     
     workspace_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'workspace_name', 'style': 'simple', 'explode': False }})
     r"""Type the name of the workspace."""
@@ -46,13 +46,13 @@ class ListEvalRunsAPIV1WorkspacesWorkspaceNameEvalRunsGetRequest:
     r"""Enter an ID if you want to see all entries after this ID."""
     before: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'before', 'style': 'form', 'explode': True }})
     r"""Enter an ID if you want to see all entries before this ID."""
-    field: Optional[ListEvalRunsAPIV1WorkspacesWorkspaceNameEvalRunsGetFieldFieldEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'field', 'style': 'form', 'explode': True }})
+    field: Optional[ListEvalRunsFieldFieldEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'field', 'style': 'form', 'explode': True }})
     r"""The name of the entity you want to sort by."""
     filter: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'filter', 'style': 'form', 'explode': True }})
     r"""The OData filter you want to use to in your query. It supports exact match and `AND` operations. For example, to filter for a metadata `category:news`, here's what the URL could look like: 'url = \\"https://api.cloud.deepset.ai/api/v1/workspaces/production/files?limit=10&filter=category eq 'news'\\"'. OData filters only work with cursor-based pagination (leave the `page_number` field blank to enable it).To learn more about the OData filter syntax, see: [Querying Data](https://www.odata.org/getting-started/basic-tutorial/#queryData)."""
     limit: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
     r"""How many entries do you want to display? Leaving this field empty keeps the default and max 10 results are returned."""
-    order: Optional[ListEvalRunsAPIV1WorkspacesWorkspaceNameEvalRunsGetOrderOrderEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'order', 'style': 'form', 'explode': True }})
+    order: Optional[ListEvalRunsOrderOrderEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'order', 'style': 'form', 'explode': True }})
     r"""Choose how you want to sort the results."""
     page_number: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page_number', 'style': 'form', 'explode': True }})
     r"""Which page do you want to see? Type the number."""
@@ -61,7 +61,7 @@ class ListEvalRunsAPIV1WorkspacesWorkspaceNameEvalRunsGetRequest:
     
 
 @dataclasses.dataclass
-class ListEvalRunsAPIV1WorkspacesWorkspaceNameEvalRunsGetResponse:
+class ListEvalRunsResponse:
     
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()

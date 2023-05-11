@@ -204,22 +204,22 @@ class EvalRun:
         return res
 
     
-    def list(self, request: operations.ListEvalRunsAPIV1WorkspacesWorkspaceNameEvalRunsGetRequest, security: operations.ListEvalRunsAPIV1WorkspacesWorkspaceNameEvalRunsGetSecurity) -> operations.ListEvalRunsAPIV1WorkspacesWorkspaceNameEvalRunsGetResponse:
+    def list(self, request: operations.ListEvalRunsRequest, security: operations.ListEvalRunsSecurity) -> operations.ListEvalRunsResponse:
         r"""Get Eval Runs
         Returns all the evaluation runs created in deepset Cloud.
         """
         base_url = self._server_url
         
-        url = utils.generate_url(operations.ListEvalRunsAPIV1WorkspacesWorkspaceNameEvalRunsGetRequest, base_url, '/api/v1/workspaces/{workspace_name}/eval_runs', request)
+        url = utils.generate_url(operations.ListEvalRunsRequest, base_url, '/api/v1/workspaces/{workspace_name}/eval_runs', request)
         
-        query_params = utils.get_query_params(operations.ListEvalRunsAPIV1WorkspacesWorkspaceNameEvalRunsGetRequest, request)
+        query_params = utils.get_query_params(operations.ListEvalRunsRequest, request)
         
         client = utils.configure_security_client(self._client, security)
         
         http_res = client.request('GET', url, params=query_params)
         content_type = http_res.headers.get('Content-Type')
 
-        res = operations.ListEvalRunsAPIV1WorkspacesWorkspaceNameEvalRunsGetResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.ListEvalRunsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):

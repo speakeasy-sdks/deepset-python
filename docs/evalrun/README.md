@@ -198,19 +198,19 @@ from deepset_cloud.models import operations
 
 s = deepset_cloud.DeepsetCloud()
 
-req = operations.ListEvalRunsAPIV1WorkspacesWorkspaceNameEvalRunsGetRequest(
+req = operations.ListEvalRunsRequest(
     after='5b7fd2ed-0289-421c-9dc6-92601fb576b0',
     before='d5f0d30c-5fbb-4258-b053-202c73d5fe9b',
-    field=operations.ListEvalRunsAPIV1WorkspacesWorkspaceNameEvalRunsGetFieldFieldEnum.INTEGRATED_MEAN_RECIPROCAL_RANK,
+    field=operations.ListEvalRunsFieldFieldEnum.INTEGRATED_MEAN_RECIPROCAL_RANK,
     filter='voluptatem',
     limit=783645,
-    order=operations.ListEvalRunsAPIV1WorkspacesWorkspaceNameEvalRunsGetOrderOrderEnum.ASC,
+    order=operations.ListEvalRunsOrderOrderEnum.ASC,
     page_number=500026,
     select='error',
     workspace_name='eaque',
 )
 
-res = s.eval_run.list(req, operations.ListEvalRunsAPIV1WorkspacesWorkspaceNameEvalRunsGetSecurity(
+res = s.eval_run.list(req, operations.ListEvalRunsSecurity(
     http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
 ))
 
