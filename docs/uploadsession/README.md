@@ -25,8 +25,8 @@ req = operations.CloseSessionAPIV1WorkspacesWorkspaceNameUploadSessionsSessionID
     close_session=shared.CloseSession(
         status=shared.CloseSessionSessionCloseStatusEnumEnum.CLOSED,
     ),
-    session_id='e3ab8845-f059-47a6-8ff2-a54a31e94764',
-    workspace_name='culpa',
+    session_id='d4f9efc1-b451-42c1-8326-48dc2f615199',
+    workspace_name='earum',
 )
 
 res = s.upload_session.close(req, operations.CloseSessionAPIV1WorkspacesWorkspaceNameUploadSessionsSessionIDPutSecurity(
@@ -51,9 +51,9 @@ s = deepset_cloud.DeepsetCloud()
 
 req = operations.CreateUploadSessionAPIV1WorkspacesWorkspaceNameUploadSessionsPostRequest(
     create_session=shared.CreateSession(
-        write_mode=shared.CreateSessionFileWriteModeEnumEnum.KEEP,
+        write_mode=shared.CreateSessionFileWriteModeEnumEnum.FAIL,
     ),
-    workspace_name='debitis',
+    workspace_name='hic',
 )
 
 res = s.upload_session.create(req, operations.CreateUploadSessionAPIV1WorkspacesWorkspaceNameUploadSessionsPostSecurity(
@@ -77,13 +77,13 @@ from deepset_cloud.models import operations
 s = deepset_cloud.DeepsetCloud()
 
 req = operations.GetSessionFilesAPIV1WorkspacesWorkspaceNameUploadSessionsSessionIDFilesGetRequest(
-    after='865e7956-f925-41a5-a9da-660ff57bfaad',
-    before='4f9efc1b-4512-4c10-b264-8dc2f615199e',
-    ingestion_status=operations.GetSessionFilesAPIV1WorkspacesWorkspaceNameUploadSessionsSessionIDFilesGetIngestionStatusFileIngestionStatusEnumEnum.FINISHED,
-    limit=940782,
-    page_number=848151,
-    session_id='0e9fe6c6-32ca-43ae-9011-7996312fde04',
-    workspace_name='nihil',
+    after='d0e9fe6c-632c-4a3a-ad01-17996312fde0',
+    before='4771778f-f61d-4017-8763-60a15db6a660',
+    ingestion_status=operations.GetSessionFilesAPIV1WorkspacesWorkspaceNameUploadSessionsSessionIDFilesGetIngestionStatusFileIngestionStatusEnumEnum.FAILED,
+    limit=374753,
+    page_number=614528,
+    session_id='a1adeaab-5851-4d6c-a45b-08b61891baa0',
+    workspace_name='sapiente',
 )
 
 res = s.upload_session.get_files(req, operations.GetSessionFilesAPIV1WorkspacesWorkspaceNameUploadSessionsSessionIDFilesGetSecurity(
@@ -107,8 +107,8 @@ from deepset_cloud.models import operations
 s = deepset_cloud.DeepsetCloud()
 
 req = operations.GetSessionStatusAPIV1WorkspacesWorkspaceNameUploadSessionsSessionIDGetRequest(
-    session_id='71778ff6-1d01-4747-a360-a15db6a66065',
-    workspace_name='iste',
+    session_id='e1ade008-e6f8-4c5f-b50d-8cdb5a341814',
+    workspace_name='dolor',
 )
 
 res = s.upload_session.get_status(req, operations.GetSessionStatusAPIV1WorkspacesWorkspaceNameUploadSessionsSessionIDGetSecurity(
@@ -132,12 +132,12 @@ from deepset_cloud.models import operations
 s = deepset_cloud.DeepsetCloud()
 
 req = operations.ListUploadSessionsAPIV1WorkspacesWorkspaceNameUploadSessionsGetRequest(
-    after='a1adeaab-5851-4d6c-a45b-08b61891baa0',
-    before='fe1ade00-8e6f-48c5-b350-d8cdb5a34181',
+    after='01042181-3d52-408e-8e7e-253b668451c6',
+    before='c6e205e1-6dea-4b3f-ac95-78a64584273a',
     is_expired=False,
-    limit=274575,
-    page_number=221396,
-    workspace_name='consequatur',
+    limit=514054,
+    page_number=277340,
+    workspace_name='quasi',
 )
 
 res = s.upload_session.list(req, operations.ListUploadSessionsAPIV1WorkspacesWorkspaceNameUploadSessionsGetSecurity(

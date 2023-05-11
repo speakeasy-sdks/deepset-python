@@ -26,13 +26,11 @@ s = deepset_cloud.DeepsetCloud()
 req = operations.DeleteFilesAPIV1WorkspacesWorkspaceNameFilesDeleteRequest(
     request_body=operations.DeleteFilesAPIV1WorkspacesWorkspaceNameFilesDeleteFileNames(
         names=[
-            'quidem',
-            'voluptatibus',
-            'voluptas',
-            'natus',
+            'sit',
+            'expedita',
         ],
     ),
-    workspace_name='eos',
+    workspace_name='neque',
 )
 
 res = s.file.delete_multi(req, operations.DeleteFilesAPIV1WorkspacesWorkspaceNameFilesDeleteSecurity(
@@ -56,8 +54,8 @@ from deepset_cloud.models import operations
 s = deepset_cloud.DeepsetCloud()
 
 req = operations.DeleteFileAPIV1WorkspacesWorkspaceNameFilesFileIDDeleteRequest(
-    file_id='80d1ba77-a89e-4bf7-b7ae-4203ce5e6a95',
-    workspace_name='repellendus',
+    file_id='26b5a734-29cd-4b1a-8422-bb679d232271',
+    workspace_name='ullam',
 )
 
 res = s.file.delete_single(req, operations.DeleteFileAPIV1WorkspacesWorkspaceNameFilesFileIDDeleteSecurity(
@@ -81,8 +79,8 @@ from deepset_cloud.models import operations
 s = deepset_cloud.DeepsetCloud()
 
 req = operations.GetFileAPIV1WorkspacesWorkspaceNameFilesFileIDGetRequest(
-    file_id='8a0d446c-e2af-47a7-bcf3-be453f870b32',
-    workspace_name='vel',
+    file_id='bf0cbb1e-31b8-4b90-b344-3a1108e0adcf',
+    workspace_name='ut',
 )
 
 res = s.file.get(req, operations.GetFileAPIV1WorkspacesWorkspaceNameFilesFileIDGetSecurity(
@@ -106,8 +104,8 @@ from deepset_cloud.models import operations
 s = deepset_cloud.DeepsetCloud()
 
 req = operations.GetDocumentAPIV1WorkspacesWorkspaceNameFilesFileIDDocumentsGetRequest(
-    file_id='b5a73429-cdb1-4a84-a2bb-679d2322715b',
-    workspace_name='hic',
+    file_id='b921879f-ce95-43f7-bef7-fbc7abd74dd3',
+    workspace_name='natus',
 )
 
 res = s.file.get_document(req, operations.GetDocumentAPIV1WorkspacesWorkspaceNameFilesFileIDDocumentsGetSecurity(
@@ -131,8 +129,8 @@ from deepset_cloud.models import operations
 s = deepset_cloud.DeepsetCloud()
 
 req = operations.GetFileMetaAPIV1WorkspacesWorkspaceNameFilesFileIDMetaGetRequest(
-    file_id='0cbb1e31-b8b9-40f3-843a-1108e0adcf4b',
-    workspace_name='cupiditate',
+    file_id='c0f5d2cf-f7c7-40a4-9626-d436813f16d9',
+    workspace_name='voluptatibus',
 )
 
 res = s.file.get_meta_data(req, operations.GetFileMetaAPIV1WorkspacesWorkspaceNameFilesFileIDMetaGetSecurity(
@@ -156,18 +154,18 @@ from deepset_cloud.models import operations
 s = deepset_cloud.DeepsetCloud()
 
 req = operations.ListFilesAPIV1WorkspacesWorkspaceNameFilesGetRequest(
-    after_file_id='21879fce-953f-473e-b7fb-c7abd74dd39c',
-    after_value='aut',
-    content='voluptatibus',
+    after_file_id='5fce6c55-6146-4c3e-a50f-b008c42e141a',
+    after_value='laborum',
+    content='placeat',
     field=operations.ListFilesAPIV1WorkspacesWorkspaceNameFilesGetFieldFieldEnum.CREATED_AT,
-    filter='nulla',
-    limit=148141,
-    meta_key='porro',
-    meta_value='maiores',
-    name='Ted Romaguera MD',
+    filter='eum',
+    limit=420539,
+    meta_key='nobis',
+    meta_value='quas',
+    name='Drew Hoeger I',
     order=operations.ListFilesAPIV1WorkspacesWorkspaceNameFilesGetOrderOrderEnum.ASC,
-    page_number=368584,
-    workspace_name='ea',
+    page_number=131482,
+    workspace_name='provident',
 )
 
 res = s.file.list(req, operations.ListFilesAPIV1WorkspacesWorkspaceNameFilesGetSecurity(
@@ -193,10 +191,10 @@ s = deepset_cloud.DeepsetCloud()
 
 req = operations.UpdateFileMetaAPIV1WorkspacesWorkspaceNameFilesFileIDMetaPutRequest(
     request_body={
-        "vel": 'possimus',
+        "molestiae": 'magnam',
     },
-    file_id='436813f1-6d9f-45fc-a6c5-56146c3e250f',
-    workspace_name='libero',
+    file_id='74778a7b-d466-4d28-810a-b3cdca425190',
+    workspace_name='tempora',
 )
 
 res = s.file.update_meta_data(req, operations.UpdateFileMetaAPIV1WorkspacesWorkspaceNameFilesFileIDMetaPutSecurity(
@@ -222,14 +220,14 @@ s = deepset_cloud.DeepsetCloud()
 req = operations.UploadFileAPIV1WorkspacesWorkspaceNameFilesPostRequest(
     body_upload_file_api_v1_workspaces_workspace_name_files_post=shared.BodyUploadFileAPIV1WorkspacesWorkspaceNameFilesPost(
         file=shared.BodyUploadFileAPIV1WorkspacesWorkspaceNameFilesPostFile(
-            file='aut',
-            content='aut'.encode(),
+            file='debitis',
+            content='ipsam'.encode(),
         ),
-        meta='deleniti',
-        text='impedit',
+        meta='aspernatur',
+        text='sequi',
     ),
-    file_name='aliquam',
-    workspace_name='fugit',
+    file_name='quo',
+    workspace_name='esse',
     write_mode=operations.UploadFileAPIV1WorkspacesWorkspaceNameFilesPostWriteModeFileWriteModeEnumEnum.FAIL,
 )
 

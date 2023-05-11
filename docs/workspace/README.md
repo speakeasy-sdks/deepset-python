@@ -23,7 +23,7 @@ from deepset_cloud.models import operations, shared
 s = deepset_cloud.DeepsetCloud()
 
 req = shared.WorkspaceName(
-    name='Camille Crist',
+    name='Margarita Jacobson',
 )
 
 res = s.workspace.create(req, operations.CreateWorkspaceAPIV1WorkspacesPostSecurity(
@@ -47,7 +47,7 @@ from deepset_cloud.models import operations
 s = deepset_cloud.DeepsetCloud()
 
 req = operations.DeleteWorkspaceAPIV1WorkspacesWorkspaceNameDeleteRequest(
-    workspace_name='velit',
+    workspace_name='libero',
 )
 
 res = s.workspace.delete(req, operations.DeleteWorkspaceAPIV1WorkspacesWorkspaceNameDeleteSecurity(
@@ -71,7 +71,7 @@ from deepset_cloud.models import operations
 s = deepset_cloud.DeepsetCloud()
 
 req = operations.GetWorkspaceAPIV1WorkspacesWorkspaceNameGetRequest(
-    workspace_name='illo',
+    workspace_name='rem',
 )
 
 res = s.workspace.get(req, operations.GetWorkspaceAPIV1WorkspacesWorkspaceNameGetSecurity(
@@ -95,7 +95,7 @@ from deepset_cloud.models import operations
 s = deepset_cloud.DeepsetCloud()
 
 req = operations.GetWorkspaceStatsAPIV1WorkspacesWorkspaceNameStatsGetRequest(
-    workspace_name='accusantium',
+    workspace_name='dolorum',
 )
 
 res = s.workspace.get_stats(req, operations.GetWorkspaceStatsAPIV1WorkspacesWorkspaceNameStatsGetSecurity(
@@ -140,11 +140,11 @@ from deepset_cloud.models import operations
 s = deepset_cloud.DeepsetCloud()
 
 req = operations.SearchCountAPIV1WorkspacesWorkspaceNameSearchCountGetRequest(
-    after='661e9634-9e1c-4f9e-86e3-a437000ae6b6',
-    before='bc9b8f75-9eac-455a-9741-d311352965bb',
-    limit=526907,
-    page_number=678060,
-    workspace_name='odio',
+    after='72026114-35e1-439d-bc22-59b1abda8c07',
+    before='0e1084cb-0672-4d1a-9879-eeb9665b85ef',
+    limit=737279,
+    page_number=872303,
+    workspace_name='alias',
 )
 
 res = s.workspace.search_count(req, operations.SearchCountAPIV1WorkspacesWorkspaceNameSearchCountGetSecurity(
@@ -168,11 +168,11 @@ from deepset_cloud.models import operations
 s = deepset_cloud.DeepsetCloud()
 
 req = operations.SearchHistoryAPIV1WorkspacesWorkspaceNameSearchHistoryGetRequest(
-    after='20261143-5e13-49db-8225-9b1abda8c070',
-    before='e1084cb0-672d-41ad-879e-eb9665b85efb',
-    limit=872303,
-    page_number=5152,
-    workspace_name='quia',
+    after='2bae0be2-d782-4259-a3ea-4b5197f92443',
+    before='da7ce52b-895c-4537-8645-4efb0b34896c',
+    limit=242099,
+    page_number=795591,
+    workspace_name='fuga',
 )
 
 res = s.workspace.search_history(req, operations.SearchHistoryAPIV1WorkspacesWorkspaceNameSearchHistoryGetSecurity(

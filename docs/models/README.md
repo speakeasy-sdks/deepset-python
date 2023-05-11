@@ -17,8 +17,8 @@ from deepset_cloud.models import operations
 s = deepset_cloud.DeepsetCloud()
 
 req = operations.ListModelAPIV1ModelGetRequest(
-    author='autem',
-    node_type='nobis',
+    author='aliquam',
+    node_type='odio',
 )
 
 res = s.models.list(req, operations.ListModelAPIV1ModelGetSecurity(

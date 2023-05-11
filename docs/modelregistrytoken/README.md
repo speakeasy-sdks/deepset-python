@@ -93,7 +93,7 @@ from deepset_cloud.models import operations
 s = deepset_cloud.DeepsetCloud()
 
 req = operations.RemoveTokenAPIV1ModelRegistryTokensProviderDeleteRequest(
-    provider=operations.RemoveTokenAPIV1ModelRegistryTokensProviderDeleteProviderModelProviderEnum.HUGGINGFACE,
+    provider=operations.RemoveTokenAPIV1ModelRegistryTokensProviderDeleteProviderModelProviderEnum.COHERE,
 )
 
 res = s.model_registry_token.remove(req, operations.RemoveTokenAPIV1ModelRegistryTokensProviderDeleteSecurity(
@@ -141,9 +141,9 @@ s = deepset_cloud.DeepsetCloud()
 
 req = operations.SaveTokenAPIV1ModelRegistryTokensProviderPostRequest(
     create_model_registry_token=shared.CreateModelRegistryToken(
-        token='et',
+        token='quod',
     ),
-    provider=operations.SaveTokenAPIV1ModelRegistryTokensProviderPostProviderModelProviderEnum.COHERE,
+    provider=operations.SaveTokenAPIV1ModelRegistryTokensProviderPostProviderModelProviderEnum.OPENAI,
 )
 
 res = s.model_registry_token.save(req, operations.SaveTokenAPIV1ModelRegistryTokensProviderPostSecurity(
@@ -169,7 +169,7 @@ from deepset_cloud.models import operations, shared
 s = deepset_cloud.DeepsetCloud()
 
 req = shared.CreateModelRegistryToken(
-    token='laborum',
+    token='inventore',
 )
 
 res = s.model_registry_token.save_token_deprecated(req, operations.SaveTokenDeprecatedAPIV1ModelRegistryTokenPostSecurity(
@@ -194,9 +194,9 @@ s = deepset_cloud.DeepsetCloud()
 
 req = operations.UpdateTokenAPIV1ModelRegistryTokensProviderPutRequest(
     update_model_registry_token=shared.UpdateModelRegistryToken(
-        token='placeat',
+        token='nihil',
     ),
-    provider=operations.UpdateTokenAPIV1ModelRegistryTokensProviderPutProviderModelProviderEnum.HUGGINGFACE,
+    provider=operations.UpdateTokenAPIV1ModelRegistryTokensProviderPutProviderModelProviderEnum.OPENAI,
 )
 
 res = s.model_registry_token.update(req, operations.UpdateTokenAPIV1ModelRegistryTokensProviderPutSecurity(
@@ -222,7 +222,7 @@ from deepset_cloud.models import operations, shared
 s = deepset_cloud.DeepsetCloud()
 
 req = shared.UpdateModelRegistryToken(
-    token='eum',
+    token='accusamus',
 )
 
 res = s.model_registry_token.update_token_deprecated(req, operations.UpdateTokenDeprecatedAPIV1ModelRegistryTokenPutSecurity(
