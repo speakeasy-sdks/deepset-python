@@ -30,7 +30,7 @@ req = operations.CloseSessionAPIV1WorkspacesWorkspaceNameUploadSessionsSessionID
 )
 
 res = s.upload_session.close(req, operations.CloseSessionAPIV1WorkspacesWorkspaceNameUploadSessionsSessionIDPutSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.status_code == 200:
@@ -57,7 +57,7 @@ req = operations.CreateUploadSessionAPIV1WorkspacesWorkspaceNameUploadSessionsPo
 )
 
 res = s.upload_session.create(req, operations.CreateUploadSessionAPIV1WorkspacesWorkspaceNameUploadSessionsPostSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.upload_session is not None:
@@ -87,7 +87,7 @@ req = operations.GetSessionFilesAPIV1WorkspacesWorkspaceNameUploadSessionsSessio
 )
 
 res = s.upload_session.get_files(req, operations.GetSessionFilesAPIV1WorkspacesWorkspaceNameUploadSessionsSessionIDFilesGetSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.paginated_session_file is not None:
@@ -112,7 +112,7 @@ req = operations.GetSessionStatusAPIV1WorkspacesWorkspaceNameUploadSessionsSessi
 )
 
 res = s.upload_session.get_status(req, operations.GetSessionStatusAPIV1WorkspacesWorkspaceNameUploadSessionsSessionIDGetSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.session_detail is not None:
@@ -141,7 +141,7 @@ req = operations.ListUploadSessionsAPIV1WorkspacesWorkspaceNameUploadSessionsGet
 )
 
 res = s.upload_session.list(req, operations.ListUploadSessionsAPIV1WorkspacesWorkspaceNameUploadSessionsGetSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.paginated_session is not None:

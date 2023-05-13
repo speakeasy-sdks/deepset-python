@@ -25,7 +25,7 @@ req = operations.DeleteUserAPIV1UsersUserIDDeleteRequest(
 )
 
 res = s.user.delete(req, operations.DeleteUserAPIV1UsersUserIDDeleteSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.delete_user_api_v1_users_user_id_delete_200_application_json_any is not None:
@@ -49,7 +49,7 @@ req = operations.GetUserAPIV1UsersUserIDGetRequest(
 )
 
 res = s.user.get(req, operations.GetUserAPIV1UsersUserIDGetSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.user is not None:
@@ -77,7 +77,7 @@ req = operations.ListUsersAPIV1UsersGetRequest(
 )
 
 res = s.user.list(req, operations.ListUsersAPIV1UsersGetSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.user_pagination is not None:
@@ -98,7 +98,7 @@ s = deepset_cloud.DeepsetCloud()
 
 
 res = s.user.me(operations.ReadUsersMeAPIV1MeGetSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.user is not None:
@@ -125,7 +125,7 @@ req = operations.UpdateUserPermissionAPIV1UsersUserIDPatchRequest(
 )
 
 res = s.user.update_permission(req, operations.UpdateUserPermissionAPIV1UsersUserIDPatchSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.status_code == 200:

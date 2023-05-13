@@ -27,7 +27,7 @@ req = operations.DeleteEvaluationSetAPIV1WorkspacesWorkspaceNameEvaluationSetsEv
 )
 
 res = s.evaluation_set.delete(req, operations.DeleteEvaluationSetAPIV1WorkspacesWorkspaceNameEvaluationSetsEvaluationSetNameDeleteSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.delete_evaluation_set_api_v1_workspaces_workspace_name_evaluation_sets_evaluation_set_name_delete_200_application_json_any is not None:
@@ -52,7 +52,7 @@ req = operations.GetEvaluationSetAPIV1WorkspacesWorkspaceNameEvaluationSetsEvalu
 )
 
 res = s.evaluation_set.get(req, operations.GetEvaluationSetAPIV1WorkspacesWorkspaceNameEvaluationSetsEvaluationSetNameGetSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.label_list is not None:
@@ -77,7 +77,7 @@ req = operations.GetEvaluationSetCsvFileAPIV1WorkspacesWorkspaceNameEvaluationSe
 )
 
 res = s.evaluation_set.get_csv(req, operations.GetEvaluationSetCsvFileAPIV1WorkspacesWorkspaceNameEvaluationSetsEvaluationSetNameCsvGetSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.get_evaluation_set_csv_file_api_v1_workspaces_workspace_name_evaluation_sets_evaluation_set_name_csv_get_200_application_json_any is not None:
@@ -107,7 +107,7 @@ req = operations.ImportEvaluationSetAPIV1WorkspacesWorkspaceNameEvaluationSetsIm
 )
 
 res = s.evaluation_set.import_evaluation_set(req, operations.ImportEvaluationSetAPIV1WorkspacesWorkspaceNameEvaluationSetsImportPostSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.evaluation_set_import is not None:
@@ -136,7 +136,7 @@ req = operations.ListEvaluationSetsAPIV1WorkspacesWorkspaceNameEvaluationSetsGet
 )
 
 res = s.evaluation_set.list(req, operations.ListEvaluationSetsAPIV1WorkspacesWorkspaceNameEvaluationSetsGetSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.evaluation_set_pagination is not None:
@@ -161,7 +161,7 @@ req = operations.RetriggerLabelMatchingAPIV1WorkspacesWorkspaceNameEvaluationSet
 )
 
 res = s.evaluation_set.retrigger(req, operations.RetriggerLabelMatchingAPIV1WorkspacesWorkspaceNameEvaluationSetsEvaluationSetNameLabelMatchingPostSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.status_code == 200:

@@ -51,7 +51,7 @@ req = operations.AddFeedbackAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameFee
 )
 
 res = s.pipeline.add_feedback(req, operations.AddFeedbackAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameFeedbackPostSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.add_feedback_api_v1_workspaces_workspace_name_pipelines_pipeline_name_feedback_post_200_application_json_any is not None:
@@ -76,7 +76,7 @@ req = operations.CreatePipelineAPIV1WorkspacesWorkspaceNamePipelinesPostRequest(
 )
 
 res = s.pipeline.create(req, operations.CreatePipelineAPIV1WorkspacesWorkspaceNamePipelinesPostSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.pipeline_name is not None:
@@ -101,7 +101,7 @@ req = operations.DeletePipelineAPIV1WorkspacesWorkspaceNamePipelinesPipelineName
 )
 
 res = s.pipeline.delete(req, operations.DeletePipelineAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameDeleteSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.delete_pipeline_api_v1_workspaces_workspace_name_pipelines_pipeline_name_delete_200_application_json_any is not None:
@@ -126,7 +126,7 @@ req = operations.DeployPipelineAPIV1WorkspacesWorkspaceNamePipelinesPipelineName
 )
 
 res = s.pipeline.deploy(req, operations.DeployPipelineAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameDeployPostSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.pipeline_indexing is not None:
@@ -151,7 +151,7 @@ req = operations.GetPipelineAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameGet
 )
 
 res = s.pipeline.get(req, operations.GetPipelineAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameGetSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.pipeline_indexing is not None:
@@ -185,7 +185,7 @@ req = operations.GetPipelineFeedbackAPIV1WorkspacesWorkspaceNamePipelinesPipelin
 )
 
 res = s.pipeline.get_feedback(req, operations.GetPipelineFeedbackAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameFeedbackGetSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.response_200_get_pipeline_feedback_api_v1_workspaces_workspace_name_pipelines_pipeline_name_feedback_get is not None:
@@ -211,7 +211,7 @@ req = operations.GetPipelineFilesAPIV1WorkspacesWorkspaceNamePipelinesPipelineNa
 )
 
 res = s.pipeline.get_files(req, operations.GetPipelineFilesAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameFilesGetSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.get_pipeline_files_api_v1_workspaces_workspace_name_pipelines_pipeline_name_files_get_200_application_json_uuid_strings is not None:
@@ -236,7 +236,7 @@ req = operations.GetPipelineIndexingAPIV1WorkspacesWorkspaceNamePipelinesPipelin
 )
 
 res = s.pipeline.get_indexing(req, operations.GetPipelineIndexingAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameIndexingGetSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.pipeline_indexing_status_detail is not None:
@@ -261,7 +261,7 @@ req = operations.GetPipelineYamlAsJSONAPIV1WorkspacesWorkspaceNamePipelinesPipel
 )
 
 res = s.pipeline.get_json(req, operations.GetPipelineYamlAsJSONAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameJSONGetSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.response_get_pipeline_yaml_as_json_api_v1_workspaces_workspace_name_pipelines_pipeline_name_json_get is not None:
@@ -286,7 +286,7 @@ req = operations.GetPipelineIndexMetadataAPIV1WorkspacesWorkspaceNamePipelinesPi
 )
 
 res = s.pipeline.get_metadata(req, operations.GetPipelineIndexMetadataAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameMetaGetSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.response_200_get_pipeline_index_metadata_api_v1_workspaces_workspace_name_pipelines_pipeline_name_meta_get is not None:
@@ -315,7 +315,7 @@ req = operations.GetPipelineMetadataFieldValuesAPIV1WorkspacesWorkspaceNamePipel
 )
 
 res = s.pipeline.get_metadata_field_values(req, operations.GetPipelineMetadataFieldValuesAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameMetaFieldNameGetSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.pipeline_field_search_result is not None:
@@ -341,7 +341,7 @@ req = operations.GetPipelineMinMaxAggregationMetadataAPIV1WorkspacesWorkspaceNam
 )
 
 res = s.pipeline.get_min_max_aggregation_metadata(req, operations.GetPipelineMinMaxAggregationMetadataAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameMetaMetaFieldAggregationGetSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.pipeline_metadata_aggregation is not None:
@@ -366,7 +366,7 @@ req = operations.GetPipelineStatsAPIV1WorkspacesWorkspaceNamePipelinesPipelineNa
 )
 
 res = s.pipeline.get_stats(req, operations.GetPipelineStatsAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameStatsGetSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.pipeline_statistics is not None:
@@ -391,7 +391,7 @@ req = operations.GetPipelineYamlAPIV1WorkspacesWorkspaceNamePipelinesPipelineNam
 )
 
 res = s.pipeline.get_yaml(req, operations.GetPipelineYamlAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameYamlGetSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.pipeline_yaml is not None:
@@ -423,7 +423,7 @@ req = operations.ListPipelinesAPIV1WorkspacesWorkspaceNamePipelinesGetRequest(
 )
 
 res = s.pipeline.list(req, operations.ListPipelinesAPIV1WorkspacesWorkspaceNamePipelinesGetSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.pipeline_pagination is not None:
@@ -466,7 +466,7 @@ req = operations.SearchAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameSearchPo
 )
 
 res = s.pipeline.search(req, operations.SearchAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameSearchPostSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.search_result is not None:
@@ -495,7 +495,7 @@ req = operations.PipelineSearchHistoryAPIV1WorkspacesWorkspaceNamePipelinesPipel
 )
 
 res = s.pipeline.search_history(req, operations.PipelineSearchHistoryAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameSearchHistoryGetSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.search_history_pagination is not None:
@@ -520,7 +520,7 @@ req = operations.SetDefaultPipelineAPIV1WorkspacesWorkspaceNamePipelinesPipeline
 )
 
 res = s.pipeline.set_default(req, operations.SetDefaultPipelineAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameDefaultPostSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.set_default_pipeline_api_v1_workspaces_workspace_name_pipelines_pipeline_name_default_post_200_application_json_any is not None:
@@ -545,7 +545,7 @@ req = operations.UndeployPipelineAPIV1WorkspacesWorkspaceNamePipelinesPipelineNa
 )
 
 res = s.pipeline.undeploy(req, operations.UndeployPipelineAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameUndeployPostSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.pipeline_indexing is not None:
@@ -570,7 +570,7 @@ req = operations.UpdatePipelineYamlAPIV1WorkspacesWorkspaceNamePipelinesPipeline
 )
 
 res = s.pipeline.update_yaml(req, operations.UpdatePipelineYamlAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameYamlPutSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.pipeline_name is not None:
