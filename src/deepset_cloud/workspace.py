@@ -29,13 +29,13 @@ class Workspace:
         base_url = self._server_url
         
         url = base_url.removesuffix('/') + '/api/v1/workspaces'
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
         
@@ -63,11 +63,12 @@ class Workspace:
         base_url = self._server_url
         
         url = utils.generate_url(operations.DeleteWorkspaceAPIV1WorkspacesWorkspaceNameDeleteRequest, base_url, '/api/v1/workspaces/{workspace_name}', request)
-        
+        headers = {}
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
         
-        http_res = client.request('DELETE', url)
+        http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.DeleteWorkspaceAPIV1WorkspacesWorkspaceNameDeleteResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -89,11 +90,12 @@ class Workspace:
         base_url = self._server_url
         
         url = utils.generate_url(operations.GetWorkspaceAPIV1WorkspacesWorkspaceNameGetRequest, base_url, '/api/v1/workspaces/{workspace_name}', request)
-        
+        headers = {}
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
         
-        http_res = client.request('GET', url)
+        http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.GetWorkspaceAPIV1WorkspacesWorkspaceNameGetResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -117,11 +119,12 @@ class Workspace:
         base_url = self._server_url
         
         url = utils.generate_url(operations.GetWorkspaceStatsAPIV1WorkspacesWorkspaceNameStatsGetRequest, base_url, '/api/v1/workspaces/{workspace_name}/stats', request)
-        
+        headers = {}
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
         
-        http_res = client.request('GET', url)
+        http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.GetWorkspaceStatsAPIV1WorkspacesWorkspaceNameStatsGetResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -145,11 +148,12 @@ class Workspace:
         base_url = self._server_url
         
         url = base_url.removesuffix('/') + '/api/v1/workspaces'
-        
+        headers = {}
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
         
-        http_res = client.request('GET', url)
+        http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.ListWorkspacesAPIV1WorkspacesGetResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -169,12 +173,13 @@ class Workspace:
         base_url = self._server_url
         
         url = utils.generate_url(operations.SearchCountAPIV1WorkspacesWorkspaceNameSearchCountGetRequest, base_url, '/api/v1/workspaces/{workspace_name}/search_count', request)
-        
+        headers = {}
         query_params = utils.get_query_params(operations.SearchCountAPIV1WorkspacesWorkspaceNameSearchCountGetRequest, request)
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
         
-        http_res = client.request('GET', url, params=query_params)
+        http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.SearchCountAPIV1WorkspacesWorkspaceNameSearchCountGetResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -198,12 +203,13 @@ class Workspace:
         base_url = self._server_url
         
         url = utils.generate_url(operations.SearchHistoryAPIV1WorkspacesWorkspaceNameSearchHistoryGetRequest, base_url, '/api/v1/workspaces/{workspace_name}/search_history', request)
-        
+        headers = {}
         query_params = utils.get_query_params(operations.SearchHistoryAPIV1WorkspacesWorkspaceNameSearchHistoryGetRequest, request)
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
         
-        http_res = client.request('GET', url, params=query_params)
+        http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.SearchHistoryAPIV1WorkspacesWorkspaceNameSearchHistoryGetResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)

@@ -29,11 +29,12 @@ class EvaluationSet:
         base_url = self._server_url
         
         url = utils.generate_url(operations.DeleteEvaluationSetAPIV1WorkspacesWorkspaceNameEvaluationSetsEvaluationSetNameDeleteRequest, base_url, '/api/v1/workspaces/{workspace_name}/evaluation_sets/{evaluation_set_name}', request)
-        
+        headers = {}
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
         
-        http_res = client.request('DELETE', url)
+        http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.DeleteEvaluationSetAPIV1WorkspacesWorkspaceNameEvaluationSetsEvaluationSetNameDeleteResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -57,11 +58,12 @@ class EvaluationSet:
         base_url = self._server_url
         
         url = utils.generate_url(operations.GetEvaluationSetAPIV1WorkspacesWorkspaceNameEvaluationSetsEvaluationSetNameGetRequest, base_url, '/api/v1/workspaces/{workspace_name}/evaluation_sets/{evaluation_set_name}', request)
-        
+        headers = {}
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
         
-        http_res = client.request('GET', url)
+        http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.GetEvaluationSetAPIV1WorkspacesWorkspaceNameEvaluationSetsEvaluationSetNameGetResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -85,11 +87,12 @@ class EvaluationSet:
         base_url = self._server_url
         
         url = utils.generate_url(operations.GetEvaluationSetCsvFileAPIV1WorkspacesWorkspaceNameEvaluationSetsEvaluationSetNameCsvGetRequest, base_url, '/api/v1/workspaces/{workspace_name}/evaluation_sets/{evaluation_set_name}/csv', request)
-        
+        headers = {}
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
         
-        http_res = client.request('GET', url)
+        http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.GetEvaluationSetCsvFileAPIV1WorkspacesWorkspaceNameEvaluationSetsEvaluationSetNameCsvGetResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -115,13 +118,13 @@ class EvaluationSet:
         base_url = self._server_url
         
         url = utils.generate_url(operations.ImportEvaluationSetAPIV1WorkspacesWorkspaceNameEvaluationSetsImportPostRequest, base_url, '/api/v1/workspaces/{workspace_name}/evaluation_sets/import', request)
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "body_import_evaluation_set_api_v1_workspaces_workspace_name_evaluation_sets_import_post", 'multipart')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
         
@@ -151,12 +154,13 @@ class EvaluationSet:
         base_url = self._server_url
         
         url = utils.generate_url(operations.ListEvaluationSetsAPIV1WorkspacesWorkspaceNameEvaluationSetsGetRequest, base_url, '/api/v1/workspaces/{workspace_name}/evaluation_sets', request)
-        
+        headers = {}
         query_params = utils.get_query_params(operations.ListEvaluationSetsAPIV1WorkspacesWorkspaceNameEvaluationSetsGetRequest, request)
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
         
-        http_res = client.request('GET', url, params=query_params)
+        http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.ListEvaluationSetsAPIV1WorkspacesWorkspaceNameEvaluationSetsGetResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -180,11 +184,12 @@ class EvaluationSet:
         base_url = self._server_url
         
         url = utils.generate_url(operations.RetriggerLabelMatchingAPIV1WorkspacesWorkspaceNameEvaluationSetsEvaluationSetNameLabelMatchingPostRequest, base_url, '/api/v1/workspaces/{workspace_name}/evaluation_sets/{evaluation_set_name}/label-matching', request)
-        
+        headers = {}
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
         
-        http_res = client.request('POST', url)
+        http_res = client.request('POST', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.RetriggerLabelMatchingAPIV1WorkspacesWorkspaceNameEvaluationSetsEvaluationSetNameLabelMatchingPostResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)

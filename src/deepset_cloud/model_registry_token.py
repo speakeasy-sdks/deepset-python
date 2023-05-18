@@ -29,11 +29,12 @@ class ModelRegistryToken:
         base_url = self._server_url
         
         url = utils.generate_url(operations.GetTokenAPIV1ModelRegistryTokensProviderGetRequest, base_url, '/api/v1/model_registry_tokens/{provider}', request)
-        
+        headers = {}
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
         
-        http_res = client.request('GET', url)
+        http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.GetTokenAPIV1ModelRegistryTokensProviderGetResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -59,11 +60,12 @@ class ModelRegistryToken:
         base_url = self._server_url
         
         url = base_url.removesuffix('/') + '/api/v1/model_registry_token'
-        
+        headers = {}
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
         
-        http_res = client.request('GET', url)
+        http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.GetTokenDeprecatedAPIV1ModelRegistryTokenGetResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -83,11 +85,12 @@ class ModelRegistryToken:
         base_url = self._server_url
         
         url = base_url.removesuffix('/') + '/api/v1/model_registry_tokens'
-        
+        headers = {}
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
         
-        http_res = client.request('GET', url)
+        http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.ListTokensAPIV1ModelRegistryTokensGetResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -107,11 +110,12 @@ class ModelRegistryToken:
         base_url = self._server_url
         
         url = utils.generate_url(operations.RemoveTokenAPIV1ModelRegistryTokensProviderDeleteRequest, base_url, '/api/v1/model_registry_tokens/{provider}', request)
-        
+        headers = {}
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
         
-        http_res = client.request('DELETE', url)
+        http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.RemoveTokenAPIV1ModelRegistryTokensProviderDeleteResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -137,11 +141,12 @@ class ModelRegistryToken:
         base_url = self._server_url
         
         url = base_url.removesuffix('/') + '/api/v1/model_registry_token'
-        
+        headers = {}
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
         
-        http_res = client.request('DELETE', url)
+        http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.RemoveTokenDeprecatedAPIV1ModelRegistryTokenDeleteResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -161,13 +166,13 @@ class ModelRegistryToken:
         base_url = self._server_url
         
         url = utils.generate_url(operations.SaveTokenAPIV1ModelRegistryTokensProviderPostRequest, base_url, '/api/v1/model_registry_tokens/{provider}', request)
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "create_model_registry_token", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
         
@@ -197,13 +202,13 @@ class ModelRegistryToken:
         base_url = self._server_url
         
         url = base_url.removesuffix('/') + '/api/v1/model_registry_token'
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
         
@@ -231,13 +236,13 @@ class ModelRegistryToken:
         base_url = self._server_url
         
         url = utils.generate_url(operations.UpdateTokenAPIV1ModelRegistryTokensProviderPutRequest, base_url, '/api/v1/model_registry_tokens/{provider}', request)
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "update_model_registry_token", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
         
@@ -267,13 +272,13 @@ class ModelRegistryToken:
         base_url = self._server_url
         
         url = base_url.removesuffix('/') + '/api/v1/model_registry_token'
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
         

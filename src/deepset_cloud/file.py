@@ -29,11 +29,11 @@ class File:
         base_url = self._server_url
         
         url = utils.generate_url(operations.DeleteFilesAPIV1WorkspacesWorkspaceNameFilesDeleteRequest, base_url, '/api/v1/workspaces/{workspace_name}/files', request)
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "request_body", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
         
@@ -61,11 +61,12 @@ class File:
         base_url = self._server_url
         
         url = utils.generate_url(operations.DeleteFileAPIV1WorkspacesWorkspaceNameFilesFileIDDeleteRequest, base_url, '/api/v1/workspaces/{workspace_name}/files/{file_id}', request)
-        
+        headers = {}
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
         
-        http_res = client.request('DELETE', url)
+        http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.DeleteFileAPIV1WorkspacesWorkspaceNameFilesFileIDDeleteResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -89,11 +90,12 @@ class File:
         base_url = self._server_url
         
         url = utils.generate_url(operations.GetFileAPIV1WorkspacesWorkspaceNameFilesFileIDGetRequest, base_url, '/api/v1/workspaces/{workspace_name}/files/{file_id}', request)
-        
+        headers = {}
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
         
-        http_res = client.request('GET', url)
+        http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.GetFileAPIV1WorkspacesWorkspaceNameFilesFileIDGetResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -117,11 +119,12 @@ class File:
         base_url = self._server_url
         
         url = utils.generate_url(operations.GetDocumentAPIV1WorkspacesWorkspaceNameFilesFileIDDocumentsGetRequest, base_url, '/api/v1/workspaces/{workspace_name}/files/{file_id}/documents', request)
-        
+        headers = {}
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
         
-        http_res = client.request('GET', url)
+        http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.GetDocumentAPIV1WorkspacesWorkspaceNameFilesFileIDDocumentsGetResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -145,11 +148,12 @@ class File:
         base_url = self._server_url
         
         url = utils.generate_url(operations.GetFileMetaAPIV1WorkspacesWorkspaceNameFilesFileIDMetaGetRequest, base_url, '/api/v1/workspaces/{workspace_name}/files/{file_id}/meta', request)
-        
+        headers = {}
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
         
-        http_res = client.request('GET', url)
+        http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.GetFileMetaAPIV1WorkspacesWorkspaceNameFilesFileIDMetaGetResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -173,12 +177,13 @@ class File:
         base_url = self._server_url
         
         url = utils.generate_url(operations.ListFilesAPIV1WorkspacesWorkspaceNameFilesGetRequest, base_url, '/api/v1/workspaces/{workspace_name}/files', request)
-        
+        headers = {}
         query_params = utils.get_query_params(operations.ListFilesAPIV1WorkspacesWorkspaceNameFilesGetRequest, request)
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
         
-        http_res = client.request('GET', url, params=query_params)
+        http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.ListFilesAPIV1WorkspacesWorkspaceNameFilesGetResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -203,13 +208,13 @@ class File:
         base_url = self._server_url
         
         url = utils.generate_url(operations.UpdateFileMetaAPIV1WorkspacesWorkspaceNameFilesFileIDMetaPutRequest, base_url, '/api/v1/workspaces/{workspace_name}/files/{file_id}/meta', request)
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "request_body", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
         
@@ -237,12 +242,12 @@ class File:
         base_url = self._server_url
         
         url = utils.generate_url(operations.UploadFileAPIV1WorkspacesWorkspaceNameFilesPostRequest, base_url, '/api/v1/workspaces/{workspace_name}/files', request)
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "body_upload_file_api_v1_workspaces_workspace_name_files_post", 'multipart')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         query_params = utils.get_query_params(operations.UploadFileAPIV1WorkspacesWorkspaceNameFilesPostRequest, request)
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
         
