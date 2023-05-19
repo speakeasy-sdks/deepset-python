@@ -35,6 +35,7 @@ class EvalRun:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
@@ -71,6 +72,7 @@ class EvalRun:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
@@ -100,6 +102,7 @@ class EvalRun:
         
         url = utils.generate_url(operations.DeleteEvalRunAPIV1WorkspacesWorkspaceNameEvalRunsEvalRunNameDeleteRequest, base_url, '/api/v1/workspaces/{workspace_name}/eval_runs/{eval_run_name}', request)
         headers = {}
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
@@ -127,6 +130,7 @@ class EvalRun:
         
         url = utils.generate_url(operations.DeleteTagAPIV1WorkspacesWorkspaceNameTagsTagNameDeleteRequest, base_url, '/api/v1/workspaces/{workspace_name}/tags/{tag_name}', request)
         headers = {}
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
@@ -154,6 +158,7 @@ class EvalRun:
         
         url = utils.generate_url(operations.GetEvalRunAPIV1WorkspacesWorkspaceNameEvalRunsEvalRunNameGetRequest, base_url, '/api/v1/workspaces/{workspace_name}/eval_runs/{eval_run_name}', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
@@ -184,6 +189,7 @@ class EvalRun:
         url = utils.generate_url(operations.GetNodeEvalPredictionsAPIV1WorkspacesWorkspaceNameEvalRunsEvalRunNameNodesNodeNamePredictionsGetRequest, base_url, '/api/v1/workspaces/{workspace_name}/eval_runs/{eval_run_name}/nodes/{node_name}/predictions', request)
         headers = utils.get_headers(request)
         query_params = utils.get_query_params(operations.GetNodeEvalPredictionsAPIV1WorkspacesWorkspaceNameEvalRunsEvalRunNameNodesNodeNamePredictionsGetRequest, request)
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
@@ -216,6 +222,7 @@ class EvalRun:
         url = utils.generate_url(operations.ListEvalRunsRequest, base_url, '/api/v1/workspaces/{workspace_name}/eval_runs', request)
         headers = {}
         query_params = utils.get_query_params(operations.ListEvalRunsRequest, request)
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
@@ -246,6 +253,7 @@ class EvalRun:
         url = utils.generate_url(operations.GetTagsAPIV1WorkspacesWorkspaceNameTagsGetRequest, base_url, '/api/v1/workspaces/{workspace_name}/tags', request)
         headers = {}
         query_params = utils.get_query_params(operations.GetTagsAPIV1WorkspacesWorkspaceNameTagsGetRequest, request)
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
@@ -275,6 +283,7 @@ class EvalRun:
         
         url = utils.generate_url(operations.StartEvalRunAPIV1WorkspacesWorkspaceNameEvalRunsEvalRunNameStartPostRequest, base_url, '/api/v1/workspaces/{workspace_name}/eval_runs/{eval_run_name}/start', request)
         headers = {}
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
@@ -307,6 +316,7 @@ class EvalRun:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
@@ -341,6 +351,7 @@ class EvalRun:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)

@@ -30,6 +30,7 @@ class User:
         
         url = utils.generate_url(operations.DeleteUserAPIV1UsersUserIDDeleteRequest, base_url, '/api/v1/users/{user_id}', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
@@ -59,6 +60,7 @@ class User:
         
         url = utils.generate_url(operations.GetUserAPIV1UsersUserIDGetRequest, base_url, '/api/v1/users/{user_id}', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
@@ -89,6 +91,7 @@ class User:
         url = base_url.removesuffix('/') + '/api/v1/users'
         headers = {}
         query_params = utils.get_query_params(operations.ListUsersAPIV1UsersGetRequest, request)
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
@@ -118,6 +121,7 @@ class User:
         
         url = base_url.removesuffix('/') + '/api/v1/me'
         headers = {}
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
@@ -148,6 +152,7 @@ class User:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)

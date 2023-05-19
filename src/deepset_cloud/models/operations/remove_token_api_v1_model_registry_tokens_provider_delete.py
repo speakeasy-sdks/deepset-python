@@ -13,7 +13,7 @@ class RemoveTokenAPIV1ModelRegistryTokensProviderDeleteSecurity:
     
     http_bearer: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
-class RemoveTokenAPIV1ModelRegistryTokensProviderDeleteProviderModelProviderEnum(str, Enum):
+class RemoveTokenAPIV1ModelRegistryTokensProviderDeleteProviderModelProvider(str, Enum):
     r"""The provider of the model registry"""
     HUGGINGFACE = 'huggingface'
     OPENAI = 'openai'
@@ -23,7 +23,7 @@ class RemoveTokenAPIV1ModelRegistryTokensProviderDeleteProviderModelProviderEnum
 @dataclasses.dataclass
 class RemoveTokenAPIV1ModelRegistryTokensProviderDeleteRequest:
     
-    provider: RemoveTokenAPIV1ModelRegistryTokensProviderDeleteProviderModelProviderEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'provider', 'style': 'simple', 'explode': False }})
+    provider: RemoveTokenAPIV1ModelRegistryTokensProviderDeleteProviderModelProvider = dataclasses.field(metadata={'path_param': { 'field_name': 'provider', 'style': 'simple', 'explode': False }})
     r"""The provider of the model registry"""
     
 

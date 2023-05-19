@@ -4,7 +4,7 @@ from __future__ import annotations
 import dataclasses
 import requests as requests_http
 from ..shared import httpvalidationerror as shared_httpvalidationerror
-from ..shared import rolestodb_enum as shared_rolestodb_enum
+from ..shared import rolestodb as shared_rolestodb
 from dataclasses_json import Undefined, dataclass_json
 from deepset_cloud import utils
 from typing import Any, Optional
@@ -27,7 +27,7 @@ class InviteUserToOrganizationAPIV1OrganizationOrganizationIDInvitationPostUserI
     r"""Family name of a user"""
     given_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('given_name') }})
     r"""Given name of a user"""
-    role: shared_rolestodb_enum.RolesToDBEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('role') }})
+    role: shared_rolestodb.RolesToDB = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('role') }})
     r"""An enumeration."""
     
 

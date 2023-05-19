@@ -54,7 +54,7 @@ class FeedbackSearchResultFeedbackSearchQuery:
     filters: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('filters'), 'exclude': lambda f: f is None }})
     r"""Shows which metadata filters were used for the search query."""
     
-class FeedbackSearchResultSearchTypeEnum(str, Enum):
+class FeedbackSearchResultSearchType(str, Enum):
     r"""An enumeration."""
     DOCUMENT = 'document'
     EXTRACTIVE = 'extractive'
@@ -75,7 +75,7 @@ class FeedbackSearchResult:
     r"""Shows information about the search query which returned this result."""
     search_result_history_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('search_result_history_id') }})
     r"""Unique identifier of this search result"""
-    type: FeedbackSearchResultSearchTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
+    type: FeedbackSearchResultSearchType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
     r"""Shows the type of the prediction."""
     answer: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('answer'), 'exclude': lambda f: f is None }})
     r"""Shows the query answer. This is only returned for question answering pipelines."""

@@ -22,7 +22,7 @@ class EvaluationSetWithStatusOauthUser:
     r"""Given name of a user"""
     user_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('user_id') }})
     
-class EvaluationSetWithStatusEvaluationSetStatusAsStrEnum(str, Enum):
+class EvaluationSetWithStatusEvaluationSetStatusAsStr(str, Enum):
     r"""An enumeration."""
     RECEIVED = 'RECEIVED'
     LABEL_EXTRACTION_STARTED = 'LABEL_EXTRACTION_STARTED'
@@ -44,7 +44,7 @@ class EvaluationSetWithStatus:
     r"""The number of labels that were not matched"""
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
     r"""Name of the evaluation set. By default, the name of the csv or Squad2 file."""
-    status: EvaluationSetWithStatusEvaluationSetStatusAsStrEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
+    status: EvaluationSetWithStatusEvaluationSetStatusAsStr = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
     r"""Shows you what is currently happening to the evaluation set."""
     total_labels: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('total_labels') }})
     r"""The total number of uploaded labels"""

@@ -36,6 +36,7 @@ class UploadSession:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
@@ -68,6 +69,7 @@ class UploadSession:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
@@ -100,6 +102,7 @@ class UploadSession:
         url = utils.generate_url(operations.GetSessionFilesAPIV1WorkspacesWorkspaceNameUploadSessionsSessionIDFilesGetRequest, base_url, '/api/v1/workspaces/{workspace_name}/upload_sessions/{session_id}/files', request)
         headers = {}
         query_params = utils.get_query_params(operations.GetSessionFilesAPIV1WorkspacesWorkspaceNameUploadSessionsSessionIDFilesGetRequest, request)
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
@@ -131,6 +134,7 @@ class UploadSession:
         
         url = utils.generate_url(operations.GetSessionStatusAPIV1WorkspacesWorkspaceNameUploadSessionsSessionIDGetRequest, base_url, '/api/v1/workspaces/{workspace_name}/upload_sessions/{session_id}', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
@@ -163,6 +167,7 @@ class UploadSession:
         url = utils.generate_url(operations.ListUploadSessionsAPIV1WorkspacesWorkspaceNameUploadSessionsGetRequest, base_url, '/api/v1/workspaces/{workspace_name}/upload_sessions', request)
         headers = {}
         query_params = utils.get_query_params(operations.ListUploadSessionsAPIV1WorkspacesWorkspaceNameUploadSessionsGetRequest, request)
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)

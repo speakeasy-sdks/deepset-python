@@ -30,6 +30,7 @@ class Health:
         
         url = base_url.removesuffix('/') + '/health'
         headers = {}
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client
@@ -54,6 +55,7 @@ class Health:
         
         url = base_url.removesuffix('/') + '/'
         headers = {}
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._client

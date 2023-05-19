@@ -3,8 +3,10 @@
 from __future__ import annotations
 from enum import Enum
 
-class ServerTypeEnum(str, Enum):
+class RolesToDB(str, Enum):
     r"""An enumeration."""
-    CPU_SERVER = 'cpu-server'
-    GPU_SERVER = 'gpu-server'
-    UNKNOWN = 'unknown'
+    ZERO = '0'
+    ONE = '1'
+    TWO = '2'
+    THREE = '3'
+    FOUR = '4'

@@ -7,7 +7,7 @@ from deepset_cloud import utils
 from enum import Enum
 from typing import Any, Optional
 
-class DeepsetCloudDocumentContentTypeEnum(str, Enum):
+class DeepsetCloudDocumentContentType(str, Enum):
     r"""Type of the content."""
     TEXT = 'text'
     TABLE = 'table'
@@ -20,7 +20,7 @@ class DeepsetCloudDocumentContentTypeEnum(str, Enum):
 class DeepsetCloudDocument:
     r"""Successful Response"""
     
-    content_type: DeepsetCloudDocumentContentTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('content_type') }})
+    content_type: DeepsetCloudDocumentContentType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('content_type') }})
     r"""Type of the content."""
     id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id') }})
     r"""ID of the document."""

@@ -14,7 +14,7 @@ class UploadFileAPIV1WorkspacesWorkspaceNameFilesPostSecurity:
     
     http_bearer: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
-class UploadFileAPIV1WorkspacesWorkspaceNameFilesPostWriteModeFileWriteModeEnumEnum(str, Enum):
+class UploadFileAPIV1WorkspacesWorkspaceNameFilesPostWriteModeFileWriteModeEnum(str, Enum):
     r"""An enumeration."""
     KEEP = 'KEEP'
     OVERWRITE = 'OVERWRITE'
@@ -29,7 +29,7 @@ class UploadFileAPIV1WorkspacesWorkspaceNameFilesPostRequest:
     body_upload_file_api_v1_workspaces_workspace_name_files_post: Optional[shared_body_upload_file_api_v1_workspaces_workspace_name_files_post.BodyUploadFileAPIV1WorkspacesWorkspaceNameFilesPost] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
     file_name: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'file_name', 'style': 'form', 'explode': True }})
     r"""How do you want to call your file? Use this field only if you're creating a file to upload. If you're uploading a ready file, leave this field empty."""
-    write_mode: Optional[UploadFileAPIV1WorkspacesWorkspaceNameFilesPostWriteModeFileWriteModeEnumEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'write_mode', 'style': 'form', 'explode': True }})
+    write_mode: Optional[UploadFileAPIV1WorkspacesWorkspaceNameFilesPostWriteModeFileWriteModeEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'write_mode', 'style': 'form', 'explode': True }})
     r"""The write mode determines how to handle uploading a file if it's already in the workspace. Your options are: keep the file with the same name, make the request fail if a file with the same name already exists, or overwrite the file. If you choose to overwrite, all files with the same name are overwritten."""
     
 

@@ -7,7 +7,7 @@ from deepset_cloud import utils
 from enum import Enum
 from typing import Optional
 
-class DocumentNodeEvalRunMetricNodeTypeEnum(str, Enum):
+class DocumentNodeEvalRunMetricNodeType(str, Enum):
     r"""This node returns 'Document' objects, not 'Answer' objects."""
     DOCUMENT_NODE = 'document_node'
 
@@ -18,7 +18,7 @@ class DocumentNodeEvalRunMetric:
     
     node_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('node_name') }})
     r"""The name of the evaluated pipeline node."""
-    node_type: DocumentNodeEvalRunMetricNodeTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('node_type') }})
+    node_type: DocumentNodeEvalRunMetricNodeType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('node_type') }})
     r"""This node returns 'Document' objects, not 'Answer' objects."""
     integrated_mean_average_precision: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('integrated_mean_average_precision'), 'exclude': lambda f: f is None }})
     r"""The mean average precision of the node when it's evaluated in the integrated mode. For more information, see [Experiments and Metrics](https://docs.cloud.deepset.ai/docs/experiments-and-metrics)."""

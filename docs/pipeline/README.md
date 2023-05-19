@@ -171,17 +171,16 @@ from deepset_cloud.models import operations
 s = deepset_cloud.DeepsetCloud()
 
 req = operations.GetPipelineFeedbackAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameFeedbackGetRequest(
-    accept='aliquam',
-    after='f1575608-2d68-4ea1-9f1d-17051339d080',
-    before='86a18403-94c2-4607-9f93-f5f0642dac7a',
-    field=operations.GetPipelineFeedbackAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameFeedbackGetFieldFieldEnum.SEARCH_RESULT_SEARCH_QUERY,
-    filter='nemo',
-    limit=65304,
-    order=operations.GetPipelineFeedbackAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameFeedbackGetOrderOrderEnum.ASC,
-    page_number=783235,
-    pipeline_name='quod',
-    select='labore',
-    workspace_name='ab',
+    after='4f157560-82d6-48ea-99f1-d17051339d08',
+    before='086a1840-394c-4260-b1f9-3f5f0642dac7',
+    field=operations.GetPipelineFeedbackAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameFeedbackGetFieldField.SEARCH_RESULT_SEARCH_CREATED_AT,
+    filter='asperiores',
+    limit=368102,
+    order=operations.GetPipelineFeedbackAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameFeedbackGetOrderOrder.ASC,
+    page_number=312753,
+    pipeline_name='porro',
+    select='quod',
+    workspace_name='labore',
 )
 
 res = s.pipeline.get_feedback(req, operations.GetPipelineFeedbackAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameFeedbackGetSecurity(
@@ -205,9 +204,9 @@ from deepset_cloud.models import operations
 s = deepset_cloud.DeepsetCloud()
 
 req = operations.GetPipelineFilesAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameFilesGetRequest(
-    pipeline_name='adipisci',
-    status=operations.GetPipelineFilesAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameFilesGetStatusFileIndexingStatusQueryEnum.INDEXED_NO_DOCUMENTS,
-    workspace_name='id',
+    pipeline_name='ab',
+    status=operations.GetPipelineFilesAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameFilesGetStatusFileIndexingStatusQuery.FAILED,
+    workspace_name='fuga',
 )
 
 res = s.pipeline.get_files(req, operations.GetPipelineFilesAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameFilesGetSecurity(
@@ -231,8 +230,8 @@ from deepset_cloud.models import operations
 s = deepset_cloud.DeepsetCloud()
 
 req = operations.GetPipelineIndexingAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameIndexingGetRequest(
-    pipeline_name='suscipit',
-    workspace_name='velit',
+    pipeline_name='id',
+    workspace_name='suscipit',
 )
 
 res = s.pipeline.get_indexing(req, operations.GetPipelineIndexingAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameIndexingGetSecurity(
@@ -256,8 +255,8 @@ from deepset_cloud.models import operations
 s = deepset_cloud.DeepsetCloud()
 
 req = operations.GetPipelineYamlAsJSONAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameJSONGetRequest(
-    pipeline_name='culpa',
-    workspace_name='est',
+    pipeline_name='velit',
+    workspace_name='culpa',
 )
 
 res = s.pipeline.get_json(req, operations.GetPipelineYamlAsJSONAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameJSONGetSecurity(
@@ -281,8 +280,8 @@ from deepset_cloud.models import operations
 s = deepset_cloud.DeepsetCloud()
 
 req = operations.GetPipelineIndexMetadataAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameMetaGetRequest(
-    pipeline_name='recusandae',
-    workspace_name='totam',
+    pipeline_name='est',
+    workspace_name='recusandae',
 )
 
 res = s.pipeline.get_metadata(req, operations.GetPipelineIndexMetadataAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameMetaGetSecurity(
@@ -306,12 +305,12 @@ from deepset_cloud.models import operations
 s = deepset_cloud.DeepsetCloud()
 
 req = operations.GetPipelineMetadataFieldValuesAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameMetaFieldNameGetRequest(
-    after=853940,
-    field_name='vel',
-    limit=497678,
-    pipeline_name='quos',
-    query='vel',
-    workspace_name='labore',
+    after=517309,
+    field_name='fugiat',
+    limit=424089,
+    pipeline_name='ducimus',
+    query='quos',
+    workspace_name='vel',
 )
 
 res = s.pipeline.get_metadata_field_values(req, operations.GetPipelineMetadataFieldValuesAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameMetaFieldNameGetSecurity(
@@ -335,9 +334,9 @@ from deepset_cloud.models import operations
 s = deepset_cloud.DeepsetCloud()
 
 req = operations.GetPipelineMinMaxAggregationMetadataAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameMetaMetaFieldAggregationGetRequest(
-    meta_field='possimus',
-    pipeline_name='facilis',
-    workspace_name='cum',
+    meta_field='labore',
+    pipeline_name='possimus',
+    workspace_name='facilis',
 )
 
 res = s.pipeline.get_min_max_aggregation_metadata(req, operations.GetPipelineMinMaxAggregationMetadataAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameMetaMetaFieldAggregationGetSecurity(
@@ -361,8 +360,8 @@ from deepset_cloud.models import operations
 s = deepset_cloud.DeepsetCloud()
 
 req = operations.GetPipelineStatsAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameStatsGetRequest(
-    pipeline_name='commodi',
-    workspace_name='in',
+    pipeline_name='cum',
+    workspace_name='commodi',
 )
 
 res = s.pipeline.get_stats(req, operations.GetPipelineStatsAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameStatsGetSecurity(
@@ -386,8 +385,8 @@ from deepset_cloud.models import operations
 s = deepset_cloud.DeepsetCloud()
 
 req = operations.GetPipelineYamlAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameYamlGetRequest(
-    pipeline_name='corporis',
-    workspace_name='reiciendis',
+    pipeline_name='in',
+    workspace_name='corporis',
 )
 
 res = s.pipeline.get_yaml(req, operations.GetPipelineYamlAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameYamlGetSecurity(
@@ -411,15 +410,15 @@ from deepset_cloud.models import operations
 s = deepset_cloud.DeepsetCloud()
 
 req = operations.ListPipelinesAPIV1WorkspacesWorkspaceNamePipelinesGetRequest(
-    after='d5e60b37-5ed4-4f6f-bee4-1f33317fe35b',
-    before='60eb1ea4-2655-45ba-bc28-744ed53b88f3',
+    after='fd5e60b3-75ed-44f6-bbee-41f33317fe35',
+    before='b60eb1ea-4265-455b-a3c2-8744ed53b88f',
     deleted=False,
-    desired_status='culpa',
-    limit=548519,
-    page_number=867290,
-    pipeline_name='totam',
-    status='hic',
-    workspace_name='exercitationem',
+    desired_status='nesciunt',
+    limit=633998,
+    page_number=548519,
+    pipeline_name='pariatur',
+    status='totam',
+    workspace_name='hic',
 )
 
 res = s.pipeline.list(req, operations.ListPipelinesAPIV1WorkspacesWorkspaceNamePipelinesGetSecurity(
@@ -446,23 +445,23 @@ req = operations.SearchAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameSearchPo
     pipeline_query=shared.PipelineQuery(
         debug=False,
         filters={
-            "sit": 'rerum',
-            "sed": 'reiciendis',
-            "explicabo": 'asperiores',
-            "facilis": 'voluptate',
+            "nobis": 'sit',
+            "rerum": 'sed',
         },
         params={
-            "ab": 'iste',
-            "dolore": 'laborum',
-            "sed": 'in',
+            "explicabo": 'asperiores',
+            "facilis": 'voluptate',
+            "expedita": 'ab',
+            "iste": 'dolore',
         },
         queries=[
-            'quidem',
-            'explicabo',
+            'sed',
+            'in',
+            'commodi',
         ],
     ),
-    pipeline_name='voluptas',
-    workspace_name='unde',
+    pipeline_name='quidem',
+    workspace_name='explicabo',
 )
 
 res = s.pipeline.search(req, operations.SearchAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameSearchPostSecurity(
@@ -486,12 +485,12 @@ from deepset_cloud.models import operations
 s = deepset_cloud.DeepsetCloud()
 
 req = operations.PipelineSearchHistoryAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameSearchHistoryGetRequest(
-    after='16fe1f08-f429-44e3-a98f-447f603e8b44',
-    before='5e80ca55-efd2-40e4-97e1-858b6a89fbe3',
-    limit=677115,
-    page_number=341698,
-    pipeline_name='officia',
-    workspace_name='dolorum',
+    after='6916fe1f-08f4-4294-a369-8f447f603e8b',
+    before='445e80ca-55ef-4d20-a457-e1858b6a89fb',
+    limit=892863,
+    page_number=204923,
+    pipeline_name='dolorum',
+    workspace_name='nostrum',
 )
 
 res = s.pipeline.search_history(req, operations.PipelineSearchHistoryAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameSearchHistoryGetSecurity(
@@ -515,8 +514,8 @@ from deepset_cloud.models import operations
 s = deepset_cloud.DeepsetCloud()
 
 req = operations.SetDefaultPipelineAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameDefaultPostRequest(
-    pipeline_name='corrupti',
-    workspace_name='accusamus',
+    pipeline_name='officia',
+    workspace_name='dolorum',
 )
 
 res = s.pipeline.set_default(req, operations.SetDefaultPipelineAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameDefaultPostSecurity(
@@ -540,8 +539,8 @@ from deepset_cloud.models import operations
 s = deepset_cloud.DeepsetCloud()
 
 req = operations.UndeployPipelineAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameUndeployPostRequest(
-    pipeline_name='tempora',
-    workspace_name='atque',
+    pipeline_name='corrupti',
+    workspace_name='accusamus',
 )
 
 res = s.pipeline.undeploy(req, operations.UndeployPipelineAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameUndeployPostSecurity(
@@ -565,8 +564,8 @@ from deepset_cloud.models import operations
 s = deepset_cloud.DeepsetCloud()
 
 req = operations.UpdatePipelineYamlAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameYamlPutRequest(
-    pipeline_name='fugit',
-    workspace_name='ut',
+    pipeline_name='tempora',
+    workspace_name='atque',
 )
 
 res = s.pipeline.update_yaml(req, operations.UpdatePipelineYamlAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameYamlPutSecurity(

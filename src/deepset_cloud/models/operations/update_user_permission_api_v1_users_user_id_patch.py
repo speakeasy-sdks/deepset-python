@@ -4,7 +4,7 @@ from __future__ import annotations
 import dataclasses
 import requests as requests_http
 from ..shared import httpvalidationerror as shared_httpvalidationerror
-from ..shared import rolestodb_enum as shared_rolestodb_enum
+from ..shared import rolestodb as shared_rolestodb
 from dataclasses_json import Undefined, dataclass_json
 from deepset_cloud import utils
 from typing import Optional
@@ -21,7 +21,7 @@ class UpdateUserPermissionAPIV1UsersUserIDPatchSecurity:
 class UpdateUserPermissionAPIV1UsersUserIDPatchUserRole:
     r"""Specify the new role for the user."""
     
-    role: shared_rolestodb_enum.RolesToDBEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('role') }})
+    role: shared_rolestodb.RolesToDB = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('role') }})
     r"""An enumeration."""
     
 

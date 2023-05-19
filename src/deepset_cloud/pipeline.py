@@ -35,6 +35,7 @@ class Pipeline:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
@@ -67,6 +68,7 @@ class Pipeline:
         url = utils.generate_url(operations.CreatePipelineAPIV1WorkspacesWorkspaceNamePipelinesPostRequest, base_url, '/api/v1/workspaces/{workspace_name}/pipelines', request)
         headers = {}
         query_params = utils.get_query_params(operations.CreatePipelineAPIV1WorkspacesWorkspaceNamePipelinesPostRequest, request)
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
@@ -98,6 +100,7 @@ class Pipeline:
         
         url = utils.generate_url(operations.DeletePipelineAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameDeleteRequest, base_url, '/api/v1/workspaces/{workspace_name}/pipelines/{pipeline_name}', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
@@ -129,6 +132,7 @@ class Pipeline:
         
         url = utils.generate_url(operations.DeployPipelineAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameDeployPostRequest, base_url, '/api/v1/workspaces/{workspace_name}/pipelines/{pipeline_name}/deploy', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
@@ -158,6 +162,7 @@ class Pipeline:
         
         url = utils.generate_url(operations.GetPipelineAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameGetRequest, base_url, '/api/v1/workspaces/{workspace_name}/pipelines/{pipeline_name}', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
@@ -188,6 +193,7 @@ class Pipeline:
         url = utils.generate_url(operations.GetPipelineFeedbackAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameFeedbackGetRequest, base_url, '/api/v1/workspaces/{workspace_name}/pipelines/{pipeline_name}/feedback', request)
         headers = utils.get_headers(request)
         query_params = utils.get_query_params(operations.GetPipelineFeedbackAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameFeedbackGetRequest, request)
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
@@ -220,6 +226,7 @@ class Pipeline:
         url = utils.generate_url(operations.GetPipelineFilesAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameFilesGetRequest, base_url, '/api/v1/workspaces/{workspace_name}/pipelines/{pipeline_name}/files', request)
         headers = {}
         query_params = utils.get_query_params(operations.GetPipelineFilesAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameFilesGetRequest, request)
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
@@ -249,6 +256,7 @@ class Pipeline:
         
         url = utils.generate_url(operations.GetPipelineIndexingAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameIndexingGetRequest, base_url, '/api/v1/workspaces/{workspace_name}/pipelines/{pipeline_name}/indexing', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
@@ -278,6 +286,7 @@ class Pipeline:
         
         url = utils.generate_url(operations.GetPipelineYamlAsJSONAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameJSONGetRequest, base_url, '/api/v1/workspaces/{workspace_name}/pipelines/{pipeline_name}/json', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
@@ -309,6 +318,7 @@ class Pipeline:
         
         url = utils.generate_url(operations.GetPipelineIndexMetadataAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameMetaGetRequest, base_url, '/api/v1/workspaces/{workspace_name}/pipelines/{pipeline_name}/meta', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
@@ -341,6 +351,7 @@ class Pipeline:
         url = utils.generate_url(operations.GetPipelineMetadataFieldValuesAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameMetaFieldNameGetRequest, base_url, '/api/v1/workspaces/{workspace_name}/pipelines/{pipeline_name}/meta/{field_name}', request)
         headers = {}
         query_params = utils.get_query_params(operations.GetPipelineMetadataFieldValuesAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameMetaFieldNameGetRequest, request)
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
@@ -372,6 +383,7 @@ class Pipeline:
         
         url = utils.generate_url(operations.GetPipelineMinMaxAggregationMetadataAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameMetaMetaFieldAggregationGetRequest, base_url, '/api/v1/workspaces/{workspace_name}/pipelines/{pipeline_name}/meta/{meta_field}/aggregation', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
@@ -403,6 +415,7 @@ class Pipeline:
         
         url = utils.generate_url(operations.GetPipelineStatsAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameStatsGetRequest, base_url, '/api/v1/workspaces/{workspace_name}/pipelines/{pipeline_name}/stats', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
@@ -432,6 +445,7 @@ class Pipeline:
         
         url = utils.generate_url(operations.GetPipelineYamlAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameYamlGetRequest, base_url, '/api/v1/workspaces/{workspace_name}/pipelines/{pipeline_name}/yaml', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
@@ -464,6 +478,7 @@ class Pipeline:
         url = utils.generate_url(operations.ListPipelinesAPIV1WorkspacesWorkspaceNamePipelinesGetRequest, base_url, '/api/v1/workspaces/{workspace_name}/pipelines', request)
         headers = {}
         query_params = utils.get_query_params(operations.ListPipelinesAPIV1WorkspacesWorkspaceNamePipelinesGetRequest, request)
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
@@ -498,6 +513,7 @@ class Pipeline:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
@@ -530,6 +546,7 @@ class Pipeline:
         url = utils.generate_url(operations.PipelineSearchHistoryAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameSearchHistoryGetRequest, base_url, '/api/v1/workspaces/{workspace_name}/pipelines/{pipeline_name}/search_history', request)
         headers = {}
         query_params = utils.get_query_params(operations.PipelineSearchHistoryAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameSearchHistoryGetRequest, request)
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
@@ -559,6 +576,7 @@ class Pipeline:
         
         url = utils.generate_url(operations.SetDefaultPipelineAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameDefaultPostRequest, base_url, '/api/v1/workspaces/{workspace_name}/pipelines/{pipeline_name}/default', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
@@ -588,6 +606,7 @@ class Pipeline:
         
         url = utils.generate_url(operations.UndeployPipelineAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameUndeployPostRequest, base_url, '/api/v1/workspaces/{workspace_name}/pipelines/{pipeline_name}/undeploy', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
@@ -617,6 +636,7 @@ class Pipeline:
         
         url = utils.generate_url(operations.UpdatePipelineYamlAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameYamlPutRequest, base_url, '/api/v1/workspaces/{workspace_name}/pipelines/{pipeline_name}/yaml', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)

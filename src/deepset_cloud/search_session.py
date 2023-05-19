@@ -30,6 +30,7 @@ class SearchSession:
         
         url = utils.generate_url(operations.CreateSearchSessionAPIV1WorkspacesWorkspaceNameSearchSessionsPostRequest, base_url, '/api/v1/workspaces/{workspace_name}/search_sessions', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)

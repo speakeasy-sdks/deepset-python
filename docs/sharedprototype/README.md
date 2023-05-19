@@ -24,16 +24,17 @@ s = deepset_cloud.DeepsetCloud()
 
 req = operations.CreatePrototypeAPIV1WorkspacesWorkspaceNameSharedPrototypesPostRequest(
     post_shared_prototype=shared.PostSharedPrototype(
-        description='voluptatem',
-        expiration_date=dateutil.parser.isoparse('2021-07-31T10:53:55.286Z'),
+        description='ut',
+        expiration_date=dateutil.parser.isoparse('2022-11-28T21:25:01.550Z'),
         pipeline_names=[
+            'expedita',
+            'magnam',
             'consequatur',
-            'esse',
         ],
         show_files=False,
         show_metadata_filters=False,
     ),
-    workspace_name='ipsam',
+    workspace_name='esse',
 )
 
 res = s.shared_prototype.create(req, operations.CreatePrototypeAPIV1WorkspacesWorkspaceNameSharedPrototypesPostSecurity(
@@ -57,8 +58,8 @@ from deepset_cloud.models import operations
 s = deepset_cloud.DeepsetCloud()
 
 req = operations.CreateExternalUserAPIV1WorkspacesWorkspaceNameSharedPrototypeUsersPostRequest(
-    existing_user_id='088e5186-2065-4e90-8f3b-1194b8abf603',
-    workspace_name='deserunt',
+    existing_user_id='5088e518-6206-45e9-84f3-b1194b8abf60',
+    workspace_name='amet',
 )
 
 res = s.shared_prototype.create_external_user(req, operations.CreateExternalUserAPIV1WorkspacesWorkspaceNameSharedPrototypeUsersPostSecurity(
@@ -82,8 +83,8 @@ from deepset_cloud.models import operations
 s = deepset_cloud.DeepsetCloud()
 
 req = operations.GetSharedPrototypeAPIV1WorkspacesWorkspaceNameSharedPrototypesSharedPrototypeIDGetRequest(
-    shared_prototype_id='79f9dfe0-ab7d-4a8a-90ce-187f86bc173d',
-    workspace_name='ea',
+    shared_prototype_id='a79f9dfe-0ab7-4da8-a50c-e187f86bc173',
+    workspace_name='assumenda',
 )
 
 res = s.shared_prototype.get(req, operations.GetSharedPrototypeAPIV1WorkspacesWorkspaceNameSharedPrototypesSharedPrototypeIDGetSecurity(
@@ -107,12 +108,12 @@ from deepset_cloud.models import operations
 s = deepset_cloud.DeepsetCloud()
 
 req = operations.ListPrototypesAPIV1WorkspacesWorkspaceNameSharedPrototypesGetRequest(
-    after='89eee952-6f8d-4986-a881-ead4f0e10125',
-    before='63f94e29-e973-4e92-aa57-a15be3e06080',
-    filter='molestiae',
-    limit=907733,
-    page_number=184362,
-    workspace_name='cum',
+    after='689eee95-26f8-4d98-ae88-1ead4f0e1012',
+    before='563f94e2-9e97-43e9-a2a5-7a15be3e0608',
+    filter='quae',
+    limit=474668,
+    page_number=907733,
+    workspace_name='qui',
 )
 
 res = s.shared_prototype.list(req, operations.ListPrototypesAPIV1WorkspacesWorkspaceNameSharedPrototypesGetSecurity(
@@ -136,8 +137,8 @@ from deepset_cloud.models import operations
 s = deepset_cloud.DeepsetCloud()
 
 req = operations.RevokeSharedPrototypeAPIV1WorkspacesWorkspaceNameSharedPrototypesSharedPrototypeIDDeleteRequest(
-    shared_prototype_id='6e3ab884-5f05-497a-a0ff-2a54a31e9476',
-    workspace_name='ut',
+    shared_prototype_id='b6e3ab88-45f0-4597-a60f-f2a54a31e947',
+    workspace_name='ex',
 )
 
 res = s.shared_prototype.revoke(req, operations.RevokeSharedPrototypeAPIV1WorkspacesWorkspaceNameSharedPrototypesSharedPrototypeIDDeleteSecurity(
@@ -162,12 +163,12 @@ s = deepset_cloud.DeepsetCloud()
 
 req = operations.EditSharedPrototypeAPIV1WorkspacesWorkspaceNameSharedPrototypesSharedPrototypeIDPatchRequest(
     patch_shared_prototype=shared.PatchSharedPrototype(
-        description='culpa',
+        description='ut',
         show_files=False,
         show_metadata_filters=False,
     ),
-    shared_prototype_id='3e865e79-56f9-4251-a5a9-da660ff57bfa',
-    workspace_name='laborum',
+    shared_prototype_id='a3e865e7-956f-4925-9a5a-9da660ff57bf',
+    workspace_name='officia',
 )
 
 res = s.shared_prototype.update(req, operations.EditSharedPrototypeAPIV1WorkspacesWorkspaceNameSharedPrototypesSharedPrototypeIDPatchSecurity(

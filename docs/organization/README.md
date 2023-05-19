@@ -43,7 +43,7 @@ req = operations.InviteUserToOrganizationAPIV1OrganizationOrganizationIDInvitati
         email='Stuart.Kautzer69@gmail.com',
         family_name='occaecati',
         given_name='minima',
-        role=shared.RolesToDBEnum.THREE,
+        role=shared.RolesToDB.THREE,
     ),
     organization_id='eligendi',
 )

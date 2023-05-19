@@ -14,7 +14,7 @@ class GetTokenAPIV1ModelRegistryTokensProviderGetSecurity:
     
     http_bearer: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
-class GetTokenAPIV1ModelRegistryTokensProviderGetProviderModelProviderEnum(str, Enum):
+class GetTokenAPIV1ModelRegistryTokensProviderGetProviderModelProvider(str, Enum):
     r"""The provider of the model registry"""
     HUGGINGFACE = 'huggingface'
     OPENAI = 'openai'
@@ -24,7 +24,7 @@ class GetTokenAPIV1ModelRegistryTokensProviderGetProviderModelProviderEnum(str, 
 @dataclasses.dataclass
 class GetTokenAPIV1ModelRegistryTokensProviderGetRequest:
     
-    provider: GetTokenAPIV1ModelRegistryTokensProviderGetProviderModelProviderEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'provider', 'style': 'simple', 'explode': False }})
+    provider: GetTokenAPIV1ModelRegistryTokensProviderGetProviderModelProvider = dataclasses.field(metadata={'path_param': { 'field_name': 'provider', 'style': 'simple', 'explode': False }})
     r"""The provider of the model registry"""
     
 

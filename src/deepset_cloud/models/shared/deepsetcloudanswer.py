@@ -8,7 +8,7 @@ from deepset_cloud import utils
 from enum import Enum
 from typing import Any, Optional
 
-class DeepsetCloudAnswerAnswerTypeEnum(str, Enum):
+class DeepsetCloudAnswerAnswerType(str, Enum):
     r"""Type of the answer."""
     GENERATIVE = 'generative'
     EXTRACTIVE = 'extractive'
@@ -20,7 +20,7 @@ class DeepsetCloudAnswerAnswerTypeEnum(str, Enum):
 class DeepsetCloudAnswer:
     
     answer: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('answer') }})
-    type: DeepsetCloudAnswerAnswerTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
+    type: DeepsetCloudAnswerAnswerType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
     r"""Type of the answer."""
     context: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('context'), 'exclude': lambda f: f is None }})
     r"""Context of the answer."""

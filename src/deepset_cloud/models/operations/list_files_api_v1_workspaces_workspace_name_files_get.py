@@ -14,12 +14,12 @@ class ListFilesAPIV1WorkspacesWorkspaceNameFilesGetSecurity:
     
     http_bearer: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
-class ListFilesAPIV1WorkspacesWorkspaceNameFilesGetFieldFieldEnum(str, Enum):
+class ListFilesAPIV1WorkspacesWorkspaceNameFilesGetFieldField(str, Enum):
     r"""The name of the entity you want to sort by."""
     CREATED_AT = 'created_at'
     NAME = 'name'
 
-class ListFilesAPIV1WorkspacesWorkspaceNameFilesGetOrderOrderEnum(str, Enum):
+class ListFilesAPIV1WorkspacesWorkspaceNameFilesGetOrderOrder(str, Enum):
     r"""Choose how you want to sort the results."""
     ASC = 'ASC'
     DESC = 'DESC'
@@ -36,7 +36,7 @@ class ListFilesAPIV1WorkspacesWorkspaceNameFilesGetRequest:
     r"""Enter a value if you want to see all files that are sorted after this value and a file ID defined in the 'after_file_id' parameter. This value must match the type of the field you want to sort by. You can only use this parameter in combination with the 'after_file_id' parameter."""
     content: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'content', 'style': 'form', 'explode': True }})
     r"""What file do you want to see? Enter its content."""
-    field: Optional[ListFilesAPIV1WorkspacesWorkspaceNameFilesGetFieldFieldEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'field', 'style': 'form', 'explode': True }})
+    field: Optional[ListFilesAPIV1WorkspacesWorkspaceNameFilesGetFieldField] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'field', 'style': 'form', 'explode': True }})
     r"""The name of the entity you want to sort by."""
     filter: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'filter', 'style': 'form', 'explode': True }})
     r"""The OData filter you want to use to in your query. It supports exact match and `AND` operations. For example, to filter for a metadata `category:news`, here's what the URL could look like: 'url = \\"https://api.cloud.deepset.ai/api/v1/workspaces/production/files?limit=10&filter=category eq 'news'\\"'. OData filters only work with cursor-based pagination (leave the `page_number` field blank to enable it).To learn more about the OData filter syntax, see: [Querying Data](https://www.odata.org/getting-started/basic-tutorial/#queryData)."""
@@ -54,7 +54,7 @@ class ListFilesAPIV1WorkspacesWorkspaceNameFilesGetRequest:
     """
     name: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'name', 'style': 'form', 'explode': True }})
     r"""What file do you want to see? Type its name."""
-    order: Optional[ListFilesAPIV1WorkspacesWorkspaceNameFilesGetOrderOrderEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'order', 'style': 'form', 'explode': True }})
+    order: Optional[ListFilesAPIV1WorkspacesWorkspaceNameFilesGetOrderOrder] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'order', 'style': 'form', 'explode': True }})
     r"""Choose how you want to sort the results."""
     page_number: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page_number', 'style': 'form', 'explode': True }})
     r"""Which page do you want to see? Type the number."""

@@ -7,7 +7,7 @@ from deepset_cloud import utils
 from enum import Enum
 from typing import Optional
 
-class AnswerNodeEvalRunMetricNodeTypeEnum(str, Enum):
+class AnswerNodeEvalRunMetricNodeType(str, Enum):
     r"""This node returns 'Answer' objects, not 'Document' objects."""
     ANSWER_NODE = 'answer_node'
 
@@ -18,7 +18,7 @@ class AnswerNodeEvalRunMetric:
     
     node_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('node_name') }})
     r"""The name of the evaluated pipeline node."""
-    node_type: AnswerNodeEvalRunMetricNodeTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('node_type') }})
+    node_type: AnswerNodeEvalRunMetricNodeType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('node_type') }})
     r"""This node returns 'Answer' objects, not 'Document' objects."""
     integrated_exact_match: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('integrated_exact_match'), 'exclude': lambda f: f is None }})
     r"""The number of exact matches when the node is evaluated in the integrated mode. For more information, see [Experiments and Metrics](https://docs.cloud.deepset.ai/docs/experiments-and-metrics)."""

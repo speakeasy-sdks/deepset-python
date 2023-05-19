@@ -13,7 +13,7 @@ class GetPipelineFilesAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameFilesGetS
     
     http_bearer: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
-class GetPipelineFilesAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameFilesGetStatusFileIndexingStatusQueryEnum(str, Enum):
+class GetPipelineFilesAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameFilesGetStatusFileIndexingStatusQuery(str, Enum):
     r"""An enumeration."""
     FAILED = 'FAILED'
     INDEXED_NO_DOCUMENTS = 'INDEXED_NO_DOCUMENTS'
@@ -26,7 +26,7 @@ class GetPipelineFilesAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameFilesGetR
     r"""The name of the pipeline whose files you want to display."""
     workspace_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'workspace_name', 'style': 'simple', 'explode': False }})
     r"""Type the name of the workspace."""
-    status: Optional[GetPipelineFilesAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameFilesGetStatusFileIndexingStatusQueryEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'status', 'style': 'form', 'explode': True }})
+    status: Optional[GetPipelineFilesAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameFilesGetStatusFileIndexingStatusQuery] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'status', 'style': 'form', 'explode': True }})
     r"""The status of the pipeline whose files you want to display."""
     
 

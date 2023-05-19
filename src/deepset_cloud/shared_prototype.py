@@ -35,6 +35,7 @@ class SharedPrototype:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
@@ -65,6 +66,7 @@ class SharedPrototype:
         url = utils.generate_url(operations.CreateExternalUserAPIV1WorkspacesWorkspaceNameSharedPrototypeUsersPostRequest, base_url, '/api/v1/workspaces/{workspace_name}/shared_prototype_users', request)
         headers = {}
         query_params = utils.get_query_params(operations.CreateExternalUserAPIV1WorkspacesWorkspaceNameSharedPrototypeUsersPostRequest, request)
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
@@ -96,6 +98,7 @@ class SharedPrototype:
         
         url = utils.generate_url(operations.GetSharedPrototypeAPIV1WorkspacesWorkspaceNameSharedPrototypesSharedPrototypeIDGetRequest, base_url, '/api/v1/workspaces/{workspace_name}/shared_prototypes/{shared_prototype_id}', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
@@ -128,6 +131,7 @@ class SharedPrototype:
         url = utils.generate_url(operations.ListPrototypesAPIV1WorkspacesWorkspaceNameSharedPrototypesGetRequest, base_url, '/api/v1/workspaces/{workspace_name}/shared_prototypes', request)
         headers = {}
         query_params = utils.get_query_params(operations.ListPrototypesAPIV1WorkspacesWorkspaceNameSharedPrototypesGetRequest, request)
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
@@ -157,6 +161,7 @@ class SharedPrototype:
         
         url = utils.generate_url(operations.RevokeSharedPrototypeAPIV1WorkspacesWorkspaceNameSharedPrototypesSharedPrototypeIDDeleteRequest, base_url, '/api/v1/workspaces/{workspace_name}/shared_prototypes/{shared_prototype_id}', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
@@ -193,6 +198,7 @@ class SharedPrototype:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)

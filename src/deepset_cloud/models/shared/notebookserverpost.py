@@ -7,7 +7,7 @@ from deepset_cloud import utils
 from enum import Enum
 from typing import Optional
 
-class NotebookServerPostServerTypeEnum(str, Enum):
+class NotebookServerPostServerType(str, Enum):
     r"""An enumeration."""
     CPU_SERVER = 'cpu-server'
     GPU_SERVER = 'gpu-server'
@@ -18,6 +18,6 @@ class NotebookServerPostServerTypeEnum(str, Enum):
 @dataclasses.dataclass
 class NotebookServerPost:
     
-    server_type: Optional[NotebookServerPostServerTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('server_type'), 'exclude': lambda f: f is None }})
+    server_type: Optional[NotebookServerPostServerType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('server_type'), 'exclude': lambda f: f is None }})
     r"""Use 'gpu-server' to start a GPU instance, use 'cpu-server' to start a CPU instance."""
     

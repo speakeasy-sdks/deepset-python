@@ -22,7 +22,7 @@ class SessionOauthUser:
     r"""Given name of a user"""
     user_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('user_id') }})
     
-class SessionFileWriteModeEnumEnum(str, Enum):
+class SessionFileWriteModeEnum(str, Enum):
     r"""An enumeration."""
     KEEP = 'KEEP'
     OVERWRITE = 'OVERWRITE'
@@ -41,6 +41,6 @@ class Session:
     r"""The time when the session expires."""
     session_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('session_id'), 'exclude': lambda f: f is None }})
     r"""Unique identifier of a session."""
-    write_mode: Optional[SessionFileWriteModeEnumEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('write_mode'), 'exclude': lambda f: f is None }})
+    write_mode: Optional[SessionFileWriteModeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('write_mode'), 'exclude': lambda f: f is None }})
     r"""Determines how to handle files that already exist. You can KEEP the existing file, OVERWRITE it, or FAIL to ingest if a file with the same name is already in your workspace."""
     

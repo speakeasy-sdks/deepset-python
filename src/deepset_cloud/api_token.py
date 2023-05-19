@@ -35,6 +35,7 @@ class APIToken:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
@@ -65,6 +66,7 @@ class APIToken:
         url = base_url.removesuffix('/') + '/api/v1/token'
         headers = {}
         query_params = utils.get_query_params(operations.ListTokensAPIV1TokenGetRequest, request)
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)
@@ -94,6 +96,7 @@ class APIToken:
         
         url = utils.generate_url(operations.RemoveTokenAPIV1TokenAPITokenIDDeleteRequest, base_url, '/api/v1/token/{api_token_id}', request)
         headers = {}
+        headers['Accept'] = 'application/json;q=1, application/json;q=0'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = utils.configure_security_client(self._client, security)

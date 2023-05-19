@@ -11,12 +11,12 @@ from enum import Enum
 from marshmallow import fields
 from typing import Any, Optional
 
-class DocumentEvalNodePredictionEvaluationModeEnum(str, Enum):
+class DocumentEvalNodePredictionEvaluationMode(str, Enum):
     r"""An enumeration."""
     ISOLATED = 'ISOLATED'
     INTEGRATED = 'INTEGRATED'
 
-class DocumentEvalNodePredictionPredictionTypeEnum(str, Enum):
+class DocumentEvalNodePredictionPredictionType(str, Enum):
     r"""This node returns document objects during the prediction."""
     DOCUMENT = 'document'
 
@@ -35,7 +35,7 @@ class DocumentEvalNodePrediction:
     r"""The maximum context similarity of all predictions for the given label."""
     created_at: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_at'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
     r"""The date and time when the prediction was created."""
-    eval_mode: DocumentEvalNodePredictionEvaluationModeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('eval_mode') }})
+    eval_mode: DocumentEvalNodePredictionEvaluationMode = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('eval_mode') }})
     r"""Whether the node was evaluated as part of the entire pipeline (integrated) or on its own (isolated)."""
     eval_node_result_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('eval_node_result_id') }})
     r"""ID for the results of a node which this prediction belongs to."""
@@ -57,7 +57,7 @@ class DocumentEvalNodePrediction:
     r"""The labels associated with this prediction including label specific prediction data such as the f1 score for this specific label."""
     prediction_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('prediction_id') }})
     r"""Unique identifier of this eval prediction."""
-    prediction_type: DocumentEvalNodePredictionPredictionTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('prediction_type') }})
+    prediction_type: DocumentEvalNodePredictionPredictionType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('prediction_type') }})
     r"""This node returns document objects during the prediction."""
     query: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('query') }})
     r"""The text which was used to evaluate this particular node's query behavior."""

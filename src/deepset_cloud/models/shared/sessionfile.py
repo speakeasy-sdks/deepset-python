@@ -7,13 +7,13 @@ from deepset_cloud import utils
 from enum import Enum
 from typing import Optional
 
-class SessionFileFileIngestionStatusEnumEnum(str, Enum):
+class SessionFileFileIngestionStatusEnum(str, Enum):
     r"""An enumeration."""
     PENDING = 'PENDING'
     FAILED = 'FAILED'
     FINISHED = 'FINISHED'
 
-class SessionFileFileIngestionStatusReasonEnumEnum(str, Enum):
+class SessionFileFileIngestionStatusReasonEnum(str, Enum):
     r"""An enumeration."""
     EMPTY_FILE = 'EMPTY_FILE'
     FILE_NOT_FOUND = 'FILE_NOT_FOUND'
@@ -26,12 +26,12 @@ class SessionFileFileIngestionStatusReasonEnumEnum(str, Enum):
 @dataclasses.dataclass
 class SessionFile:
     
-    ingestion_status: SessionFileFileIngestionStatusEnumEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ingestion_status') }})
+    ingestion_status: SessionFileFileIngestionStatusEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ingestion_status') }})
     r"""The ingestion status of the ingested file."""
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
     r"""The name of the ingested file."""
     file_ingestion_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('file_ingestion_id'), 'exclude': lambda f: f is None }})
     r"""The ID of the ingested file."""
-    ingestion_status_reason: Optional[SessionFileFileIngestionStatusReasonEnumEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ingestion_status_reason'), 'exclude': lambda f: f is None }})
+    ingestion_status_reason: Optional[SessionFileFileIngestionStatusReasonEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ingestion_status_reason'), 'exclude': lambda f: f is None }})
     r"""The ingestion status message that explains the ingestion status. This is only available for files that failed to ingest."""
     

@@ -17,7 +17,7 @@ from deepset_cloud.models import operations
 s = deepset_cloud.DeepsetCloud()
 
 req = operations.CreateSearchSessionAPIV1WorkspacesWorkspaceNameSearchSessionsPostRequest(
-    workspace_name='fugiat',
+    workspace_name='fugit',
 )
 
 res = s.search_session.create(req, operations.CreateSearchSessionAPIV1WorkspacesWorkspaceNameSearchSessionsPostSecurity(

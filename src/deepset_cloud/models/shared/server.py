@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import serverstate_enum as shared_serverstate_enum
-from ..shared import servertype_enum as shared_servertype_enum
+from ..shared import serverstate as shared_serverstate
+from ..shared import servertype as shared_servertype
 from dataclasses_json import Undefined, dataclass_json
 from deepset_cloud import utils
 
@@ -13,8 +13,8 @@ from deepset_cloud import utils
 class Server:
     r"""Successful Response"""
     
-    server_type: shared_servertype_enum.ServerTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('server_type') }})
+    server_type: shared_servertype.ServerType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('server_type') }})
     r"""An enumeration."""
-    state: shared_serverstate_enum.ServerStateEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('state') }})
+    state: shared_serverstate.ServerState = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('state') }})
     r"""An enumeration."""
     

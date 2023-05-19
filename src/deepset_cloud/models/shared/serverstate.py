@@ -3,7 +3,7 @@
 from __future__ import annotations
 from enum import Enum
 
-class ServerStateEnum(str, Enum):
+class ServerState(str, Enum):
     r"""An enumeration."""
     STARTING = 'STARTING'
     UP = 'UP'

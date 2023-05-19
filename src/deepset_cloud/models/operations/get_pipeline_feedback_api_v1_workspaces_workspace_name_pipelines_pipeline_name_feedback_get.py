@@ -13,7 +13,7 @@ class GetPipelineFeedbackAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameFeedba
     
     http_bearer: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
-class GetPipelineFeedbackAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameFeedbackGetFieldFieldEnum(str, Enum):
+class GetPipelineFeedbackAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameFeedbackGetFieldField(str, Enum):
     r"""The name of the field you want to sort by."""
     CREATED_AT = 'created_at'
     SEARCH_RESULT_RANK = 'search_result/rank'
@@ -21,7 +21,7 @@ class GetPipelineFeedbackAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameFeedba
     SEARCH_RESULT_SEARCH_CREATED_AT = 'search_result/search/created_at'
     SEARCH_RESULT_SEARCH_QUERY = 'search_result/search/query'
 
-class GetPipelineFeedbackAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameFeedbackGetOrderOrderEnum(str, Enum):
+class GetPipelineFeedbackAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameFeedbackGetOrderOrder(str, Enum):
     r"""Choose how you want to sort the results."""
     ASC = 'ASC'
     DESC = 'DESC'
@@ -34,19 +34,17 @@ class GetPipelineFeedbackAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameFeedba
     r"""The name of the pipeline whose files you want to display."""
     workspace_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'workspace_name', 'style': 'simple', 'explode': False }})
     r"""Type the name of the workspace."""
-    accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'accept', 'style': 'simple', 'explode': False }})
-    r"""Type 'text/csv' to download the feedback as a CSV file or 'application/json' to get the feedback as JSONs."""
     after: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'after', 'style': 'form', 'explode': True }})
     r"""Enter an ID if you want to see all entries after this ID."""
     before: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'before', 'style': 'form', 'explode': True }})
     r"""Enter an ID if you want to see all entries before this ID."""
-    field: Optional[GetPipelineFeedbackAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameFeedbackGetFieldFieldEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'field', 'style': 'form', 'explode': True }})
+    field: Optional[GetPipelineFeedbackAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameFeedbackGetFieldField] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'field', 'style': 'form', 'explode': True }})
     r"""The name of the field you want to sort by."""
     filter: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'filter', 'style': 'form', 'explode': True }})
     r"""The OData filter you want to use to in your query. It supports exact match and `AND` operations. For example, to filter for a metadata `category:news`, here's what the URL could look like: 'url = \\"https://api.cloud.deepset.ai/api/v1/workspaces/production/files?limit=10&filter=category eq 'news'\\"'. OData filters only work with cursor-based pagination (leave the `page_number` field blank to enable it).To learn more about the OData filter syntax, see: [Querying Data](https://www.odata.org/getting-started/basic-tutorial/#queryData)."""
     limit: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
     r"""How many entries do you want to display? Leaving this field empty keeps the default and max 10 results are returned."""
-    order: Optional[GetPipelineFeedbackAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameFeedbackGetOrderOrderEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'order', 'style': 'form', 'explode': True }})
+    order: Optional[GetPipelineFeedbackAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameFeedbackGetOrderOrder] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'order', 'style': 'form', 'explode': True }})
     r"""Choose how you want to sort the results."""
     page_number: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page_number', 'style': 'form', 'explode': True }})
     r"""Which page do you want to see? Type the number."""

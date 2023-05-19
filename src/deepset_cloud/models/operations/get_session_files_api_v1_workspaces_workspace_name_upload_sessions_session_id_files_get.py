@@ -14,7 +14,7 @@ class GetSessionFilesAPIV1WorkspacesWorkspaceNameUploadSessionsSessionIDFilesGet
     
     http_bearer: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
-class GetSessionFilesAPIV1WorkspacesWorkspaceNameUploadSessionsSessionIDFilesGetIngestionStatusFileIngestionStatusEnumEnum(str, Enum):
+class GetSessionFilesAPIV1WorkspacesWorkspaceNameUploadSessionsSessionIDFilesGetIngestionStatusFileIngestionStatusEnum(str, Enum):
     r"""An enumeration."""
     PENDING = 'PENDING'
     FAILED = 'FAILED'
@@ -32,7 +32,7 @@ class GetSessionFilesAPIV1WorkspacesWorkspaceNameUploadSessionsSessionIDFilesGet
     r"""Enter an ID if you want to see all entries after this ID."""
     before: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'before', 'style': 'form', 'explode': True }})
     r"""Enter an ID if you want to see all entries before this ID."""
-    ingestion_status: Optional[GetSessionFilesAPIV1WorkspacesWorkspaceNameUploadSessionsSessionIDFilesGetIngestionStatusFileIngestionStatusEnumEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'ingestion_status', 'style': 'form', 'explode': True }})
+    ingestion_status: Optional[GetSessionFilesAPIV1WorkspacesWorkspaceNameUploadSessionsSessionIDFilesGetIngestionStatusFileIngestionStatusEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'ingestion_status', 'style': 'form', 'explode': True }})
     r"""Use this option to filter for files that are still being ingested or that were already ingested."""
     limit: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
     r"""How many entries do you want to display? Leaving this field empty keeps the default and max 10 results are returned."""

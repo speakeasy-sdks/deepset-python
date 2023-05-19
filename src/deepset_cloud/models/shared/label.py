@@ -7,7 +7,7 @@ from deepset_cloud import utils
 from enum import Enum
 from typing import Any, Optional
 
-class LabelLabelStateAsStrEnum(str, Enum):
+class LabelLabelStateAsStr(str, Enum):
     r"""An enumeration."""
     MATCHING_NOT_STARTED = 'MATCHING_NOT_STARTED'
     MATCHED = 'MATCHED'
@@ -23,7 +23,7 @@ class Label:
     r"""Unique identifier of a label"""
     meta: dict[str, Any] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('meta') }})
     query: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('query') }})
-    state: LabelLabelStateAsStrEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('state') }})
+    state: LabelLabelStateAsStr = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('state') }})
     r"""Represents the current state for matching a file."""
     answer: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('answer'), 'exclude': lambda f: f is None }})
     answer_end: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('answer_end'), 'exclude': lambda f: f is None }})

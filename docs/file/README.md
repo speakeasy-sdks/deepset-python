@@ -26,6 +26,7 @@ s = deepset_cloud.DeepsetCloud()
 req = operations.DeleteFilesAPIV1WorkspacesWorkspaceNameFilesDeleteRequest(
     request_body=operations.DeleteFilesAPIV1WorkspacesWorkspaceNameFilesDeleteFileNames(
         names=[
+            'nihil',
             'sit',
             'expedita',
         ],
@@ -157,13 +158,13 @@ req = operations.ListFilesAPIV1WorkspacesWorkspaceNameFilesGetRequest(
     after_file_id='5fce6c55-6146-4c3e-a50f-b008c42e141a',
     after_value='laborum',
     content='placeat',
-    field=operations.ListFilesAPIV1WorkspacesWorkspaceNameFilesGetFieldFieldEnum.CREATED_AT,
+    field=operations.ListFilesAPIV1WorkspacesWorkspaceNameFilesGetFieldField.CREATED_AT,
     filter='eum',
     limit=420539,
     meta_key='nobis',
     meta_value='quas',
     name='Drew Hoeger I',
-    order=operations.ListFilesAPIV1WorkspacesWorkspaceNameFilesGetOrderOrderEnum.ASC,
+    order=operations.ListFilesAPIV1WorkspacesWorkspaceNameFilesGetOrderOrder.ASC,
     page_number=131482,
     workspace_name='provident',
 )
@@ -228,7 +229,7 @@ req = operations.UploadFileAPIV1WorkspacesWorkspaceNameFilesPostRequest(
     ),
     file_name='quo',
     workspace_name='esse',
-    write_mode=operations.UploadFileAPIV1WorkspacesWorkspaceNameFilesPostWriteModeFileWriteModeEnumEnum.FAIL,
+    write_mode=operations.UploadFileAPIV1WorkspacesWorkspaceNameFilesPostWriteModeFileWriteModeEnum.FAIL,
 )
 
 res = s.file.upload(req, operations.UploadFileAPIV1WorkspacesWorkspaceNameFilesPostSecurity(

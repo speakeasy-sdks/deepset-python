@@ -25,7 +25,7 @@ from deepset_cloud.models import operations
 s = deepset_cloud.DeepsetCloud()
 
 req = operations.GetTokenAPIV1ModelRegistryTokensProviderGetRequest(
-    provider=operations.GetTokenAPIV1ModelRegistryTokensProviderGetProviderModelProviderEnum.HUGGINGFACE,
+    provider=operations.GetTokenAPIV1ModelRegistryTokensProviderGetProviderModelProvider.HUGGINGFACE,
 )
 
 res = s.model_registry_token.get(req, operations.GetTokenAPIV1ModelRegistryTokensProviderGetSecurity(
@@ -93,7 +93,7 @@ from deepset_cloud.models import operations
 s = deepset_cloud.DeepsetCloud()
 
 req = operations.RemoveTokenAPIV1ModelRegistryTokensProviderDeleteRequest(
-    provider=operations.RemoveTokenAPIV1ModelRegistryTokensProviderDeleteProviderModelProviderEnum.COHERE,
+    provider=operations.RemoveTokenAPIV1ModelRegistryTokensProviderDeleteProviderModelProvider.COHERE,
 )
 
 res = s.model_registry_token.remove(req, operations.RemoveTokenAPIV1ModelRegistryTokensProviderDeleteSecurity(
@@ -143,7 +143,7 @@ req = operations.SaveTokenAPIV1ModelRegistryTokensProviderPostRequest(
     create_model_registry_token=shared.CreateModelRegistryToken(
         token='quod',
     ),
-    provider=operations.SaveTokenAPIV1ModelRegistryTokensProviderPostProviderModelProviderEnum.OPENAI,
+    provider=operations.SaveTokenAPIV1ModelRegistryTokensProviderPostProviderModelProvider.OPENAI,
 )
 
 res = s.model_registry_token.save(req, operations.SaveTokenAPIV1ModelRegistryTokensProviderPostSecurity(
@@ -196,7 +196,7 @@ req = operations.UpdateTokenAPIV1ModelRegistryTokensProviderPutRequest(
     update_model_registry_token=shared.UpdateModelRegistryToken(
         token='nihil',
     ),
-    provider=operations.UpdateTokenAPIV1ModelRegistryTokensProviderPutProviderModelProviderEnum.OPENAI,
+    provider=operations.UpdateTokenAPIV1ModelRegistryTokensProviderPutProviderModelProvider.OPENAI,
 )
 
 res = s.model_registry_token.update(req, operations.UpdateTokenAPIV1ModelRegistryTokensProviderPutSecurity(

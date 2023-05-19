@@ -167,11 +167,11 @@ src/deepset_cloud/models/shared/updatemodelregistrytoken.py
 src/deepset_cloud/models/shared/modelmeta.py
 src/deepset_cloud/models/shared/notebook.py
 src/deepset_cloud/models/shared/server.py
-src/deepset_cloud/models/shared/serverstate_enum.py
-src/deepset_cloud/models/shared/servertype_enum.py
+src/deepset_cloud/models/shared/serverstate.py
+src/deepset_cloud/models/shared/servertype.py
 src/deepset_cloud/models/shared/notebookserverpost.py
 src/deepset_cloud/models/shared/organizationname.py
-src/deepset_cloud/models/shared/rolestodb_enum.py
+src/deepset_cloud/models/shared/rolestodb.py
 src/deepset_cloud/models/shared/postpipelinefeedback.py
 src/deepset_cloud/models/shared/pipelinename.py
 src/deepset_cloud/models/shared/pipelineindexing.py

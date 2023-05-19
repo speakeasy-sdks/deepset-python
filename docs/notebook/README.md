@@ -69,7 +69,7 @@ from deepset_cloud.models import operations, shared
 s = deepset_cloud.DeepsetCloud()
 
 req = shared.NotebookServerPost(
-    server_type=shared.NotebookServerPostServerTypeEnum.GPU_SERVER,
+    server_type=shared.NotebookServerPostServerType.GPU_SERVER,
 )
 
 res = s.notebook.start(req, operations.StartJupyterLabAPIV1NotebookServerPostSecurity(
