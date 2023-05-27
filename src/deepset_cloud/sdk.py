@@ -47,8 +47,8 @@ class DeepsetCloud:
     _security_client: requests_http.Session
     _server_url: str = SERVERS[0]
     _language: str = "python"
-    _sdk_version: str = "1.6.0"
-    _gen_version: str = "2.32.2"
+    _sdk_version: str = "1.6.1"
+    _gen_version: str = "2.32.7"
 
     def __init__(self,
                  server_url: str = None,
