@@ -15,6 +15,7 @@ src/deepset_cloud/upload_session.py
 src/deepset_cloud/user.py
 src/deepset_cloud/workspace.py
 src/deepset_cloud/sdk.py
+.gitignore
 pylintrc
 setup.py
 src/deepset_cloud/__init__.py
