@@ -1,3 +1,4 @@
+src/deepset_cloud/sdkconfiguration.py
 src/deepset_cloud/api_token.py
 src/deepset_cloud/document_store.py
 src/deepset_cloud/eval_run.py
