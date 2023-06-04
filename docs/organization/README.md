@@ -19,7 +19,7 @@ s = deepset_cloud.DeepsetCloud()
 
 
 res = s.organization.get(operations.GetOrganizationAPIV1OrganizationGetSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.organization_name is not None:
@@ -43,13 +43,13 @@ req = operations.InviteUserToOrganizationAPIV1OrganizationOrganizationIDInvitati
         email='Stuart.Kautzer69@gmail.com',
         family_name='occaecati',
         given_name='minima',
-        role=shared.RolesToDBEnum.THREE,
+        role=shared.RolesToDB.THREE,
     ),
     organization_id='eligendi',
 )
 
 res = s.organization.invite(req, operations.InviteUserToOrganizationAPIV1OrganizationOrganizationIDInvitationPostSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.invite_user_to_organization_api_v1_organization_organization_id_invitation_post_201_application_json_any is not None:

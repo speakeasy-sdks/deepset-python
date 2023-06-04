@@ -22,7 +22,7 @@ req = operations.ListModelAPIV1ModelGetRequest(
 )
 
 res = s.models.list(req, operations.ListModelAPIV1ModelGetSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.model_metas is not None:

@@ -26,6 +26,7 @@ s = deepset_cloud.DeepsetCloud()
 req = operations.DeleteFilesAPIV1WorkspacesWorkspaceNameFilesDeleteRequest(
     request_body=operations.DeleteFilesAPIV1WorkspacesWorkspaceNameFilesDeleteFileNames(
         names=[
+            'nihil',
             'sit',
             'expedita',
         ],
@@ -34,7 +35,7 @@ req = operations.DeleteFilesAPIV1WorkspacesWorkspaceNameFilesDeleteRequest(
 )
 
 res = s.file.delete_multi(req, operations.DeleteFilesAPIV1WorkspacesWorkspaceNameFilesDeleteSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.delete_files_api_v1_workspaces_workspace_name_files_delete_200_application_json_any is not None:
@@ -59,7 +60,7 @@ req = operations.DeleteFileAPIV1WorkspacesWorkspaceNameFilesFileIDDeleteRequest(
 )
 
 res = s.file.delete_single(req, operations.DeleteFileAPIV1WorkspacesWorkspaceNameFilesFileIDDeleteSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.delete_file_api_v1_workspaces_workspace_name_files_file_id_delete_200_application_json_any is not None:
@@ -84,7 +85,7 @@ req = operations.GetFileAPIV1WorkspacesWorkspaceNameFilesFileIDGetRequest(
 )
 
 res = s.file.get(req, operations.GetFileAPIV1WorkspacesWorkspaceNameFilesFileIDGetSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.get_file_api_v1_workspaces_workspace_name_files_file_id_get_200_application_json_any is not None:
@@ -109,7 +110,7 @@ req = operations.GetDocumentAPIV1WorkspacesWorkspaceNameFilesFileIDDocumentsGetR
 )
 
 res = s.file.get_document(req, operations.GetDocumentAPIV1WorkspacesWorkspaceNameFilesFileIDDocumentsGetSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.documents is not None:
@@ -134,7 +135,7 @@ req = operations.GetFileMetaAPIV1WorkspacesWorkspaceNameFilesFileIDMetaGetReques
 )
 
 res = s.file.get_meta_data(req, operations.GetFileMetaAPIV1WorkspacesWorkspaceNameFilesFileIDMetaGetSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.response_get_file_meta_api_v1_workspaces_workspace_name_files_file_id_meta_get is not None:
@@ -157,19 +158,19 @@ req = operations.ListFilesAPIV1WorkspacesWorkspaceNameFilesGetRequest(
     after_file_id='5fce6c55-6146-4c3e-a50f-b008c42e141a',
     after_value='laborum',
     content='placeat',
-    field=operations.ListFilesAPIV1WorkspacesWorkspaceNameFilesGetFieldFieldEnum.CREATED_AT,
+    field=operations.ListFilesAPIV1WorkspacesWorkspaceNameFilesGetFieldField.CREATED_AT,
     filter='eum',
     limit=420539,
     meta_key='nobis',
     meta_value='quas',
     name='Drew Hoeger I',
-    order=operations.ListFilesAPIV1WorkspacesWorkspaceNameFilesGetOrderOrderEnum.ASC,
+    order=operations.ListFilesAPIV1WorkspacesWorkspaceNameFilesGetOrderOrder.ASC,
     page_number=131482,
     workspace_name='provident',
 )
 
 res = s.file.list(req, operations.ListFilesAPIV1WorkspacesWorkspaceNameFilesGetSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.file_pagination is not None:
@@ -198,7 +199,7 @@ req = operations.UpdateFileMetaAPIV1WorkspacesWorkspaceNameFilesFileIDMetaPutReq
 )
 
 res = s.file.update_meta_data(req, operations.UpdateFileMetaAPIV1WorkspacesWorkspaceNameFilesFileIDMetaPutSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.update_file_meta_api_v1_workspaces_workspace_name_files_file_id_meta_put_200_application_json_any is not None:
@@ -228,11 +229,11 @@ req = operations.UploadFileAPIV1WorkspacesWorkspaceNameFilesPostRequest(
     ),
     file_name='quo',
     workspace_name='esse',
-    write_mode=operations.UploadFileAPIV1WorkspacesWorkspaceNameFilesPostWriteModeFileWriteModeEnumEnum.FAIL,
+    write_mode=operations.UploadFileAPIV1WorkspacesWorkspaceNameFilesPostWriteModeFileWriteModeEnum.FAIL,
 )
 
 res = s.file.upload(req, operations.UploadFileAPIV1WorkspacesWorkspaceNameFilesPostSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.response_upload_file_api_v1_workspaces_workspace_name_files_post is not None:

@@ -17,11 +17,11 @@ from deepset_cloud.models import operations
 s = deepset_cloud.DeepsetCloud()
 
 req = operations.CreateSearchSessionAPIV1WorkspacesWorkspaceNameSearchSessionsPostRequest(
-    workspace_name='fugiat',
+    workspace_name='fugit',
 )
 
 res = s.search_session.create(req, operations.CreateSearchSessionAPIV1WorkspacesWorkspaceNameSearchSessionsPostSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.search_session_post_response is not None:

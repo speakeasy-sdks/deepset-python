@@ -42,7 +42,7 @@ req = operations.CreateEvalRunAPIV1WorkspacesWorkspaceNameEvalRunsPostRequest(
 )
 
 res = s.eval_run.create_eval_run(req, operations.CreateEvalRunAPIV1WorkspacesWorkspaceNameEvalRunsPostSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.eval_run_create_response is not None:
@@ -69,7 +69,7 @@ req = operations.CreateTagAPIV1WorkspacesWorkspaceNameTagsPostRequest(
 )
 
 res = s.eval_run.create_tag(req, operations.CreateTagAPIV1WorkspacesWorkspaceNameTagsPostSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.create_tag_response is not None:
@@ -94,7 +94,7 @@ req = operations.DeleteEvalRunAPIV1WorkspacesWorkspaceNameEvalRunsEvalRunNameDel
 )
 
 res = s.eval_run.delete(req, operations.DeleteEvalRunAPIV1WorkspacesWorkspaceNameEvalRunsEvalRunNameDeleteSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.status_code == 200:
@@ -119,7 +119,7 @@ req = operations.DeleteTagAPIV1WorkspacesWorkspaceNameTagsTagNameDeleteRequest(
 )
 
 res = s.eval_run.delete_tag(req, operations.DeleteTagAPIV1WorkspacesWorkspaceNameTagsTagNameDeleteSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.status_code == 200:
@@ -144,7 +144,7 @@ req = operations.GetEvalRunAPIV1WorkspacesWorkspaceNameEvalRunsEvalRunNameGetReq
 )
 
 res = s.eval_run.get(req, operations.GetEvalRunAPIV1WorkspacesWorkspaceNameEvalRunsEvalRunNameGetSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.single_eval_run_response is not None:
@@ -164,22 +164,21 @@ from deepset_cloud.models import operations
 s = deepset_cloud.DeepsetCloud()
 
 req = operations.GetNodeEvalPredictionsAPIV1WorkspacesWorkspaceNameEvalRunsEvalRunNameNodesNodeNamePredictionsGetRequest(
-    accept='maiores',
-    after='b14cd66a-e395-4efb-9ba8-8f3a66997074',
-    before='ba4469b6-e214-4195-9890-afa563e2516f',
-    eval_run_name='debitis',
-    field=operations.GetNodeEvalPredictionsAPIV1WorkspacesWorkspaceNameEvalRunsEvalRunNameNodesNodeNamePredictionsGetFieldFieldEnum.RANK,
-    filter='maxime',
-    limit=537023,
-    node_name='facilis',
-    order=operations.GetNodeEvalPredictionsAPIV1WorkspacesWorkspaceNameEvalRunsEvalRunNameNodesNodeNamePredictionsGetOrderOrderEnum.ASC,
-    page_number=100226,
+    after='fb14cd66-ae39-45ef-b9ba-88f3a6699707',
+    before='4ba4469b-6e21-4419-9989-0afa563e2516',
+    eval_run_name='doloribus',
+    field=operations.GetNodeEvalPredictionsAPIV1WorkspacesWorkspaceNameEvalRunsEvalRunNameNodesNodeNamePredictionsGetFieldField.ANSWER,
+    filter='eius',
+    limit=806194,
+    node_name='deleniti',
+    order=operations.GetNodeEvalPredictionsAPIV1WorkspacesWorkspaceNameEvalRunsEvalRunNameNodesNodeNamePredictionsGetOrderOrder.DESC,
+    page_number=447926,
     select='architecto',
-    workspace_name='repudiandae',
+    workspace_name='architecto',
 )
 
 res = s.eval_run.get_node_eval_predictions(req, operations.GetNodeEvalPredictionsAPIV1WorkspacesWorkspaceNameEvalRunsEvalRunNameNodesNodeNamePredictionsGetSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.response_200_get_node_eval_predictions_api_v1_workspaces_workspace_name_eval_runs_eval_run_name_nodes_node_name_predictions_get is not None:
@@ -199,19 +198,19 @@ from deepset_cloud.models import operations
 s = deepset_cloud.DeepsetCloud()
 
 req = operations.ListEvalRunsRequest(
-    after='5b7fd2ed-0289-421c-9dc6-92601fb576b0',
-    before='d5f0d30c-5fbb-4258-b053-202c73d5fe9b',
-    field=operations.FieldEnum.INTEGRATED_MEAN_RECIPROCAL_RANK,
-    filter='voluptatem',
-    limit=783645,
-    order=operations.OrderEnum.ASC,
-    page_number=500026,
-    select='error',
-    workspace_name='eaque',
+    after='e5b7fd2e-d028-4921-8ddc-692601fb576b',
+    before='0d5f0d30-c5fb-4b25-8705-3202c73d5fe9',
+    field=operations.Field.INTEGRATED_MEAN_AVERAGE_PRECISION,
+    filter='perspiciatis',
+    limit=31838,
+    order=operations.Order.DESC,
+    page_number=164694,
+    select='blanditiis',
+    workspace_name='error',
 )
 
 res = s.eval_run.list(req, operations.ListEvalRunsSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.eval_runs_response is not None:
@@ -231,12 +230,12 @@ from deepset_cloud.models import operations
 s = deepset_cloud.DeepsetCloud()
 
 req = operations.GetTagsAPIV1WorkspacesWorkspaceNameTagsGetRequest(
-    filter='occaecati',
-    workspace_name='rerum',
+    filter='eaque',
+    workspace_name='occaecati',
 )
 
 res = s.eval_run.list_tags(req, operations.GetTagsAPIV1WorkspacesWorkspaceNameTagsGetSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.get_tags is not None:
@@ -256,12 +255,12 @@ from deepset_cloud.models import operations
 s = deepset_cloud.DeepsetCloud()
 
 req = operations.StartEvalRunAPIV1WorkspacesWorkspaceNameEvalRunsEvalRunNameStartPostRequest(
-    eval_run_name='adipisci',
-    workspace_name='asperiores',
+    eval_run_name='rerum',
+    workspace_name='adipisci',
 )
 
 res = s.eval_run.start(req, operations.StartEvalRunAPIV1WorkspacesWorkspaceNameEvalRunsEvalRunNameStartPostSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.status_code == 200:
@@ -282,21 +281,21 @@ s = deepset_cloud.DeepsetCloud()
 
 req = operations.EditEvalRunAPIV1WorkspacesWorkspaceNameEvalRunsEvalRunNamePatchRequest(
     eval_run_patch=shared.EvalRunPatch(
-        comment='earum',
-        evaluation_set_name='modi',
-        pipeline_name='iste',
+        comment='asperiores',
+        evaluation_set_name='earum',
+        pipeline_name='modi',
         tags=[
+            'dolorum',
             'deleniti',
             'pariatur',
-            'provident',
         ],
     ),
-    eval_run_name='nobis',
-    workspace_name='libero',
+    eval_run_name='provident',
+    workspace_name='nobis',
 )
 
 res = s.eval_run.update(req, operations.EditEvalRunAPIV1WorkspacesWorkspaceNameEvalRunsEvalRunNamePatchSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.eval_run_create_response is not None:
@@ -317,14 +316,14 @@ s = deepset_cloud.DeepsetCloud()
 
 req = operations.UpdateTagAPIV1WorkspacesWorkspaceNameTagsTagNamePatchRequest(
     request_body=operations.UpdateTagAPIV1WorkspacesWorkspaceNameTagsTagNamePatchUpdateTag(
-        name='Alex Luettgen',
+        name='Toby Hahn',
     ),
     tag_name='dolorem',
-    workspace_name='dolor',
+    workspace_name='dolorem',
 )
 
 res = s.eval_run.update_tag(req, operations.UpdateTagAPIV1WorkspacesWorkspaceNameTagsTagNamePatchSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.status_code == 200:

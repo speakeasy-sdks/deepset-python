@@ -23,11 +23,11 @@ from deepset_cloud.models import operations, shared
 s = deepset_cloud.DeepsetCloud()
 
 req = shared.WorkspaceName(
-    name='Margarita Jacobson',
+    name='Tina Moore',
 )
 
 res = s.workspace.create(req, operations.CreateWorkspaceAPIV1WorkspacesPostSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.create_workspace_api_v1_workspaces_post_201_application_json_any is not None:
@@ -47,11 +47,11 @@ from deepset_cloud.models import operations
 s = deepset_cloud.DeepsetCloud()
 
 req = operations.DeleteWorkspaceAPIV1WorkspacesWorkspaceNameDeleteRequest(
-    workspace_name='libero',
+    workspace_name='soluta',
 )
 
 res = s.workspace.delete(req, operations.DeleteWorkspaceAPIV1WorkspacesWorkspaceNameDeleteSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.status_code == 200:
@@ -71,11 +71,11 @@ from deepset_cloud.models import operations
 s = deepset_cloud.DeepsetCloud()
 
 req = operations.GetWorkspaceAPIV1WorkspacesWorkspaceNameGetRequest(
-    workspace_name='rem',
+    workspace_name='libero',
 )
 
 res = s.workspace.get(req, operations.GetWorkspaceAPIV1WorkspacesWorkspaceNameGetSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.workspace is not None:
@@ -95,11 +95,11 @@ from deepset_cloud.models import operations
 s = deepset_cloud.DeepsetCloud()
 
 req = operations.GetWorkspaceStatsAPIV1WorkspacesWorkspaceNameStatsGetRequest(
-    workspace_name='dolorum',
+    workspace_name='rem',
 )
 
 res = s.workspace.get_stats(req, operations.GetWorkspaceStatsAPIV1WorkspacesWorkspaceNameStatsGetSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.workspace_stats is not None:
@@ -120,7 +120,7 @@ s = deepset_cloud.DeepsetCloud()
 
 
 res = s.workspace.list(operations.ListWorkspacesAPIV1WorkspacesGetSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.workspace_list is not None:
@@ -140,15 +140,15 @@ from deepset_cloud.models import operations
 s = deepset_cloud.DeepsetCloud()
 
 req = operations.SearchCountAPIV1WorkspacesWorkspaceNameSearchCountGetRequest(
-    after='72026114-35e1-439d-bc22-59b1abda8c07',
-    before='0e1084cb-0672-4d1a-9879-eeb9665b85ef',
-    limit=737279,
-    page_number=872303,
-    workspace_name='alias',
+    after='a7202611-435e-4139-9bc2-259b1abda8c0',
+    before='70e1084c-b067-42d1-ad87-9eeb9665b85e',
+    limit=972912,
+    page_number=737279,
+    workspace_name='at',
 )
 
 res = s.workspace.search_count(req, operations.SearchCountAPIV1WorkspacesWorkspaceNameSearchCountGetSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.search_count_pagination is not None:
@@ -168,15 +168,15 @@ from deepset_cloud.models import operations
 s = deepset_cloud.DeepsetCloud()
 
 req = operations.SearchHistoryAPIV1WorkspacesWorkspaceNameSearchHistoryGetRequest(
-    after='2bae0be2-d782-4259-a3ea-4b5197f92443',
-    before='da7ce52b-895c-4537-8645-4efb0b34896c',
-    limit=242099,
-    page_number=795591,
-    workspace_name='fuga',
+    after='02bae0be-2d78-4225-9e3e-a4b5197f9244',
+    before='3da7ce52-b895-4c53-bc64-54efb0b34896',
+    limit=779180,
+    page_number=242099,
+    workspace_name='minus',
 )
 
 res = s.workspace.search_history(req, operations.SearchHistoryAPIV1WorkspacesWorkspaceNameSearchHistoryGetSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.search_history_pagination is not None:

@@ -21,11 +21,11 @@ from deepset_cloud.models import operations
 s = deepset_cloud.DeepsetCloud()
 
 req = operations.DeleteUserAPIV1UsersUserIDDeleteRequest(
-    user_id='8d162309-fb09-4299-a1ae-fb9f58c4d86e',
+    user_id='18d16230-9fb0-4929-921a-efb9f58c4d86',
 )
 
 res = s.user.delete(req, operations.DeleteUserAPIV1UsersUserIDDeleteSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.delete_user_api_v1_users_user_id_delete_200_application_json_any is not None:
@@ -45,11 +45,11 @@ from deepset_cloud.models import operations
 s = deepset_cloud.DeepsetCloud()
 
 req = operations.GetUserAPIV1UsersUserIDGetRequest(
-    user_id='68e4be05-6013-4f59-9a75-7a59ecfef66e',
+    user_id='e68e4be0-5601-43f5-9da7-57a59ecfef66',
 )
 
 res = s.user.get(req, operations.GetUserAPIV1UsersUserIDGetSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.user is not None:
@@ -69,15 +69,15 @@ from deepset_cloud.models import operations
 s = deepset_cloud.DeepsetCloud()
 
 req = operations.ListUsersAPIV1UsersGetRequest(
-    after='f1caa338-3c2b-4eb4-b737-3c8d72f64d1d',
-    before='b1f2c431-0661-4e96-b49e-1cf9e06e3a43',
+    after='ef1caa33-83c2-4beb-8773-73c8d72f64d1',
+    before='db1f2c43-1066-41e9-a349-e1cf9e06e3a4',
     include_deleted=False,
-    limit=483394,
-    page_number=24753,
+    limit=224467,
+    page_number=483394,
 )
 
 res = s.user.list(req, operations.ListUsersAPIV1UsersGetSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.user_pagination is not None:
@@ -98,7 +98,7 @@ s = deepset_cloud.DeepsetCloud()
 
 
 res = s.user.me(operations.ReadUsersMeAPIV1MeGetSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.user is not None:
@@ -119,13 +119,13 @@ s = deepset_cloud.DeepsetCloud()
 
 req = operations.UpdateUserPermissionAPIV1UsersUserIDPatchRequest(
     request_body=operations.UpdateUserPermissionAPIV1UsersUserIDPatchUserRole(
-        role=shared.RolesToDBEnum.ZERO,
+        role=shared.RolesToDB.ZERO,
     ),
-    user_id='0ae6b6bc-9b8f-4759-aac5-5a9741d31135',
+    user_id='00ae6b6b-c9b8-4f75-9eac-55a9741d3113',
 )
 
 res = s.user.update_permission(req, operations.UpdateUserPermissionAPIV1UsersUserIDPatchSecurity(
-    http_bearer="Bearer YOUR_BEARER_TOKEN_HERE",
+    http_bearer="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.status_code == 200:
