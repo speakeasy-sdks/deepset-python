@@ -21,7 +21,7 @@ from .workspace import Workspace
 from deepset_cloud import utils
 
 class DeepsetCloud:
-    r"""deepset Cloud API description"""
+    r"""Deepset Cloud: deepset Cloud API description"""
     api_token: APIToken
     document_store: DocumentStore
     eval_run: EvalRun

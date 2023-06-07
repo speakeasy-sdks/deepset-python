@@ -2,7 +2,7 @@
 
 ## Overview
 
-deepset Cloud API description
+Deepset Cloud: deepset Cloud API description
 
 ### Available Operations
 
