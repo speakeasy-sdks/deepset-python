@@ -38,7 +38,7 @@ req = operations.CreatePrototypeAPIV1WorkspacesWorkspaceNameSharedPrototypesPost
 )
 
 res = s.shared_prototype.create(req, operations.CreatePrototypeAPIV1WorkspacesWorkspaceNameSharedPrototypesPostSecurity(
-    http_bearer="YOUR_BEARER_TOKEN_HERE",
+    http_bearer="",
 ))
 
 if res.shared_prototype is not None:
@@ -63,7 +63,7 @@ req = operations.CreateExternalUserAPIV1WorkspacesWorkspaceNameSharedPrototypeUs
 )
 
 res = s.shared_prototype.create_external_user(req, operations.CreateExternalUserAPIV1WorkspacesWorkspaceNameSharedPrototypeUsersPostSecurity(
-    http_bearer="YOUR_BEARER_TOKEN_HERE",
+    http_bearer="",
 ))
 
 if res.external_user_information is not None:
@@ -88,7 +88,7 @@ req = operations.GetSharedPrototypeAPIV1WorkspacesWorkspaceNameSharedPrototypesS
 )
 
 res = s.shared_prototype.get(req, operations.GetSharedPrototypeAPIV1WorkspacesWorkspaceNameSharedPrototypesSharedPrototypeIDGetSecurity(
-    http_bearer="YOUR_BEARER_TOKEN_HERE",
+    http_bearer="",
 ))
 
 if res.shared_prototype is not None:
@@ -117,7 +117,7 @@ req = operations.ListPrototypesAPIV1WorkspacesWorkspaceNameSharedPrototypesGetRe
 )
 
 res = s.shared_prototype.list(req, operations.ListPrototypesAPIV1WorkspacesWorkspaceNameSharedPrototypesGetSecurity(
-    http_bearer="YOUR_BEARER_TOKEN_HERE",
+    http_bearer="",
 ))
 
 if res.paginated_shared_prototypes is not None:
@@ -142,7 +142,7 @@ req = operations.RevokeSharedPrototypeAPIV1WorkspacesWorkspaceNameSharedPrototyp
 )
 
 res = s.shared_prototype.revoke(req, operations.RevokeSharedPrototypeAPIV1WorkspacesWorkspaceNameSharedPrototypesSharedPrototypeIDDeleteSecurity(
-    http_bearer="YOUR_BEARER_TOKEN_HERE",
+    http_bearer="",
 ))
 
 if res.revoke_shared_prototype_api_v1_workspaces_workspace_name_shared_prototypes_shared_prototype_id_delete_200_application_json_any is not None:
@@ -172,7 +172,7 @@ req = operations.EditSharedPrototypeAPIV1WorkspacesWorkspaceNameSharedPrototypes
 )
 
 res = s.shared_prototype.update(req, operations.EditSharedPrototypeAPIV1WorkspacesWorkspaceNameSharedPrototypesSharedPrototypeIDPatchSecurity(
-    http_bearer="YOUR_BEARER_TOKEN_HERE",
+    http_bearer="",
 ))
 
 if res.shared_prototype is not None:

@@ -29,7 +29,7 @@ req = operations.GetTokenAPIV1ModelRegistryTokensProviderGetRequest(
 )
 
 res = s.model_registry_token.get(req, operations.GetTokenAPIV1ModelRegistryTokensProviderGetSecurity(
-    http_bearer="YOUR_BEARER_TOKEN_HERE",
+    http_bearer="",
 ))
 
 if res.model_registry_token is not None:
@@ -52,7 +52,7 @@ s = deepset_cloud.DeepsetCloud()
 
 
 res = s.model_registry_token.get_token_deprecated(operations.GetTokenDeprecatedAPIV1ModelRegistryTokenGetSecurity(
-    http_bearer="YOUR_BEARER_TOKEN_HERE",
+    http_bearer="",
 ))
 
 if res.model_registry_token is not None:
@@ -73,7 +73,7 @@ s = deepset_cloud.DeepsetCloud()
 
 
 res = s.model_registry_token.list(operations.ListTokensAPIV1ModelRegistryTokensGetSecurity(
-    http_bearer="YOUR_BEARER_TOKEN_HERE",
+    http_bearer="",
 ))
 
 if res.model_registry_tokens is not None:
@@ -97,7 +97,7 @@ req = operations.RemoveTokenAPIV1ModelRegistryTokensProviderDeleteRequest(
 )
 
 res = s.model_registry_token.remove(req, operations.RemoveTokenAPIV1ModelRegistryTokensProviderDeleteSecurity(
-    http_bearer="YOUR_BEARER_TOKEN_HERE",
+    http_bearer="",
 ))
 
 if res.remove_token_api_v1_model_registry_tokens_provider_delete_202_application_json_any is not None:
@@ -120,7 +120,7 @@ s = deepset_cloud.DeepsetCloud()
 
 
 res = s.model_registry_token.remove_token_deprecated(operations.RemoveTokenDeprecatedAPIV1ModelRegistryTokenDeleteSecurity(
-    http_bearer="YOUR_BEARER_TOKEN_HERE",
+    http_bearer="",
 ))
 
 if res.remove_token_deprecated_api_v1_model_registry_token_delete_202_application_json_any is not None:
@@ -147,7 +147,7 @@ req = operations.SaveTokenAPIV1ModelRegistryTokensProviderPostRequest(
 )
 
 res = s.model_registry_token.save(req, operations.SaveTokenAPIV1ModelRegistryTokensProviderPostSecurity(
-    http_bearer="YOUR_BEARER_TOKEN_HERE",
+    http_bearer="",
 ))
 
 if res.save_token_api_v1_model_registry_tokens_provider_post_201_application_json_any is not None:
@@ -173,7 +173,7 @@ req = shared.CreateModelRegistryToken(
 )
 
 res = s.model_registry_token.save_token_deprecated(req, operations.SaveTokenDeprecatedAPIV1ModelRegistryTokenPostSecurity(
-    http_bearer="YOUR_BEARER_TOKEN_HERE",
+    http_bearer="",
 ))
 
 if res.save_token_deprecated_api_v1_model_registry_token_post_201_application_json_any is not None:
@@ -200,7 +200,7 @@ req = operations.UpdateTokenAPIV1ModelRegistryTokensProviderPutRequest(
 )
 
 res = s.model_registry_token.update(req, operations.UpdateTokenAPIV1ModelRegistryTokensProviderPutSecurity(
-    http_bearer="YOUR_BEARER_TOKEN_HERE",
+    http_bearer="",
 ))
 
 if res.update_token_api_v1_model_registry_tokens_provider_put_201_application_json_any is not None:
@@ -226,7 +226,7 @@ req = shared.UpdateModelRegistryToken(
 )
 
 res = s.model_registry_token.update_token_deprecated(req, operations.UpdateTokenDeprecatedAPIV1ModelRegistryTokenPutSecurity(
-    http_bearer="YOUR_BEARER_TOKEN_HERE",
+    http_bearer="",
 ))
 
 if res.update_token_deprecated_api_v1_model_registry_token_put_201_application_json_any is not None:

@@ -24,7 +24,7 @@ req = shared.CreateToken(
 )
 
 res = s.api_token.create_token(req, operations.CreateTokenAPIV1TokenPostSecurity(
-    http_bearer="YOUR_BEARER_TOKEN_HERE",
+    http_bearer="",
 ))
 
 if res.api_token_result is not None:
@@ -51,7 +51,7 @@ req = operations.ListTokensAPIV1TokenGetRequest(
 )
 
 res = s.api_token.list(req, operations.ListTokensAPIV1TokenGetSecurity(
-    http_bearer="YOUR_BEARER_TOKEN_HERE",
+    http_bearer="",
 ))
 
 if res.token_pagination is not None:
@@ -75,7 +75,7 @@ req = operations.RemoveTokenAPIV1TokenAPITokenIDDeleteRequest(
 )
 
 res = s.api_token.remove(req, operations.RemoveTokenAPIV1TokenAPITokenIDDeleteSecurity(
-    http_bearer="YOUR_BEARER_TOKEN_HERE",
+    http_bearer="",
 ))
 
 if res.remove_token_api_v1_token_api_token_id_delete_200_application_json_any is not None:

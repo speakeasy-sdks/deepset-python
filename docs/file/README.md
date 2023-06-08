@@ -35,7 +35,7 @@ req = operations.DeleteFilesAPIV1WorkspacesWorkspaceNameFilesDeleteRequest(
 )
 
 res = s.file.delete_multi(req, operations.DeleteFilesAPIV1WorkspacesWorkspaceNameFilesDeleteSecurity(
-    http_bearer="YOUR_BEARER_TOKEN_HERE",
+    http_bearer="",
 ))
 
 if res.delete_files_api_v1_workspaces_workspace_name_files_delete_200_application_json_any is not None:
@@ -60,7 +60,7 @@ req = operations.DeleteFileAPIV1WorkspacesWorkspaceNameFilesFileIDDeleteRequest(
 )
 
 res = s.file.delete_single(req, operations.DeleteFileAPIV1WorkspacesWorkspaceNameFilesFileIDDeleteSecurity(
-    http_bearer="YOUR_BEARER_TOKEN_HERE",
+    http_bearer="",
 ))
 
 if res.delete_file_api_v1_workspaces_workspace_name_files_file_id_delete_200_application_json_any is not None:
@@ -85,7 +85,7 @@ req = operations.GetFileAPIV1WorkspacesWorkspaceNameFilesFileIDGetRequest(
 )
 
 res = s.file.get(req, operations.GetFileAPIV1WorkspacesWorkspaceNameFilesFileIDGetSecurity(
-    http_bearer="YOUR_BEARER_TOKEN_HERE",
+    http_bearer="",
 ))
 
 if res.get_file_api_v1_workspaces_workspace_name_files_file_id_get_200_application_json_any is not None:
@@ -110,7 +110,7 @@ req = operations.GetDocumentAPIV1WorkspacesWorkspaceNameFilesFileIDDocumentsGetR
 )
 
 res = s.file.get_document(req, operations.GetDocumentAPIV1WorkspacesWorkspaceNameFilesFileIDDocumentsGetSecurity(
-    http_bearer="YOUR_BEARER_TOKEN_HERE",
+    http_bearer="",
 ))
 
 if res.documents is not None:
@@ -135,7 +135,7 @@ req = operations.GetFileMetaAPIV1WorkspacesWorkspaceNameFilesFileIDMetaGetReques
 )
 
 res = s.file.get_meta_data(req, operations.GetFileMetaAPIV1WorkspacesWorkspaceNameFilesFileIDMetaGetSecurity(
-    http_bearer="YOUR_BEARER_TOKEN_HERE",
+    http_bearer="",
 ))
 
 if res.response_get_file_meta_api_v1_workspaces_workspace_name_files_file_id_meta_get is not None:
@@ -170,7 +170,7 @@ req = operations.ListFilesAPIV1WorkspacesWorkspaceNameFilesGetRequest(
 )
 
 res = s.file.list(req, operations.ListFilesAPIV1WorkspacesWorkspaceNameFilesGetSecurity(
-    http_bearer="YOUR_BEARER_TOKEN_HERE",
+    http_bearer="",
 ))
 
 if res.file_pagination is not None:
@@ -199,7 +199,7 @@ req = operations.UpdateFileMetaAPIV1WorkspacesWorkspaceNameFilesFileIDMetaPutReq
 )
 
 res = s.file.update_meta_data(req, operations.UpdateFileMetaAPIV1WorkspacesWorkspaceNameFilesFileIDMetaPutSecurity(
-    http_bearer="YOUR_BEARER_TOKEN_HERE",
+    http_bearer="",
 ))
 
 if res.update_file_meta_api_v1_workspaces_workspace_name_files_file_id_meta_put_200_application_json_any is not None:
@@ -233,7 +233,7 @@ req = operations.UploadFileAPIV1WorkspacesWorkspaceNameFilesPostRequest(
 )
 
 res = s.file.upload(req, operations.UploadFileAPIV1WorkspacesWorkspaceNameFilesPostSecurity(
-    http_bearer="YOUR_BEARER_TOKEN_HERE",
+    http_bearer="",
 ))
 
 if res.response_upload_file_api_v1_workspaces_workspace_name_files_post is not None:

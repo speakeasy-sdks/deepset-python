@@ -21,7 +21,7 @@ req = operations.CreateSearchSessionAPIV1WorkspacesWorkspaceNameSearchSessionsPo
 )
 
 res = s.search_session.create(req, operations.CreateSearchSessionAPIV1WorkspacesWorkspaceNameSearchSessionsPostSecurity(
-    http_bearer="YOUR_BEARER_TOKEN_HERE",
+    http_bearer="",
 ))
 
 if res.search_session_post_response is not None:

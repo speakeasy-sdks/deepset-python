@@ -27,7 +27,7 @@ req = shared.WorkspaceName(
 )
 
 res = s.workspace.create(req, operations.CreateWorkspaceAPIV1WorkspacesPostSecurity(
-    http_bearer="YOUR_BEARER_TOKEN_HERE",
+    http_bearer="",
 ))
 
 if res.create_workspace_api_v1_workspaces_post_201_application_json_any is not None:
@@ -51,7 +51,7 @@ req = operations.DeleteWorkspaceAPIV1WorkspacesWorkspaceNameDeleteRequest(
 )
 
 res = s.workspace.delete(req, operations.DeleteWorkspaceAPIV1WorkspacesWorkspaceNameDeleteSecurity(
-    http_bearer="YOUR_BEARER_TOKEN_HERE",
+    http_bearer="",
 ))
 
 if res.status_code == 200:
@@ -75,7 +75,7 @@ req = operations.GetWorkspaceAPIV1WorkspacesWorkspaceNameGetRequest(
 )
 
 res = s.workspace.get(req, operations.GetWorkspaceAPIV1WorkspacesWorkspaceNameGetSecurity(
-    http_bearer="YOUR_BEARER_TOKEN_HERE",
+    http_bearer="",
 ))
 
 if res.workspace is not None:
@@ -99,7 +99,7 @@ req = operations.GetWorkspaceStatsAPIV1WorkspacesWorkspaceNameStatsGetRequest(
 )
 
 res = s.workspace.get_stats(req, operations.GetWorkspaceStatsAPIV1WorkspacesWorkspaceNameStatsGetSecurity(
-    http_bearer="YOUR_BEARER_TOKEN_HERE",
+    http_bearer="",
 ))
 
 if res.workspace_stats is not None:
@@ -120,7 +120,7 @@ s = deepset_cloud.DeepsetCloud()
 
 
 res = s.workspace.list(operations.ListWorkspacesAPIV1WorkspacesGetSecurity(
-    http_bearer="YOUR_BEARER_TOKEN_HERE",
+    http_bearer="",
 ))
 
 if res.workspace_list is not None:
@@ -148,7 +148,7 @@ req = operations.SearchCountAPIV1WorkspacesWorkspaceNameSearchCountGetRequest(
 )
 
 res = s.workspace.search_count(req, operations.SearchCountAPIV1WorkspacesWorkspaceNameSearchCountGetSecurity(
-    http_bearer="YOUR_BEARER_TOKEN_HERE",
+    http_bearer="",
 ))
 
 if res.search_count_pagination is not None:
@@ -176,7 +176,7 @@ req = operations.SearchHistoryAPIV1WorkspacesWorkspaceNameSearchHistoryGetReques
 )
 
 res = s.workspace.search_history(req, operations.SearchHistoryAPIV1WorkspacesWorkspaceNameSearchHistoryGetSecurity(
-    http_bearer="YOUR_BEARER_TOKEN_HERE",
+    http_bearer="",
 ))
 
 if res.search_history_pagination is not None:

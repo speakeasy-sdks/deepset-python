@@ -28,7 +28,7 @@ req = operations.PostNotebookAPIV1NotebookPostRequest(
 )
 
 res = s.notebook.create(req, operations.PostNotebookAPIV1NotebookPostSecurity(
-    http_bearer="YOUR_BEARER_TOKEN_HERE",
+    http_bearer="",
 ))
 
 if res.notebook is not None:
@@ -49,7 +49,7 @@ s = deepset_cloud.DeepsetCloud()
 
 
 res = s.notebook.get_server_state(operations.GetJupyterLabAPIV1NotebookServerGetSecurity(
-    http_bearer="YOUR_BEARER_TOKEN_HERE",
+    http_bearer="",
 ))
 
 if res.server is not None:
@@ -73,7 +73,7 @@ req = shared.NotebookServerPost(
 )
 
 res = s.notebook.start(req, operations.StartJupyterLabAPIV1NotebookServerPostSecurity(
-    http_bearer="YOUR_BEARER_TOKEN_HERE",
+    http_bearer="",
 ))
 
 if res.start_jupyter_lab_api_v1_notebook_server_post_200_application_json_any is not None:

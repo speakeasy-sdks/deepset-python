@@ -27,7 +27,7 @@ req = operations.CheckConnectionAPIV1WorkspacesWorkspaceNameIndexesIndexNameGetR
 )
 
 res = s.document_store.check_connection(req, operations.CheckConnectionAPIV1WorkspacesWorkspaceNameIndexesIndexNameGetSecurity(
-    http_bearer="YOUR_BEARER_TOKEN_HERE",
+    http_bearer="",
 ))
 
 if res.document_store is not None:
@@ -61,7 +61,7 @@ req = operations.CountDocumentsStreamAPIV1WorkspacesWorkspaceNameIndexesIndexNam
 )
 
 res = s.document_store.count_documents(req, operations.CountDocumentsStreamAPIV1WorkspacesWorkspaceNameIndexesIndexNameDocumentsCountPostSecurity(
-    http_bearer="YOUR_BEARER_TOKEN_HERE",
+    http_bearer="",
 ))
 
 if res.dc_document_count is not None:
@@ -87,7 +87,7 @@ req = operations.GetDocumentAPIV1WorkspacesWorkspaceNameIndexesIndexNameDocument
 )
 
 res = s.document_store.get(req, operations.GetDocumentAPIV1WorkspacesWorkspaceNameIndexesIndexNameDocumentsDocumentIDGetSecurity(
-    http_bearer="YOUR_BEARER_TOKEN_HERE",
+    http_bearer="",
 ))
 
 if res.deepset_cloud_document is not None:
@@ -120,7 +120,7 @@ req = operations.GetAllDocumentsStreamAPIV1WorkspacesWorkspaceNameIndexesIndexNa
 )
 
 res = s.document_store.list_document_streams(req, operations.GetAllDocumentsStreamAPIV1WorkspacesWorkspaceNameIndexesIndexNameDocumentsStreamPostSecurity(
-    http_bearer="YOUR_BEARER_TOKEN_HERE",
+    http_bearer="",
 ))
 
 if res.status_code == 200:
@@ -146,7 +146,7 @@ req = operations.GetAllDocumentsAPIV1WorkspacesWorkspaceNameIndexesIndexNameDocu
 )
 
 res = s.document_store.list_documents(req, operations.GetAllDocumentsAPIV1WorkspacesWorkspaceNameIndexesIndexNameDocumentsGetSecurity(
-    http_bearer="YOUR_BEARER_TOKEN_HERE",
+    http_bearer="",
 ))
 
 if res.deepset_cloud_documents is not None:
@@ -185,7 +185,7 @@ req = operations.QueryDocumentsStreamAPIV1WorkspacesWorkspaceNameIndexesIndexNam
 )
 
 res = s.document_store.search(req, operations.QueryDocumentsStreamAPIV1WorkspacesWorkspaceNameIndexesIndexNameDocumentsQueryPostSecurity(
-    http_bearer="YOUR_BEARER_TOKEN_HERE",
+    http_bearer="",
 ))
 
 if res.deepset_cloud_documents is not None:
