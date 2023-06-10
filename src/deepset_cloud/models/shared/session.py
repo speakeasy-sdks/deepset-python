@@ -12,16 +12,18 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class SessionOauthUser:
     r"""The user who created the session."""
-    
     family_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('family_name') }})
     r"""Family name of a user"""
     given_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('given_name') }})
     r"""Given name of a user"""
     user_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('user_id') }})
     
+
+
 class SessionFileWriteModeEnum(str, Enum):
     r"""An enumeration."""
     KEEP = 'KEEP'
@@ -30,9 +32,9 @@ class SessionFileWriteModeEnum(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class Session:
-    
     created_at: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_at'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
     r"""The time when the session was created."""
     created_by: SessionOauthUser = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_by') }})
@@ -44,3 +46,4 @@ class Session:
     write_mode: Optional[SessionFileWriteModeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('write_mode'), 'exclude': lambda f: f is None }})
     r"""Determines how to handle files that already exist. You can KEEP the existing file, OVERWRITE it, or FAIL to ingest if a file with the same name is already in your workspace."""
     
+

@@ -10,9 +10,9 @@ from marshmallow import fields
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class LogEntry:
-    
     created_at: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_at'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
     r"""The date and time when the log entry was created."""
     level: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('level') }})
@@ -20,3 +20,4 @@ class LogEntry:
     msg: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('msg') }})
     r"""The log message."""
     
+

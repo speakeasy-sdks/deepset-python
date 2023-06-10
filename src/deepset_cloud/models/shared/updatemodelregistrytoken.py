@@ -7,9 +7,10 @@ from deepset_cloud import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class UpdateModelRegistryToken:
-    
     token: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('token') }})
     r"""The new Hugging Face token."""
     
+

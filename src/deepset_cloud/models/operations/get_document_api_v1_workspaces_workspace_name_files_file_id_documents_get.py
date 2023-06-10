@@ -8,23 +8,27 @@ from ..shared import httpvalidationerror as shared_httpvalidationerror
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class GetDocumentAPIV1WorkspacesWorkspaceNameFilesFileIDDocumentsGetSecurity:
-    
     http_bearer: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
 
+
+
+
 @dataclasses.dataclass
 class GetDocumentAPIV1WorkspacesWorkspaceNameFilesFileIDDocumentsGetRequest:
-    
     file_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'file_id', 'style': 'simple', 'explode': False }})
     workspace_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'workspace_name', 'style': 'simple', 'explode': False }})
     r"""Type the name of the workspace."""
     
 
+
+
+
 @dataclasses.dataclass
 class GetDocumentAPIV1WorkspacesWorkspaceNameFilesFileIDDocumentsGetResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     documents: Optional[shared_documents.Documents] = dataclasses.field(default=None)
@@ -33,3 +37,4 @@ class GetDocumentAPIV1WorkspacesWorkspaceNameFilesFileIDDocumentsGetResponse:
     r"""Validation Error"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

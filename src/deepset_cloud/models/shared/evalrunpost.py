@@ -8,9 +8,9 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class EvalRunPost:
-    
     debug: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('debug') }})
     r"""Turns the debug mode on for this evaluation run. The debug mode shows you what went wrong if the evaluation run fails."""
     evaluation_set_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('evaluation_set_name') }})
@@ -24,3 +24,4 @@ class EvalRunPost:
     tags: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('tags'), 'exclude': lambda f: f is None }})
     r"""Enter the tags for this evaluation run."""
     
+

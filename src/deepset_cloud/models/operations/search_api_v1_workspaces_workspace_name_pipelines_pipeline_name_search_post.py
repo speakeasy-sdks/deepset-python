@@ -9,15 +9,17 @@ from ..shared import searchresult as shared_searchresult
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class SearchAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameSearchPostSecurity:
-    
     http_bearer: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
 
+
+
+
 @dataclasses.dataclass
 class SearchAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameSearchPostRequest:
-    
     pipeline_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'pipeline_name', 'style': 'simple', 'explode': False }})
     r"""The name of the pipeline that you want to use for search."""
     pipeline_query: shared_pipelinequery.PipelineQuery = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
@@ -25,9 +27,11 @@ class SearchAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameSearchPostRequest:
     r"""Type the name of the workspace."""
     
 
+
+
+
 @dataclasses.dataclass
 class SearchAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameSearchPostResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     http_validation_error: Optional[shared_httpvalidationerror.HTTPValidationError] = dataclasses.field(default=None)
@@ -36,3 +40,4 @@ class SearchAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameSearchPostResponse:
     search_result: Optional[shared_searchresult.SearchResult] = dataclasses.field(default=None)
     r"""Returns the search results."""
     
+

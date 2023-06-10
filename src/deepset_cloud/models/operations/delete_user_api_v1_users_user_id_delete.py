@@ -7,22 +7,26 @@ from ..shared import httpvalidationerror as shared_httpvalidationerror
 from typing import Any, Optional
 
 
+
 @dataclasses.dataclass
 class DeleteUserAPIV1UsersUserIDDeleteSecurity:
-    
     http_bearer: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
 
+
+
+
 @dataclasses.dataclass
 class DeleteUserAPIV1UsersUserIDDeleteRequest:
-    
     user_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'user_id', 'style': 'simple', 'explode': False }})
     r"""A unique identifier of the user. You can obtain it by running the Get Users endpoint."""
     
 
+
+
+
 @dataclasses.dataclass
 class DeleteUserAPIV1UsersUserIDDeleteResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     delete_user_api_v1_users_user_id_delete_200_application_json_any: Optional[Any] = dataclasses.field(default=None)
@@ -31,3 +35,4 @@ class DeleteUserAPIV1UsersUserIDDeleteResponse:
     r"""Validation Error"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

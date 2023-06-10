@@ -8,20 +8,23 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class DocumentDocumentMeta:
     r"""The metadata of this document."""
-    
     split_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('split_id') }})
     r"""The ID you can use to identify this document passage in the file."""
     
 
+
+
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class Document:
-    
     text: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('text') }})
     r"""The contents of this document."""
     meta: Optional[DocumentDocumentMeta] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('meta'), 'exclude': lambda f: f is None }})
     r"""The metadata of this document."""
     
+

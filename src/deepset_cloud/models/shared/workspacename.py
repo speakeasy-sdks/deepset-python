@@ -7,9 +7,10 @@ from deepset_cloud import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class WorkspaceName:
-    
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
     r"""How do you want to name your workspace? Type a name that's longer than 3 characters."""
     
+

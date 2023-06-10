@@ -1,0 +1,42 @@
+# search_session
+
+### Available Operations
+
+* [create](#create) - Create Search Session [private]
+
+## create
+
+This is an endpoint we use internally. This means it can change anytime so bear this in mind if you want to use it.
+
+### Example Usage
+
+```python
+import deepset_cloud
+from deepset_cloud.models import operations
+
+s = deepset_cloud.DeepsetCloud()
+
+req = operations.CreateSearchSessionAPIV1WorkspacesWorkspaceNameSearchSessionsPostRequest(
+    workspace_name='rem',
+)
+
+res = s.search_session.create(req, operations.CreateSearchSessionAPIV1WorkspacesWorkspaceNameSearchSessionsPostSecurity(
+    http_bearer="",
+))
+
+if res.search_session_post_response is not None:
+    # handle response
+```
+
+### Parameters
+
+| Parameter                                                                                                                                                                                    | Type                                                                                                                                                                                         | Required                                                                                                                                                                                     | Description                                                                                                                                                                                  |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                                                                    | [operations.CreateSearchSessionAPIV1WorkspacesWorkspaceNameSearchSessionsPostRequest](../../models/operations/createsearchsessionapiv1workspacesworkspacenamesearchsessionspostrequest.md)   | :heavy_check_mark:                                                                                                                                                                           | The request object to use for the request.                                                                                                                                                   |
+| `security`                                                                                                                                                                                   | [operations.CreateSearchSessionAPIV1WorkspacesWorkspaceNameSearchSessionsPostSecurity](../../models/operations/createsearchsessionapiv1workspacesworkspacenamesearchsessionspostsecurity.md) | :heavy_check_mark:                                                                                                                                                                           | The security requirements to use for the request.                                                                                                                                            |
+
+
+### Response
+
+**[operations.CreateSearchSessionAPIV1WorkspacesWorkspaceNameSearchSessionsPostResponse](../../models/operations/createsearchsessionapiv1workspacesworkspacenamesearchsessionspostresponse.md)**
+

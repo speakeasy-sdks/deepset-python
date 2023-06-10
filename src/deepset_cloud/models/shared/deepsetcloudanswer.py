@@ -8,6 +8,33 @@ from deepset_cloud import utils
 from enum import Enum
 from typing import Any, Optional
 
+
+
+@dataclasses.dataclass
+class DeepsetCloudAnswerContextContext:
+    r"""Context of the answer."""
+    pass
+
+
+
+@dataclasses.dataclass
+class DeepsetCloudAnswerFileReferenceObjectDeprecatedUseFilesInstead:
+    r"""Object containing the `file_id` and `name` of a file. This is used to associate a document with a file."""
+    pass
+
+
+
+@dataclasses.dataclass
+class DeepsetCloudAnswerFiles:
+    pass
+
+
+
+@dataclasses.dataclass
+class DeepsetCloudAnswerMetadataOfFile:
+    r"""The metadata of this document."""
+    pass
+
 class DeepsetCloudAnswerAnswerType(str, Enum):
     r"""Type of the answer."""
     GENERATIVE = 'generative'
@@ -16,9 +43,9 @@ class DeepsetCloudAnswerAnswerType(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class DeepsetCloudAnswer:
-    
     answer: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('answer') }})
     type: DeepsetCloudAnswerAnswerType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
     r"""Type of the answer."""
@@ -28,11 +55,11 @@ class DeepsetCloudAnswer:
     r"""ID of the document"""
     document_ids: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('document_ids'), 'exclude': lambda f: f is None }})
     r"""IDs of the document"""
-    file: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('file'), 'exclude': lambda f: f is None }})
+    file: Optional[DeepsetCloudAnswerFileReferenceObjectDeprecatedUseFilesInstead] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('file'), 'exclude': lambda f: f is None }})
     r"""Object containing the `file_id` and `name` of a file. This is used to associate a document with a file."""
-    files: Optional[list[dict[str, Any]]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('files'), 'exclude': lambda f: f is None }})
+    files: Optional[list[DeepsetCloudAnswerFiles]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('files'), 'exclude': lambda f: f is None }})
     r"""List of object containing the `file_id` and `name` of a file. This is used to associate an answer with its source files."""
-    meta: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('meta'), 'exclude': lambda f: f is None }})
+    meta: Optional[DeepsetCloudAnswerMetadataOfFile] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('meta'), 'exclude': lambda f: f is None }})
     r"""The metadata of this document."""
     offsets_in_context: Optional[list[shared_deepsetcloudspan.DeepsetCloudSpan]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('offsets_in_context'), 'exclude': lambda f: f is None }})
     r"""Offsets of the answer in the context."""
@@ -45,3 +72,4 @@ class DeepsetCloudAnswer:
     score: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('score'), 'exclude': lambda f: f is None }})
     r"""Score of the answer."""
     
+

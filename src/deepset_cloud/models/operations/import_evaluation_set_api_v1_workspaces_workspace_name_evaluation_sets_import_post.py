@@ -9,23 +9,27 @@ from ..shared import httpvalidationerror as shared_httpvalidationerror
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class ImportEvaluationSetAPIV1WorkspacesWorkspaceNameEvaluationSetsImportPostSecurity:
-    
     http_bearer: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
 
+
+
+
 @dataclasses.dataclass
 class ImportEvaluationSetAPIV1WorkspacesWorkspaceNameEvaluationSetsImportPostRequest:
-    
     body_import_evaluation_set_api_v1_workspaces_workspace_name_evaluation_sets_import_post: shared_body_import_evaluation_set_api_v1_workspaces_workspace_name_evaluation_sets_import_post.BodyImportEvaluationSetAPIV1WorkspacesWorkspaceNameEvaluationSetsImportPost = dataclasses.field(metadata={'request': { 'media_type': 'multipart/form-data' }})
     workspace_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'workspace_name', 'style': 'simple', 'explode': False }})
     r"""Type the name of the workspace."""
     
 
+
+
+
 @dataclasses.dataclass
 class ImportEvaluationSetAPIV1WorkspacesWorkspaceNameEvaluationSetsImportPostResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     evaluation_set_import: Optional[shared_evaluationsetimport.EvaluationSetImport] = dataclasses.field(default=None)
@@ -34,3 +38,4 @@ class ImportEvaluationSetAPIV1WorkspacesWorkspaceNameEvaluationSetsImportPostRes
     r"""Validation Error"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

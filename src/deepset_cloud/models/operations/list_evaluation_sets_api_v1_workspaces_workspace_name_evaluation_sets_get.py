@@ -8,15 +8,17 @@ from ..shared import httpvalidationerror as shared_httpvalidationerror
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class ListEvaluationSetsAPIV1WorkspacesWorkspaceNameEvaluationSetsGetSecurity:
-    
     http_bearer: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
 
+
+
+
 @dataclasses.dataclass
 class ListEvaluationSetsAPIV1WorkspacesWorkspaceNameEvaluationSetsGetRequest:
-    
     workspace_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'workspace_name', 'style': 'simple', 'explode': False }})
     r"""Type the name of the workspace."""
     after: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'after', 'style': 'form', 'explode': True }})
@@ -30,9 +32,11 @@ class ListEvaluationSetsAPIV1WorkspacesWorkspaceNameEvaluationSetsGetRequest:
     r"""Which page do you want to see? Type the number."""
     
 
+
+
+
 @dataclasses.dataclass
 class ListEvaluationSetsAPIV1WorkspacesWorkspaceNameEvaluationSetsGetResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     evaluation_set_pagination: Optional[shared_evaluationsetpagination.EvaluationSetPagination] = dataclasses.field(default=None)
@@ -41,3 +45,4 @@ class ListEvaluationSetsAPIV1WorkspacesWorkspaceNameEvaluationSetsGetResponse:
     r"""Validation Error"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

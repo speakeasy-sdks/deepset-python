@@ -8,15 +8,17 @@ from ..shared import searchcountpagination as shared_searchcountpagination
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class SearchCountAPIV1WorkspacesWorkspaceNameSearchCountGetSecurity:
-    
     http_bearer: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
 
+
+
+
 @dataclasses.dataclass
 class SearchCountAPIV1WorkspacesWorkspaceNameSearchCountGetRequest:
-    
     workspace_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'workspace_name', 'style': 'simple', 'explode': False }})
     r"""Type the name of the workspace."""
     after: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'after', 'style': 'form', 'explode': True }})
@@ -29,9 +31,11 @@ class SearchCountAPIV1WorkspacesWorkspaceNameSearchCountGetRequest:
     r"""Which page do you want to see? Type the number."""
     
 
+
+
+
 @dataclasses.dataclass
 class SearchCountAPIV1WorkspacesWorkspaceNameSearchCountGetResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     http_validation_error: Optional[shared_httpvalidationerror.HTTPValidationError] = dataclasses.field(default=None)
@@ -40,3 +44,4 @@ class SearchCountAPIV1WorkspacesWorkspaceNameSearchCountGetResponse:
     search_count_pagination: Optional[shared_searchcountpagination.SearchCountPagination] = dataclasses.field(default=None)
     r"""Successful Response"""
     
+

@@ -11,9 +11,9 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class PostSharedPrototype:
-    
     expiration_date: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('expiration_date'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
     r"""The date after which the generated link will expire and become invalid. The expiration date must be within 60 days from the current date."""
     pipeline_names: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('pipeline_names') }})
@@ -25,3 +25,4 @@ class PostSharedPrototype:
     show_metadata_filters: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('show_metadata_filters'), 'exclude': lambda f: f is None }})
     r"""Select `True` if you want your users to be able to filter the documents by metadata."""
     
+

@@ -5,16 +5,18 @@ import dataclasses
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class BodyUploadFileAPIV1WorkspacesWorkspaceNameFilesPostFile:
-    
     content: bytes = dataclasses.field(metadata={'multipart_form': { 'content': True }})
     file: str = dataclasses.field(metadata={'multipart_form': { 'field_name': 'File' }})
     
 
+
+
+
 @dataclasses.dataclass
 class BodyUploadFileAPIV1WorkspacesWorkspaceNameFilesPost:
-    
     file: Optional[BodyUploadFileAPIV1WorkspacesWorkspaceNameFilesPostFile] = dataclasses.field(default=None, metadata={'multipart_form': { 'file': True }})
     r"""Choose the file that you want to upload."""
     meta: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'meta' }})
@@ -22,3 +24,4 @@ class BodyUploadFileAPIV1WorkspacesWorkspaceNameFilesPost:
     text: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'text' }})
     r"""Instead of uploading a file, you can paste the file contents here to create a text file."""
     
+

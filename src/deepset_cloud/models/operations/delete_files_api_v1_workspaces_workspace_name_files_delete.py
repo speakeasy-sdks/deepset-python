@@ -9,32 +9,38 @@ from deepset_cloud import utils
 from typing import Any, Optional
 
 
+
 @dataclasses.dataclass
 class DeleteFilesAPIV1WorkspacesWorkspaceNameFilesDeleteSecurity:
-    
     http_bearer: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
 
+
+
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class DeleteFilesAPIV1WorkspacesWorkspaceNameFilesDeleteFileNames:
     r"""Type the names of the files you want to delete, separated with commas."""
-    
     names: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('names') }})
     r"""The names of the files to delete."""
     
 
+
+
+
 @dataclasses.dataclass
 class DeleteFilesAPIV1WorkspacesWorkspaceNameFilesDeleteRequest:
-    
     workspace_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'workspace_name', 'style': 'simple', 'explode': False }})
     r"""Type the name of the workspace."""
     request_body: Optional[DeleteFilesAPIV1WorkspacesWorkspaceNameFilesDeleteFileNames] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
+
+
+
 @dataclasses.dataclass
 class DeleteFilesAPIV1WorkspacesWorkspaceNameFilesDeleteResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     delete_files_api_v1_workspaces_workspace_name_files_delete_200_application_json_any: Optional[Any] = dataclasses.field(default=None)
@@ -43,3 +49,4 @@ class DeleteFilesAPIV1WorkspacesWorkspaceNameFilesDeleteResponse:
     r"""Validation Error"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

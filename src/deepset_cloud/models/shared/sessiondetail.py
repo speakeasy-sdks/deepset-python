@@ -11,21 +11,23 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class SessionDetailFileIngestionStatus:
     r"""The status of the ingestion process for this file."""
-    
     failed_files: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('failed_files'), 'exclude': lambda f: f is None }})
     r"""The number of files that failed to be ingested."""
     finished_files: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('finished_files'), 'exclude': lambda f: f is None }})
     r"""The number of files that were successfully ingested."""
     
 
+
+
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class SessionDetail:
     r"""Your upload sessions."""
-    
     expires_at: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('expires_at'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
     r"""The time when the session expires."""
     ingestion_status: SessionDetailFileIngestionStatus = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ingestion_status') }})
@@ -35,3 +37,4 @@ class SessionDetail:
     documentation_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('documentation_url'), 'exclude': lambda f: f is None }})
     r"""The URL to the documentation of the session."""
     
+

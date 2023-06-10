@@ -8,11 +8,13 @@ from enum import Enum
 from typing import Any, Optional
 
 
+
 @dataclasses.dataclass
 class GetNodeEvalPredictionsAPIV1WorkspacesWorkspaceNameEvalRunsEvalRunNameNodesNodeNamePredictionsGetSecurity:
-    
     http_bearer: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
+
+
 class GetNodeEvalPredictionsAPIV1WorkspacesWorkspaceNameEvalRunsEvalRunNameNodesNodeNamePredictionsGetFieldField(str, Enum):
     r"""The name of the entity you want to sort by."""
     QUERY = 'query'
@@ -30,9 +32,9 @@ class GetNodeEvalPredictionsAPIV1WorkspacesWorkspaceNameEvalRunsEvalRunNameNodes
     DESC = 'DESC'
 
 
+
 @dataclasses.dataclass
 class GetNodeEvalPredictionsAPIV1WorkspacesWorkspaceNameEvalRunsEvalRunNameNodesNodeNamePredictionsGetRequest:
-    
     eval_run_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'eval_run_name', 'style': 'simple', 'explode': False }})
     r"""Which evaluation run do you want to see the metrics for? Type its name here."""
     node_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'node_name', 'style': 'simple', 'explode': False }})
@@ -57,9 +59,11 @@ class GetNodeEvalPredictionsAPIV1WorkspacesWorkspaceNameEvalRunsEvalRunNameNodes
     r"""Partial implementation of the OData $select operator. It currently only supports selecting fields from the root entity or a child entity. Selecting fields from children's children is not supported. If you use this parameter, the API answer is always a flat list of distinct JSON objects with the selected properties, for example, '[{\\"given_name\\": \\"user1\\", \\"user_id\\": \\"...\\"}, ...]' for 'select=created_by/given_name, created_by/user_id'. The results are ordered by the first selected attribute. To learn more about the OData filter syntax, see: [Querying Data](https://www.odata.org/getting-started/basic-tutorial/#queryData)."""
     
 
+
+
+
 @dataclasses.dataclass
 class GetNodeEvalPredictionsAPIV1WorkspacesWorkspaceNameEvalRunsEvalRunNameNodesNodeNamePredictionsGetResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     http_validation_error: Optional[shared_httpvalidationerror.HTTPValidationError] = dataclasses.field(default=None)
@@ -68,3 +72,4 @@ class GetNodeEvalPredictionsAPIV1WorkspacesWorkspaceNameEvalRunsEvalRunNameNodes
     response_200_get_node_eval_predictions_api_v1_workspaces_workspace_name_eval_runs_eval_run_name_nodes_node_name_predictions_get: Optional[Any] = dataclasses.field(default=None)
     r"""These are the predicted answers for the node you chose. If you added 'text/csv' in the `accept` header, they're returned as a CSV file."""
     
+

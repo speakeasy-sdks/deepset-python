@@ -13,9 +13,9 @@ class DocumentNodeEvalRunMetricNodeType(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class DocumentNodeEvalRunMetric:
-    
     node_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('node_name') }})
     r"""The name of the evaluated pipeline node."""
     node_type: DocumentNodeEvalRunMetricNodeType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('node_type') }})
@@ -33,3 +33,4 @@ class DocumentNodeEvalRunMetric:
     integrated_recall_single_hit: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('integrated_recall_single_hit'), 'exclude': lambda f: f is None }})
     r"""The recall single hit metric of the node when it's evaluated in integrated mode. For more information, see [Experiments and Metrics](https://docs.cloud.deepset.ai/docs/experiments-and-metrics)."""
     
+

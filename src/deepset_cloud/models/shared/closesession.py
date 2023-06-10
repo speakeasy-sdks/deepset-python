@@ -13,9 +13,10 @@ class CloseSessionSessionCloseStatusEnum(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class CloseSession:
-    
     status: Optional[CloseSessionSessionCloseStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
     r"""Closes the session and starts the ingestion of the uploaded files."""
     
+

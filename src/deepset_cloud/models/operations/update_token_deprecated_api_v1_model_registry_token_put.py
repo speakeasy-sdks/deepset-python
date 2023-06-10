@@ -7,15 +7,17 @@ from ..shared import httpvalidationerror as shared_httpvalidationerror
 from typing import Any, Optional
 
 
+
 @dataclasses.dataclass
 class UpdateTokenDeprecatedAPIV1ModelRegistryTokenPutSecurity:
-    
     http_bearer: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
 
+
+
+
 @dataclasses.dataclass
 class UpdateTokenDeprecatedAPIV1ModelRegistryTokenPutResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     http_validation_error: Optional[shared_httpvalidationerror.HTTPValidationError] = dataclasses.field(default=None)
@@ -24,3 +26,4 @@ class UpdateTokenDeprecatedAPIV1ModelRegistryTokenPutResponse:
     update_token_deprecated_api_v1_model_registry_token_put_201_application_json_any: Optional[Any] = dataclasses.field(default=None)
     r"""Successful Response"""
     
+

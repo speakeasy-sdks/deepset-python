@@ -8,15 +8,17 @@ from ..shared import searchhistorypagination as shared_searchhistorypagination
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class PipelineSearchHistoryAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameSearchHistoryGetSecurity:
-    
     http_bearer: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
 
+
+
+
 @dataclasses.dataclass
 class PipelineSearchHistoryAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameSearchHistoryGetRequest:
-    
     pipeline_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'pipeline_name', 'style': 'simple', 'explode': False }})
     r"""The name of the pipeline that you want to fetch the search history for."""
     workspace_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'workspace_name', 'style': 'simple', 'explode': False }})
@@ -31,9 +33,11 @@ class PipelineSearchHistoryAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameSear
     r"""Which page do you want to see? Type the number."""
     
 
+
+
+
 @dataclasses.dataclass
 class PipelineSearchHistoryAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameSearchHistoryGetResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     http_validation_error: Optional[shared_httpvalidationerror.HTTPValidationError] = dataclasses.field(default=None)
@@ -42,3 +46,4 @@ class PipelineSearchHistoryAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameSear
     search_history_pagination: Optional[shared_searchhistorypagination.SearchHistoryPagination] = dataclasses.field(default=None)
     r"""Successful Response"""
     
+

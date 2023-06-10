@@ -8,16 +8,18 @@ from ..shared import httpvalidationerror as shared_httpvalidationerror
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class CreateTokenAPIV1TokenPostSecurity:
-    
     http_bearer: Optional[str] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     http_bearer1: Optional[str] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
 
+
+
+
 @dataclasses.dataclass
 class CreateTokenAPIV1TokenPostResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     api_token_result: Optional[shared_apitokenresult.APITokenResult] = dataclasses.field(default=None)
@@ -26,3 +28,4 @@ class CreateTokenAPIV1TokenPostResponse:
     r"""Validation Error"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

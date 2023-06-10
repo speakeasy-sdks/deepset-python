@@ -9,15 +9,17 @@ from ..shared import querydocumentsparams as shared_querydocumentsparams
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class QueryDocumentsStreamAPIV1WorkspacesWorkspaceNameIndexesIndexNameDocumentsQueryPostSecurity:
-    
     http_bearer: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
 
+
+
+
 @dataclasses.dataclass
 class QueryDocumentsStreamAPIV1WorkspacesWorkspaceNameIndexesIndexNameDocumentsQueryPostRequest:
-    
     index_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'index_name', 'style': 'simple', 'explode': False }})
     r"""The name of the pipeline."""
     query_documents_params: shared_querydocumentsparams.QueryDocumentsParams = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
@@ -25,9 +27,11 @@ class QueryDocumentsStreamAPIV1WorkspacesWorkspaceNameIndexesIndexNameDocumentsQ
     r"""Type the name of the workspace."""
     
 
+
+
+
 @dataclasses.dataclass
 class QueryDocumentsStreamAPIV1WorkspacesWorkspaceNameIndexesIndexNameDocumentsQueryPostResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     deepset_cloud_documents: Optional[list[shared_deepsetclouddocument.DeepsetCloudDocument]] = dataclasses.field(default=None)
@@ -36,3 +40,4 @@ class QueryDocumentsStreamAPIV1WorkspacesWorkspaceNameIndexesIndexNameDocumentsQ
     r"""Validation Error"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

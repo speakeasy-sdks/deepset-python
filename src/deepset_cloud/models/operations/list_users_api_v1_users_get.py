@@ -8,15 +8,17 @@ from ..shared import userpagination as shared_userpagination
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class ListUsersAPIV1UsersGetSecurity:
-    
     http_bearer: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
 
+
+
+
 @dataclasses.dataclass
 class ListUsersAPIV1UsersGetRequest:
-    
     after: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'after', 'style': 'form', 'explode': True }})
     r"""Enter an ID if you want to see all entries after this ID."""
     before: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'before', 'style': 'form', 'explode': True }})
@@ -28,9 +30,11 @@ class ListUsersAPIV1UsersGetRequest:
     r"""Which page do you want to see? Type the number."""
     
 
+
+
+
 @dataclasses.dataclass
 class ListUsersAPIV1UsersGetResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     http_validation_error: Optional[shared_httpvalidationerror.HTTPValidationError] = dataclasses.field(default=None)
@@ -39,3 +43,4 @@ class ListUsersAPIV1UsersGetResponse:
     user_pagination: Optional[shared_userpagination.UserPagination] = dataclasses.field(default=None)
     r"""Successful Response"""
     
+

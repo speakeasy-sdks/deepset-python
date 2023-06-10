@@ -10,32 +10,38 @@ from deepset_cloud import utils
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class CreateTagAPIV1WorkspacesWorkspaceNameTagsPostSecurity:
-    
     http_bearer: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
 
+
+
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class CreateTagAPIV1WorkspacesWorkspaceNameTagsPostCreateTag:
     r"""The parameters of the tag you want to create."""
-    
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
     r"""The name of the tag."""
     
 
+
+
+
 @dataclasses.dataclass
 class CreateTagAPIV1WorkspacesWorkspaceNameTagsPostRequest:
-    
     request_body: CreateTagAPIV1WorkspacesWorkspaceNameTagsPostCreateTag = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     workspace_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'workspace_name', 'style': 'simple', 'explode': False }})
     r"""Type the name of the workspace."""
     
 
+
+
+
 @dataclasses.dataclass
 class CreateTagAPIV1WorkspacesWorkspaceNameTagsPostResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     create_tag_response: Optional[shared_createtagresponse.CreateTagResponse] = dataclasses.field(default=None)
@@ -44,3 +50,4 @@ class CreateTagAPIV1WorkspacesWorkspaceNameTagsPostResponse:
     r"""Validation Error"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

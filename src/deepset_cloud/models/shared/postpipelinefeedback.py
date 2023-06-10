@@ -8,9 +8,9 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class PostPipelineFeedback:
-    
     is_correct_answer: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('is_correct_answer') }})
     r"""Feedback if the answer was correct"""
     is_correct_document: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('is_correct_document') }})
@@ -19,3 +19,4 @@ class PostPipelineFeedback:
     tags: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('tags'), 'exclude': lambda f: f is None }})
     r"""A list of tags associated with the feedback."""
     
+

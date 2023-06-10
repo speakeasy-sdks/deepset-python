@@ -8,11 +8,12 @@ from deepset_cloud import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class DocumentStore:
     r"""Successful Response"""
-    
     indexing: shared_pipelineindexingstatus.PipelineIndexingStatus = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('indexing') }})
     return_embedding: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('return_embedding') }})
     similarity: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('similarity') }})
     
+

@@ -9,15 +9,17 @@ from ..shared import sharedprototype as shared_sharedprototype
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class EditSharedPrototypeAPIV1WorkspacesWorkspaceNameSharedPrototypesSharedPrototypeIDPatchSecurity:
-    
     http_bearer: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
 
+
+
+
 @dataclasses.dataclass
 class EditSharedPrototypeAPIV1WorkspacesWorkspaceNameSharedPrototypesSharedPrototypeIDPatchRequest:
-    
     patch_shared_prototype: shared_patchsharedprototype.PatchSharedPrototype = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     shared_prototype_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'shared_prototype_id', 'style': 'simple', 'explode': False }})
     r"""The ID of the shared prototype"""
@@ -25,9 +27,11 @@ class EditSharedPrototypeAPIV1WorkspacesWorkspaceNameSharedPrototypesSharedProto
     r"""Type the name of the workspace."""
     
 
+
+
+
 @dataclasses.dataclass
 class EditSharedPrototypeAPIV1WorkspacesWorkspaceNameSharedPrototypesSharedPrototypeIDPatchResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     http_validation_error: Optional[shared_httpvalidationerror.HTTPValidationError] = dataclasses.field(default=None)
@@ -36,3 +40,4 @@ class EditSharedPrototypeAPIV1WorkspacesWorkspaceNameSharedPrototypesSharedProto
     shared_prototype: Optional[shared_sharedprototype.SharedPrototype] = dataclasses.field(default=None)
     r"""The prototype was successfully updated with the new values"""
     
+

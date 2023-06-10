@@ -7,10 +7,11 @@ from deepset_cloud import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class SearchSessionPostResponse:
     r"""Successful Response"""
-    
     search_session_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('search_session_id') }})
     r"""The ID of the search session."""
     
+

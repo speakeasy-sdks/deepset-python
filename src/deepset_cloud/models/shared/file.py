@@ -7,20 +7,27 @@ from dataclasses_json import Undefined, dataclass_json
 from datetime import datetime
 from deepset_cloud import utils
 from marshmallow import fields
-from typing import Any, Optional
+from typing import Optional
+
+
+
+@dataclasses.dataclass
+class FileMetadataOfFile:
+    r"""Metadata of a file."""
+    pass
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class File:
-    
     characters: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('characters') }})
     r"""The total number of characters in this file."""
     created_at: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_at'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
     r"""Datetime object, specifies when the file was created"""
     file_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('file_id') }})
     r"""Unique identifier of a file."""
-    meta: dict[str, Any] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('meta') }})
+    meta: FileMetadataOfFile = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('meta') }})
     r"""Metadata of a file."""
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
     r"""Name of the file"""
@@ -31,3 +38,4 @@ class File:
     languages: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('languages'), 'exclude': lambda f: f is None }})
     r"""List of languages in that file."""
     
+

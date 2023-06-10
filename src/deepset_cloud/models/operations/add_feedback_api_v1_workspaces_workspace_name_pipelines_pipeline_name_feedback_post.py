@@ -8,15 +8,17 @@ from ..shared import postpipelinefeedback as shared_postpipelinefeedback
 from typing import Any, Optional
 
 
+
 @dataclasses.dataclass
 class AddFeedbackAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameFeedbackPostSecurity:
-    
     http_bearer: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
 
+
+
+
 @dataclasses.dataclass
 class AddFeedbackAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameFeedbackPostRequest:
-    
     pipeline_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'pipeline_name', 'style': 'simple', 'explode': False }})
     r"""The name of the pipeline used for search."""
     post_pipeline_feedback: shared_postpipelinefeedback.PostPipelineFeedback = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
@@ -24,9 +26,11 @@ class AddFeedbackAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameFeedbackPostRe
     r"""Type the name of the workspace."""
     
 
+
+
+
 @dataclasses.dataclass
 class AddFeedbackAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameFeedbackPostResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     add_feedback_api_v1_workspaces_workspace_name_pipelines_pipeline_name_feedback_post_200_application_json_any: Optional[Any] = dataclasses.field(default=None)
@@ -35,3 +39,4 @@ class AddFeedbackAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameFeedbackPostRe
     r"""Validation Error"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

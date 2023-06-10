@@ -9,12 +9,13 @@ from deepset_cloud import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class Server:
     r"""Successful Response"""
-    
     server_type: shared_servertype.ServerType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('server_type') }})
     r"""An enumeration."""
     state: shared_serverstate.ServerState = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('state') }})
     r"""An enumeration."""
     
+

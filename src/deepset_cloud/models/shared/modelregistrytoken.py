@@ -7,10 +7,10 @@ from deepset_cloud import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class ModelRegistryToken:
     r"""Successful Response"""
-    
     invalid: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('invalid') }})
     r"""Signals whether the token is invalid."""
     model_registry_token_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('model_registry_token_id') }})
@@ -20,3 +20,4 @@ class ModelRegistryToken:
     provider_domain: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('provider_domain') }})
     r"""Model provider domain, for example huggingface.co"""
     
+

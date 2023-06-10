@@ -7,15 +7,17 @@ from ..shared import httpvalidationerror as shared_httpvalidationerror
 from typing import Any, Optional
 
 
+
 @dataclasses.dataclass
 class CreateWorkspaceAPIV1WorkspacesPostSecurity:
-    
     http_bearer: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
 
+
+
+
 @dataclasses.dataclass
 class CreateWorkspaceAPIV1WorkspacesPostResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     create_workspace_api_v1_workspaces_post_201_application_json_any: Optional[Any] = dataclasses.field(default=None)
@@ -24,3 +26,4 @@ class CreateWorkspaceAPIV1WorkspacesPostResponse:
     r"""Validation Error"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

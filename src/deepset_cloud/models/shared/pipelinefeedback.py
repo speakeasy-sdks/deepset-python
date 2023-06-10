@@ -12,9 +12,9 @@ from marshmallow import fields
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class PipelineFeedback:
-    
     created_at: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_at'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
     r"""Datetime object, specifies when the feedback was created"""
     feedback_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('feedback_id') }})
@@ -27,3 +27,4 @@ class PipelineFeedback:
     tags: list[shared_tag.Tag] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('tags') }})
     r"""A list of tags associated with the feedback."""
     
+

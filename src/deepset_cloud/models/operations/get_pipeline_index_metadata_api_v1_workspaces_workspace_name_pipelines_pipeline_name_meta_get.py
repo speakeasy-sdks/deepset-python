@@ -8,24 +8,28 @@ from ..shared import pipelineindexmetadataproperty as shared_pipelineindexmetada
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class GetPipelineIndexMetadataAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameMetaGetSecurity:
-    
     http_bearer: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
 
+
+
+
 @dataclasses.dataclass
 class GetPipelineIndexMetadataAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameMetaGetRequest:
-    
     pipeline_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'pipeline_name', 'style': 'simple', 'explode': False }})
     r"""The name of the pipeline whose files you want to display."""
     workspace_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'workspace_name', 'style': 'simple', 'explode': False }})
     r"""Type the name of the workspace."""
     
 
+
+
+
 @dataclasses.dataclass
 class GetPipelineIndexMetadataAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameMetaGetResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     http_validation_error: Optional[shared_httpvalidationerror.HTTPValidationError] = dataclasses.field(default=None)
@@ -34,3 +38,4 @@ class GetPipelineIndexMetadataAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameM
     response_200_get_pipeline_index_metadata_api_v1_workspaces_workspace_name_pipelines_pipeline_name_meta_get: Optional[dict[str, shared_pipelineindexmetadataproperty.PipelineIndexMetadataProperty]] = dataclasses.field(default=None)
     r"""Metadata for the pipeline's index."""
     
+

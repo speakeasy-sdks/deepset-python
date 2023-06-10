@@ -5,7 +5,20 @@ import dataclasses
 from dataclasses_json import Undefined, dataclass_json
 from deepset_cloud import utils
 from enum import Enum
-from typing import Any, Optional
+from typing import Optional
+
+
+
+@dataclasses.dataclass
+class LabelHaystackFilters:
+    r"""Filters you can use to narrow down the search. For more information, see [metadata filtering](https://docs.haystack.deepset.ai/docs/metadata-filtering)."""
+    pass
+
+
+
+@dataclasses.dataclass
+class LabelMeta:
+    pass
 
 class LabelLabelStateAsStr(str, Enum):
     r"""An enumeration."""
@@ -16,12 +29,12 @@ class LabelLabelStateAsStr(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class Label:
-    
     label_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('label_id') }})
     r"""Unique identifier of a label"""
-    meta: dict[str, Any] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('meta') }})
+    meta: LabelMeta = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('meta') }})
     query: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('query') }})
     state: LabelLabelStateAsStr = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('state') }})
     r"""Represents the current state for matching a file."""
@@ -33,6 +46,7 @@ class Label:
     context: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('context'), 'exclude': lambda f: f is None }})
     external_file_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('external_file_name'), 'exclude': lambda f: f is None }})
     file_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('file_id'), 'exclude': lambda f: f is None }})
-    filters: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('filters'), 'exclude': lambda f: f is None }})
+    filters: Optional[LabelHaystackFilters] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('filters'), 'exclude': lambda f: f is None }})
     r"""Filters you can use to narrow down the search. For more information, see [metadata filtering](https://docs.haystack.deepset.ai/docs/metadata-filtering)."""
     
+

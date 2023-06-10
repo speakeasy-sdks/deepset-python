@@ -155,7 +155,7 @@ class File:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[dict[str, Any]])
+                out = utils.unmarshal_json(http_res.text, Optional[operations.GetFileMetaAPIV1WorkspacesWorkspaceNameFilesFileIDMetaGetResponseGetFileMetaAPIV1WorkspacesWorkspaceNameFilesFileIDMetaGet])
                 res.response_get_file_meta_api_v1_workspaces_workspace_name_files_file_id_meta_get = out
         elif http_res.status_code == 422:
             if utils.match_content_type(content_type, 'application/json'):

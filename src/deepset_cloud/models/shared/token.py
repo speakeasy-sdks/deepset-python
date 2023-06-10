@@ -11,12 +11,13 @@ from marshmallow import fields
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class Token:
-    
     api_token_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('api_token_id') }})
     r"""Unique identifier of the API token."""
     expires_at: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('expires_at'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
     r"""Timestamp when the token should expire, for example '2022-05-12T12:25:09+02:00'"""
     user: shared_username.UserName = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('user') }})
     
+

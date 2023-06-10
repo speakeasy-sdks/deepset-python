@@ -9,25 +9,40 @@ from datetime import datetime
 from deepset_cloud import utils
 from enum import Enum
 from marshmallow import fields
-from typing import Any, Optional
+from typing import Optional
+
+
+
+@dataclasses.dataclass
+class FeedbackSearchResultDocuments:
+    pass
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class FeedbackSearchResultPipelineFeedbackFile:
     r"""Shows information about the file which contains the search result."""
-    
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
     r"""Unique identifier of a file."""
     name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name'), 'exclude': lambda f: f is None }})
     r"""Name of the file"""
     
 
+
+
+
+@dataclasses.dataclass
+class FeedbackSearchResultFeedbackSearchQuerySearchFilters:
+    r"""Shows which metadata filters were used for the search query."""
+    pass
+
+
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class FeedbackSearchResultFeedbackSearchQueryFeedbackUser:
     r"""The user who gave feedback to the search result."""
-    
     family_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('family_name') }})
     r"""Family name of a user"""
     given_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('given_name') }})
@@ -36,11 +51,13 @@ class FeedbackSearchResultFeedbackSearchQueryFeedbackUser:
     r"""Email of a user"""
     
 
+
+
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class FeedbackSearchResultFeedbackSearchQuery:
     r"""Shows information about the search query which returned this result."""
-    
     created_at: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_at'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
     r"""Specifies when the search query was done."""
     duration: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('duration') }})
@@ -51,9 +68,11 @@ class FeedbackSearchResultFeedbackSearchQuery:
     r"""Unique identifier of the search query."""
     user: FeedbackSearchResultFeedbackSearchQueryFeedbackUser = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('user') }})
     r"""The user who gave feedback to the search result."""
-    filters: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('filters'), 'exclude': lambda f: f is None }})
+    filters: Optional[FeedbackSearchResultFeedbackSearchQuerySearchFilters] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('filters'), 'exclude': lambda f: f is None }})
     r"""Shows which metadata filters were used for the search query."""
     
+
+
 class FeedbackSearchResultSearchType(str, Enum):
     r"""An enumeration."""
     DOCUMENT = 'document'
@@ -62,10 +81,10 @@ class FeedbackSearchResultSearchType(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class FeedbackSearchResult:
-    
-    documents: list[dict[str, Any]] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('documents') }})
+    documents: list[FeedbackSearchResultDocuments] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('documents') }})
     r"""Shows the documents which contain the search results."""
     file: FeedbackSearchResultPipelineFeedbackFile = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('file') }})
     r"""Shows information about the file which contains the search result."""
@@ -90,3 +109,4 @@ class FeedbackSearchResult:
     score: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('score'), 'exclude': lambda f: f is None }})
     r"""Shows the relevance score of the prediction."""
     
+

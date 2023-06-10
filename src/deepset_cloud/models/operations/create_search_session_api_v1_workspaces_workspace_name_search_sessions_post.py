@@ -8,22 +8,26 @@ from ..shared import searchsessionpostresponse as shared_searchsessionpostrespon
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class CreateSearchSessionAPIV1WorkspacesWorkspaceNameSearchSessionsPostSecurity:
-    
     http_bearer: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
 
+
+
+
 @dataclasses.dataclass
 class CreateSearchSessionAPIV1WorkspacesWorkspaceNameSearchSessionsPostRequest:
-    
     workspace_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'workspace_name', 'style': 'simple', 'explode': False }})
     r"""Type the name of the workspace."""
     
 
+
+
+
 @dataclasses.dataclass
 class CreateSearchSessionAPIV1WorkspacesWorkspaceNameSearchSessionsPostResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     http_validation_error: Optional[shared_httpvalidationerror.HTTPValidationError] = dataclasses.field(default=None)
@@ -32,3 +36,4 @@ class CreateSearchSessionAPIV1WorkspacesWorkspaceNameSearchSessionsPostResponse:
     search_session_post_response: Optional[shared_searchsessionpostresponse.SearchSessionPostResponse] = dataclasses.field(default=None)
     r"""Successful Response"""
     
+

@@ -8,10 +8,10 @@ from deepset_cloud import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class PaginatedSharedPrototypes:
     r"""Successful Response"""
-    
     data: list[shared_sharedprototype.SharedPrototype] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('data') }})
     r"""A list of matching shared prototypes."""
     has_more: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('has_more') }})
@@ -19,3 +19,4 @@ class PaginatedSharedPrototypes:
     total: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('total') }})
     r"""The total number of results matching your query."""
     
+

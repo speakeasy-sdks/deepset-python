@@ -7,9 +7,9 @@ from deepset_cloud import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class TagWithMeta:
-    
     is_used_by_experiments: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('is_used_by_experiments') }})
     r"""Indicates if there are experiments that use this tag."""
     is_used_by_feedback: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('is_used_by_feedback') }})
@@ -19,3 +19,4 @@ class TagWithMeta:
     tag_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('tag_id') }})
     r"""Unique identifier of the tag"""
     
+

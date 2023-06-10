@@ -4,18 +4,25 @@ from __future__ import annotations
 import dataclasses
 from dataclasses_json import Undefined, dataclass_json
 from deepset_cloud import utils
-from typing import Any, Optional
+from typing import Optional
+
+
+
+@dataclasses.dataclass
+class QueryDocumentsParamsHaystackFilters:
+    r"""Filters you can use to narrow down the search. For more information, see [metadata filtering](https://docs.haystack.deepset.ai/docs/metadata-filtering)."""
+    pass
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class QueryDocumentsParams:
-    
     all_terms_must_match: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('all_terms_must_match'), 'exclude': lambda f: f is None }})
     r"""Specifies if returned documents must match all query terms."""
     custom_query: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('custom_query'), 'exclude': lambda f: f is None }})
     r"""Sends a custom query."""
-    filters: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('filters'), 'exclude': lambda f: f is None }})
+    filters: Optional[QueryDocumentsParamsHaystackFilters] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('filters'), 'exclude': lambda f: f is None }})
     r"""Filters you can use to narrow down the search. For more information, see [metadata filtering](https://docs.haystack.deepset.ai/docs/metadata-filtering)."""
     query: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('query'), 'exclude': lambda f: f is None }})
     r"""The search query"""
@@ -28,3 +35,4 @@ class QueryDocumentsParams:
     use_prefiltering: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('use_prefiltering'), 'exclude': lambda f: f is None }})
     r"""Specifies if documents should be prefiltered in the document store instead of within the retriever."""
     
+

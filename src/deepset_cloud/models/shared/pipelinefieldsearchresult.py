@@ -7,10 +7,10 @@ from deepset_cloud import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class PipelineFieldSearchResult:
     r"""Metadata for the pipeline's index."""
-    
     data: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('data') }})
     r"""A list of fields that you searched for."""
     has_more: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('has_more') }})
@@ -18,3 +18,4 @@ class PipelineFieldSearchResult:
     total: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('total') }})
     r"""The total number of results matching your query."""
     
+

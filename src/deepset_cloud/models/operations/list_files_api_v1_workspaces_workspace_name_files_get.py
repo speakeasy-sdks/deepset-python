@@ -9,11 +9,13 @@ from enum import Enum
 from typing import Any, Optional
 
 
+
 @dataclasses.dataclass
 class ListFilesAPIV1WorkspacesWorkspaceNameFilesGetSecurity:
-    
     http_bearer: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
+
+
 class ListFilesAPIV1WorkspacesWorkspaceNameFilesGetFieldField(str, Enum):
     r"""The name of the entity you want to sort by."""
     CREATED_AT = 'created_at'
@@ -25,9 +27,9 @@ class ListFilesAPIV1WorkspacesWorkspaceNameFilesGetOrderOrder(str, Enum):
     DESC = 'DESC'
 
 
+
 @dataclasses.dataclass
 class ListFilesAPIV1WorkspacesWorkspaceNameFilesGetRequest:
-    
     workspace_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'workspace_name', 'style': 'simple', 'explode': False }})
     r"""Type the name of the workspace."""
     after_file_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'after_file_id', 'style': 'form', 'explode': True }})
@@ -60,9 +62,11 @@ class ListFilesAPIV1WorkspacesWorkspaceNameFilesGetRequest:
     r"""Which page do you want to see? Type the number."""
     
 
+
+
+
 @dataclasses.dataclass
 class ListFilesAPIV1WorkspacesWorkspaceNameFilesGetResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     file_pagination: Optional[shared_filepagination.FilePagination] = dataclasses.field(default=None)
@@ -71,3 +75,4 @@ class ListFilesAPIV1WorkspacesWorkspaceNameFilesGetResponse:
     r"""Validation Error"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

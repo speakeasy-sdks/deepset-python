@@ -8,15 +8,17 @@ from ..shared import pipelinemetadataaggregation as shared_pipelinemetadataaggre
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class GetPipelineMinMaxAggregationMetadataAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameMetaMetaFieldAggregationGetSecurity:
-    
     http_bearer: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
 
+
+
+
 @dataclasses.dataclass
 class GetPipelineMinMaxAggregationMetadataAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameMetaMetaFieldAggregationGetRequest:
-    
     meta_field: str = dataclasses.field(metadata={'path_param': { 'field_name': 'meta_field', 'style': 'simple', 'explode': False }})
     r"""The name of the metadata field to get the min and max values for."""
     pipeline_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'pipeline_name', 'style': 'simple', 'explode': False }})
@@ -25,9 +27,11 @@ class GetPipelineMinMaxAggregationMetadataAPIV1WorkspacesWorkspaceNamePipelinesP
     r"""Type the name of the workspace."""
     
 
+
+
+
 @dataclasses.dataclass
 class GetPipelineMinMaxAggregationMetadataAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameMetaMetaFieldAggregationGetResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     http_validation_error: Optional[shared_httpvalidationerror.HTTPValidationError] = dataclasses.field(default=None)
@@ -36,3 +40,4 @@ class GetPipelineMinMaxAggregationMetadataAPIV1WorkspacesWorkspaceNamePipelinesP
     r"""Min and max value aggregation of the meta_field"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

@@ -6,18 +6,21 @@ import requests as requests_http
 from typing import Any, Optional
 
 
+
 @dataclasses.dataclass
 class RemoveTokenDeprecatedAPIV1ModelRegistryTokenDeleteSecurity:
-    
     http_bearer: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
 
+
+
+
 @dataclasses.dataclass
 class RemoveTokenDeprecatedAPIV1ModelRegistryTokenDeleteResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     remove_token_deprecated_api_v1_model_registry_token_delete_202_application_json_any: Optional[Any] = dataclasses.field(default=None)
     r"""Successful Response"""
     
+

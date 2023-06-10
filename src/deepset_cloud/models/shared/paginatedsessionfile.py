@@ -8,13 +8,14 @@ from deepset_cloud import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class PaginatedSessionFile:
     r"""Returns a list of files registered to the session."""
-    
     data: list[shared_sessionfile.SessionFile] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('data') }})
     has_more: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('has_more') }})
     r"""Whether the session has more files."""
     total: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('total') }})
     r"""The total number of files in the session."""
     
+

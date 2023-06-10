@@ -8,15 +8,17 @@ from ..shared import paginatedsession as shared_paginatedsession
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class ListUploadSessionsAPIV1WorkspacesWorkspaceNameUploadSessionsGetSecurity:
-    
     http_bearer: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
 
+
+
+
 @dataclasses.dataclass
 class ListUploadSessionsAPIV1WorkspacesWorkspaceNameUploadSessionsGetRequest:
-    
     workspace_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'workspace_name', 'style': 'simple', 'explode': False }})
     r"""Type the name of the workspace."""
     after: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'after', 'style': 'form', 'explode': True }})
@@ -31,9 +33,11 @@ class ListUploadSessionsAPIV1WorkspacesWorkspaceNameUploadSessionsGetRequest:
     r"""Which page do you want to see? Type the number."""
     
 
+
+
+
 @dataclasses.dataclass
 class ListUploadSessionsAPIV1WorkspacesWorkspaceNameUploadSessionsGetResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     http_validation_error: Optional[shared_httpvalidationerror.HTTPValidationError] = dataclasses.field(default=None)
@@ -42,3 +46,4 @@ class ListUploadSessionsAPIV1WorkspacesWorkspaceNameUploadSessionsGetResponse:
     r"""Your upload sessions."""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

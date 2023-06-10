@@ -9,11 +9,13 @@ from enum import Enum
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class UploadFileAPIV1WorkspacesWorkspaceNameFilesPostSecurity:
-    
     http_bearer: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
+
+
 class UploadFileAPIV1WorkspacesWorkspaceNameFilesPostWriteModeFileWriteModeEnum(str, Enum):
     r"""An enumeration."""
     KEEP = 'KEEP'
@@ -21,9 +23,9 @@ class UploadFileAPIV1WorkspacesWorkspaceNameFilesPostWriteModeFileWriteModeEnum(
     FAIL = 'FAIL'
 
 
+
 @dataclasses.dataclass
 class UploadFileAPIV1WorkspacesWorkspaceNameFilesPostRequest:
-    
     workspace_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'workspace_name', 'style': 'simple', 'explode': False }})
     r"""Type the name of the workspace."""
     body_upload_file_api_v1_workspaces_workspace_name_files_post: Optional[shared_body_upload_file_api_v1_workspaces_workspace_name_files_post.BodyUploadFileAPIV1WorkspacesWorkspaceNameFilesPost] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
@@ -33,9 +35,11 @@ class UploadFileAPIV1WorkspacesWorkspaceNameFilesPostRequest:
     r"""The write mode determines how to handle uploading a file if it's already in the workspace. Your options are: keep the file with the same name, make the request fail if a file with the same name already exists, or overwrite the file. If you choose to overwrite, all files with the same name are overwritten."""
     
 
+
+
+
 @dataclasses.dataclass
 class UploadFileAPIV1WorkspacesWorkspaceNameFilesPostResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     http_validation_error: Optional[shared_httpvalidationerror.HTTPValidationError] = dataclasses.field(default=None)
@@ -44,3 +48,4 @@ class UploadFileAPIV1WorkspacesWorkspaceNameFilesPostResponse:
     response_upload_file_api_v1_workspaces_workspace_name_files_post: Optional[dict[str, str]] = dataclasses.field(default=None)
     r"""Your file's in the workspace."""
     
+

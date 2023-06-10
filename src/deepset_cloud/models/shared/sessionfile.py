@@ -23,9 +23,9 @@ class SessionFileFileIngestionStatusReasonEnum(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class SessionFile:
-    
     ingestion_status: SessionFileFileIngestionStatusEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ingestion_status') }})
     r"""The ingestion status of the ingested file."""
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
@@ -35,3 +35,4 @@ class SessionFile:
     ingestion_status_reason: Optional[SessionFileFileIngestionStatusReasonEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ingestion_status_reason'), 'exclude': lambda f: f is None }})
     r"""The ingestion status message that explains the ingestion status. This is only available for files that failed to ingest."""
     
+

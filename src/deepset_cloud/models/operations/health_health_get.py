@@ -6,12 +6,13 @@ import requests as requests_http
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class HealthHealthGetResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     response_health_health_get: Optional[str] = dataclasses.field(default=None)
     r"""Successful Response"""
     
+

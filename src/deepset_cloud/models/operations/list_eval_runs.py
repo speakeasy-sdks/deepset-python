@@ -9,11 +9,13 @@ from enum import Enum
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class ListEvalRunsSecurity:
-    
     http_bearer: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
+
+
 class Field(str, Enum):
     r"""The name of the entity you want to sort by."""
     NAME = 'name'
@@ -37,9 +39,9 @@ class Order(str, Enum):
     DESC = 'DESC'
 
 
+
 @dataclasses.dataclass
 class ListEvalRunsRequest:
-    
     workspace_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'workspace_name', 'style': 'simple', 'explode': False }})
     r"""Type the name of the workspace."""
     after: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'after', 'style': 'form', 'explode': True }})
@@ -60,9 +62,11 @@ class ListEvalRunsRequest:
     r"""Partial implementation of the OData $select operator. It currently only supports selecting fields from the root entity or a child entity. Selecting fields from children's children is not supported. If you use this parameter, the API answer is always a flat list of distinct JSON objects with the selected properties, for example, '[{\\"given_name\\": \\"user1\\", \\"user_id\\": \\"...\\"}, ...]' for 'select=created_by/given_name, created_by/user_id'. The results are ordered by the first selected attribute. To learn more about the OData filter syntax, see: [Querying Data](https://www.odata.org/getting-started/basic-tutorial/#queryData)."""
     
 
+
+
+
 @dataclasses.dataclass
 class ListEvalRunsResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     eval_runs_response: Optional[shared_evalrunsresponse.EvalRunsResponse] = dataclasses.field(default=None)
@@ -71,3 +75,4 @@ class ListEvalRunsResponse:
     r"""Validation Error"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

@@ -8,24 +8,28 @@ from ..shared import httpvalidationerror as shared_httpvalidationerror
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class CreateExternalUserAPIV1WorkspacesWorkspaceNameSharedPrototypeUsersPostSecurity:
-    
     http_bearer: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
 
+
+
+
 @dataclasses.dataclass
 class CreateExternalUserAPIV1WorkspacesWorkspaceNameSharedPrototypeUsersPostRequest:
-    
     workspace_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'workspace_name', 'style': 'simple', 'explode': False }})
     r"""Type the name of the workspace."""
     existing_user_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'existing_user_id', 'style': 'form', 'explode': True }})
     r"""The ID of an existing external user"""
     
 
+
+
+
 @dataclasses.dataclass
 class CreateExternalUserAPIV1WorkspacesWorkspaceNameSharedPrototypeUsersPostResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     external_user_information: Optional[shared_externaluserinformation.ExternalUserInformation] = dataclasses.field(default=None)
@@ -34,3 +38,4 @@ class CreateExternalUserAPIV1WorkspacesWorkspaceNameSharedPrototypeUsersPostResp
     r"""Validation Error"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

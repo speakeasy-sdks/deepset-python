@@ -8,11 +8,13 @@ from enum import Enum
 from typing import Any, Optional
 
 
+
 @dataclasses.dataclass
 class RemoveTokenAPIV1ModelRegistryTokensProviderDeleteSecurity:
-    
     http_bearer: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
+
+
 class RemoveTokenAPIV1ModelRegistryTokensProviderDeleteProviderModelProvider(str, Enum):
     r"""The provider of the model registry"""
     HUGGINGFACE = 'huggingface'
@@ -20,16 +22,18 @@ class RemoveTokenAPIV1ModelRegistryTokensProviderDeleteProviderModelProvider(str
     COHERE = 'cohere'
 
 
+
 @dataclasses.dataclass
 class RemoveTokenAPIV1ModelRegistryTokensProviderDeleteRequest:
-    
     provider: RemoveTokenAPIV1ModelRegistryTokensProviderDeleteProviderModelProvider = dataclasses.field(metadata={'path_param': { 'field_name': 'provider', 'style': 'simple', 'explode': False }})
     r"""The provider of the model registry"""
     
 
+
+
+
 @dataclasses.dataclass
 class RemoveTokenAPIV1ModelRegistryTokensProviderDeleteResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     http_validation_error: Optional[shared_httpvalidationerror.HTTPValidationError] = dataclasses.field(default=None)
@@ -38,3 +42,4 @@ class RemoveTokenAPIV1ModelRegistryTokensProviderDeleteResponse:
     remove_token_api_v1_model_registry_tokens_provider_delete_202_application_json_any: Optional[Any] = dataclasses.field(default=None)
     r"""Successful Response"""
     
+

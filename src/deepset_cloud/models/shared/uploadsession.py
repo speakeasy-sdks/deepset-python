@@ -11,21 +11,23 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class UploadSessionPresignedPrefix:
     r"""The request configuration used for uploading files. Set each file key to `<org_id>/<workspace_id>/<session_id>/${filename}`, where filename is <file_name>.<txt|pdf> or <file_name>.<txt|pdf>.meta.json for meta files."""
-    
     fields_: dict[str, str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('fields') }})
     r"""The fields to include in the request to the presigned URL. These fields are required in the body of each request."""
     url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('url') }})
     r"""The presigned URL to upload the file to. This URL was generated using the AWS ShareObjectPresignedUrl feature. To learn more, see [AWS Documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/ShareObjectPreSignedURL.html)."""
     
 
+
+
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class UploadSession:
     r"""Your session is created."""
-    
     aws_prefixed_request_config: UploadSessionPresignedPrefix = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('aws_prefixed_request_config') }})
     r"""The request configuration used for uploading files. Set each file key to `<org_id>/<workspace_id>/<session_id>/${filename}`, where filename is <file_name>.<txt|pdf> or <file_name>.<txt|pdf>.meta.json for meta files."""
     expires_at: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('expires_at'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
@@ -35,3 +37,4 @@ class UploadSession:
     session_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('session_id'), 'exclude': lambda f: f is None }})
     r"""Unique identifier of a session."""
     
+

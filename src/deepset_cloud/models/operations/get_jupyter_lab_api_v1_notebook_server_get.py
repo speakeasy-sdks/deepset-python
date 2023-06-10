@@ -7,18 +7,21 @@ from ..shared import server as shared_server
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class GetJupyterLabAPIV1NotebookServerGetSecurity:
-    
     http_bearer: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
 
+
+
+
 @dataclasses.dataclass
 class GetJupyterLabAPIV1NotebookServerGetResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     server: Optional[shared_server.Server] = dataclasses.field(default=None)
     r"""Successful Response"""
     
+

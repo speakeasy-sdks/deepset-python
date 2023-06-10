@@ -9,12 +9,19 @@ from datetime import datetime
 from deepset_cloud import utils
 from enum import Enum
 from marshmallow import fields
-from typing import Any, Optional
+from typing import Optional
 
 class DocumentEvalNodePredictionEvaluationMode(str, Enum):
     r"""An enumeration."""
     ISOLATED = 'ISOLATED'
     INTEGRATED = 'INTEGRATED'
+
+
+
+@dataclasses.dataclass
+class DocumentEvalNodePredictionQueryFilters:
+    r"""Filters which were used for the evaluation of the query."""
+    pass
 
 class DocumentEvalNodePredictionPredictionType(str, Enum):
     r"""This node returns document objects during the prediction."""
@@ -22,9 +29,9 @@ class DocumentEvalNodePredictionPredictionType(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class DocumentEvalNodePrediction:
-    
     answer_match: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('answer_match') }})
     r"""'True' if the node returned the answer as specified in the evaluation set."""
     context_and_answer_match: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('context_and_answer_match') }})
@@ -67,8 +74,9 @@ class DocumentEvalNodePrediction:
     r"""Context of the node's prediction."""
     document_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('document_id'), 'exclude': lambda f: f is None }})
     r"""The ID of the predicted document."""
-    filters: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('filters'), 'exclude': lambda f: f is None }})
+    filters: Optional[DocumentEvalNodePredictionQueryFilters] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('filters'), 'exclude': lambda f: f is None }})
     r"""Filters which were used for the evaluation of the query."""
     updated_at: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('updated_at'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso'), 'exclude': lambda f: f is None }})
     r"""The date and time when the prediction was created."""
     
+

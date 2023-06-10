@@ -10,17 +10,19 @@ from deepset_cloud import utils
 from typing import Any, Optional
 
 
+
 @dataclasses.dataclass
 class InviteUserToOrganizationAPIV1OrganizationOrganizationIDInvitationPostSecurity:
-    
     http_bearer: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
 
+
+
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class InviteUserToOrganizationAPIV1OrganizationOrganizationIDInvitationPostUserInvitation:
     r"""The definition of the user that you want to invite to the organization."""
-    
     email: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('email') }})
     r"""Email of a user"""
     family_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('family_name') }})
@@ -31,17 +33,21 @@ class InviteUserToOrganizationAPIV1OrganizationOrganizationIDInvitationPostUserI
     r"""An enumeration."""
     
 
+
+
+
 @dataclasses.dataclass
 class InviteUserToOrganizationAPIV1OrganizationOrganizationIDInvitationPostRequest:
-    
     organization_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'organization_id', 'style': 'simple', 'explode': False }})
     r"""A unique identifier of the organization. You can obtain it from Get Organization."""
     request_body: InviteUserToOrganizationAPIV1OrganizationOrganizationIDInvitationPostUserInvitation = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
+
+
+
 @dataclasses.dataclass
 class InviteUserToOrganizationAPIV1OrganizationOrganizationIDInvitationPostResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     http_validation_error: Optional[shared_httpvalidationerror.HTTPValidationError] = dataclasses.field(default=None)
@@ -50,3 +56,4 @@ class InviteUserToOrganizationAPIV1OrganizationOrganizationIDInvitationPostRespo
     r"""Successful Response"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

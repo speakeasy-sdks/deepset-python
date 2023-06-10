@@ -4,14 +4,27 @@ from __future__ import annotations
 import dataclasses
 from dataclasses_json import Undefined, dataclass_json
 from deepset_cloud import utils
-from typing import Any, Optional
+from typing import Optional
+
+
+
+@dataclasses.dataclass
+class SearchResultHistoryEntryDocuments:
+    pass
+
+
+
+@dataclasses.dataclass
+class SearchResultHistoryEntrySearchResults:
+    r"""List of search results."""
+    pass
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class SearchResultHistoryEntry:
-    
-    documents: list[dict[str, Any]] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('documents') }})
+    documents: list[SearchResultHistoryEntryDocuments] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('documents') }})
     r"""Documents that contain the search result."""
     search_result_history_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('search_result_history_id') }})
     r"""List of search results."""
@@ -19,6 +32,7 @@ class SearchResultHistoryEntry:
     r"""The type of the search result. This can be either 'document' or 'answer'."""
     rank: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('rank'), 'exclude': lambda f: f is None }})
     r"""The rank of the search result. A lower value means more relevant result."""
-    result: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('result'), 'exclude': lambda f: f is None }})
+    result: Optional[SearchResultHistoryEntrySearchResults] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('result'), 'exclude': lambda f: f is None }})
     r"""List of search results."""
     
+

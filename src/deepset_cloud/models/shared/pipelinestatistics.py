@@ -8,10 +8,10 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class PipelineStatistics:
     r"""Successful Response"""
-    
     accuracy_of_answers: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('accuracy_of_answers'), 'exclude': lambda f: f is None }})
     r"""The accuracy of answers is calculated by dividing the total number of positive feedback by the total number of given feedback. Pipelines with feedback on multiple responses will be counted only once."""
     avg_feedback_per_query: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('avg_feedback_per_query'), 'exclude': lambda f: f is None }})
@@ -37,3 +37,4 @@ class PipelineStatistics:
     wrong_answers_with_correct_document: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('wrong_answers_with_correct_document'), 'exclude': lambda f: f is None }})
     r"""The number of answers marked as wrong by the user while the document was marked as correct."""
     
+

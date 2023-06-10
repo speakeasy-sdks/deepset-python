@@ -8,24 +8,28 @@ from ..shared import modelmeta as shared_modelmeta
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class ListModelAPIV1ModelGetSecurity:
-    
     http_bearer: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
 
+
+
+
 @dataclasses.dataclass
 class ListModelAPIV1ModelGetRequest:
-    
     author: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'author', 'style': 'form', 'explode': True }})
     r"""Author from Hugging Face. The author of the model 'deepset/minilm-uncased-squad2' is 'deepset'."""
     node_type: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'node_type', 'style': 'form', 'explode': True }})
     r"""Type of the node. E.g. 'PromptNode'"""
     
 
+
+
+
 @dataclasses.dataclass
 class ListModelAPIV1ModelGetResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     http_validation_error: Optional[shared_httpvalidationerror.HTTPValidationError] = dataclasses.field(default=None)
@@ -34,3 +38,4 @@ class ListModelAPIV1ModelGetResponse:
     r"""Successful Response"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

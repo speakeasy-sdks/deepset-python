@@ -12,10 +12,10 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class SharedPrototype:
     r"""Successful Response"""
-    
     created_by_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_by_id') }})
     r"""Unique ID of the user who created the shared prototype."""
     expiration_date: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('expiration_date'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
@@ -37,3 +37,4 @@ class SharedPrototype:
     show_metadata_filters: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('show_metadata_filters'), 'exclude': lambda f: f is None }})
     r"""Select `True` if you want your users to be able to filter the documents by metadata."""
     
+

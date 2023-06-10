@@ -7,11 +7,12 @@ from deepset_cloud import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class DeepsetCloudSpan:
-    
     end: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('end') }})
     r"""End of the span."""
     start: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('start') }})
     r"""Start of the span."""
     
+

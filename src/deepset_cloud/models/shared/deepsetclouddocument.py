@@ -7,6 +7,13 @@ from deepset_cloud import utils
 from enum import Enum
 from typing import Any, Optional
 
+
+
+@dataclasses.dataclass
+class DeepsetCloudDocumentContentContent:
+    r"""Content of the document."""
+    pass
+
 class DeepsetCloudDocumentContentType(str, Enum):
     r"""Type of the content."""
     TEXT = 'text'
@@ -15,25 +22,40 @@ class DeepsetCloudDocumentContentType(str, Enum):
     AUDIO = 'audio'
 
 
+
+@dataclasses.dataclass
+class DeepsetCloudDocumentFileReferenceObjectDeprecatedUseFilesInstead:
+    r"""Object containing the `file_id` and `name` of a file. This is used to associate a document with a file."""
+    pass
+
+
+
+@dataclasses.dataclass
+class DeepsetCloudDocumentMetadataOfFile:
+    r"""The metadata of this document."""
+    pass
+
+
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class DeepsetCloudDocument:
     r"""Successful Response"""
-    
     content_type: DeepsetCloudDocumentContentType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('content_type') }})
     r"""Type of the content."""
     id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id') }})
     r"""ID of the document."""
-    meta: dict[str, Any] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('meta') }})
+    meta: DeepsetCloudDocumentMetadataOfFile = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('meta') }})
     r"""The metadata of this document."""
     content: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('content'), 'exclude': lambda f: f is None }})
     r"""Content of the document."""
     embedding: Optional[list[float]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('embedding'), 'exclude': lambda f: f is None }})
     r"""Embedding of the document."""
-    file: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('file'), 'exclude': lambda f: f is None }})
+    file: Optional[DeepsetCloudDocumentFileReferenceObjectDeprecatedUseFilesInstead] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('file'), 'exclude': lambda f: f is None }})
     r"""Object containing the `file_id` and `name` of a file. This is used to associate a document with a file."""
     result_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('result_id'), 'exclude': lambda f: f is None }})
     r"""Unique identifier of the result."""
     score: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('score'), 'exclude': lambda f: f is None }})
     r"""Shows the relevance score of the prediction."""
     
+

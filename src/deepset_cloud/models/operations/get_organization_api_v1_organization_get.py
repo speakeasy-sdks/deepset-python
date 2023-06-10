@@ -7,18 +7,21 @@ from ..shared import organizationname as shared_organizationname
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class GetOrganizationAPIV1OrganizationGetSecurity:
-    
     http_bearer: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
 
+
+
+
 @dataclasses.dataclass
 class GetOrganizationAPIV1OrganizationGetResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     organization_name: Optional[shared_organizationname.OrganizationName] = dataclasses.field(default=None)
     r"""Successful Response"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

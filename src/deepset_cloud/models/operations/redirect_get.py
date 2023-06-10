@@ -6,12 +6,13 @@ import requests as requests_http
 from typing import Any, Optional
 
 
+
 @dataclasses.dataclass
 class RedirectGetResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     redirect_get_200_application_json_any: Optional[Any] = dataclasses.field(default=None)
     r"""Successful Response"""
     
+

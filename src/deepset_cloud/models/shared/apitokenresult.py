@@ -7,10 +7,11 @@ from deepset_cloud import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class APITokenResult:
     r"""Successful Response"""
-    
     api_token: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('api_token') }})
     r"""API token with the prefix `api_`. This token inherits all permissions of users and acts on behalf of users."""
     
+

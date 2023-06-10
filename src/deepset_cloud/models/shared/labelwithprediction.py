@@ -5,7 +5,20 @@ import dataclasses
 from dataclasses_json import Undefined, dataclass_json
 from deepset_cloud import utils
 from enum import Enum
-from typing import Any, Optional
+from typing import Optional
+
+
+
+@dataclasses.dataclass
+class LabelWithPredictionHaystackFilters:
+    r"""Filters you can use to narrow down the search. For more information, see [metadata filtering](https://docs.haystack.deepset.ai/docs/metadata-filtering)."""
+    pass
+
+
+
+@dataclasses.dataclass
+class LabelWithPredictionMeta:
+    pass
 
 class LabelWithPredictionLabelStateAsStr(str, Enum):
     r"""An enumeration."""
@@ -16,16 +29,16 @@ class LabelWithPredictionLabelStateAsStr(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class LabelWithPrediction:
-    
     context_similarity: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('context_similarity') }})
     r"""Similarity of the context with the gold context of this specific label."""
     document_id_match: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('document_id_match') }})
     r"""'True' if the selected document ID matched with the gold ID of this specific label."""
     label_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('label_id') }})
     r"""Unique identifier of a label"""
-    meta: dict[str, Any] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('meta') }})
+    meta: LabelWithPredictionMeta = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('meta') }})
     query: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('query') }})
     state: LabelWithPredictionLabelStateAsStr = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('state') }})
     r"""Represents the current state for matching a file."""
@@ -43,8 +56,9 @@ class LabelWithPrediction:
     f1: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('f1'), 'exclude': lambda f: f is None }})
     r"""F1 score for this specific label."""
     file_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('file_id'), 'exclude': lambda f: f is None }})
-    filters: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('filters'), 'exclude': lambda f: f is None }})
+    filters: Optional[LabelWithPredictionHaystackFilters] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('filters'), 'exclude': lambda f: f is None }})
     r"""Filters you can use to narrow down the search. For more information, see [metadata filtering](https://docs.haystack.deepset.ai/docs/metadata-filtering)."""
     sas: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sas'), 'exclude': lambda f: f is None }})
     r"""The SAS score for this specific label."""
     
+

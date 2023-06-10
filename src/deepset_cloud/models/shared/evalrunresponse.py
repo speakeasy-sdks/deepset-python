@@ -13,10 +13,10 @@ from typing import Any, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class EvalRunResponseOauthUser:
     r"""The user who created the eval run."""
-    
     family_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('family_name') }})
     r"""Family name of a user"""
     given_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('given_name') }})
@@ -24,11 +24,13 @@ class EvalRunResponseOauthUser:
     user_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('user_id') }})
     
 
+
+
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class EvalRunResponseEvalRunParameters:
     r"""Parameters set for this evaluation run"""
-    
     debug: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('debug') }})
     r"""Turns the debug mode on for this evaluation run. The debug mode shows you what went wrong if the evaluation run fails."""
     evaluation_set_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('evaluation_set_id') }})
@@ -45,11 +47,13 @@ class EvalRunResponseEvalRunParameters:
     r"""The name of the model used to calculate SAS metrics during an experiment."""
     
 
+
+
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class EvalRunResponsePipelineMetric:
     r"""The metrics for the whole pipeline."""
-    
     integrated_exact_match: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('integrated_exact_match'), 'exclude': lambda f: f is None }})
     r"""The number of exact matches of the pipeline. For more information, see [Experiments and Metrics](https://docs.cloud.deepset.ai/docs/experiments-and-metrics)"""
     integrated_f1: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('integrated_f1'), 'exclude': lambda f: f is None }})
@@ -76,10 +80,12 @@ class EvalRunResponsePipelineMetric:
     r"""The SAS score of the last answer_node in isolated mode. For more information, see [Experiments and Metrics](https://docs.cloud.deepset.ai/docs/experiments-and-metrics)"""
     
 
+
+
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class EvalRunResponse:
-    
     created_at: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_at'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
     r"""The date and time when the evaluation run was created."""
     created_by: EvalRunResponseOauthUser = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_by') }})
@@ -107,3 +113,4 @@ class EvalRunResponse:
     last_edited_by: Optional[EvalRunResponseOauthUser] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('last_edited_by'), 'exclude': lambda f: f is None }})
     r"""The user who created the eval run."""
     
+

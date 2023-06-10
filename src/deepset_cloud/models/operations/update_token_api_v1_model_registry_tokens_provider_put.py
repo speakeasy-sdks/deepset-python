@@ -9,11 +9,13 @@ from enum import Enum
 from typing import Any, Optional
 
 
+
 @dataclasses.dataclass
 class UpdateTokenAPIV1ModelRegistryTokensProviderPutSecurity:
-    
     http_bearer: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
+
+
 class UpdateTokenAPIV1ModelRegistryTokensProviderPutProviderModelProvider(str, Enum):
     r"""The provider of the model registry"""
     HUGGINGFACE = 'huggingface'
@@ -21,17 +23,19 @@ class UpdateTokenAPIV1ModelRegistryTokensProviderPutProviderModelProvider(str, E
     COHERE = 'cohere'
 
 
+
 @dataclasses.dataclass
 class UpdateTokenAPIV1ModelRegistryTokensProviderPutRequest:
-    
     provider: UpdateTokenAPIV1ModelRegistryTokensProviderPutProviderModelProvider = dataclasses.field(metadata={'path_param': { 'field_name': 'provider', 'style': 'simple', 'explode': False }})
     r"""The provider of the model registry"""
     update_model_registry_token: shared_updatemodelregistrytoken.UpdateModelRegistryToken = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
+
+
+
 @dataclasses.dataclass
 class UpdateTokenAPIV1ModelRegistryTokensProviderPutResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     http_validation_error: Optional[shared_httpvalidationerror.HTTPValidationError] = dataclasses.field(default=None)
@@ -40,3 +44,4 @@ class UpdateTokenAPIV1ModelRegistryTokensProviderPutResponse:
     update_token_api_v1_model_registry_tokens_provider_put_201_application_json_any: Optional[Any] = dataclasses.field(default=None)
     r"""Successful Response"""
     
+

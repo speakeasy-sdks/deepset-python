@@ -8,15 +8,17 @@ from ..shared import searchhistorypagination as shared_searchhistorypagination
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class SearchHistoryAPIV1WorkspacesWorkspaceNameSearchHistoryGetSecurity:
-    
     http_bearer: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
 
+
+
+
 @dataclasses.dataclass
 class SearchHistoryAPIV1WorkspacesWorkspaceNameSearchHistoryGetRequest:
-    
     workspace_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'workspace_name', 'style': 'simple', 'explode': False }})
     r"""Type the name of the workspace."""
     after: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'after', 'style': 'form', 'explode': True }})
@@ -29,9 +31,11 @@ class SearchHistoryAPIV1WorkspacesWorkspaceNameSearchHistoryGetRequest:
     r"""Which page do you want to see? Type the number."""
     
 
+
+
+
 @dataclasses.dataclass
 class SearchHistoryAPIV1WorkspacesWorkspaceNameSearchHistoryGetResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     http_validation_error: Optional[shared_httpvalidationerror.HTTPValidationError] = dataclasses.field(default=None)
@@ -40,3 +44,4 @@ class SearchHistoryAPIV1WorkspacesWorkspaceNameSearchHistoryGetResponse:
     search_history_pagination: Optional[shared_searchhistorypagination.SearchHistoryPagination] = dataclasses.field(default=None)
     r"""Successful Response"""
     
+

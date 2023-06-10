@@ -10,17 +10,23 @@ from dataclasses_json import Undefined, dataclass_json
 from datetime import datetime
 from deepset_cloud import utils
 from marshmallow import fields
-from typing import Any
+
+
+
+@dataclasses.dataclass
+class SearchHistoryQueryRequest:
+    r"""Query request"""
+    pass
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class SearchHistory:
-    
     duration: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('duration') }})
     r"""Duration in ms."""
     pipeline: shared_pipelinename.PipelineName = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('pipeline') }})
-    request: dict[str, Any] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('request') }})
+    request: SearchHistoryQueryRequest = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('request') }})
     r"""Query request"""
     response: list[shared_searchresulthistoryentry.SearchResultHistoryEntry] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('response') }})
     r"""Response list from Haystack open source"""
@@ -30,3 +36,4 @@ class SearchHistory:
     r"""Timestamp when the query was sent"""
     user: shared_useridname.UserIDName = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('user') }})
     
+

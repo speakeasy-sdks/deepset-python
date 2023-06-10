@@ -9,11 +9,13 @@ from enum import Enum
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class GetTokenAPIV1ModelRegistryTokensProviderGetSecurity:
-    
     http_bearer: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
+
+
 class GetTokenAPIV1ModelRegistryTokensProviderGetProviderModelProvider(str, Enum):
     r"""The provider of the model registry"""
     HUGGINGFACE = 'huggingface'
@@ -21,16 +23,18 @@ class GetTokenAPIV1ModelRegistryTokensProviderGetProviderModelProvider(str, Enum
     COHERE = 'cohere'
 
 
+
 @dataclasses.dataclass
 class GetTokenAPIV1ModelRegistryTokensProviderGetRequest:
-    
     provider: GetTokenAPIV1ModelRegistryTokensProviderGetProviderModelProvider = dataclasses.field(metadata={'path_param': { 'field_name': 'provider', 'style': 'simple', 'explode': False }})
     r"""The provider of the model registry"""
     
 
+
+
+
 @dataclasses.dataclass
 class GetTokenAPIV1ModelRegistryTokensProviderGetResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     http_validation_error: Optional[shared_httpvalidationerror.HTTPValidationError] = dataclasses.field(default=None)
@@ -39,3 +43,4 @@ class GetTokenAPIV1ModelRegistryTokensProviderGetResponse:
     r"""Successful Response"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

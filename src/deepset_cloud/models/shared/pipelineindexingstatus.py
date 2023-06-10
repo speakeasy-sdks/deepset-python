@@ -7,11 +7,12 @@ from deepset_cloud import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class PipelineIndexingStatus:
-    
     failed_file_count: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('failed_file_count') }})
     r"""Files that failed during indexing"""
     pending_file_count: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('pending_file_count') }})
     r"""The number of pending files to be indexed"""
     
+

@@ -20,7 +20,7 @@ class Notebook:
         
         url = base_url + '/api/v1/notebook'
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "request_body", 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "empty_class", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         query_params = utils.get_query_params(operations.PostNotebookAPIV1NotebookPostRequest, request)

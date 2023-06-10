@@ -8,12 +8,13 @@ from typing import Any, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class PipelineMetadataAggregation:
     r"""Min and max value aggregation of the meta_field"""
-    
     max: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('max'), 'exclude': lambda f: f is None }})
     r"""The maximum value of the metadata field."""
     min: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('min'), 'exclude': lambda f: f is None }})
     r"""The minimum value of the metadata field."""
     
+

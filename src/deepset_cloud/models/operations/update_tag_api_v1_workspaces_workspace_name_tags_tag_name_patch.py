@@ -9,24 +9,28 @@ from deepset_cloud import utils
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class UpdateTagAPIV1WorkspacesWorkspaceNameTagsTagNamePatchSecurity:
-    
     http_bearer: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
 
+
+
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class UpdateTagAPIV1WorkspacesWorkspaceNameTagsTagNamePatchUpdateTag:
     r"""The parameters of the tag you want to update."""
-    
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
     r"""The name of the tag."""
     
 
+
+
+
 @dataclasses.dataclass
 class UpdateTagAPIV1WorkspacesWorkspaceNameTagsTagNamePatchRequest:
-    
     request_body: UpdateTagAPIV1WorkspacesWorkspaceNameTagsTagNamePatchUpdateTag = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     tag_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'tag_name', 'style': 'simple', 'explode': False }})
     r"""Which tag do you want to update? Type its name here."""
@@ -34,12 +38,15 @@ class UpdateTagAPIV1WorkspacesWorkspaceNameTagsTagNamePatchRequest:
     r"""Type the name of the workspace."""
     
 
+
+
+
 @dataclasses.dataclass
 class UpdateTagAPIV1WorkspacesWorkspaceNameTagsTagNamePatchResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     http_validation_error: Optional[shared_httpvalidationerror.HTTPValidationError] = dataclasses.field(default=None)
     r"""Validation Error"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

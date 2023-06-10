@@ -8,15 +8,17 @@ from ..shared import pipelinefieldsearchresult as shared_pipelinefieldsearchresu
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class GetPipelineMetadataFieldValuesAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameMetaFieldNameGetSecurity:
-    
     http_bearer: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
 
+
+
+
 @dataclasses.dataclass
 class GetPipelineMetadataFieldValuesAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameMetaFieldNameGetRequest:
-    
     field_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'field_name', 'style': 'simple', 'explode': False }})
     r"""The name of the field to search in."""
     pipeline_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'pipeline_name', 'style': 'simple', 'explode': False }})
@@ -31,9 +33,11 @@ class GetPipelineMetadataFieldValuesAPIV1WorkspacesWorkspaceNamePipelinesPipelin
     r"""The query you want to use to search through metadata. You can use wildcards in the query, for example, '*query*' to list all values which contain the term 'query'."""
     
 
+
+
+
 @dataclasses.dataclass
 class GetPipelineMetadataFieldValuesAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameMetaFieldNameGetResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     http_validation_error: Optional[shared_httpvalidationerror.HTTPValidationError] = dataclasses.field(default=None)
@@ -42,3 +46,4 @@ class GetPipelineMetadataFieldValuesAPIV1WorkspacesWorkspaceNamePipelinesPipelin
     r"""Metadata for the pipeline's index."""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

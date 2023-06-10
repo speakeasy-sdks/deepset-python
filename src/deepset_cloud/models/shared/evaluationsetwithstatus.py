@@ -12,16 +12,18 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class EvaluationSetWithStatusOauthUser:
     r"""The user who created the evaluation set."""
-    
     family_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('family_name') }})
     r"""Family name of a user"""
     given_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('given_name') }})
     r"""Given name of a user"""
     user_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('user_id') }})
     
+
+
 class EvaluationSetWithStatusEvaluationSetStatusAsStr(str, Enum):
     r"""An enumeration."""
     RECEIVED = 'RECEIVED'
@@ -33,9 +35,9 @@ class EvaluationSetWithStatusEvaluationSetStatusAsStr(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class EvaluationSetWithStatus:
-    
     created_at: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_at'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
     r"""Datetime object, specifies when the evaluation set was created"""
     evaluation_set_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('evaluation_set_id') }})
@@ -51,3 +53,4 @@ class EvaluationSetWithStatus:
     created_by: Optional[EvaluationSetWithStatusOauthUser] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_by'), 'exclude': lambda f: f is None }})
     r"""The user who created the evaluation set."""
     
+

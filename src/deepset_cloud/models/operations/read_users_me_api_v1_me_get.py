@@ -7,18 +7,21 @@ from ..shared import user as shared_user
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class ReadUsersMeAPIV1MeGetSecurity:
-    
     http_bearer: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
 
+
+
+
 @dataclasses.dataclass
 class ReadUsersMeAPIV1MeGetResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     user: Optional[shared_user.User] = dataclasses.field(default=None)
     r"""Successful Response"""
     
+

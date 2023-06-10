@@ -8,11 +8,13 @@ from enum import Enum
 from typing import Any, Optional
 
 
+
 @dataclasses.dataclass
 class GetPipelineFeedbackAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameFeedbackGetSecurity:
-    
     http_bearer: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
+
+
 class GetPipelineFeedbackAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameFeedbackGetFieldField(str, Enum):
     r"""The name of the field you want to sort by."""
     CREATED_AT = 'created_at'
@@ -27,9 +29,9 @@ class GetPipelineFeedbackAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameFeedba
     DESC = 'DESC'
 
 
+
 @dataclasses.dataclass
 class GetPipelineFeedbackAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameFeedbackGetRequest:
-    
     pipeline_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'pipeline_name', 'style': 'simple', 'explode': False }})
     r"""The name of the pipeline whose files you want to display."""
     workspace_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'workspace_name', 'style': 'simple', 'explode': False }})
@@ -52,9 +54,11 @@ class GetPipelineFeedbackAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameFeedba
     r"""Partial implementation of the OData $select operator. It currently only supports selecting fields from the root entity or a child entity. Selecting fields from children's children is not supported. If you use this parameter, the API answer is always a flat list of distinct JSON objects with the selected properties, for example, '[{\\"given_name\\": \\"user1\\", \\"user_id\\": \\"...\\"}, ...]' for 'select=created_by/given_name, created_by/user_id'. The results are ordered by the first selected attribute. To learn more about the OData filter syntax, see: [Querying Data](https://www.odata.org/getting-started/basic-tutorial/#queryData)."""
     
 
+
+
+
 @dataclasses.dataclass
 class GetPipelineFeedbackAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameFeedbackGetResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     http_validation_error: Optional[shared_httpvalidationerror.HTTPValidationError] = dataclasses.field(default=None)
@@ -63,3 +67,4 @@ class GetPipelineFeedbackAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameFeedba
     response_200_get_pipeline_feedback_api_v1_workspaces_workspace_name_pipelines_pipeline_name_feedback_get: Optional[Any] = dataclasses.field(default=None)
     r"""The CSV file with the collected feedback"""
     
+

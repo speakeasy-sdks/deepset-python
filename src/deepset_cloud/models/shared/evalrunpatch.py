@@ -8,9 +8,9 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class EvalRunPatch:
-    
     comment: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('comment'), 'exclude': lambda f: f is None }})
     r"""Add a comment to replace the previous one. To keep a history of comments, copy the previous comment here and then append your new comment to it."""
     evaluation_set_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('evaluation_set_name'), 'exclude': lambda f: f is None }})
@@ -20,3 +20,4 @@ class EvalRunPatch:
     tags: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('tags'), 'exclude': lambda f: f is None }})
     r"""Add new tags for this evaluation run. The new tags overwrite the previous ones."""
     
+

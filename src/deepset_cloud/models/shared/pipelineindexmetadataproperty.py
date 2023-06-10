@@ -7,9 +7,10 @@ from deepset_cloud import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class PipelineIndexMetadataProperty:
-    
     type: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
     r"""The associated data type of the metadata field such as 'keyword', 'long', 'float', or 'date'."""
     
+

@@ -13,9 +13,9 @@ class AnswerNodeEvalRunMetricNodeType(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class AnswerNodeEvalRunMetric:
-    
     node_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('node_name') }})
     r"""The name of the evaluated pipeline node."""
     node_type: AnswerNodeEvalRunMetricNodeType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('node_type') }})
@@ -33,3 +33,4 @@ class AnswerNodeEvalRunMetric:
     isolated_sas: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('isolated_sas'), 'exclude': lambda f: f is None }})
     r"""The SAS score of the node when the node is evaluated in the isolated mode. For more information, see [Experiments and Metrics](https://docs.cloud.deepset.ai/docs/experiments-and-metrics)."""
     
+

@@ -7,22 +7,26 @@ from ..shared import httpvalidationerror as shared_httpvalidationerror
 from typing import Any, Optional
 
 
+
 @dataclasses.dataclass
 class RemoveTokenAPIV1TokenAPITokenIDDeleteSecurity:
-    
     http_bearer: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
 
+
+
+
 @dataclasses.dataclass
 class RemoveTokenAPIV1TokenAPITokenIDDeleteRequest:
-    
     api_token_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'api_token_id', 'style': 'simple', 'explode': False }})
     r"""A unique identifier of the API token that you want to remove. You can run the Get Tokens endpoint to check the IDs of the existing API tokens."""
     
 
+
+
+
 @dataclasses.dataclass
 class RemoveTokenAPIV1TokenAPITokenIDDeleteResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     http_validation_error: Optional[shared_httpvalidationerror.HTTPValidationError] = dataclasses.field(default=None)
@@ -31,3 +35,4 @@ class RemoveTokenAPIV1TokenAPITokenIDDeleteResponse:
     remove_token_api_v1_token_api_token_id_delete_200_application_json_any: Optional[Any] = dataclasses.field(default=None)
     r"""Successful Response"""
     
+

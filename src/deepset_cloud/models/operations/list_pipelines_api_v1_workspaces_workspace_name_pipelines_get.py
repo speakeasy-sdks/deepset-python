@@ -8,15 +8,17 @@ from ..shared import pipelinepagination as shared_pipelinepagination
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class ListPipelinesAPIV1WorkspacesWorkspaceNamePipelinesGetSecurity:
-    
     http_bearer: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
 
+
+
+
 @dataclasses.dataclass
 class ListPipelinesAPIV1WorkspacesWorkspaceNamePipelinesGetRequest:
-    
     workspace_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'workspace_name', 'style': 'simple', 'explode': False }})
     r"""Type the name of the workspace."""
     after: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'after', 'style': 'form', 'explode': True }})
@@ -37,9 +39,11 @@ class ListPipelinesAPIV1WorkspacesWorkspaceNamePipelinesGetRequest:
     r"""The status of pipelines that you want to list."""
     
 
+
+
+
 @dataclasses.dataclass
 class ListPipelinesAPIV1WorkspacesWorkspaceNamePipelinesGetResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     http_validation_error: Optional[shared_httpvalidationerror.HTTPValidationError] = dataclasses.field(default=None)
@@ -48,3 +52,4 @@ class ListPipelinesAPIV1WorkspacesWorkspaceNamePipelinesGetResponse:
     r"""Successful Response"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

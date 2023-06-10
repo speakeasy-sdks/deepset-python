@@ -4,22 +4,37 @@ from __future__ import annotations
 import dataclasses
 from dataclasses_json import Undefined, dataclass_json
 from deepset_cloud import utils
-from typing import Any, Optional
+from typing import Optional
+
+
+
+@dataclasses.dataclass
+class WorkspaceWorkspaceLanguages:
+    r"""Supported languages within a workspace."""
+    pass
+
+
+
+@dataclasses.dataclass
+class WorkspaceWorkspaceMeta:
+    r"""Metadata for workspaces."""
+    pass
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class Workspace:
     r"""Successful Response"""
-    
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
     r"""How do you want to name your workspace? Type a name that's longer than 3 characters."""
     workspace_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('workspace_id') }})
     r"""Unique identifier of a workspace."""
     default_idle_timeout_in_seconds: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('default_idle_timeout_in_seconds'), 'exclude': lambda f: f is None }})
     r"""Default idle timeout for pipelines. Pipelines will be marked as idle after this time. Reach out to support to increase this limit."""
-    languages: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('languages'), 'exclude': lambda f: f is None }})
+    languages: Optional[WorkspaceWorkspaceLanguages] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('languages'), 'exclude': lambda f: f is None }})
     r"""Supported languages within a workspace."""
-    metadata_fields: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('metadata_fields'), 'exclude': lambda f: f is None }})
+    metadata_fields: Optional[WorkspaceWorkspaceMeta] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('metadata_fields'), 'exclude': lambda f: f is None }})
     r"""Metadata for workspaces."""
     
+

@@ -12,10 +12,10 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class PipelineIndexingOauthUser:
     r"""The user who created the pipeline."""
-    
     family_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('family_name') }})
     r"""Family name of a user"""
     given_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('given_name') }})
@@ -23,11 +23,13 @@ class PipelineIndexingOauthUser:
     user_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('user_id') }})
     
 
+
+
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class PipelineIndexing:
     r"""Successful Response"""
-    
     created_at: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_at'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
     r"""Datetime object, specifies when the pipeline was created"""
     desired_status: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('desired_status') }})
@@ -50,3 +52,4 @@ class PipelineIndexing:
     last_edited_by: Optional[PipelineIndexingOauthUser] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('last_edited_by'), 'exclude': lambda f: f is None }})
     r"""The user who last edited the pipeline."""
     
+

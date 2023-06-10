@@ -8,15 +8,17 @@ from ..shared import httpvalidationerror as shared_httpvalidationerror
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class GetDocumentAPIV1WorkspacesWorkspaceNameIndexesIndexNameDocumentsDocumentIDGetSecurity:
-    
     http_bearer: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
 
+
+
+
 @dataclasses.dataclass
 class GetDocumentAPIV1WorkspacesWorkspaceNameIndexesIndexNameDocumentsDocumentIDGetRequest:
-    
     document_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'document_id', 'style': 'simple', 'explode': False }})
     r"""The identifier of the document. To obtain the ID, you can run the Get All Documents endpoint."""
     index_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'index_name', 'style': 'simple', 'explode': False }})
@@ -25,9 +27,11 @@ class GetDocumentAPIV1WorkspacesWorkspaceNameIndexesIndexNameDocumentsDocumentID
     r"""Type the name of the workspace."""
     
 
+
+
+
 @dataclasses.dataclass
 class GetDocumentAPIV1WorkspacesWorkspaceNameIndexesIndexNameDocumentsDocumentIDGetResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     deepset_cloud_document: Optional[shared_deepsetclouddocument.DeepsetCloudDocument] = dataclasses.field(default=None)
@@ -36,3 +40,4 @@ class GetDocumentAPIV1WorkspacesWorkspaceNameIndexesIndexNameDocumentsDocumentID
     r"""Validation Error"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

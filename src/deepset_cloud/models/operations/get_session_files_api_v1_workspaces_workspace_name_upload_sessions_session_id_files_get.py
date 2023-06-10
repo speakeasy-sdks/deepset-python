@@ -9,11 +9,13 @@ from enum import Enum
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class GetSessionFilesAPIV1WorkspacesWorkspaceNameUploadSessionsSessionIDFilesGetSecurity:
-    
     http_bearer: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
+
+
 class GetSessionFilesAPIV1WorkspacesWorkspaceNameUploadSessionsSessionIDFilesGetIngestionStatusFileIngestionStatusEnum(str, Enum):
     r"""An enumeration."""
     PENDING = 'PENDING'
@@ -21,9 +23,9 @@ class GetSessionFilesAPIV1WorkspacesWorkspaceNameUploadSessionsSessionIDFilesGet
     FINISHED = 'FINISHED'
 
 
+
 @dataclasses.dataclass
 class GetSessionFilesAPIV1WorkspacesWorkspaceNameUploadSessionsSessionIDFilesGetRequest:
-    
     session_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'session_id', 'style': 'simple', 'explode': False }})
     r"""The ID of the session."""
     workspace_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'workspace_name', 'style': 'simple', 'explode': False }})
@@ -40,9 +42,11 @@ class GetSessionFilesAPIV1WorkspacesWorkspaceNameUploadSessionsSessionIDFilesGet
     r"""Which page do you want to see? Type the number."""
     
 
+
+
+
 @dataclasses.dataclass
 class GetSessionFilesAPIV1WorkspacesWorkspaceNameUploadSessionsSessionIDFilesGetResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     http_validation_error: Optional[shared_httpvalidationerror.HTTPValidationError] = dataclasses.field(default=None)
@@ -51,3 +55,4 @@ class GetSessionFilesAPIV1WorkspacesWorkspaceNameUploadSessionsSessionIDFilesGet
     r"""Returns a list of files registered to the session."""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+
