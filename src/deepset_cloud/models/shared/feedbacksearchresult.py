@@ -35,7 +35,8 @@ class FeedbackSearchResultPipelineFeedbackFile:
 @dataclasses.dataclass
 class FeedbackSearchResultFeedbackSearchQuerySearchFilters:
     r"""Shows which metadata filters were used for the search query."""
-    pass
+    
+
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)

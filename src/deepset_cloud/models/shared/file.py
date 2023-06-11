@@ -14,7 +14,8 @@ from typing import Optional
 @dataclasses.dataclass
 class FileMetadataOfFile:
     r"""Metadata of a file."""
-    pass
+    
+
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)

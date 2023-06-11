@@ -17,7 +17,8 @@ class SearchResultHistoryEntryDocuments:
 @dataclasses.dataclass
 class SearchResultHistoryEntrySearchResults:
     r"""List of search results."""
-    pass
+    
+
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)

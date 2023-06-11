@@ -21,7 +21,8 @@ class DocumentEvalNodePredictionEvaluationMode(str, Enum):
 @dataclasses.dataclass
 class DocumentEvalNodePredictionQueryFilters:
     r"""Filters which were used for the evaluation of the query."""
-    pass
+    
+
 
 class DocumentEvalNodePredictionPredictionType(str, Enum):
     r"""This node returns document objects during the prediction."""

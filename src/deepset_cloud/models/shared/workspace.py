@@ -11,14 +11,16 @@ from typing import Optional
 @dataclasses.dataclass
 class WorkspaceWorkspaceLanguages:
     r"""Supported languages within a workspace."""
-    pass
+    
+
 
 
 
 @dataclasses.dataclass
 class WorkspaceWorkspaceMeta:
     r"""Metadata for workspaces."""
-    pass
+    
+
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)

@@ -13,14 +13,16 @@ from typing import Any, Optional
 @dataclasses.dataclass
 class DeepsetCloudAnswerContextContext:
     r"""Context of the answer."""
-    pass
+    
+
 
 
 
 @dataclasses.dataclass
 class DeepsetCloudAnswerFileReferenceObjectDeprecatedUseFilesInstead:
     r"""Object containing the `file_id` and `name` of a file. This is used to associate a document with a file."""
-    pass
+    
+
 
 
 
@@ -33,7 +35,8 @@ class DeepsetCloudAnswerFiles:
 @dataclasses.dataclass
 class DeepsetCloudAnswerMetadataOfFile:
     r"""The metadata of this document."""
-    pass
+    
+
 
 class DeepsetCloudAnswerAnswerType(str, Enum):
     r"""Type of the answer."""

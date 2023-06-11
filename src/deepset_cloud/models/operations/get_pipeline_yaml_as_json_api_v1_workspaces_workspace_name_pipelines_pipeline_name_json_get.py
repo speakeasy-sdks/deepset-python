@@ -30,7 +30,8 @@ class GetPipelineYamlAsJSONAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameJSON
 @dataclasses.dataclass
 class GetPipelineYamlAsJSONAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameJSONGetResponseGetPipelineYamlAsJSONAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameJSONGet:
     r"""Returns the pipeline as JSON."""
-    pass
+    
+
 
 
 

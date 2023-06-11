@@ -10,7 +10,8 @@ from deepset_cloud import utils
 @dataclasses.dataclass
 class PipelineNodeConfigPipelineParameters:
     r"""The configuration parameters of this pipeline component"""
-    pass
+    
+
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)

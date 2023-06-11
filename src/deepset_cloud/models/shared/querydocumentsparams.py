@@ -11,7 +11,8 @@ from typing import Optional
 @dataclasses.dataclass
 class QueryDocumentsParamsHaystackFilters:
     r"""Filters you can use to narrow down the search. For more information, see [metadata filtering](https://docs.haystack.deepset.ai/docs/metadata-filtering)."""
-    pass
+    
+
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)

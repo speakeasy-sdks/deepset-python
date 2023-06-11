@@ -12,7 +12,8 @@ from typing import Any, Optional
 @dataclasses.dataclass
 class DeepsetCloudDocumentContentContent:
     r"""Content of the document."""
-    pass
+    
+
 
 class DeepsetCloudDocumentContentType(str, Enum):
     r"""Type of the content."""
@@ -26,14 +27,16 @@ class DeepsetCloudDocumentContentType(str, Enum):
 @dataclasses.dataclass
 class DeepsetCloudDocumentFileReferenceObjectDeprecatedUseFilesInstead:
     r"""Object containing the `file_id` and `name` of a file. This is used to associate a document with a file."""
-    pass
+    
+
 
 
 
 @dataclasses.dataclass
 class DeepsetCloudDocumentMetadataOfFile:
     r"""The metadata of this document."""
-    pass
+    
+
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)

@@ -16,7 +16,8 @@ from marshmallow import fields
 @dataclasses.dataclass
 class SearchHistoryQueryRequest:
     r"""Query request"""
-    pass
+    
+
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)

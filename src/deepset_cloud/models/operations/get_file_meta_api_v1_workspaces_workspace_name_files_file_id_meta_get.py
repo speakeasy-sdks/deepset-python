@@ -29,7 +29,8 @@ class GetFileMetaAPIV1WorkspacesWorkspaceNameFilesFileIDMetaGetRequest:
 @dataclasses.dataclass
 class GetFileMetaAPIV1WorkspacesWorkspaceNameFilesFileIDMetaGetResponseGetFileMetaAPIV1WorkspacesWorkspaceNameFilesFileIDMetaGet:
     r"""Successful Response"""
-    pass
+    
+
 
 
 

@@ -21,7 +21,8 @@ class AnswerEvalNodePredictionEvaluationMode(str, Enum):
 @dataclasses.dataclass
 class AnswerEvalNodePredictionQueryFilters:
     r"""Filters which were used for the evaluation of the query."""
-    pass
+    
+
 
 class AnswerEvalNodePredictionPredictionType(str, Enum):
     r"""This node returns answer objects during the prediction."""
