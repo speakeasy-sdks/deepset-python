@@ -1,0 +1,12 @@
+# CreateTokenAPIV1TokenPostResponse
+
+
+## Fields
+
+| Field                                                                                 | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `api_token_result`                                                                    | [Optional[shared.APITokenResult]](../../models/shared/apitokenresult.md)              | :heavy_minus_sign:                                                                    | Successful Response                                                                   |
+| `content_type`                                                                        | *str*                                                                                 | :heavy_check_mark:                                                                    | N/A                                                                                   |
+| `http_validation_error`                                                               | [Optional[shared.HTTPValidationError]](../../models/shared/httpvalidationerror.md)    | :heavy_minus_sign:                                                                    | Validation Error                                                                      |
+| `status_code`                                                                         | *int*                                                                                 | :heavy_check_mark:                                                                    | N/A                                                                                   |
+| `raw_response`                                                                        | [requests.Response](https://requests.readthedocs.io/en/latest/api/#requests.Response) | :heavy_minus_sign:                                                                    | N/A                                                                                   |
