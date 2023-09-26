@@ -1,0 +1,15 @@
+# File
+
+
+## Fields
+
+| Field                                                                | Type                                                                 | Required                                                             | Description                                                          |
+| -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| `characters`                                                         | *int*                                                                | :heavy_check_mark:                                                   | The total number of characters in this file.                         |
+| `created_at`                                                         | [date](https://docs.python.org/3/library/datetime.html#date-objects) | :heavy_check_mark:                                                   | Datetime object, specifies when the file was created                 |
+| `file_id`                                                            | *str*                                                                | :heavy_check_mark:                                                   | Unique identifier of a file.                                         |
+| `languages`                                                          | list[*str*]                                                          | :heavy_minus_sign:                                                   | List of languages in that file.                                      |
+| `meta`                                                               | [FileMetadataOfFile](../../models/shared/filemetadataoffile.md)      | :heavy_check_mark:                                                   | Metadata of a file.                                                  |
+| `name`                                                               | *str*                                                                | :heavy_check_mark:                                                   | Name of the file                                                     |
+| `size`                                                               | *int*                                                                | :heavy_check_mark:                                                   | Size of the file in bytes.                                           |
+| `url`                                                                | *str*                                                                | :heavy_check_mark:                                                   | The url path of the file.                                            |
