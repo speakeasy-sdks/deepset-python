@@ -1,0 +1,10 @@
+# DocumentStore
+
+
+## Fields
+
+| Field                                                                                        | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `indexing`                                                                                   | [Optional[shared.PipelineIndexingStatus]](undefined/models/shared/pipelineindexingstatus.md) | :heavy_check_mark:                                                                           | N/A                                                                                          |
+| `return_embedding`                                                                           | *Optional[bool]*                                                                             | :heavy_check_mark:                                                                           | N/A                                                                                          |
+| `similarity`                                                                                 | *Optional[str]*                                                                              | :heavy_check_mark:                                                                           | N/A                                                                                          |
