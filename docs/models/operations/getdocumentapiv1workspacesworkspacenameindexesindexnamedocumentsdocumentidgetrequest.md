@@ -1,0 +1,10 @@
+# GetDocumentAPIV1WorkspacesWorkspaceNameIndexesIndexNameDocumentsDocumentIDGetRequest
+
+
+## Fields
+
+| Field                                                                                         | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `document_id`                                                                                 | *Optional[str]*                                                                               | :heavy_check_mark:                                                                            | The identifier of the document. To obtain the ID, you can run the Get All Documents endpoint. |
+| `index_name`                                                                                  | *Optional[str]*                                                                               | :heavy_check_mark:                                                                            | The name of the pipeline used to process the documents.                                       |
+| `workspace_name`                                                                              | *Optional[str]*                                                                               | :heavy_check_mark:                                                                            | Type the name of the workspace.                                                               |

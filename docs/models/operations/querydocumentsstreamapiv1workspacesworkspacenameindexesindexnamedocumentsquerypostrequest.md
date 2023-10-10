@@ -1,0 +1,10 @@
+# QueryDocumentsStreamAPIV1WorkspacesWorkspaceNameIndexesIndexNameDocumentsQueryPostRequest
+
+
+## Fields
+
+| Field                                                                                    | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `query_documents_params`                                                                 | [Optional[shared.QueryDocumentsParams]](undefined/models/shared/querydocumentsparams.md) | :heavy_check_mark:                                                                       | N/A                                                                                      |
+| `index_name`                                                                             | *Optional[str]*                                                                          | :heavy_check_mark:                                                                       | The name of the pipeline.                                                                |
+| `workspace_name`                                                                         | *Optional[str]*                                                                          | :heavy_check_mark:                                                                       | Type the name of the workspace.                                                          |
