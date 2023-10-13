@@ -1,0 +1,9 @@
+# PipelineMetadataAggregation
+
+
+## Fields
+
+| Field                                                                                                           | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `max`                                                                                                           | [Optional[Union[float, str]]](../../models/shared/pipelinemetadataaggregationmaximumvalueofthemetadatafield.md) | :heavy_minus_sign:                                                                                              | The maximum value of the metadata field.                                                                        |
+| `min`                                                                                                           | [Optional[Union[float, str]]](../../models/shared/pipelinemetadataaggregationminimumvalueofthemetadatafield.md) | :heavy_minus_sign:                                                                                              | The minimum value of the metadata field.                                                                        |
