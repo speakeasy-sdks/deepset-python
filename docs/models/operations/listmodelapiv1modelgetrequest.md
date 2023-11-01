@@ -1,0 +1,9 @@
+# ListModelAPIV1ModelGetRequest
+
+
+## Fields
+
+| Field                                                                                           | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `author`                                                                                        | *Optional[str]*                                                                                 | :heavy_minus_sign:                                                                              | Author from Hugging Face. The author of the model 'deepset/minilm-uncased-squad2' is 'deepset'. |
+| `node_type`                                                                                     | *Optional[str]*                                                                                 | :heavy_minus_sign:                                                                              | Type of the node. E.g. 'PromptNode'                                                             |
