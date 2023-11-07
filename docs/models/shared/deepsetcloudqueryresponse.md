@@ -1,0 +1,12 @@
+# DeepsetCloudQueryResponse
+
+
+## Fields
+
+| Field                                                                                | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `debug`                                                                              | [Optional[components.Debug]](../../models/shared/debug.md)                           | :heavy_minus_sign:                                                                   | N/A                                                                                  |
+| `answers`                                                                            | List[[components.DeepsetCloudAnswer](../../models/shared/deepsetcloudanswer.md)]     | :heavy_minus_sign:                                                                   | List of deepset Cloud answers.                                                       |
+| `documents`                                                                          | List[[components.DeepsetCloudDocument](../../models/shared/deepsetclouddocument.md)] | :heavy_minus_sign:                                                                   | List of deepset Cloud documents.                                                     |
+| `query`                                                                              | *str*                                                                                | :heavy_check_mark:                                                                   | The search query                                                                     |
+| `query_id`                                                                           | *Optional[str]*                                                                      | :heavy_minus_sign:                                                                   | Unique identifier of the search query.                                               |
