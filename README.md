@@ -18,7 +18,7 @@ import deepset_cloud
 from deepset_cloud.models import operations
 
 s = deepset_cloud.DeepsetCloud(
-    http_bearer="",
+    http_bearer="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 req = operations.ListEvalRunsRequest(
@@ -197,7 +197,7 @@ import deepset_cloud
 from deepset_cloud.models import operations
 
 s = deepset_cloud.DeepsetCloud(
-    http_bearer="",
+    http_bearer="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 
@@ -235,7 +235,7 @@ import deepset_cloud
 
 s = deepset_cloud.DeepsetCloud(
     server_idx=0,
-    http_bearer="",
+    http_bearer="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 
@@ -255,7 +255,7 @@ import deepset_cloud
 
 s = deepset_cloud.DeepsetCloud(
     server_url="https://api.cloud.deepset.ai",
-    http_bearer="",
+    http_bearer="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 
@@ -299,7 +299,7 @@ To authenticate with the API the `http_bearer` parameter must be set when initia
 import deepset_cloud
 
 s = deepset_cloud.DeepsetCloud(
-    http_bearer="",
+    http_bearer="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 
@@ -323,7 +323,7 @@ s = deepset_cloud.DeepsetCloud()
 req = components.CreateToken()
 
 res = s.api_token.create_token(req, operations.CreateTokenAPIV1TokenPostSecurity(
-    http_bearer="",
+    http_bearer="<YOUR_BEARER_TOKEN_HERE>",
 ))
 
 if res.api_token_result is not None:

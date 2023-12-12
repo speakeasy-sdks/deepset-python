@@ -24,7 +24,7 @@ import deepset_cloud
 from deepset_cloud.models import operations
 
 s = deepset_cloud.DeepsetCloud(
-    http_bearer="",
+    http_bearer="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 
@@ -64,7 +64,7 @@ Returns the Hugging Face model token. This is an endpoint we use internally. Thi
 import deepset_cloud
 
 s = deepset_cloud.DeepsetCloud(
-    http_bearer="",
+    http_bearer="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 
@@ -95,7 +95,7 @@ Returns the model tokens. This is an endpoint we use internally. This means it c
 import deepset_cloud
 
 s = deepset_cloud.DeepsetCloud(
-    http_bearer="",
+    http_bearer="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 
@@ -127,7 +127,7 @@ import deepset_cloud
 from deepset_cloud.models import operations
 
 s = deepset_cloud.DeepsetCloud(
-    http_bearer="",
+    http_bearer="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 
@@ -167,7 +167,7 @@ Deletes the Hugging Face model token from deepset Cloud. This is an endpoint we 
 import deepset_cloud
 
 s = deepset_cloud.DeepsetCloud(
-    http_bearer="",
+    http_bearer="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 
@@ -199,7 +199,7 @@ import deepset_cloud
 from deepset_cloud.models import components, operations
 
 s = deepset_cloud.DeepsetCloud(
-    http_bearer="",
+    http_bearer="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 
@@ -243,7 +243,7 @@ import deepset_cloud
 from deepset_cloud.models import components
 
 s = deepset_cloud.DeepsetCloud(
-    http_bearer="",
+    http_bearer="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 req = components.CreateModelRegistryToken(
@@ -285,7 +285,7 @@ import deepset_cloud
 from deepset_cloud.models import components, operations
 
 s = deepset_cloud.DeepsetCloud(
-    http_bearer="",
+    http_bearer="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 
@@ -329,7 +329,7 @@ import deepset_cloud
 from deepset_cloud.models import components
 
 s = deepset_cloud.DeepsetCloud(
-    http_bearer="",
+    http_bearer="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 req = components.UpdateModelRegistryToken(

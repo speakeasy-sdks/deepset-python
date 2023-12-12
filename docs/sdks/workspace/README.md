@@ -22,7 +22,7 @@ import deepset_cloud
 from deepset_cloud.models import components
 
 s = deepset_cloud.DeepsetCloud(
-    http_bearer="",
+    http_bearer="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 req = components.WorkspaceName(
@@ -64,7 +64,7 @@ import deepset_cloud
 from deepset_cloud.models import operations
 
 s = deepset_cloud.DeepsetCloud(
-    http_bearer="",
+    http_bearer="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 
@@ -103,7 +103,7 @@ import deepset_cloud
 from deepset_cloud.models import operations
 
 s = deepset_cloud.DeepsetCloud(
-    http_bearer="",
+    http_bearer="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 
@@ -142,7 +142,7 @@ import deepset_cloud
 from deepset_cloud.models import operations
 
 s = deepset_cloud.DeepsetCloud(
-    http_bearer="",
+    http_bearer="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 
@@ -180,7 +180,7 @@ Lists all deepset Cloud workspaces and their properties. This is an endpoint we 
 import deepset_cloud
 
 s = deepset_cloud.DeepsetCloud(
-    http_bearer="",
+    http_bearer="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 
@@ -212,7 +212,7 @@ import deepset_cloud
 from deepset_cloud.models import operations
 
 s = deepset_cloud.DeepsetCloud(
-    http_bearer="",
+    http_bearer="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 req = operations.SearchCountAPIV1WorkspacesWorkspaceNameSearchCountGetRequest(
@@ -254,7 +254,7 @@ import deepset_cloud
 from deepset_cloud.models import operations
 
 s = deepset_cloud.DeepsetCloud(
-    http_bearer="",
+    http_bearer="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 req = operations.SearchHistoryAPIV1WorkspacesWorkspaceNameSearchHistoryGetRequest(

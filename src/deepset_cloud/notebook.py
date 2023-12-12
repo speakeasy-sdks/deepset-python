@@ -26,7 +26,7 @@ class Notebook:
         
         url = base_url + '/api/v1/notebook'
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "empty_class", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.PostNotebookAPIV1NotebookPostRequest, "empty_class", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         query_params = utils.get_query_params(operations.PostNotebookAPIV1NotebookPostRequest, request)
@@ -105,7 +105,7 @@ class Notebook:
         
         url = base_url + '/api/v1/notebook-server'
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, components.NotebookServerPost, "request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:

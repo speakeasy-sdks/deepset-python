@@ -174,7 +174,7 @@ class EvaluationSet:
         
         url = utils.generate_url(operations.ImportEvaluationSetAPIV1WorkspacesWorkspaceNameEvaluationSetsImportPostRequest, base_url, '/api/v1/workspaces/{workspace_name}/evaluation_sets/import', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "body_import_evaluation_set_api_v1_workspaces_workspace_name_evaluation_sets_import_post", False, False, 'multipart')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.ImportEvaluationSetAPIV1WorkspacesWorkspaceNameEvaluationSetsImportPostRequest, "body_import_evaluation_set_api_v1_workspaces_workspace_name_evaluation_sets_import_post", False, False, 'multipart')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:

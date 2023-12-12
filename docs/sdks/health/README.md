@@ -16,7 +16,7 @@ Checks if the API works correctly.
 import deepset_cloud
 
 s = deepset_cloud.DeepsetCloud(
-    http_bearer="",
+    http_bearer="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 
@@ -47,7 +47,7 @@ Opens the documentation in Open API.
 import deepset_cloud
 
 s = deepset_cloud.DeepsetCloud(
-    http_bearer="",
+    http_bearer="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 

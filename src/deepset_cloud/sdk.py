@@ -20,7 +20,7 @@ from .user import User
 from .workspace import Workspace
 from deepset_cloud import utils
 from deepset_cloud.models import components
-from typing import Callable, Dict, Union
+from typing import Dict, Optional
 
 class DeepsetCloud:
     r"""Deepset Cloud: deepset Cloud API description"""
@@ -44,7 +44,7 @@ class DeepsetCloud:
     sdk_configuration: SDKConfiguration
 
     def __init__(self,
-                 http_bearer: Union[str,Callable[[], str]],
+                 http_bearer: Optional[str]  = None,
                  server_idx: int = None,
                  server_url: str = None,
                  url_params: Dict[str, str] = None,

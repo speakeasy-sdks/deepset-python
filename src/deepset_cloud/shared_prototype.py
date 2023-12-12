@@ -26,7 +26,7 @@ class SharedPrototype:
         
         url = utils.generate_url(operations.CreatePrototypeAPIV1WorkspacesWorkspaceNameSharedPrototypesPostRequest, base_url, '/api/v1/workspaces/{workspace_name}/shared_prototypes', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "post_shared_prototype", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.CreatePrototypeAPIV1WorkspacesWorkspaceNameSharedPrototypesPostRequest, "post_shared_prototype", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -259,7 +259,7 @@ class SharedPrototype:
         
         url = utils.generate_url(operations.EditSharedPrototypeAPIV1WorkspacesWorkspaceNameSharedPrototypesSharedPrototypeIDPatchRequest, base_url, '/api/v1/workspaces/{workspace_name}/shared_prototypes/{shared_prototype_id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "patch_shared_prototype", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.EditSharedPrototypeAPIV1WorkspacesWorkspaceNameSharedPrototypesSharedPrototypeIDPatchRequest, "patch_shared_prototype", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:

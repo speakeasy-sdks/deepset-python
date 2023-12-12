@@ -18,7 +18,7 @@ import deepset_cloud
 from deepset_cloud.models import components, operations
 
 s = deepset_cloud.DeepsetCloud(
-    http_bearer="",
+    http_bearer="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 
@@ -57,7 +57,7 @@ Returns the state of the Jupyter lab server. This is an endpoint we use internal
 import deepset_cloud
 
 s = deepset_cloud.DeepsetCloud(
-    http_bearer="",
+    http_bearer="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 
@@ -89,7 +89,7 @@ import deepset_cloud
 from deepset_cloud.models import components
 
 s = deepset_cloud.DeepsetCloud(
-    http_bearer="",
+    http_bearer="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 req = components.NotebookServerPost()

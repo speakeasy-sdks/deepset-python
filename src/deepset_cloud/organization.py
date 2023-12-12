@@ -60,7 +60,7 @@ class Organization:
         
         url = utils.generate_url(operations.InviteUserToOrganizationAPIV1OrganizationOrganizationIDInvitationPostRequest, base_url, '/api/v1/organization/{organization_id}/invitation', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "request_body", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.InviteUserToOrganizationAPIV1OrganizationOrganizationIDInvitationPostRequest, "request_body", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:

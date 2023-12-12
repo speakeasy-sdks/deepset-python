@@ -27,7 +27,7 @@ class Pipeline:
         
         url = utils.generate_url(operations.AddFeedbackAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameFeedbackPostRequest, base_url, '/api/v1/workspaces/{workspace_name}/pipelines/{pipeline_name}/feedback', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "post_pipeline_feedback", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.AddFeedbackAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameFeedbackPostRequest, "post_pipeline_feedback", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -715,7 +715,7 @@ class Pipeline:
         
         url = utils.generate_url(operations.SearchAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameSearchPostRequest, base_url, '/api/v1/workspaces/{workspace_name}/pipelines/{pipeline_name}/search', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "pipeline_query", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.SearchAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameSearchPostRequest, "pipeline_query", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:

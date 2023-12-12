@@ -222,7 +222,7 @@ class ModelRegistryToken:
         
         url = utils.generate_url(operations.SaveTokenAPIV1ModelRegistryTokensProviderPostRequest, base_url, '/api/v1/model_registry_tokens/{provider}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "create_model_registry_token", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.SaveTokenAPIV1ModelRegistryTokensProviderPostRequest, "create_model_registry_token", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -270,7 +270,7 @@ class ModelRegistryToken:
         
         url = base_url + '/api/v1/model_registry_token'
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, components.CreateModelRegistryToken, "request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -321,7 +321,7 @@ class ModelRegistryToken:
         
         url = utils.generate_url(operations.UpdateTokenAPIV1ModelRegistryTokensProviderPutRequest, base_url, '/api/v1/model_registry_tokens/{provider}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "update_model_registry_token", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.UpdateTokenAPIV1ModelRegistryTokensProviderPutRequest, "update_model_registry_token", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -369,7 +369,7 @@ class ModelRegistryToken:
         
         url = base_url + '/api/v1/model_registry_token'
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, components.UpdateModelRegistryToken, "request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:

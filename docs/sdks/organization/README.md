@@ -16,7 +16,7 @@ Returns the name of the organization. This is an endpoint we use internally. Thi
 import deepset_cloud
 
 s = deepset_cloud.DeepsetCloud(
-    http_bearer="",
+    http_bearer="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 
@@ -48,7 +48,7 @@ import deepset_cloud
 from deepset_cloud.models import components, operations
 
 s = deepset_cloud.DeepsetCloud(
-    http_bearer="",
+    http_bearer="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 

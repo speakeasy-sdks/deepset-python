@@ -23,7 +23,7 @@ import deepset_cloud
 from deepset_cloud.models import operations
 
 s = deepset_cloud.DeepsetCloud(
-    http_bearer="",
+    http_bearer="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 
@@ -67,7 +67,7 @@ import deepset_cloud
 from deepset_cloud.models import operations
 
 s = deepset_cloud.DeepsetCloud(
-    http_bearer="",
+    http_bearer="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 
@@ -107,7 +107,7 @@ import deepset_cloud
 from deepset_cloud.models import operations
 
 s = deepset_cloud.DeepsetCloud(
-    http_bearer="",
+    http_bearer="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 
@@ -147,7 +147,7 @@ import deepset_cloud
 from deepset_cloud.models import operations
 
 s = deepset_cloud.DeepsetCloud(
-    http_bearer="",
+    http_bearer="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 
@@ -187,7 +187,7 @@ import deepset_cloud
 from deepset_cloud.models import operations
 
 s = deepset_cloud.DeepsetCloud(
-    http_bearer="",
+    http_bearer="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 
@@ -227,7 +227,7 @@ import deepset_cloud
 from deepset_cloud.models import operations
 
 s = deepset_cloud.DeepsetCloud(
-    http_bearer="",
+    http_bearer="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 req = operations.ListFilesAPIV1WorkspacesWorkspaceNameFilesGetRequest(
@@ -270,7 +270,7 @@ import deepset_cloud
 from deepset_cloud.models import operations
 
 s = deepset_cloud.DeepsetCloud(
-    http_bearer="",
+    http_bearer="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 
@@ -311,7 +311,7 @@ import deepset_cloud
 from deepset_cloud.models import components, operations
 
 s = deepset_cloud.DeepsetCloud(
-    http_bearer="",
+    http_bearer="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 

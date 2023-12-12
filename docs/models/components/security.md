@@ -3,6 +3,6 @@
 
 ## Fields
 
-| Field              | Type               | Required           | Description        | Example            |
-| ------------------ | ------------------ | ------------------ | ------------------ | ------------------ |
-| `http_bearer`      | *str*              | :heavy_check_mark: | N/A                |                    |
+| Field              | Type               | Required           | Description        |
+| ------------------ | ------------------ | ------------------ | ------------------ |
+| `http_bearer`      | *Optional[str]*    | :heavy_minus_sign: | N/A                |

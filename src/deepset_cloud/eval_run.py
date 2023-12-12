@@ -26,7 +26,7 @@ class EvalRun:
         
         url = utils.generate_url(operations.CreateEvalRunAPIV1WorkspacesWorkspaceNameEvalRunsPostRequest, base_url, '/api/v1/workspaces/{workspace_name}/eval_runs', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "eval_run_post", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.CreateEvalRunAPIV1WorkspacesWorkspaceNameEvalRunsPostRequest, "eval_run_post", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -77,7 +77,7 @@ class EvalRun:
         
         url = utils.generate_url(operations.CreateTagAPIV1WorkspacesWorkspaceNameTagsPostRequest, base_url, '/api/v1/workspaces/{workspace_name}/tags', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "request_body", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.CreateTagAPIV1WorkspacesWorkspaceNameTagsPostRequest, "request_body", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -432,7 +432,7 @@ class EvalRun:
         
         url = utils.generate_url(operations.EditEvalRunAPIV1WorkspacesWorkspaceNameEvalRunsEvalRunNamePatchRequest, base_url, '/api/v1/workspaces/{workspace_name}/eval_runs/{eval_run_name}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "eval_run_patch", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.EditEvalRunAPIV1WorkspacesWorkspaceNameEvalRunsEvalRunNamePatchRequest, "eval_run_patch", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -484,7 +484,7 @@ class EvalRun:
         
         url = utils.generate_url(operations.UpdateTagAPIV1WorkspacesWorkspaceNameTagsTagNamePatchRequest, base_url, '/api/v1/workspaces/{workspace_name}/tags/{tag_name}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "request_body", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.UpdateTagAPIV1WorkspacesWorkspaceNameTagsTagNamePatchRequest, "request_body", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:

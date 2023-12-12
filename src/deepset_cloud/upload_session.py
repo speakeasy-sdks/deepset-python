@@ -28,7 +28,7 @@ class UploadSession:
         
         url = utils.generate_url(operations.CloseSessionAPIV1WorkspacesWorkspaceNameUploadSessionsSessionIDPutRequest, base_url, '/api/v1/workspaces/{workspace_name}/upload_sessions/{session_id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "close_session", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.CloseSessionAPIV1WorkspacesWorkspaceNameUploadSessionsSessionIDPutRequest, "close_session", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -75,7 +75,7 @@ class UploadSession:
         
         url = utils.generate_url(operations.CreateUploadSessionAPIV1WorkspacesWorkspaceNameUploadSessionsPostRequest, base_url, '/api/v1/workspaces/{workspace_name}/upload_sessions', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "create_session", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.CreateUploadSessionAPIV1WorkspacesWorkspaceNameUploadSessionsPostRequest, "create_session", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:

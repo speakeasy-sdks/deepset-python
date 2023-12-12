@@ -73,7 +73,7 @@ class DocumentStore:
         
         url = utils.generate_url(operations.CountDocumentsStreamAPIV1WorkspacesWorkspaceNameIndexesIndexNameDocumentsCountPostRequest, base_url, '/api/v1/workspaces/{workspace_name}/indexes/{index_name}/documents-count', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "count_documents_params", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.CountDocumentsStreamAPIV1WorkspacesWorkspaceNameIndexesIndexNameDocumentsCountPostRequest, "count_documents_params", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -172,7 +172,7 @@ class DocumentStore:
         
         url = utils.generate_url(operations.GetAllDocumentsStreamAPIV1WorkspacesWorkspaceNameIndexesIndexNameDocumentsStreamPostRequest, base_url, '/api/v1/workspaces/{workspace_name}/indexes/{index_name}/documents-stream', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "fetch_documents_params", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.GetAllDocumentsStreamAPIV1WorkspacesWorkspaceNameIndexesIndexNameDocumentsStreamPostRequest, "fetch_documents_params", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -268,7 +268,7 @@ class DocumentStore:
         
         url = utils.generate_url(operations.QueryDocumentsStreamAPIV1WorkspacesWorkspaceNameIndexesIndexNameDocumentsQueryPostRequest, base_url, '/api/v1/workspaces/{workspace_name}/indexes/{index_name}/documents-query', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "query_documents_params", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.QueryDocumentsStreamAPIV1WorkspacesWorkspaceNameIndexesIndexNameDocumentsQueryPostRequest, "query_documents_params", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
