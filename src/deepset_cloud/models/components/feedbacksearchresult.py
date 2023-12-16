@@ -18,7 +18,7 @@ class FeedbackSearchResultDocuments:
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
-class FeedbackSearchResultPipelineFeedbackFile:
+class FileDeprecatedUseFilesInstead:
     r"""Shows information about the file which contains the search result."""
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
     r"""Unique identifier of a file."""
@@ -51,7 +51,7 @@ class FeedbackUser:
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
-class FeedbackSearchQuery:
+class SearchQuery:
     r"""Shows information about the search query which returned this result."""
     created_at: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_at'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse }})
     r"""Specifies when the search query was done."""
@@ -68,8 +68,8 @@ class FeedbackSearchQuery:
     
 
 
-class SearchType(str, Enum):
-    r"""An enumeration."""
+class Type(str, Enum):
+    r"""Shows the type of the prediction."""
     DOCUMENT = 'document'
     EXTRACTIVE = 'extractive'
     GENERATIVE = 'generative'
@@ -80,15 +80,15 @@ class SearchType(str, Enum):
 class FeedbackSearchResult:
     documents: List[FeedbackSearchResultDocuments] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('documents') }})
     r"""Shows the documents which contain the search results."""
-    file: FeedbackSearchResultPipelineFeedbackFile = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('file') }})
+    file: FileDeprecatedUseFilesInstead = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('file') }})
     r"""Shows information about the file which contains the search result."""
     files: List[PipelineFeedbackFile] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('files') }})
     r"""Shows information about the files which contain the search results."""
-    search: FeedbackSearchQuery = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('search') }})
+    search: SearchQuery = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('search') }})
     r"""Shows information about the search query which returned this result."""
     search_result_history_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('search_result_history_id') }})
     r"""Unique identifier of this search result"""
-    type: SearchType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
+    type: Type = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
     r"""Shows the type of the prediction."""
     answer: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('answer'), 'exclude': lambda f: f is None }})
     r"""Shows the query answer. This is only returned for question answering pipelines."""

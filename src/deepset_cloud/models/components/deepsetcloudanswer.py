@@ -10,10 +10,8 @@ from typing import Any, List, Optional, Union
 
 
 @dataclasses.dataclass
-class DeepsetCloudAnswerContext:
-    r"""Context of the answer."""
-    
-
+class Two:
+    pass
 
 
 @dataclasses.dataclass
@@ -47,7 +45,7 @@ class DeepsetCloudAnswer:
     answer: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('answer') }})
     type: AnswerType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
     r"""Type of the answer."""
-    context: Optional[Union[str, DeepsetCloudAnswerContext, List[Any]]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('context'), 'exclude': lambda f: f is None }})
+    context: Optional[Union[str, Two, List[Any]]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('context'), 'exclude': lambda f: f is None }})
     r"""Context of the answer."""
     document_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('document_id'), 'exclude': lambda f: f is None }})
     r"""ID of the document"""

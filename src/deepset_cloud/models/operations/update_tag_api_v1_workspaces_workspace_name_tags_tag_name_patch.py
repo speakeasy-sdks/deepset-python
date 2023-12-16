@@ -9,7 +9,7 @@ from deepset_cloud import utils
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
-class UpdateTagAPIV1WorkspacesWorkspaceNameTagsTagNamePatchUpdateTag:
+class UpdateTagAPIV1WorkspacesWorkspaceNameTagsTagNamePatchTagParameters:
     r"""The parameters of the tag you want to update."""
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
     r"""The name of the tag."""
@@ -19,7 +19,7 @@ class UpdateTagAPIV1WorkspacesWorkspaceNameTagsTagNamePatchUpdateTag:
 
 @dataclasses.dataclass
 class UpdateTagAPIV1WorkspacesWorkspaceNameTagsTagNamePatchRequest:
-    request_body: UpdateTagAPIV1WorkspacesWorkspaceNameTagsTagNamePatchUpdateTag = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    request_body: UpdateTagAPIV1WorkspacesWorkspaceNameTagsTagNamePatchTagParameters = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     tag_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'tag_name', 'style': 'simple', 'explode': False }})
     r"""Which tag do you want to update? Type its name here."""
     workspace_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'workspace_name', 'style': 'simple', 'explode': False }})

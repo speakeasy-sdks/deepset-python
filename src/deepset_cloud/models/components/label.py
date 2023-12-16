@@ -19,8 +19,8 @@ class LabelHaystackFilters:
 class Meta:
     pass
 
-class LabelStateAsStr(str, Enum):
-    r"""An enumeration."""
+class LabelMatchingStatus(str, Enum):
+    r"""Represents the current state for matching a file."""
     MATCHING_NOT_STARTED = 'MATCHING_NOT_STARTED'
     MATCHED = 'MATCHED'
     NO_MATCH_FOUND = 'NO_MATCH_FOUND'
@@ -34,7 +34,7 @@ class Label:
     r"""Unique identifier of a label"""
     meta: Meta = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('meta') }})
     query: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('query') }})
-    state: LabelStateAsStr = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('state') }})
+    state: LabelMatchingStatus = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('state') }})
     r"""Represents the current state for matching a file."""
     answer: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('answer'), 'exclude': lambda f: f is None }})
     answer_end: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('answer_end'), 'exclude': lambda f: f is None }})

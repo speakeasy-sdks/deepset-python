@@ -13,7 +13,7 @@ class File:
         
     
     
-    def delete_multi(self, workspace_name: str, request_body: Optional[operations.DeleteFilesAPIV1WorkspacesWorkspaceNameFilesDeleteFileNames] = None) -> operations.DeleteFilesAPIV1WorkspacesWorkspaceNameFilesDeleteResponse:
+    def delete_multi(self, workspace_name: str, request_body: Optional[operations.DeleteFilesAPIV1WorkspacesWorkspaceNameFilesDeleteFiles] = None) -> operations.DeleteFilesAPIV1WorkspacesWorkspaceNameFilesDeleteResponse:
         r"""Delete Files
         Deletes files in a workspace. Deletes all files if no file_names provided.
         """

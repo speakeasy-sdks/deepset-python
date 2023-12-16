@@ -12,7 +12,7 @@ from typing import Optional
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
-class EvaluationSetWithStatusOauthUser:
+class EvaluationSetWithStatusCreatedBy:
     r"""The user who created the evaluation set."""
     family_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('family_name') }})
     r"""Family name of a user"""
@@ -22,8 +22,8 @@ class EvaluationSetWithStatusOauthUser:
     
 
 
-class EvaluationSetStatusAsStr(str, Enum):
-    r"""An enumeration."""
+class StatusOfTheEvaluationSet(str, Enum):
+    r"""Shows you what is currently happening to the evaluation set."""
     RECEIVED = 'RECEIVED'
     LABEL_EXTRACTION_STARTED = 'LABEL_EXTRACTION_STARTED'
     CONTEXT_MATCHING_STARTED = 'CONTEXT_MATCHING_STARTED'
@@ -43,11 +43,11 @@ class EvaluationSetWithStatus:
     r"""The number of labels that were not matched"""
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
     r"""Name of the evaluation set. By default, the name of the csv or Squad2 file."""
-    status: EvaluationSetStatusAsStr = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
+    status: StatusOfTheEvaluationSet = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
     r"""Shows you what is currently happening to the evaluation set."""
     total_labels: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('total_labels') }})
     r"""The total number of uploaded labels"""
-    created_by: Optional[EvaluationSetWithStatusOauthUser] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_by'), 'exclude': lambda f: f is None }})
+    created_by: Optional[EvaluationSetWithStatusCreatedBy] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_by'), 'exclude': lambda f: f is None }})
     r"""The user who created the evaluation set."""
     
 

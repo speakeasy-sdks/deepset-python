@@ -11,7 +11,7 @@ from typing import Dict, Optional
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
-class PresignedPrefix:
+class AWSPrefix:
     r"""The request configuration used for uploading files. Set each file key to `<org_id>/<workspace_id>/<session_id>/${filename}`, where filename is <file_name>.<txt|pdf> or <file_name>.<txt|pdf>.meta.json for meta files."""
     fields: Dict[str, str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('fields') }})
     r"""The fields to include in the request to the presigned URL. These fields are required in the body of each request."""
@@ -24,7 +24,7 @@ class PresignedPrefix:
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class UploadSession:
-    aws_prefixed_request_config: PresignedPrefix = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('aws_prefixed_request_config') }})
+    aws_prefixed_request_config: AWSPrefix = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('aws_prefixed_request_config') }})
     r"""The request configuration used for uploading files. Set each file key to `<org_id>/<workspace_id>/<session_id>/${filename}`, where filename is <file_name>.<txt|pdf> or <file_name>.<txt|pdf>.meta.json for meta files."""
     expires_at: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('expires_at'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse }})
     r"""The time when the session expires."""

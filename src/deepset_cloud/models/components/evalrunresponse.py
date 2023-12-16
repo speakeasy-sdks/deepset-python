@@ -15,7 +15,7 @@ from typing import Dict, List, Optional, Union
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
-class OauthUser:
+class CreatedBy:
     r"""The user who created the eval run."""
     family_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('family_name') }})
     r"""Family name of a user"""
@@ -28,7 +28,7 @@ class OauthUser:
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
-class EvalRunResponseOauthUser:
+class EvalRunResponseCreatedBy:
     r"""The user who created the eval run."""
     family_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('family_name') }})
     r"""Family name of a user"""
@@ -41,7 +41,7 @@ class EvalRunResponseOauthUser:
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
-class EvalRunParameters:
+class EvaluationRunParameters:
     r"""Parameters set for this evaluation run"""
     debug: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('debug') }})
     r"""Turns the debug mode on for this evaluation run. The debug mode shows you what went wrong if the evaluation run fails."""
@@ -63,7 +63,7 @@ class EvalRunParameters:
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
-class PipelineMetric:
+class PipelineMetrics:
     r"""The metrics for the whole pipeline."""
     integrated_exact_match: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('integrated_exact_match'), 'exclude': lambda f: f is None }})
     r"""The number of exact matches of the pipeline. For more information, see [Experiments and Metrics](https://docs.cloud.deepset.ai/docs/experiments-and-metrics)"""
@@ -98,15 +98,15 @@ class PipelineMetric:
 class EvalRunResponse:
     created_at: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_at'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse }})
     r"""The date and time when the evaluation run was created."""
-    created_by: OauthUser = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_by') }})
+    created_by: CreatedBy = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_by') }})
     r"""The user who created the eval run."""
     eval_run_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('eval_run_id') }})
     r"""A unique identifier of the evaluation run."""
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
     r"""Unique name of an evaluation run."""
-    parameters: EvalRunParameters = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('parameters') }})
+    parameters: EvaluationRunParameters = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('parameters') }})
     r"""Parameters set for this evaluation run"""
-    pipeline_metrics: PipelineMetric = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('pipeline_metrics') }})
+    pipeline_metrics: PipelineMetrics = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('pipeline_metrics') }})
     r"""The metrics for the whole pipeline."""
     pipeline_parameters: Dict[str, PipelineNodeConfig] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('pipeline_parameters') }})
     r"""The parameters for each pipeline node with key and value."""
@@ -120,7 +120,7 @@ class EvalRunResponse:
     r"""Contains the evaluated pipeline nodes and their overall metrics."""
     last_edited_at: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('last_edited_at'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'exclude': lambda f: f is None }})
     r"""The date and time when the evaluation run was last edited."""
-    last_edited_by: Optional[EvalRunResponseOauthUser] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('last_edited_by'), 'exclude': lambda f: f is None }})
+    last_edited_by: Optional[EvalRunResponseCreatedBy] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('last_edited_by'), 'exclude': lambda f: f is None }})
     r"""The user who created the eval run."""
     
 

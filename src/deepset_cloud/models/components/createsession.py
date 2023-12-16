@@ -7,8 +7,8 @@ from deepset_cloud import utils
 from enum import Enum
 from typing import Optional
 
-class FileWriteModeEnum(str, Enum):
-    r"""An enumeration."""
+class WriteMode(str, Enum):
+    r"""Determines how to handle files that already exist. You can KEEP the existing file, OVERWRITE it, or FAIL to ingest if a file with the same name is already in your workspace."""
     KEEP = 'KEEP'
     OVERWRITE = 'OVERWRITE'
     FAIL = 'FAIL'
@@ -17,7 +17,7 @@ class FileWriteModeEnum(str, Enum):
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class CreateSession:
-    write_mode: Optional[FileWriteModeEnum] = dataclasses.field(default=FileWriteModeEnum.KEEP, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('write_mode'), 'exclude': lambda f: f is None }})
+    write_mode: Optional[WriteMode] = dataclasses.field(default=WriteMode.KEEP, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('write_mode'), 'exclude': lambda f: f is None }})
     r"""Determines how to handle files that already exist. You can KEEP the existing file, OVERWRITE it, or FAIL to ingest if a file with the same name is already in your workspace."""
     
 

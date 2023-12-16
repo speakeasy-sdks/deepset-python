@@ -1,5 +1,7 @@
 # MinimumValueOfTheMetadataField
 
+The minimum value of the metadata field.
+
 
 ## Supported Types
 

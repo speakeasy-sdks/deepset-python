@@ -1,5 +1,7 @@
 # Context
 
+Context of the answer.
+
 
 ## Supported Types
 
@@ -9,10 +11,10 @@
 context: str = /* values here */
 ```
 
-### DeepsetCloudAnswerContext
+### Two
 
 ```python
-context: components.DeepsetCloudAnswerContext = /* values here */
+context: components.Two = /* values here */
 ```
 
 ### 

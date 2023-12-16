@@ -7,8 +7,8 @@ from ...models.components import paginatedsessionfile as components_paginatedses
 from enum import Enum
 from typing import Optional
 
-class FileIngestionStatusEnum(str, Enum):
-    r"""An enumeration."""
+class FilterForIngestionStatus(str, Enum):
+    r"""Use this option to filter for files that are still being ingested or that were already ingested."""
     PENDING = 'PENDING'
     FAILED = 'FAILED'
     FINISHED = 'FINISHED'
@@ -24,7 +24,7 @@ class GetSessionFilesAPIV1WorkspacesWorkspaceNameUploadSessionsSessionIDFilesGet
     r"""Enter an ID if you want to see all entries after this ID."""
     before: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'before', 'style': 'form', 'explode': True }})
     r"""Enter an ID if you want to see all entries before this ID."""
-    ingestion_status: Optional[FileIngestionStatusEnum] = dataclasses.field(default=FileIngestionStatusEnum.FAILED, metadata={'query_param': { 'field_name': 'ingestion_status', 'style': 'form', 'explode': True }})
+    ingestion_status: Optional[FilterForIngestionStatus] = dataclasses.field(default=FilterForIngestionStatus.FAILED, metadata={'query_param': { 'field_name': 'ingestion_status', 'style': 'form', 'explode': True }})
     r"""Use this option to filter for files that are still being ingested or that were already ingested."""
     limit: Optional[int] = dataclasses.field(default=10, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
     r"""How many entries do you want to display? Leaving this field empty keeps the default and max 10 results are returned."""

@@ -9,10 +9,8 @@ from typing import Any, List, Optional, Union
 
 
 @dataclasses.dataclass
-class DeepsetCloudDocumentContent:
-    r"""Content of the document."""
-    
-
+class DeepsetCloudDocument2:
+    pass
 
 class ContentType(str, Enum):
     r"""Type of the content."""
@@ -45,7 +43,7 @@ class DeepsetCloudDocument:
     r"""ID of the document."""
     meta: DeepsetCloudDocumentMetadataOfFile = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('meta') }})
     r"""The metadata of this document."""
-    content: Optional[Union[str, DeepsetCloudDocumentContent, List[Any]]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('content'), 'exclude': lambda f: f is None }})
+    content: Optional[Union[str, DeepsetCloudDocument2, List[Any]]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('content'), 'exclude': lambda f: f is None }})
     r"""Content of the document."""
     embedding: Optional[List[float]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('embedding'), 'exclude': lambda f: f is None }})
     r"""Embedding of the document."""

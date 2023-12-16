@@ -11,7 +11,7 @@ from typing import Optional
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
-class FileIngestionStatus:
+class IngestionStatus:
     r"""The status of the ingestion process for this file."""
     failed_files: Optional[int] = dataclasses.field(default=0, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('failed_files'), 'exclude': lambda f: f is None }})
     r"""The number of files that failed to be ingested."""
@@ -26,7 +26,7 @@ class FileIngestionStatus:
 class SessionDetail:
     expires_at: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('expires_at'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse }})
     r"""The time when the session expires."""
-    ingestion_status: FileIngestionStatus = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ingestion_status') }})
+    ingestion_status: IngestionStatus = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ingestion_status') }})
     r"""The status of the ingestion process for this file."""
     session_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('session_id') }})
     r"""Unique identifier of a session."""

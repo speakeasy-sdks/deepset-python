@@ -11,7 +11,7 @@ from typing import Any, Optional
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
-class InviteUserToOrganizationAPIV1OrganizationOrganizationIDInvitationPostUserInvitation:
+class InviteUserToOrganizationAPIV1OrganizationOrganizationIDInvitationPostInvitationRequest:
     r"""The definition of the user that you want to invite to the organization."""
     email: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('email') }})
     r"""Email of a user"""
@@ -29,7 +29,7 @@ class InviteUserToOrganizationAPIV1OrganizationOrganizationIDInvitationPostUserI
 class InviteUserToOrganizationAPIV1OrganizationOrganizationIDInvitationPostRequest:
     organization_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'organization_id', 'style': 'simple', 'explode': False }})
     r"""A unique identifier of the organization. You can obtain it from Get Organization."""
-    request_body: InviteUserToOrganizationAPIV1OrganizationOrganizationIDInvitationPostUserInvitation = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    request_body: InviteUserToOrganizationAPIV1OrganizationOrganizationIDInvitationPostInvitationRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
 

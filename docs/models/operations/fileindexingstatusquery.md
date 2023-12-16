@@ -1,6 +1,6 @@
 # FileIndexingStatusQuery
 
-An enumeration.
+The status of the pipeline whose files you want to display.
 
 
 ## Values

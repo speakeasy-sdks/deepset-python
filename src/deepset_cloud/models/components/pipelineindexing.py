@@ -12,7 +12,7 @@ from typing import Optional
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
-class PipelineIndexingOauthUser:
+class PipelineIndexingCreatedBy:
     r"""The user who created the pipeline."""
     family_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('family_name') }})
     r"""Family name of a user"""
@@ -25,7 +25,7 @@ class PipelineIndexingOauthUser:
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
-class PipelineIndexingSchemasOauthUser:
+class LastEditedByUser:
     r"""The user who last edited the pipeline."""
     family_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('family_name') }})
     r"""Family name of a user"""
@@ -52,13 +52,13 @@ class PipelineIndexing:
     r"""Unique identifier of a pipeline"""
     status: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
     r"""Status of a pipeline. This string can be: 'DEPLOYED', 'UNDEPLOYED', 'DEPLOYMENT_IN_PROGRESS', and the like"""
-    created_by: Optional[PipelineIndexingOauthUser] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_by'), 'exclude': lambda f: f is None }})
+    created_by: Optional[PipelineIndexingCreatedBy] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_by'), 'exclude': lambda f: f is None }})
     r"""The user who created the pipeline."""
     deleted: Optional[bool] = dataclasses.field(default=False, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('deleted'), 'exclude': lambda f: f is None }})
     r"""Soft deletion of pipelines"""
     last_edited_at: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('last_edited_at'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'exclude': lambda f: f is None }})
     r"""Datetime object, specifies when the pipeline was edited"""
-    last_edited_by: Optional[PipelineIndexingSchemasOauthUser] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('last_edited_by'), 'exclude': lambda f: f is None }})
+    last_edited_by: Optional[LastEditedByUser] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('last_edited_by'), 'exclude': lambda f: f is None }})
     r"""The user who last edited the pipeline."""
     
 

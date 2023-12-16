@@ -1,5 +1,7 @@
 # MaximumValueOfTheMetadataField
 
+The maximum value of the metadata field.
+
 
 ## Supported Types
 

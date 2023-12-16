@@ -11,7 +11,7 @@ from enum import Enum
 from typing import List, Optional
 
 class DocumentEvalNodePredictionEvaluationMode(str, Enum):
-    r"""An enumeration."""
+    r"""Whether the node was evaluated as part of the entire pipeline (integrated) or on its own (isolated)."""
     ISOLATED = 'ISOLATED'
     INTEGRATED = 'INTEGRATED'
 

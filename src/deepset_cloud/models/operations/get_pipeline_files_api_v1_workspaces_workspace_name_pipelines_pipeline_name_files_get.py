@@ -7,7 +7,7 @@ from enum import Enum
 from typing import List, Optional
 
 class FileIndexingStatusQuery(str, Enum):
-    r"""An enumeration."""
+    r"""The status of the pipeline whose files you want to display."""
     FAILED = 'FAILED'
     INDEXED_NO_DOCUMENTS = 'INDEXED_NO_DOCUMENTS'
 

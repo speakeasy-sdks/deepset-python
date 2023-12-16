@@ -19,8 +19,8 @@ class LabelWithPredictionHaystackFilters:
 class LabelWithPredictionMeta:
     pass
 
-class LabelWithPredictionLabelStateAsStr(str, Enum):
-    r"""An enumeration."""
+class LabelWithPredictionLabelMatchingStatus(str, Enum):
+    r"""Represents the current state for matching a file."""
     MATCHING_NOT_STARTED = 'MATCHING_NOT_STARTED'
     MATCHED = 'MATCHED'
     NO_MATCH_FOUND = 'NO_MATCH_FOUND'
@@ -38,7 +38,7 @@ class LabelWithPrediction:
     r"""Unique identifier of a label"""
     meta: LabelWithPredictionMeta = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('meta') }})
     query: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('query') }})
-    state: LabelWithPredictionLabelStateAsStr = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('state') }})
+    state: LabelWithPredictionLabelMatchingStatus = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('state') }})
     r"""Represents the current state for matching a file."""
     answer: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('answer'), 'exclude': lambda f: f is None }})
     answer_end: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('answer_end'), 'exclude': lambda f: f is None }})

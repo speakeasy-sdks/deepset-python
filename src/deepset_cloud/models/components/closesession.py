@@ -7,15 +7,15 @@ from deepset_cloud import utils
 from enum import Enum
 from typing import Optional
 
-class SessionCloseStatusEnum(str, Enum):
-    r"""An enumeration."""
+class CloseSessionCloseSession(str, Enum):
+    r"""Closes the session and starts the ingestion of the uploaded files."""
     CLOSED = 'closed'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class CloseSession:
-    status: Optional[SessionCloseStatusEnum] = dataclasses.field(default=SessionCloseStatusEnum.CLOSED, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
+    status: Optional[CloseSessionCloseSession] = dataclasses.field(default=CloseSessionCloseSession.CLOSED, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
     r"""Closes the session and starts the ingestion of the uploaded files."""
     
 

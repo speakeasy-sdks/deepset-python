@@ -10,7 +10,7 @@ from typing import Any, List, Optional
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
-class DeleteFilesAPIV1WorkspacesWorkspaceNameFilesDeleteFileNames:
+class DeleteFilesAPIV1WorkspacesWorkspaceNameFilesDeleteFiles:
     r"""Type the names of the files you want to delete, separated with commas."""
     names: List[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('names') }})
     r"""The names of the files to delete."""
@@ -22,7 +22,7 @@ class DeleteFilesAPIV1WorkspacesWorkspaceNameFilesDeleteFileNames:
 class DeleteFilesAPIV1WorkspacesWorkspaceNameFilesDeleteRequest:
     workspace_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'workspace_name', 'style': 'simple', 'explode': False }})
     r"""Type the name of the workspace."""
-    request_body: Optional[DeleteFilesAPIV1WorkspacesWorkspaceNameFilesDeleteFileNames] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    request_body: Optional[DeleteFilesAPIV1WorkspacesWorkspaceNameFilesDeleteFiles] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
 

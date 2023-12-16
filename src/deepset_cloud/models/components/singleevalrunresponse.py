@@ -16,7 +16,7 @@ from typing import Dict, List, Optional, Union
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
-class SingleEvalRunResponseOauthUser:
+class SingleEvalRunResponseCreatedBy:
     r"""The user who created the eval run."""
     family_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('family_name') }})
     r"""Family name of a user"""
@@ -29,7 +29,7 @@ class SingleEvalRunResponseOauthUser:
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
-class SingleEvalRunResponseSchemasOauthUser:
+class SingleEvalRunResponseSchemasCreatedBy:
     r"""The user who created the eval run."""
     family_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('family_name') }})
     r"""Family name of a user"""
@@ -42,7 +42,7 @@ class SingleEvalRunResponseSchemasOauthUser:
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
-class SingleEvalRunResponseEvalRunParameters:
+class SingleEvalRunResponseEvaluationRunParameters:
     r"""Parameters set for this evaluation run"""
     debug: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('debug') }})
     r"""Turns the debug mode on for this evaluation run. The debug mode shows you what went wrong if the evaluation run fails."""
@@ -64,7 +64,7 @@ class SingleEvalRunResponseEvalRunParameters:
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
-class SingleEvalRunResponsePipelineMetric:
+class SingleEvalRunResponsePipelineMetrics:
     r"""The metrics for the whole pipeline."""
     integrated_exact_match: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('integrated_exact_match'), 'exclude': lambda f: f is None }})
     r"""The number of exact matches of the pipeline. For more information, see [Experiments and Metrics](https://docs.cloud.deepset.ai/docs/experiments-and-metrics)"""
@@ -99,7 +99,7 @@ class SingleEvalRunResponsePipelineMetric:
 class SingleEvalRunResponse:
     created_at: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_at'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse }})
     r"""The date and time when the evaluation run was created."""
-    created_by: SingleEvalRunResponseOauthUser = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_by') }})
+    created_by: SingleEvalRunResponseCreatedBy = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_by') }})
     r"""The user who created the eval run."""
     eval_run_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('eval_run_id') }})
     r"""A unique identifier of the evaluation run."""
@@ -107,9 +107,9 @@ class SingleEvalRunResponse:
     r"""Contains the logs of the evaluation run."""
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
     r"""Unique name of an evaluation run."""
-    parameters: SingleEvalRunResponseEvalRunParameters = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('parameters') }})
+    parameters: SingleEvalRunResponseEvaluationRunParameters = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('parameters') }})
     r"""Parameters set for this evaluation run"""
-    pipeline_metrics: SingleEvalRunResponsePipelineMetric = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('pipeline_metrics') }})
+    pipeline_metrics: SingleEvalRunResponsePipelineMetrics = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('pipeline_metrics') }})
     r"""The metrics for the whole pipeline."""
     pipeline_parameters: Dict[str, PipelineNodeConfig] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('pipeline_parameters') }})
     r"""The parameters for each pipeline node with key and value."""
@@ -123,7 +123,7 @@ class SingleEvalRunResponse:
     r"""Contains the evaluated pipeline nodes and their overall metrics."""
     last_edited_at: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('last_edited_at'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'exclude': lambda f: f is None }})
     r"""The date and time when the evaluation run was last edited."""
-    last_edited_by: Optional[SingleEvalRunResponseSchemasOauthUser] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('last_edited_by'), 'exclude': lambda f: f is None }})
+    last_edited_by: Optional[SingleEvalRunResponseSchemasCreatedBy] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('last_edited_by'), 'exclude': lambda f: f is None }})
     r"""The user who created the eval run."""
     
 

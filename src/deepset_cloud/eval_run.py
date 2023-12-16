@@ -64,7 +64,7 @@ class EvalRun:
 
     
     
-    def create_tag(self, request_body: operations.CreateTagAPIV1WorkspacesWorkspaceNameTagsPostCreateTag, workspace_name: str) -> operations.CreateTagAPIV1WorkspacesWorkspaceNameTagsPostResponse:
+    def create_tag(self, request_body: operations.CreateTagAPIV1WorkspacesWorkspaceNameTagsPostTagParameters, workspace_name: str) -> operations.CreateTagAPIV1WorkspacesWorkspaceNameTagsPostResponse:
         r"""Create Tag [private]
         Creates a tag for your evaluation run. Tags can help you order and find your evaluation runs later. This is an endpoint we use internally. This means it can change anytime so bear this in mind if you want to use it.
         """
@@ -470,7 +470,7 @@ class EvalRun:
 
     
     
-    def update_tag(self, request_body: operations.UpdateTagAPIV1WorkspacesWorkspaceNameTagsTagNamePatchUpdateTag, tag_name: str, workspace_name: str) -> operations.UpdateTagAPIV1WorkspacesWorkspaceNameTagsTagNamePatchResponse:
+    def update_tag(self, request_body: operations.UpdateTagAPIV1WorkspacesWorkspaceNameTagsTagNamePatchTagParameters, tag_name: str, workspace_name: str) -> operations.UpdateTagAPIV1WorkspacesWorkspaceNameTagsTagNamePatchResponse:
         r"""Update Tag [private]
         Changes the name of the tag you choose. Type the new tag name in the `name` field of the BODY PARAMS section. This is an endpoint we use internally. This means it can change anytime so bear this in mind if you want to use it.
         """

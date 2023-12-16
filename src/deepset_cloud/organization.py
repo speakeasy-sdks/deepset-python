@@ -47,7 +47,7 @@ class Organization:
 
     
     
-    def invite(self, request_body: operations.InviteUserToOrganizationAPIV1OrganizationOrganizationIDInvitationPostUserInvitation, organization_id: str) -> operations.InviteUserToOrganizationAPIV1OrganizationOrganizationIDInvitationPostResponse:
+    def invite(self, request_body: operations.InviteUserToOrganizationAPIV1OrganizationOrganizationIDInvitationPostInvitationRequest, organization_id: str) -> operations.InviteUserToOrganizationAPIV1OrganizationOrganizationIDInvitationPostResponse:
         r"""Invite User To Organization [private]
         Sends an email to the user inviting them to your deepset Cloud organization. This is an endpoint we use internally. This means it can change anytime so bear this in mind if you want to use it.
         """

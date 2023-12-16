@@ -11,7 +11,7 @@ from typing import Optional
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
-class CreateTagAPIV1WorkspacesWorkspaceNameTagsPostCreateTag:
+class CreateTagAPIV1WorkspacesWorkspaceNameTagsPostTagParameters:
     r"""The parameters of the tag you want to create."""
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
     r"""The name of the tag."""
@@ -21,7 +21,7 @@ class CreateTagAPIV1WorkspacesWorkspaceNameTagsPostCreateTag:
 
 @dataclasses.dataclass
 class CreateTagAPIV1WorkspacesWorkspaceNameTagsPostRequest:
-    request_body: CreateTagAPIV1WorkspacesWorkspaceNameTagsPostCreateTag = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    request_body: CreateTagAPIV1WorkspacesWorkspaceNameTagsPostTagParameters = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     workspace_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'workspace_name', 'style': 'simple', 'explode': False }})
     r"""Type the name of the workspace."""
     

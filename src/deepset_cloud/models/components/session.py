@@ -12,7 +12,7 @@ from typing import Optional
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
-class SessionOauthUser:
+class SessionCreatedByUser:
     r"""The user who created the session."""
     family_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('family_name') }})
     r"""Family name of a user"""
@@ -22,8 +22,8 @@ class SessionOauthUser:
     
 
 
-class SessionFileWriteModeEnum(str, Enum):
-    r"""An enumeration."""
+class SessionWriteMode(str, Enum):
+    r"""Determines how to handle files that already exist. You can KEEP the existing file, OVERWRITE it, or FAIL to ingest if a file with the same name is already in your workspace."""
     KEEP = 'KEEP'
     OVERWRITE = 'OVERWRITE'
     FAIL = 'FAIL'
@@ -34,13 +34,13 @@ class SessionFileWriteModeEnum(str, Enum):
 class Session:
     created_at: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_at'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse }})
     r"""The time when the session was created."""
-    created_by: SessionOauthUser = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_by') }})
+    created_by: SessionCreatedByUser = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_by') }})
     r"""The user who created the session."""
     expires_at: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('expires_at'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'exclude': lambda f: f is None }})
     r"""The time when the session expires."""
     session_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('session_id'), 'exclude': lambda f: f is None }})
     r"""Unique identifier of a session."""
-    write_mode: Optional[SessionFileWriteModeEnum] = dataclasses.field(default=SessionFileWriteModeEnum.KEEP, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('write_mode'), 'exclude': lambda f: f is None }})
+    write_mode: Optional[SessionWriteMode] = dataclasses.field(default=SessionWriteMode.KEEP, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('write_mode'), 'exclude': lambda f: f is None }})
     r"""Determines how to handle files that already exist. You can KEEP the existing file, OVERWRITE it, or FAIL to ingest if a file with the same name is already in your workspace."""
     
 

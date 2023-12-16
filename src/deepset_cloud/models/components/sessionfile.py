@@ -7,14 +7,14 @@ from deepset_cloud import utils
 from enum import Enum
 from typing import Optional
 
-class FileIngestionStatusEnum(str, Enum):
-    r"""An enumeration."""
+class IngestedFileIngestionStatus(str, Enum):
+    r"""The ingestion status of the ingested file."""
     PENDING = 'PENDING'
     FAILED = 'FAILED'
     FINISHED = 'FINISHED'
 
-class FileIngestionStatusReasonEnum(str, Enum):
-    r"""An enumeration."""
+class ExplanationOfTheIngestionStatus(str, Enum):
+    r"""The ingestion status message that explains the ingestion status. This is only available for files that failed to ingest."""
     EMPTY_FILE = 'EMPTY_FILE'
     FILE_NOT_FOUND = 'FILE_NOT_FOUND'
     FAILED_TO_PARSE_META = 'FAILED_TO_PARSE_META'
@@ -25,13 +25,13 @@ class FileIngestionStatusReasonEnum(str, Enum):
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class SessionFile:
-    ingestion_status: FileIngestionStatusEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ingestion_status') }})
+    ingestion_status: IngestedFileIngestionStatus = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ingestion_status') }})
     r"""The ingestion status of the ingested file."""
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
     r"""The name of the ingested file."""
     file_ingestion_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('file_ingestion_id'), 'exclude': lambda f: f is None }})
     r"""The ID of the ingested file."""
-    ingestion_status_reason: Optional[FileIngestionStatusReasonEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ingestion_status_reason'), 'exclude': lambda f: f is None }})
+    ingestion_status_reason: Optional[ExplanationOfTheIngestionStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ingestion_status_reason'), 'exclude': lambda f: f is None }})
     r"""The ingestion status message that explains the ingestion status. This is only available for files that failed to ingest."""
     
 

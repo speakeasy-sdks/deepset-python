@@ -1,5 +1,7 @@
 # Content
 
+Content of the document.
+
 
 ## Supported Types
 
@@ -9,10 +11,10 @@
 content: str = /* values here */
 ```
 
-### DeepsetCloudDocumentContent
+### DeepsetCloudDocument2
 
 ```python
-content: components.DeepsetCloudDocumentContent = /* values here */
+content: components.DeepsetCloudDocument2 = /* values here */
 ```
 
 ### 

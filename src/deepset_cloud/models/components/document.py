@@ -9,7 +9,7 @@ from typing import Optional
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
-class DocumentMeta:
+class DocumentMetadata:
     r"""The metadata of this document."""
     split_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('split_id') }})
     r"""The ID you can use to identify this document passage in the file."""
@@ -22,7 +22,7 @@ class DocumentMeta:
 class Document:
     text: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('text') }})
     r"""The contents of this document."""
-    meta: Optional[DocumentMeta] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('meta'), 'exclude': lambda f: f is None }})
+    meta: Optional[DocumentMetadata] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('meta'), 'exclude': lambda f: f is None }})
     r"""The metadata of this document."""
     
 
