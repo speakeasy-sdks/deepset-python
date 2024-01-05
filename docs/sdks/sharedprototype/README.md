@@ -27,7 +27,7 @@ s = deepset_cloud.DeepsetCloud(
 
 
 res = s.shared_prototype.create(post_shared_prototype=components.PostSharedPrototype(
-    expiration_date=dateutil.parser.isoparse('2022-06-17T19:34:14.348Z'),
+    expiration_date=dateutil.parser.isoparse('2023-06-18T07:14:55.676Z'),
     pipeline_names=[
         'string',
     ],
@@ -54,7 +54,7 @@ if res.shared_prototype is not None:
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4x-5xx                     | */*                        |
 
 ## create_external_user
 
@@ -94,7 +94,7 @@ if res.external_user_information is not None:
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4x-5xx                     | */*                        |
 
 ## get
 
@@ -134,7 +134,7 @@ if res.shared_prototype is not None:
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4x-5xx                     | */*                        |
 
 ## list
 
@@ -176,7 +176,7 @@ if res.paginated_shared_prototypes is not None:
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4x-5xx                     | */*                        |
 
 ## revoke
 
@@ -216,7 +216,7 @@ if res.any is not None:
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4x-5xx                     | */*                        |
 
 ## update
 
@@ -257,4 +257,4 @@ if res.shared_prototype is not None:
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4x-5xx                     | */*                        |

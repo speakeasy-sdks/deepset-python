@@ -1,28 +1,11 @@
-configVersion: 1.0.0
-management:
-  docChecksum: 08811e59b32fbd2741380b7d4efaf27b
-  docVersion: 1.0.0
-  speakeasyVersion: 1.126.4
-  generationVersion: 2.214.10
+configVersion: 2.0.0
 generation:
-  comments: {}
   sdkClassName: deepset-cloud
-  repoURL: https://github.com/speakeasy-sdks/deepset-python.git
   usageSnippets:
     optionalPropertyRendering: withExample
   fixes:
     nameResolutionDec2023: false
   telemetryEnabled: false
-features:
-  python:
-    core: 4.3.1
-    deprecations: 2.81.1
-    examples: 2.81.3
-    flattening: 2.81.1
-    globalSecurity: 2.83.1
-    globalServerURLs: 2.82.1
-    methodSecurity: 2.82.0
-    nameOverrides: 2.81.1
 python:
   version: 1.2.1
   author: deepset
@@ -38,8 +21,6 @@ python:
       shared: models/components
       webhooks: models/webhooks
   inputModelSuffix: input
-  installationURL: https://github.com/speakeasy-sdks/deepset-python.git
   maxMethodParams: 4
   outputModelSuffix: output
   packageName: deepset-cloud
-  repoSubDirectory: .
