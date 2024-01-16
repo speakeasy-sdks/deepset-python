@@ -4,7 +4,7 @@ management:
   docChecksum: 08811e59b32fbd2741380b7d4efaf27b
   docVersion: 1.0.0
   speakeasyVersion: internal
-  generationVersion: 2.228.1
+  generationVersion: 2.233.2
   releaseVersion: 1.2.2
   configChecksum: 280638cbbef089623d13e1a69c8ab69e
   repoURL: https://github.com/speakeasy-sdks/deepset-python.git
