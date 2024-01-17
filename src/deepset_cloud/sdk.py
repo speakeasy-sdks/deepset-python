@@ -20,7 +20,7 @@ from .user import User
 from .workspace import Workspace
 from deepset_cloud import utils
 from deepset_cloud.models import components
-from typing import Dict, Optional
+from typing import Callable, Dict, Optional, Union
 
 class DeepsetCloud:
     r"""Deepset Cloud: deepset Cloud API description"""
@@ -44,7 +44,7 @@ class DeepsetCloud:
     sdk_configuration: SDKConfiguration
 
     def __init__(self,
-                 http_bearer: Optional[str]  = None,
+                 http_bearer: Union[Optional[str], Callable[[], Optional[str]]] = None,
                  server_idx: int = None,
                  server_url: str = None,
                  url_params: Dict[str, str] = None,
@@ -54,7 +54,7 @@ class DeepsetCloud:
         """Instantiates the SDK configuring it with the provided parameters.
         
         :param http_bearer: The http_bearer required for authentication
-        :type http_bearer: Union[str,Callable[[], str]]
+        :type http_bearer: Union[Optional[str], Callable[[], Optional[str]]]
         :param server_idx: The index of the server to use for all operations
         :type server_idx: int
         :param server_url: The server URL to use for all operations
@@ -69,7 +69,11 @@ class DeepsetCloud:
         if client is None:
             client = requests_http.Session()
         
-        security = components.Security(http_bearer = http_bearer)
+        if callable(http_bearer):
+            def security():
+                return components.Security(http_bearer = http_bearer())
+        else:
+            security = components.Security(http_bearer = http_bearer)
         
         if server_url is not None:
             if url_params is not None:
