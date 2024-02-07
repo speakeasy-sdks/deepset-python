@@ -659,11 +659,11 @@ s = deepset_cloud.DeepsetCloud(
 
 
 res = s.pipeline.search(pipeline_query=components.PipelineQuery(
-    filters=components.PipelineQueryHaystackFilters(),
-    params=components.PipelineQueryPipelineParameters(),
     queries=[
         'string',
     ],
+    filters=components.PipelineQueryHaystackFilters(),
+    params=components.PipelineQueryPipelineParameters(),
 ), pipeline_name='string', workspace_name='string')
 
 if res.search_result is not None:

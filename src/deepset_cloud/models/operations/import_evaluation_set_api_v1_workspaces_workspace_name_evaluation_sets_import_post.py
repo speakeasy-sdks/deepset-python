@@ -21,10 +21,10 @@ class ImportEvaluationSetAPIV1WorkspacesWorkspaceNameEvaluationSetsImportPostReq
 class ImportEvaluationSetAPIV1WorkspacesWorkspaceNameEvaluationSetsImportPostResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
-    raw_response: requests_http.Response = dataclasses.field()
-    r"""Raw HTTP response; suitable for custom response parsing"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     evaluation_set_import: Optional[components_evaluationsetimport.EvaluationSetImport] = dataclasses.field(default=None)
     r"""Returns the name of the imported evaluation set."""
     

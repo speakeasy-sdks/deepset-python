@@ -16,9 +16,9 @@ class UpdateTokenAPIV1ModelRegistryTokensProviderPutPathParamModelProvider(str, 
 
 @dataclasses.dataclass
 class UpdateTokenAPIV1ModelRegistryTokensProviderPutRequest:
+    update_model_registry_token: components_updatemodelregistrytoken.UpdateModelRegistryToken = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     provider: UpdateTokenAPIV1ModelRegistryTokensProviderPutPathParamModelProvider = dataclasses.field(metadata={'path_param': { 'field_name': 'provider', 'style': 'simple', 'explode': False }})
     r"""The provider of the model registry"""
-    update_model_registry_token: components_updatemodelregistrytoken.UpdateModelRegistryToken = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
 
@@ -27,10 +27,10 @@ class UpdateTokenAPIV1ModelRegistryTokensProviderPutRequest:
 class UpdateTokenAPIV1ModelRegistryTokensProviderPutResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
-    raw_response: requests_http.Response = dataclasses.field()
-    r"""Raw HTTP response; suitable for custom response parsing"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     any: Optional[Any] = dataclasses.field(default=None)
     r"""Successful Response"""
     

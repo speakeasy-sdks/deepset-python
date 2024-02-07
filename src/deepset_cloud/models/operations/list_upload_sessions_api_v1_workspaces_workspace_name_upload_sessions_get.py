@@ -29,10 +29,10 @@ class ListUploadSessionsAPIV1WorkspacesWorkspaceNameUploadSessionsGetRequest:
 class ListUploadSessionsAPIV1WorkspacesWorkspaceNameUploadSessionsGetResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
-    raw_response: requests_http.Response = dataclasses.field()
-    r"""Raw HTTP response; suitable for custom response parsing"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     paginated_session: Optional[components_paginatedsession.PaginatedSession] = dataclasses.field(default=None)
     r"""Your upload sessions."""
     

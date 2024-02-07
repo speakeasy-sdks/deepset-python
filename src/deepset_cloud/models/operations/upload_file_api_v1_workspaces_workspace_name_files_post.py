@@ -31,10 +31,10 @@ class UploadFileAPIV1WorkspacesWorkspaceNameFilesPostRequest:
 class UploadFileAPIV1WorkspacesWorkspaceNameFilesPostResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
-    raw_response: requests_http.Response = dataclasses.field()
-    r"""Raw HTTP response; suitable for custom response parsing"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     response_upload_file_api_v1_workspaces_workspace_name_files_post: Optional[Dict[str, str]] = dataclasses.field(default=None)
     r"""Your file's in the workspace."""
     

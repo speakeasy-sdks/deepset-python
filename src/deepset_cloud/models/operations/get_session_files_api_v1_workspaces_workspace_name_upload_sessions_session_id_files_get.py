@@ -38,10 +38,10 @@ class GetSessionFilesAPIV1WorkspacesWorkspaceNameUploadSessionsSessionIDFilesGet
 class GetSessionFilesAPIV1WorkspacesWorkspaceNameUploadSessionsSessionIDFilesGetResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
-    raw_response: requests_http.Response = dataclasses.field()
-    r"""Raw HTTP response; suitable for custom response parsing"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     paginated_session_file: Optional[components_paginatedsessionfile.PaginatedSessionFile] = dataclasses.field(default=None)
     r"""Returns a list of files registered to the session."""
     

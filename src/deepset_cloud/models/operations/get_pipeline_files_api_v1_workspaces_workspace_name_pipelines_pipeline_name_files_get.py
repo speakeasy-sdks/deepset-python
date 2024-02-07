@@ -28,10 +28,10 @@ class GetPipelineFilesAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameFilesGetR
 class GetPipelineFilesAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameFilesGetResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
-    raw_response: requests_http.Response = dataclasses.field()
-    r"""Raw HTTP response; suitable for custom response parsing"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     response_get_pipeline_files_api_v1_workspaces_workspace_name_pipelines_pipeline_name_files_get: Optional[List[str]] = dataclasses.field(default=None)
     r"""Successful Response"""
     

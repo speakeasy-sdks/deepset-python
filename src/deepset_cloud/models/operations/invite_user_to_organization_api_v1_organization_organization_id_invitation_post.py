@@ -27,9 +27,9 @@ class InviteUserToOrganizationAPIV1OrganizationOrganizationIDInvitationPostInvit
 
 @dataclasses.dataclass
 class InviteUserToOrganizationAPIV1OrganizationOrganizationIDInvitationPostRequest:
+    request_body: InviteUserToOrganizationAPIV1OrganizationOrganizationIDInvitationPostInvitationRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     organization_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'organization_id', 'style': 'simple', 'explode': False }})
     r"""A unique identifier of the organization. You can obtain it from Get Organization."""
-    request_body: InviteUserToOrganizationAPIV1OrganizationOrganizationIDInvitationPostInvitationRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
 
@@ -38,10 +38,10 @@ class InviteUserToOrganizationAPIV1OrganizationOrganizationIDInvitationPostReque
 class InviteUserToOrganizationAPIV1OrganizationOrganizationIDInvitationPostResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
-    raw_response: requests_http.Response = dataclasses.field()
-    r"""Raw HTTP response; suitable for custom response parsing"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     any: Optional[Any] = dataclasses.field(default=None)
     r"""Successful Response"""
     

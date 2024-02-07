@@ -51,10 +51,10 @@ class GetPipelineFeedbackAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameFeedba
 class GetPipelineFeedbackAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameFeedbackGetResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
-    raw_response: requests_http.Response = dataclasses.field()
-    r"""Raw HTTP response; suitable for custom response parsing"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     response_200_get_pipeline_feedback_api_v1_workspaces_workspace_name_pipelines_pipeline_name_feedback_get: Optional[Union[str, components_paginatedfeedback.PaginatedFeedback]] = dataclasses.field(default=None)
     r"""The CSV file with the collected feedback"""
     

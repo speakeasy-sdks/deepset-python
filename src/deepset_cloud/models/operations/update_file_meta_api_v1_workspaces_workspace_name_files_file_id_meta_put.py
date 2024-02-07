@@ -13,8 +13,8 @@ class UpdateFileMetaAPIV1WorkspacesWorkspaceNameFilesFileIDMetaPutMeta:
 
 @dataclasses.dataclass
 class UpdateFileMetaAPIV1WorkspacesWorkspaceNameFilesFileIDMetaPutRequest:
-    file_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'file_id', 'style': 'simple', 'explode': False }})
     request_body: UpdateFileMetaAPIV1WorkspacesWorkspaceNameFilesFileIDMetaPutMeta = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    file_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'file_id', 'style': 'simple', 'explode': False }})
     workspace_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'workspace_name', 'style': 'simple', 'explode': False }})
     r"""Type the name of the workspace."""
     
@@ -25,10 +25,10 @@ class UpdateFileMetaAPIV1WorkspacesWorkspaceNameFilesFileIDMetaPutRequest:
 class UpdateFileMetaAPIV1WorkspacesWorkspaceNameFilesFileIDMetaPutResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
-    raw_response: requests_http.Response = dataclasses.field()
-    r"""Raw HTTP response; suitable for custom response parsing"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     any: Optional[Any] = dataclasses.field(default=None)
     r"""Successful Response"""
     

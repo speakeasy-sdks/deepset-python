@@ -10,9 +10,9 @@ from typing import Optional
 
 @dataclasses.dataclass
 class SearchAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameSearchPostRequest:
+    pipeline_query: components_pipelinequery.PipelineQuery = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     pipeline_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'pipeline_name', 'style': 'simple', 'explode': False }})
     r"""The name of the pipeline that you want to use for search."""
-    pipeline_query: components_pipelinequery.PipelineQuery = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     workspace_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'workspace_name', 'style': 'simple', 'explode': False }})
     r"""Type the name of the workspace."""
     
@@ -23,10 +23,10 @@ class SearchAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameSearchPostRequest:
 class SearchAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameSearchPostResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
-    raw_response: requests_http.Response = dataclasses.field()
-    r"""Raw HTTP response; suitable for custom response parsing"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     search_result: Optional[components_searchresult.SearchResult] = dataclasses.field(default=None)
     r"""Returns the search results."""
     

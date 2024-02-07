@@ -23,10 +23,10 @@ class CountDocumentsStreamAPIV1WorkspacesWorkspaceNameIndexesIndexNameDocumentsC
 class CountDocumentsStreamAPIV1WorkspacesWorkspaceNameIndexesIndexNameDocumentsCountPostResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
-    raw_response: requests_http.Response = dataclasses.field()
-    r"""Raw HTTP response; suitable for custom response parsing"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     dc_document_count: Optional[components_dcdocumentcount.DCDocumentCount] = dataclasses.field(default=None)
     r"""Successful Response"""
     

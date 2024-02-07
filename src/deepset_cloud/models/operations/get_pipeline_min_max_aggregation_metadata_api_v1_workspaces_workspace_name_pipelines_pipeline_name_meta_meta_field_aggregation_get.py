@@ -23,10 +23,10 @@ class GetPipelineMinMaxAggregationMetadataAPIV1WorkspacesWorkspaceNamePipelinesP
 class GetPipelineMinMaxAggregationMetadataAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameMetaMetaFieldAggregationGetResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
-    raw_response: requests_http.Response = dataclasses.field()
-    r"""Raw HTTP response; suitable for custom response parsing"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     pipeline_metadata_aggregation: Optional[components_pipelinemetadataaggregation.PipelineMetadataAggregation] = dataclasses.field(default=None)
     r"""Min and max value aggregation of the meta_field"""
     

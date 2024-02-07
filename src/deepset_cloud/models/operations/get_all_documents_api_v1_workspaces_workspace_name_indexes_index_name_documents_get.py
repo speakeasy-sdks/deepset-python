@@ -22,10 +22,10 @@ class GetAllDocumentsAPIV1WorkspacesWorkspaceNameIndexesIndexNameDocumentsGetReq
 class GetAllDocumentsAPIV1WorkspacesWorkspaceNameIndexesIndexNameDocumentsGetResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
-    raw_response: requests_http.Response = dataclasses.field()
-    r"""Raw HTTP response; suitable for custom response parsing"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     response_get_all_documents_api_v1_workspaces_workspace_name_indexes_index_name_documents_get: Optional[List[components_deepsetclouddocument.DeepsetCloudDocument]] = dataclasses.field(default=None)
     r"""Successful Response"""
     

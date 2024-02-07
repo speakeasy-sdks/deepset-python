@@ -9,9 +9,9 @@ from typing import Any, Optional
 
 @dataclasses.dataclass
 class AddFeedbackAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameFeedbackPostRequest:
+    post_pipeline_feedback: components_postpipelinefeedback.PostPipelineFeedback = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     pipeline_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'pipeline_name', 'style': 'simple', 'explode': False }})
     r"""The name of the pipeline used for search."""
-    post_pipeline_feedback: components_postpipelinefeedback.PostPipelineFeedback = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     workspace_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'workspace_name', 'style': 'simple', 'explode': False }})
     r"""Type the name of the workspace."""
     
@@ -22,10 +22,10 @@ class AddFeedbackAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameFeedbackPostRe
 class AddFeedbackAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameFeedbackPostResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
-    raw_response: requests_http.Response = dataclasses.field()
-    r"""Raw HTTP response; suitable for custom response parsing"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     any: Optional[Any] = dataclasses.field(default=None)
     r"""The feedback was successfully stored."""
     

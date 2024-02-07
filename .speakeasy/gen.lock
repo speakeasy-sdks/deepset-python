@@ -4,16 +4,16 @@ management:
   docChecksum: 08811e59b32fbd2741380b7d4efaf27b
   docVersion: 1.0.0
   speakeasyVersion: internal
-  generationVersion: 2.248.1
-  releaseVersion: 2.0.0
-  configChecksum: 326fbdea13c829a0de84080e5ad9042d
+  generationVersion: 2.250.12
+  releaseVersion: 3.0.0
+  configChecksum: 9979b0dbe364bcec8db524d4af3a9125
   repoURL: https://github.com/speakeasy-sdks/deepset-python.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/deepset-python.git
 features:
   python:
     constsAndDefaults: 0.1.2
-    core: 4.4.4
+    core: 4.4.5
     deprecations: 2.81.1
     examples: 2.81.3
     flattening: 2.81.1

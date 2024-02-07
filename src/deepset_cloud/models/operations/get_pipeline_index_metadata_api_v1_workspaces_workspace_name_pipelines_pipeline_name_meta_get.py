@@ -21,10 +21,10 @@ class GetPipelineIndexMetadataAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameM
 class GetPipelineIndexMetadataAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameMetaGetResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
-    raw_response: requests_http.Response = dataclasses.field()
-    r"""Raw HTTP response; suitable for custom response parsing"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     response_200_get_pipeline_index_metadata_api_v1_workspaces_workspace_name_pipelines_pipeline_name_meta_get: Optional[Dict[str, components_pipelineindexmetadataproperty.PipelineIndexMetadataProperty]] = dataclasses.field(default=None)
     r"""Metadata for the pipeline's index."""
     

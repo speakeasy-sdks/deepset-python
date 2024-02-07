@@ -10,9 +10,9 @@ from typing import Optional
 
 @dataclasses.dataclass
 class EditEvalRunAPIV1WorkspacesWorkspaceNameEvalRunsEvalRunNamePatchRequest:
+    eval_run_patch: components_evalrunpatch.EvalRunPatch = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     eval_run_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'eval_run_name', 'style': 'simple', 'explode': False }})
     r"""Which evaluation run do you want to update? Type its name here."""
-    eval_run_patch: components_evalrunpatch.EvalRunPatch = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     workspace_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'workspace_name', 'style': 'simple', 'explode': False }})
     r"""Type the name of the workspace."""
     
@@ -23,10 +23,10 @@ class EditEvalRunAPIV1WorkspacesWorkspaceNameEvalRunsEvalRunNamePatchRequest:
 class EditEvalRunAPIV1WorkspacesWorkspaceNameEvalRunsEvalRunNamePatchResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
-    raw_response: requests_http.Response = dataclasses.field()
-    r"""Raw HTTP response; suitable for custom response parsing"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     eval_run_create_response: Optional[components_evalruncreateresponse.EvalRunCreateResponse] = dataclasses.field(default=None)
     r"""Successful Response"""
     
