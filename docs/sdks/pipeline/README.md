@@ -32,7 +32,7 @@ Adds feedback to search results.
 
 ```python
 import deepset_cloud
-from deepset_cloud.models import components, operations
+from deepset_cloud.models import components
 
 s = deepset_cloud.DeepsetCloud(
     http_bearer="<YOUR_BEARER_TOKEN_HERE>",
@@ -43,9 +43,6 @@ res = s.pipeline.add_feedback(post_pipeline_feedback=components.PostPipelineFeed
     is_correct_answer=False,
     is_correct_document=False,
     result_id='ed8b6158-4f3d-4250-92ce-685935248904',
-    tags=[
-        'string',
-    ],
 ), pipeline_name='string', workspace_name='string')
 
 if res.any is not None:
@@ -80,7 +77,6 @@ Creates a pipeline YAML file.
 
 ```python
 import deepset_cloud
-from deepset_cloud.models import operations
 
 s = deepset_cloud.DeepsetCloud(
     http_bearer="<YOUR_BEARER_TOKEN_HERE>",
@@ -120,7 +116,6 @@ Deletes a pipeline from deepset Cloud.
 
 ```python
 import deepset_cloud
-from deepset_cloud.models import operations
 
 s = deepset_cloud.DeepsetCloud(
     http_bearer="<YOUR_BEARER_TOKEN_HERE>",
@@ -160,7 +155,6 @@ Deploys a pipeline in deepset Cloud.
 
 ```python
 import deepset_cloud
-from deepset_cloud.models import operations
 
 s = deepset_cloud.DeepsetCloud(
     http_bearer="<YOUR_BEARER_TOKEN_HERE>",
@@ -200,7 +194,6 @@ Returns a pipeline.
 
 ```python
 import deepset_cloud
-from deepset_cloud.models import operations
 
 s = deepset_cloud.DeepsetCloud(
     http_bearer="<YOUR_BEARER_TOKEN_HERE>",
@@ -324,7 +317,6 @@ Returns the indexing information for a pipeline.
 
 ```python
 import deepset_cloud
-from deepset_cloud.models import operations
 
 s = deepset_cloud.DeepsetCloud(
     http_bearer="<YOUR_BEARER_TOKEN_HERE>",
@@ -364,7 +356,6 @@ Returns the pipeline in the JSON format.
 
 ```python
 import deepset_cloud
-from deepset_cloud.models import operations
 
 s = deepset_cloud.DeepsetCloud(
     http_bearer="<YOUR_BEARER_TOKEN_HERE>",
@@ -404,7 +395,6 @@ This is an endpoint we use internally. This means it can change anytime so bear 
 
 ```python
 import deepset_cloud
-from deepset_cloud.models import operations
 
 s = deepset_cloud.DeepsetCloud(
     http_bearer="<YOUR_BEARER_TOKEN_HERE>",
@@ -488,7 +478,6 @@ This is an endpoint we use internally. This means it can change anytime so bear 
 
 ```python
 import deepset_cloud
-from deepset_cloud.models import operations
 
 s = deepset_cloud.DeepsetCloud(
     http_bearer="<YOUR_BEARER_TOKEN_HERE>",
@@ -529,7 +518,6 @@ Returns a pipeline.
 
 ```python
 import deepset_cloud
-from deepset_cloud.models import operations
 
 s = deepset_cloud.DeepsetCloud(
     http_bearer="<YOUR_BEARER_TOKEN_HERE>",
@@ -569,7 +557,6 @@ Displays the pipeline as a YAML.
 
 ```python
 import deepset_cloud
-from deepset_cloud.models import operations
 
 s = deepset_cloud.DeepsetCloud(
     http_bearer="<YOUR_BEARER_TOKEN_HERE>",
@@ -651,7 +638,7 @@ Run a search using a pipeline.
 
 ```python
 import deepset_cloud
-from deepset_cloud.models import components, operations
+from deepset_cloud.models import components
 
 s = deepset_cloud.DeepsetCloud(
     http_bearer="<YOUR_BEARER_TOKEN_HERE>",
@@ -662,8 +649,6 @@ res = s.pipeline.search(pipeline_query=components.PipelineQuery(
     queries=[
         'string',
     ],
-    filters=components.PipelineQueryHaystackFilters(),
-    params=components.PipelineQueryPipelineParameters(),
 ), pipeline_name='string', workspace_name='string')
 
 if res.search_result is not None:
@@ -741,7 +726,6 @@ Sets a pipeline as the default pipeline for search.
 
 ```python
 import deepset_cloud
-from deepset_cloud.models import operations
 
 s = deepset_cloud.DeepsetCloud(
     http_bearer="<YOUR_BEARER_TOKEN_HERE>",
@@ -781,7 +765,6 @@ Undeploys a pipeline in deepset Cloud.
 
 ```python
 import deepset_cloud
-from deepset_cloud.models import operations
 
 s = deepset_cloud.DeepsetCloud(
     http_bearer="<YOUR_BEARER_TOKEN_HERE>",
@@ -821,7 +804,6 @@ Updates the pipeline YAML file.
 
 ```python
 import deepset_cloud
-from deepset_cloud.models import operations
 
 s = deepset_cloud.DeepsetCloud(
     http_bearer="<YOUR_BEARER_TOKEN_HERE>",

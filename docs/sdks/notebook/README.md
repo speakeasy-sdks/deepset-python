@@ -15,7 +15,7 @@ Creates a Jupyter notebook on the Jupyter server. You must have a server ready t
 
 ```python
 import deepset_cloud
-from deepset_cloud.models import components, operations
+from deepset_cloud.models import components
 
 s = deepset_cloud.DeepsetCloud(
     http_bearer="<YOUR_BEARER_TOKEN_HERE>",

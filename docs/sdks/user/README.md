@@ -17,7 +17,6 @@ Deletes a user from deepset Cloud. This is an endpoint we use internally. This m
 
 ```python
 import deepset_cloud
-from deepset_cloud.models import operations
 
 s = deepset_cloud.DeepsetCloud(
     http_bearer="<YOUR_BEARER_TOKEN_HERE>",
@@ -56,7 +55,6 @@ Retrieves the properties of the user object. This is an endpoint we use internal
 
 ```python
 import deepset_cloud
-from deepset_cloud.models import operations
 
 s = deepset_cloud.DeepsetCloud(
     http_bearer="<YOUR_BEARER_TOKEN_HERE>",

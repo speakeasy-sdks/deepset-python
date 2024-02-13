@@ -14,7 +14,6 @@ Creates the API key that you can use to connect deepset Cloud to your applicatio
 ### Example Usage
 
 ```python
-import dateutil.parser
 import deepset_cloud
 from deepset_cloud.models import components, operations
 
@@ -57,7 +56,6 @@ Returns all API keys present in deepset Cloud together with their properties. Th
 
 ```python
 import deepset_cloud
-from deepset_cloud.models import operations
 
 s = deepset_cloud.DeepsetCloud(
     http_bearer="<YOUR_BEARER_TOKEN_HERE>",
@@ -99,7 +97,6 @@ Deletes the API key. This is an endpoint we use internally. This means it can ch
 
 ```python
 import deepset_cloud
-from deepset_cloud.models import operations
 
 s = deepset_cloud.DeepsetCloud(
     http_bearer="<YOUR_BEARER_TOKEN_HERE>",

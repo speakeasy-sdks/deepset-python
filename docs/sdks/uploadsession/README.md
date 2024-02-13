@@ -18,7 +18,7 @@ If the session is not closed explicitly, the session will be automatically close
 
 ```python
 import deepset_cloud
-from deepset_cloud.models import components, operations
+from deepset_cloud.models import components
 
 s = deepset_cloud.DeepsetCloud(
     http_bearer="<YOUR_BEARER_TOKEN_HERE>",
@@ -59,7 +59,7 @@ Creates a session for uploading files and file metadata. The session remains act
 
 ```python
 import deepset_cloud
-from deepset_cloud.models import components, operations
+from deepset_cloud.models import components
 
 s = deepset_cloud.DeepsetCloud(
     http_bearer="<YOUR_BEARER_TOKEN_HERE>",
@@ -142,7 +142,6 @@ Displays the details of a session. Use this endpoint to check the status of the 
 
 ```python
 import deepset_cloud
-from deepset_cloud.models import operations
 
 s = deepset_cloud.DeepsetCloud(
     http_bearer="<YOUR_BEARER_TOKEN_HERE>",

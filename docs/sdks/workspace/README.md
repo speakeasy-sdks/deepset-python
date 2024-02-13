@@ -61,7 +61,6 @@ Deletes a workspace and everything that is associated with it. Be careful as thi
 
 ```python
 import deepset_cloud
-from deepset_cloud.models import operations
 
 s = deepset_cloud.DeepsetCloud(
     http_bearer="<YOUR_BEARER_TOKEN_HERE>",
@@ -100,7 +99,6 @@ Returns the workspace and its properties. This is an endpoint we use internally.
 
 ```python
 import deepset_cloud
-from deepset_cloud.models import operations
 
 s = deepset_cloud.DeepsetCloud(
     http_bearer="<YOUR_BEARER_TOKEN_HERE>",
@@ -139,7 +137,6 @@ Displays the number of files and documents in a workspace, the number of search 
 
 ```python
 import deepset_cloud
-from deepset_cloud.models import operations
 
 s = deepset_cloud.DeepsetCloud(
     http_bearer="<YOUR_BEARER_TOKEN_HERE>",

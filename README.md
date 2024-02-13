@@ -194,7 +194,7 @@ Handling errors in this SDK should largely match your expectations.  All operati
 
 ```python
 import deepset_cloud
-from deepset_cloud.models import operations
+from deepset_cloud.models import errors
 
 s = deepset_cloud.DeepsetCloud(
     http_bearer="<YOUR_BEARER_TOKEN_HERE>",
@@ -205,10 +205,10 @@ res = None
 try:
     res = s.user.delete(user_id='8db863f6-ef9b-413a-8a70-cb816b33de6b')
 except errors.HTTPValidationError as e:
-    print(e)  # handle exception
+    # handle exception
     raise(e)
 except errors.SDKError as e:
-    print(e)  # handle exception
+    # handle exception
     raise(e)
 
 if res.any is not None:
@@ -314,7 +314,6 @@ if res.response_health_health_get is not None:
 
 Some operations in this SDK require the security scheme to be specified at the request level. For example:
 ```python
-import dateutil.parser
 import deepset_cloud
 from deepset_cloud.models import components, operations
 

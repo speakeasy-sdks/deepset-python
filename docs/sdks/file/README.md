@@ -64,7 +64,6 @@ Removes the file from the workspace.
 
 ```python
 import deepset_cloud
-from deepset_cloud.models import operations
 
 s = deepset_cloud.DeepsetCloud(
     http_bearer="<YOUR_BEARER_TOKEN_HERE>",
@@ -104,7 +103,6 @@ Retrieves the file contents.
 
 ```python
 import deepset_cloud
-from deepset_cloud.models import operations
 
 s = deepset_cloud.DeepsetCloud(
     http_bearer="<YOUR_BEARER_TOKEN_HERE>",
@@ -144,7 +142,6 @@ Returns all documents generated for a file.
 
 ```python
 import deepset_cloud
-from deepset_cloud.models import operations
 
 s = deepset_cloud.DeepsetCloud(
     http_bearer="<YOUR_BEARER_TOKEN_HERE>",
@@ -184,7 +181,6 @@ Displays the metadata of a file.
 
 ```python
 import deepset_cloud
-from deepset_cloud.models import operations
 
 s = deepset_cloud.DeepsetCloud(
     http_bearer="<YOUR_BEARER_TOKEN_HERE>",
@@ -315,12 +311,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 
-res = s.file.upload(workspace_name='string', body_upload_file_api_v1_workspaces_workspace_name_files_post=components.BodyUploadFileAPIV1WorkspacesWorkspaceNameFilesPost(
-    file=components.BodyUploadFileAPIV1WorkspacesWorkspaceNameFilesPostFile(
-        content='0x87cbca97eC'.encode(),
-        file_name='ullam.wav',
-    ),
-), file_name='string', write_mode=operations.FileWriteModeEnum.KEEP)
+res = s.file.upload(workspace_name='string', body_upload_file_api_v1_workspaces_workspace_name_files_post=components.BodyUploadFileAPIV1WorkspacesWorkspaceNameFilesPost(), file_name='string', write_mode=operations.FileWriteModeEnum.OVERWRITE)
 
 if res.response_upload_file_api_v1_workspaces_workspace_name_files_post is not None:
     # handle response

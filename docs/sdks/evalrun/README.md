@@ -23,7 +23,7 @@ Creates an evaluation run for pipeline experiments in deepset Cloud.
 
 ```python
 import deepset_cloud
-from deepset_cloud.models import components, operations
+from deepset_cloud.models import components
 
 s = deepset_cloud.DeepsetCloud(
     http_bearer="<YOUR_BEARER_TOKEN_HERE>",
@@ -35,9 +35,6 @@ res = s.eval_run.create_eval_run(eval_run_post=components.EvalRunPost(
     evaluation_set_name='string',
     name='string',
     pipeline_name='string',
-    tags=[
-        'string',
-    ],
 ), workspace_name='string')
 
 if res.eval_run_create_response is not None:
@@ -113,7 +110,6 @@ Removes an evaluation run from deepset Cloud.
 
 ```python
 import deepset_cloud
-from deepset_cloud.models import operations
 
 s = deepset_cloud.DeepsetCloud(
     http_bearer="<YOUR_BEARER_TOKEN_HERE>",
@@ -153,7 +149,6 @@ Removes a tag from the workspace. This is an endpoint we use internally. This me
 
 ```python
 import deepset_cloud
-from deepset_cloud.models import operations
 
 s = deepset_cloud.DeepsetCloud(
     http_bearer="<YOUR_BEARER_TOKEN_HERE>",
@@ -193,7 +188,6 @@ Returns the evaluation run you indicate.
 
 ```python
 import deepset_cloud
-from deepset_cloud.models import operations
 
 s = deepset_cloud.DeepsetCloud(
     http_bearer="<YOUR_BEARER_TOKEN_HERE>",
@@ -319,7 +313,6 @@ Lists all the tags in the workspace you choose. This is an endpoint we use inter
 
 ```python
 import deepset_cloud
-from deepset_cloud.models import operations
 
 s = deepset_cloud.DeepsetCloud(
     http_bearer="<YOUR_BEARER_TOKEN_HERE>",
@@ -359,7 +352,6 @@ Starts a draft evaluation run.
 
 ```python
 import deepset_cloud
-from deepset_cloud.models import operations
 
 s = deepset_cloud.DeepsetCloud(
     http_bearer="<YOUR_BEARER_TOKEN_HERE>",
@@ -399,18 +391,14 @@ Updates these properties of an evaluation run: name, tags, pipeline, file corpus
 
 ```python
 import deepset_cloud
-from deepset_cloud.models import components, operations
+from deepset_cloud.models import components
 
 s = deepset_cloud.DeepsetCloud(
     http_bearer="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 
-res = s.eval_run.update(eval_run_patch=components.EvalRunPatch(
-    tags=[
-        'string',
-    ],
-), eval_run_name='string', workspace_name='string')
+res = s.eval_run.update(eval_run_patch=components.EvalRunPatch(), eval_run_name='string', workspace_name='string')
 
 if res.eval_run_create_response is not None:
     # handle response

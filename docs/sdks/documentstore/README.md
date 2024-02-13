@@ -18,7 +18,6 @@ Checks the connection to the Opensearch document store and checks if the pipelin
 
 ```python
 import deepset_cloud
-from deepset_cloud.models import operations
 
 s = deepset_cloud.DeepsetCloud(
     http_bearer="<YOUR_BEARER_TOKEN_HERE>",
@@ -58,16 +57,14 @@ Returns the number of documents for a pipeline. This is an endpoint we use inter
 
 ```python
 import deepset_cloud
-from deepset_cloud.models import components, operations
+from deepset_cloud.models import components
 
 s = deepset_cloud.DeepsetCloud(
     http_bearer="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 
-res = s.document_store.count_documents(count_documents_params=components.CountDocumentsParams(
-    filters=components.HaystackFilters(),
-), index_name='string', workspace_name='string')
+res = s.document_store.count_documents(count_documents_params=components.CountDocumentsParams(), index_name='string', workspace_name='string')
 
 if res.dc_document_count is not None:
     # handle response
@@ -101,7 +98,6 @@ Displays the document content and its properties. This is an endpoint we use int
 
 ```python
 import deepset_cloud
-from deepset_cloud.models import operations
 
 s = deepset_cloud.DeepsetCloud(
     http_bearer="<YOUR_BEARER_TOKEN_HERE>",
@@ -142,16 +138,14 @@ Returns all documents created for a pipeline.
 
 ```python
 import deepset_cloud
-from deepset_cloud.models import components, operations
+from deepset_cloud.models import components
 
 s = deepset_cloud.DeepsetCloud(
     http_bearer="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 
-res = s.document_store.list_document_streams(fetch_documents_params=components.FetchDocumentsParams(
-    filters=components.FetchDocumentsParamsHaystackFilters(),
-), index_name='string', workspace_name='string')
+res = s.document_store.list_document_streams(fetch_documents_params=components.FetchDocumentsParams(), index_name='string', workspace_name='string')
 
 if res.status_code == 200:
     # handle response
@@ -185,7 +179,6 @@ Displays all documents processed by the specified pipeline together with their p
 
 ```python
 import deepset_cloud
-from deepset_cloud.models import operations
 
 s = deepset_cloud.DeepsetCloud(
     http_bearer="<YOUR_BEARER_TOKEN_HERE>",
@@ -226,19 +219,14 @@ Searches the documents for the specified query.
 
 ```python
 import deepset_cloud
-from deepset_cloud.models import components, operations
+from deepset_cloud.models import components
 
 s = deepset_cloud.DeepsetCloud(
     http_bearer="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 
-res = s.document_store.search(query_documents_params=components.QueryDocumentsParams(
-    filters=components.QueryDocumentsParamsHaystackFilters(),
-    query_emb=[
-        3076.31,
-    ],
-), index_name='string', workspace_name='string')
+res = s.document_store.search(query_documents_params=components.QueryDocumentsParams(), index_name='string', workspace_name='string')
 
 if res.response_query_documents_stream_api_v1_workspaces_workspace_name_indexes_index_name_documents_query_post is not None:
     # handle response
