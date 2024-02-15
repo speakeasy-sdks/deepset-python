@@ -32,10 +32,10 @@ s = deepset_cloud.DeepsetCloud(
 
 res = s.eval_run.create_eval_run(eval_run_post=components.EvalRunPost(
     debug=False,
-    evaluation_set_name='string',
-    name='string',
-    pipeline_name='string',
-), workspace_name='string')
+    evaluation_set_name='<value>',
+    name='<value>',
+    pipeline_name='<value>',
+), workspace_name='<value>')
 
 if res.eval_run_create_response is not None:
     # handle response
@@ -76,8 +76,8 @@ s = deepset_cloud.DeepsetCloud(
 
 
 res = s.eval_run.create_tag(request_body=operations.CreateTagAPIV1WorkspacesWorkspaceNameTagsPostTagParameters(
-    name='string',
-), workspace_name='string')
+    name='<value>',
+), workspace_name='<value>')
 
 if res.create_tag_response is not None:
     # handle response
@@ -116,7 +116,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 
-res = s.eval_run.delete(eval_run_name='string', workspace_name='string')
+res = s.eval_run.delete(eval_run_name='<value>', workspace_name='<value>')
 
 if res.status_code == 200:
     # handle response
@@ -155,7 +155,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 
-res = s.eval_run.delete_tag(tag_name='string', workspace_name='string')
+res = s.eval_run.delete_tag(tag_name='<value>', workspace_name='<value>')
 
 if res.status_code == 200:
     # handle response
@@ -194,7 +194,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 
-res = s.eval_run.get(eval_run_name='string', workspace_name='string')
+res = s.eval_run.get(eval_run_name='<value>', workspace_name='<value>')
 
 if res.single_eval_run_response is not None:
     # handle response
@@ -234,9 +234,9 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 req = operations.GetNodeEvalPredictionsAPIV1WorkspacesWorkspaceNameEvalRunsEvalRunNameNodesNodeNamePredictionsGetRequest(
-    eval_run_name='string',
-    node_name='string',
-    workspace_name='string',
+    eval_run_name='<value>',
+    node_name='<value>',
+    workspace_name='<value>',
 )
 
 res = s.eval_run.get_node_eval_predictions(req)
@@ -278,7 +278,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 req = operations.ListEvalRunsRequest(
-    workspace_name='string',
+    workspace_name='<value>',
 )
 
 res = s.eval_run.list(req)
@@ -319,7 +319,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 
-res = s.eval_run.list_tags(workspace_name='string', filter_='string')
+res = s.eval_run.list_tags(workspace_name='<value>', filter_='<value>')
 
 if res.get_tags is not None:
     # handle response
@@ -358,7 +358,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 
-res = s.eval_run.start(eval_run_name='string', workspace_name='string')
+res = s.eval_run.start(eval_run_name='<value>', workspace_name='<value>')
 
 if res.status_code == 200:
     # handle response
@@ -398,7 +398,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 
-res = s.eval_run.update(eval_run_patch=components.EvalRunPatch(), eval_run_name='string', workspace_name='string')
+res = s.eval_run.update(eval_run_patch=components.EvalRunPatch(), eval_run_name='<value>', workspace_name='<value>')
 
 if res.eval_run_create_response is not None:
     # handle response
@@ -440,8 +440,8 @@ s = deepset_cloud.DeepsetCloud(
 
 
 res = s.eval_run.update_tag(request_body=operations.UpdateTagAPIV1WorkspacesWorkspaceNameTagsTagNamePatchTagParameters(
-    name='string',
-), tag_name='string', workspace_name='string')
+    name='<value>',
+), tag_name='<value>', workspace_name='<value>')
 
 if res.status_code == 200:
     # handle response

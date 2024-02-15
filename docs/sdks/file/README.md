@@ -27,9 +27,9 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 
-res = s.file.delete_multi(workspace_name='string', request_body=operations.DeleteFilesAPIV1WorkspacesWorkspaceNameFilesDeleteFiles(
+res = s.file.delete_multi(workspace_name='<value>', request_body=operations.DeleteFilesAPIV1WorkspacesWorkspaceNameFilesDeleteFiles(
     names=[
-        'string',
+        '<value>',
     ],
 ))
 
@@ -70,7 +70,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 
-res = s.file.delete_single(file_id='b655849d-609b-4e06-9c6c-7a066adc84ee', workspace_name='string')
+res = s.file.delete_single(file_id='b655849d-609b-4e06-9c6c-7a066adc84ee', workspace_name='<value>')
 
 if res.any is not None:
     # handle response
@@ -109,7 +109,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 
-res = s.file.get(file_id='b18d8d81-fd7b-4764-a31e-475cb1f36591', workspace_name='string')
+res = s.file.get(file_id='b18d8d81-fd7b-4764-a31e-475cb1f36591', workspace_name='<value>')
 
 if res.any is not None:
     # handle response
@@ -148,7 +148,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 
-res = s.file.get_document(file_id='873d3623-7b2a-4a5d-9317-57cc835bc671', workspace_name='string')
+res = s.file.get_document(file_id='873d3623-7b2a-4a5d-9317-57cc835bc671', workspace_name='<value>')
 
 if res.documents is not None:
     # handle response
@@ -187,7 +187,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 
-res = s.file.get_meta_data(file_id='ca54c4ff-7683-4387-b133-9ade3a8c3660', workspace_name='string')
+res = s.file.get_meta_data(file_id='ca54c4ff-7683-4387-b133-9ade3a8c3660', workspace_name='<value>')
 
 if res.response_get_file_meta_api_v1_workspaces_workspace_name_files_file_id_meta_get is not None:
     # handle response
@@ -227,7 +227,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 req = operations.ListFilesAPIV1WorkspacesWorkspaceNameFilesGetRequest(
-    workspace_name='string',
+    workspace_name='<value>',
 )
 
 res = s.file.list(req)
@@ -270,7 +270,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 
-res = s.file.update_meta_data(request_body=operations.UpdateFileMetaAPIV1WorkspacesWorkspaceNameFilesFileIDMetaPutMeta(), file_id='c21bf6a8-ed89-4437-a617-505b3da68dfd', workspace_name='string')
+res = s.file.update_meta_data(request_body=operations.UpdateFileMetaAPIV1WorkspacesWorkspaceNameFilesFileIDMetaPutMeta(), file_id='c21bf6a8-ed89-4437-a617-505b3da68dfd', workspace_name='<value>')
 
 if res.any is not None:
     # handle response
@@ -311,7 +311,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 
-res = s.file.upload(workspace_name='string', body_upload_file_api_v1_workspaces_workspace_name_files_post=components.BodyUploadFileAPIV1WorkspacesWorkspaceNameFilesPost(), file_name='string', write_mode=operations.FileWriteModeEnum.OVERWRITE)
+res = s.file.upload(workspace_name='<value>', body_upload_file_api_v1_workspaces_workspace_name_files_post=components.BodyUploadFileAPIV1WorkspacesWorkspaceNameFilesPost(), file_name='<value>', write_mode=operations.FileWriteModeEnum.OVERWRITE)
 
 if res.response_upload_file_api_v1_workspaces_workspace_name_files_post is not None:
     # handle response

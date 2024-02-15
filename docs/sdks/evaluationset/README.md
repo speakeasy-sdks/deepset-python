@@ -24,7 +24,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 
-res = s.evaluation_set.delete(evaluation_set_name='string', workspace_name='string')
+res = s.evaluation_set.delete(evaluation_set_name='<value>', workspace_name='<value>')
 
 if res.any is not None:
     # handle response
@@ -63,7 +63,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 
-res = s.evaluation_set.get(evaluation_set_name='string', workspace_name='string')
+res = s.evaluation_set.get(evaluation_set_name='<value>', workspace_name='<value>')
 
 if res.label_list is not None:
     # handle response
@@ -102,7 +102,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 
-res = s.evaluation_set.get_csv(evaluation_set_name='string', workspace_name='string')
+res = s.evaluation_set.get_csv(evaluation_set_name='<value>', workspace_name='<value>')
 
 if res.two_hundred_application_json_any is not None:
     # handle response
@@ -147,7 +147,7 @@ res = s.evaluation_set.import_evaluation_set(body_import_evaluation_set_api_v1_w
         content='0xe0a9E4eDCB'.encode(),
         file_name='forward.jpeg',
     ),
-), workspace_name='string')
+), workspace_name='<value>')
 
 if res.evaluation_set_import is not None:
     # handle response
@@ -187,7 +187,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 req = operations.ListEvaluationSetsAPIV1WorkspacesWorkspaceNameEvaluationSetsGetRequest(
-    workspace_name='string',
+    workspace_name='<value>',
 )
 
 res = s.evaluation_set.list(req)
@@ -228,7 +228,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 
-res = s.evaluation_set.retrigger(evaluation_set_name='string', workspace_name='string')
+res = s.evaluation_set.retrigger(evaluation_set_name='<value>', workspace_name='<value>')
 
 if res.status_code == 200:
     # handle response

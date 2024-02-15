@@ -22,7 +22,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 req = operations.ListEvalRunsRequest(
-    workspace_name='string',
+    workspace_name='<value>',
 )
 
 res = s.eval_run.list(req)

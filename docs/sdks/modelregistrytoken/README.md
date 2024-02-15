@@ -204,7 +204,7 @@ s = deepset_cloud.DeepsetCloud(
 
 
 res = s.model_registry_token.save(create_model_registry_token=components.CreateModelRegistryToken(
-    token='string',
+    token='<value>',
 ), provider=operations.SaveTokenAPIV1ModelRegistryTokensProviderPostPathParamModelProvider.HUGGINGFACE)
 
 if res.any is not None:
@@ -247,7 +247,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 req = components.CreateModelRegistryToken(
-    token='string',
+    token='<value>',
 )
 
 res = s.model_registry_token.save_token_deprecated(req)
@@ -290,7 +290,7 @@ s = deepset_cloud.DeepsetCloud(
 
 
 res = s.model_registry_token.update(update_model_registry_token=components.UpdateModelRegistryToken(
-    token='string',
+    token='<value>',
 ), provider=operations.UpdateTokenAPIV1ModelRegistryTokensProviderPutPathParamModelProvider.COHERE)
 
 if res.any is not None:
@@ -333,7 +333,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 req = components.UpdateModelRegistryToken(
-    token='string',
+    token='<value>',
 )
 
 res = s.model_registry_token.update_token_deprecated(req)

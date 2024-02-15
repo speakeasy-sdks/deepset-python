@@ -29,9 +29,9 @@ s = deepset_cloud.DeepsetCloud(
 res = s.shared_prototype.create(post_shared_prototype=components.PostSharedPrototype(
     expiration_date=dateutil.parser.isoparse('2023-06-18T07:14:55.676Z'),
     pipeline_names=[
-        'string',
+        '<value>',
     ],
-), workspace_name='string')
+), workspace_name='<value>')
 
 if res.shared_prototype is not None:
     # handle response
@@ -70,7 +70,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 
-res = s.shared_prototype.create_external_user(workspace_name='string', existing_user_id='cb14aeb0-f38a-4ede-8206-c6a3a8239cb0')
+res = s.shared_prototype.create_external_user(workspace_name='<value>', existing_user_id='cb14aeb0-f38a-4ede-8206-c6a3a8239cb0')
 
 if res.external_user_information is not None:
     # handle response
@@ -109,7 +109,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 
-res = s.shared_prototype.get(shared_prototype_id='b18d8d81-fd7b-4764-a31e-475cb1f36591', workspace_name='string')
+res = s.shared_prototype.get(shared_prototype_id='b18d8d81-fd7b-4764-a31e-475cb1f36591', workspace_name='<value>')
 
 if res.shared_prototype is not None:
     # handle response
@@ -149,7 +149,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 req = operations.ListPrototypesAPIV1WorkspacesWorkspaceNameSharedPrototypesGetRequest(
-    workspace_name='string',
+    workspace_name='<value>',
 )
 
 res = s.shared_prototype.list(req)
@@ -190,7 +190,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 
-res = s.shared_prototype.revoke(shared_prototype_id='db021625-f680-4f7d-9078-89cd3534dba0', workspace_name='string')
+res = s.shared_prototype.revoke(shared_prototype_id='db021625-f680-4f7d-9078-89cd3534dba0', workspace_name='<value>')
 
 if res.any is not None:
     # handle response
@@ -230,7 +230,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 
-res = s.shared_prototype.update(patch_shared_prototype=components.PatchSharedPrototype(), shared_prototype_id='d0905bf4-aa77-4f20-8e77-54c352acfe54', workspace_name='string')
+res = s.shared_prototype.update(patch_shared_prototype=components.PatchSharedPrototype(), shared_prototype_id='d0905bf4-aa77-4f20-8e77-54c352acfe54', workspace_name='<value>')
 
 if res.shared_prototype is not None:
     # handle response

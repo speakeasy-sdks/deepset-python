@@ -25,7 +25,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 
-res = s.upload_session.close(close_session=components.CloseSession(), session_id='858bd1fe-535f-4534-856e-5d2a350c163f', workspace_name='string')
+res = s.upload_session.close(close_session=components.CloseSession(), session_id='858bd1fe-535f-4534-856e-5d2a350c163f', workspace_name='<value>')
 
 if res.status_code == 200:
     # handle response
@@ -66,7 +66,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 
-res = s.upload_session.create(create_session=components.CreateSession(), workspace_name='string')
+res = s.upload_session.create(create_session=components.CreateSession(), workspace_name='<value>')
 
 if res.upload_session is not None:
     # handle response
@@ -107,7 +107,7 @@ s = deepset_cloud.DeepsetCloud(
 
 req = operations.GetSessionFilesAPIV1WorkspacesWorkspaceNameUploadSessionsSessionIDFilesGetRequest(
     session_id='a693fbb2-e996-4d93-8cbc-082b8e9824c8',
-    workspace_name='string',
+    workspace_name='<value>',
 )
 
 res = s.upload_session.get_files(req)
@@ -148,7 +148,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 
-res = s.upload_session.get_status(session_id='7b8c13f1-f508-4288-9a9d-4f095d2fd2e9', workspace_name='string')
+res = s.upload_session.get_status(session_id='7b8c13f1-f508-4288-9a9d-4f095d2fd2e9', workspace_name='<value>')
 
 if res.session_detail is not None:
     # handle response
@@ -188,7 +188,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 req = operations.ListUploadSessionsAPIV1WorkspacesWorkspaceNameUploadSessionsGetRequest(
-    workspace_name='string',
+    workspace_name='<value>',
 )
 
 res = s.upload_session.list(req)

@@ -19,7 +19,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 
-res = s.models.list(author='string', node_type='string')
+res = s.models.list(author='<value>', node_type='<value>')
 
 if res.response_get_model_api_v1_model_get is not None:
     # handle response

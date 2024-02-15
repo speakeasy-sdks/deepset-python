@@ -43,7 +43,7 @@ res = s.pipeline.add_feedback(post_pipeline_feedback=components.PostPipelineFeed
     is_correct_answer=False,
     is_correct_document=False,
     result_id='ed8b6158-4f3d-4250-92ce-685935248904',
-), pipeline_name='string', workspace_name='string')
+), pipeline_name='<value>', workspace_name='<value>')
 
 if res.any is not None:
     # handle response
@@ -83,7 +83,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 
-res = s.pipeline.create(workspace_name='string', dry_run=False)
+res = s.pipeline.create(workspace_name='<value>', dry_run=False)
 
 if res.pipeline_name is not None:
     # handle response
@@ -122,7 +122,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 
-res = s.pipeline.delete(pipeline_name='string', workspace_name='string')
+res = s.pipeline.delete(pipeline_name='<value>', workspace_name='<value>')
 
 if res.any is not None:
     # handle response
@@ -161,7 +161,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 
-res = s.pipeline.deploy(pipeline_name='string', workspace_name='string')
+res = s.pipeline.deploy(pipeline_name='<value>', workspace_name='<value>')
 
 if res.pipeline_indexing is not None:
     # handle response
@@ -200,7 +200,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 
-res = s.pipeline.get(pipeline_name='string', workspace_name='string')
+res = s.pipeline.get(pipeline_name='<value>', workspace_name='<value>')
 
 if res.pipeline_indexing is not None:
     # handle response
@@ -240,8 +240,8 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 req = operations.GetPipelineFeedbackAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameFeedbackGetRequest(
-    pipeline_name='string',
-    workspace_name='string',
+    pipeline_name='<value>',
+    workspace_name='<value>',
 )
 
 res = s.pipeline.get_feedback(req)
@@ -283,7 +283,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 
-res = s.pipeline.get_files(pipeline_name='string', workspace_name='string', status=operations.FileIndexingStatusQuery.INDEXED_NO_DOCUMENTS)
+res = s.pipeline.get_files(pipeline_name='<value>', workspace_name='<value>', status=operations.FileIndexingStatusQuery.INDEXED_NO_DOCUMENTS)
 
 if res.response_get_pipeline_files_api_v1_workspaces_workspace_name_pipelines_pipeline_name_files_get is not None:
     # handle response
@@ -323,7 +323,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 
-res = s.pipeline.get_indexing(pipeline_name='string', workspace_name='string')
+res = s.pipeline.get_indexing(pipeline_name='<value>', workspace_name='<value>')
 
 if res.pipeline_indexing_status_detail is not None:
     # handle response
@@ -362,7 +362,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 
-res = s.pipeline.get_json(pipeline_name='string', workspace_name='string')
+res = s.pipeline.get_json(pipeline_name='<value>', workspace_name='<value>')
 
 if res.response_get_pipeline_yaml_as_json_api_v1_workspaces_workspace_name_pipelines_pipeline_name_json_get is not None:
     # handle response
@@ -401,7 +401,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 
-res = s.pipeline.get_metadata(pipeline_name='string', workspace_name='string')
+res = s.pipeline.get_metadata(pipeline_name='<value>', workspace_name='<value>')
 
 if res.response_200_get_pipeline_index_metadata_api_v1_workspaces_workspace_name_pipelines_pipeline_name_meta_get is not None:
     # handle response
@@ -441,9 +441,9 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 req = operations.GetPipelineMetadataFieldValuesAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameMetaFieldNameGetRequest(
-    field_name='string',
-    pipeline_name='string',
-    workspace_name='string',
+    field_name='<value>',
+    pipeline_name='<value>',
+    workspace_name='<value>',
 )
 
 res = s.pipeline.get_metadata_field_values(req)
@@ -484,7 +484,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 
-res = s.pipeline.get_min_max_aggregation_metadata(meta_field='string', pipeline_name='string', workspace_name='string')
+res = s.pipeline.get_min_max_aggregation_metadata(meta_field='<value>', pipeline_name='<value>', workspace_name='<value>')
 
 if res.pipeline_metadata_aggregation is not None:
     # handle response
@@ -524,7 +524,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 
-res = s.pipeline.get_stats(pipeline_name='string', workspace_name='string')
+res = s.pipeline.get_stats(pipeline_name='<value>', workspace_name='<value>')
 
 if res.pipeline_statistics is not None:
     # handle response
@@ -563,7 +563,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 
-res = s.pipeline.get_yaml(pipeline_name='string', workspace_name='string')
+res = s.pipeline.get_yaml(pipeline_name='<value>', workspace_name='<value>')
 
 if res.pipeline_yaml is not None:
     # handle response
@@ -603,7 +603,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 req = operations.ListPipelinesAPIV1WorkspacesWorkspaceNamePipelinesGetRequest(
-    workspace_name='string',
+    workspace_name='<value>',
 )
 
 res = s.pipeline.list(req)
@@ -647,9 +647,9 @@ s = deepset_cloud.DeepsetCloud(
 
 res = s.pipeline.search(pipeline_query=components.PipelineQuery(
     queries=[
-        'string',
+        '<value>',
     ],
-), pipeline_name='string', workspace_name='string')
+), pipeline_name='<value>', workspace_name='<value>')
 
 if res.search_result is not None:
     # handle response
@@ -690,8 +690,8 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 req = operations.PipelineSearchHistoryAPIV1WorkspacesWorkspaceNamePipelinesPipelineNameSearchHistoryGetRequest(
-    pipeline_name='string',
-    workspace_name='string',
+    pipeline_name='<value>',
+    workspace_name='<value>',
 )
 
 res = s.pipeline.search_history(req)
@@ -732,7 +732,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 
-res = s.pipeline.set_default(pipeline_name='string', workspace_name='string')
+res = s.pipeline.set_default(pipeline_name='<value>', workspace_name='<value>')
 
 if res.any is not None:
     # handle response
@@ -771,7 +771,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 
-res = s.pipeline.undeploy(pipeline_name='string', workspace_name='string')
+res = s.pipeline.undeploy(pipeline_name='<value>', workspace_name='<value>')
 
 if res.pipeline_indexing is not None:
     # handle response
@@ -810,7 +810,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 
-res = s.pipeline.update_yaml(pipeline_name='string', workspace_name='string')
+res = s.pipeline.update_yaml(pipeline_name='<value>', workspace_name='<value>')
 
 if res.pipeline_name is not None:
     # handle response

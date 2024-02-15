@@ -54,10 +54,10 @@ s = deepset_cloud.DeepsetCloud(
 
 res = s.organization.invite(request_body=operations.InviteUserToOrganizationAPIV1OrganizationOrganizationIDInvitationPostInvitationRequest(
     email='Vivianne9@yahoo.com',
-    family_name='string',
-    given_name='string',
+    family_name='<value>',
+    given_name='<value>',
     role=components.RolesToDB.FOUR,
-), organization_id='string')
+), organization_id='<value>')
 
 if res.any is not None:
     # handle response

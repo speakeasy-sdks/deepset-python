@@ -24,7 +24,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 
-res = s.document_store.check_connection(index_name='string', workspace_name='string')
+res = s.document_store.check_connection(index_name='<value>', workspace_name='<value>')
 
 if res.document_store is not None:
     # handle response
@@ -64,7 +64,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 
-res = s.document_store.count_documents(count_documents_params=components.CountDocumentsParams(), index_name='string', workspace_name='string')
+res = s.document_store.count_documents(count_documents_params=components.CountDocumentsParams(), index_name='<value>', workspace_name='<value>')
 
 if res.dc_document_count is not None:
     # handle response
@@ -104,7 +104,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 
-res = s.document_store.get(document_id='string', index_name='string', workspace_name='string')
+res = s.document_store.get(document_id='<value>', index_name='<value>', workspace_name='<value>')
 
 if res.deepset_cloud_document is not None:
     # handle response
@@ -145,7 +145,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 
-res = s.document_store.list_document_streams(fetch_documents_params=components.FetchDocumentsParams(), index_name='string', workspace_name='string')
+res = s.document_store.list_document_streams(fetch_documents_params=components.FetchDocumentsParams(), index_name='<value>', workspace_name='<value>')
 
 if res.status_code == 200:
     # handle response
@@ -185,7 +185,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 
-res = s.document_store.list_documents(index_name='string', workspace_name='string', return_embedding=False)
+res = s.document_store.list_documents(index_name='<value>', workspace_name='<value>', return_embedding=False)
 
 if res.response_get_all_documents_api_v1_workspaces_workspace_name_indexes_index_name_documents_get is not None:
     # handle response
@@ -226,7 +226,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 
-res = s.document_store.search(query_documents_params=components.QueryDocumentsParams(), index_name='string', workspace_name='string')
+res = s.document_store.search(query_documents_params=components.QueryDocumentsParams(), index_name='<value>', workspace_name='<value>')
 
 if res.response_query_documents_stream_api_v1_workspaces_workspace_name_indexes_index_name_documents_query_post is not None:
     # handle response

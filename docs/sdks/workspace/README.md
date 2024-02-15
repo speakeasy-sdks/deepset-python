@@ -26,7 +26,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 req = components.WorkspaceName(
-    name='string',
+    name='<value>',
 )
 
 res = s.workspace.create(req)
@@ -67,7 +67,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 
-res = s.workspace.delete(workspace_name='string')
+res = s.workspace.delete(workspace_name='<value>')
 
 if res.status_code == 200:
     # handle response
@@ -105,7 +105,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 
-res = s.workspace.get(workspace_name='string')
+res = s.workspace.get(workspace_name='<value>')
 
 if res.workspace is not None:
     # handle response
@@ -143,7 +143,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 
-res = s.workspace.get_stats(workspace_name='string')
+res = s.workspace.get_stats(workspace_name='<value>')
 
 if res.workspace_stats is not None:
     # handle response
@@ -213,7 +213,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 req = operations.SearchCountAPIV1WorkspacesWorkspaceNameSearchCountGetRequest(
-    workspace_name='string',
+    workspace_name='<value>',
 )
 
 res = s.workspace.search_count(req)
@@ -255,7 +255,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 req = operations.SearchHistoryAPIV1WorkspacesWorkspaceNameSearchHistoryGetRequest(
-    workspace_name='string',
+    workspace_name='<value>',
 )
 
 res = s.workspace.search_history(req)
