@@ -4,20 +4,20 @@ management:
   docChecksum: 08811e59b32fbd2741380b7d4efaf27b
   docVersion: 1.0.0
   speakeasyVersion: internal
-  generationVersion: 2.272.4
-  releaseVersion: 3.0.2
-  configChecksum: 25aaf784fbe1351fea68a57f34b130ab
+  generationVersion: 2.275.4
+  releaseVersion: 3.1.0
+  configChecksum: d43167cc682fd861bc227175d925933d
   repoURL: https://github.com/speakeasy-sdks/deepset-python.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/deepset-python.git
 features:
   python:
     constsAndDefaults: 0.1.2
-    core: 4.4.7
+    core: 4.5.0
     deprecations: 2.81.1
     examples: 2.81.3
     flattening: 2.81.1
-    globalSecurity: 2.83.3
+    globalSecurity: 2.83.4
     globalServerURLs: 2.82.1
     methodSecurity: 2.82.1
     nameOverrides: 2.81.1
@@ -650,3 +650,6 @@ generatedFiles:
   - docs/sdks/uploadsession/README.md
   - USAGE.md
   - .gitattributes
+  - src/deepset_cloud/_hooks/sdkhooks.py
+  - src/deepset_cloud/_hooks/types.py
+  - src/deepset_cloud/_hooks/__init__.py
