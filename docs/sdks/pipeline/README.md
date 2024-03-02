@@ -283,7 +283,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 
-res = s.pipeline.get_files(pipeline_name='<value>', workspace_name='<value>', status=operations.FileIndexingStatusQuery.INDEXED_NO_DOCUMENTS)
+res = s.pipeline.get_files(pipeline_name='<value>', workspace_name='<value>', status=operations.FileIndexingStatusQuery.FAILED)
 
 if res.response_get_pipeline_files_api_v1_workspaces_workspace_name_pipelines_pipeline_name_files_get is not None:
     # handle response

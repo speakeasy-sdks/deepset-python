@@ -62,7 +62,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 
-res = s.api_token.list(after='c184a429-302e-4aca-80db-f1718b882a50', before='80555741-9e79-40e2-b205-5dd402eb66ec', limit=173090, page_number=951993)
+res = s.api_token.list(after='c184a429-302e-4aca-80db-f1718b882a50', before='80555741-9e79-40e2-b205-5dd402eb66ec', limit=10, page_number=1)
 
 if res.token_pagination is not None:
     # handle response

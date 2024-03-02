@@ -311,7 +311,7 @@ s = deepset_cloud.DeepsetCloud(
 )
 
 
-res = s.file.upload(workspace_name='<value>', body_upload_file_api_v1_workspaces_workspace_name_files_post=components.BodyUploadFileAPIV1WorkspacesWorkspaceNameFilesPost(), file_name='<value>', write_mode=operations.FileWriteModeEnum.OVERWRITE)
+res = s.file.upload(workspace_name='<value>', body_upload_file_api_v1_workspaces_workspace_name_files_post=components.BodyUploadFileAPIV1WorkspacesWorkspaceNameFilesPost(), file_name='<value>', write_mode=operations.FileWriteModeEnum.KEEP)
 
 if res.response_upload_file_api_v1_workspaces_workspace_name_files_post is not None:
     # handle response

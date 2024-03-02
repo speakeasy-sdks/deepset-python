@@ -4,15 +4,15 @@ management:
   docChecksum: 08811e59b32fbd2741380b7d4efaf27b
   docVersion: 1.0.0
   speakeasyVersion: internal
-  generationVersion: 2.275.4
-  releaseVersion: 3.1.0
-  configChecksum: d43167cc682fd861bc227175d925933d
+  generationVersion: 2.277.0
+  releaseVersion: 3.1.1
+  configChecksum: 5175b7488cbae36ca770c0c841966b01
   repoURL: https://github.com/speakeasy-sdks/deepset-python.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/deepset-python.git
 features:
   python:
-    constsAndDefaults: 0.1.2
+    constsAndDefaults: 0.1.3
     core: 4.5.0
     deprecations: 2.81.1
     examples: 2.81.3
@@ -21,7 +21,7 @@ features:
     globalServerURLs: 2.82.1
     methodSecurity: 2.82.1
     nameOverrides: 2.81.1
-    unions: 2.82.5
+    unions: 2.82.6
 generatedFiles:
   - src/deepset_cloud/sdkconfiguration.py
   - src/deepset_cloud/health.py
