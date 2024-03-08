@@ -27,6 +27,7 @@ res = s.notebook.create(empty_class=components.EmptyClass(), pipeline_id='77ad64
 if res.notebook is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -66,6 +67,7 @@ res = s.notebook.get_server_state()
 if res.server is not None:
     # handle response
     pass
+
 ```
 
 
@@ -99,6 +101,7 @@ res = s.notebook.start(req)
 if res.any is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

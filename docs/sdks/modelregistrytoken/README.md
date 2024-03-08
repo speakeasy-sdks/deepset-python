@@ -33,6 +33,7 @@ res = s.model_registry_token.get(provider=operations.ModelProvider.COHERE)
 if res.model_registry_token is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -73,6 +74,7 @@ res = s.model_registry_token.get_token_deprecated()
 if res.model_registry_token is not None:
     # handle response
     pass
+
 ```
 
 
@@ -104,6 +106,7 @@ res = s.model_registry_token.list()
 if res.response_get_tokens_api_v1_model_registry_tokens_get is not None:
     # handle response
     pass
+
 ```
 
 
@@ -136,6 +139,7 @@ res = s.model_registry_token.remove(provider=operations.PathParamModelProvider.C
 if res.any is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -176,6 +180,7 @@ res = s.model_registry_token.remove_token_deprecated()
 if res.any is not None:
     # handle response
     pass
+
 ```
 
 
@@ -210,6 +215,7 @@ res = s.model_registry_token.save(create_model_registry_token=components.CreateM
 if res.any is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -255,6 +261,7 @@ res = s.model_registry_token.save_token_deprecated(req)
 if res.any is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -296,6 +303,7 @@ res = s.model_registry_token.update(update_model_registry_token=components.Updat
 if res.any is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -341,6 +349,7 @@ res = s.model_registry_token.update_token_deprecated(req)
 if res.any is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

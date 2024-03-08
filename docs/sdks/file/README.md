@@ -36,6 +36,7 @@ res = s.file.delete_multi(workspace_name='<value>', request_body=operations.Dele
 if res.any is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -75,6 +76,7 @@ res = s.file.delete_single(file_id='b655849d-609b-4e06-9c6c-7a066adc84ee', works
 if res.any is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -114,6 +116,7 @@ res = s.file.get(file_id='b18d8d81-fd7b-4764-a31e-475cb1f36591', workspace_name=
 if res.any is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -153,6 +156,7 @@ res = s.file.get_document(file_id='873d3623-7b2a-4a5d-9317-57cc835bc671', worksp
 if res.documents is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -192,6 +196,7 @@ res = s.file.get_meta_data(file_id='ca54c4ff-7683-4387-b133-9ade3a8c3660', works
 if res.response_get_file_meta_api_v1_workspaces_workspace_name_files_file_id_meta_get is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -235,6 +240,7 @@ res = s.file.list(req)
 if res.file_pagination is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -275,6 +281,7 @@ res = s.file.update_meta_data(request_body=operations.UpdateFileMetaAPIV1Workspa
 if res.any is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -316,6 +323,7 @@ res = s.file.upload(workspace_name='<value>', body_upload_file_api_v1_workspaces
 if res.response_upload_file_api_v1_workspaces_workspace_name_files_post is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

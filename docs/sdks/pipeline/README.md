@@ -48,6 +48,7 @@ res = s.pipeline.add_feedback(post_pipeline_feedback=components.PostPipelineFeed
 if res.any is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -88,6 +89,7 @@ res = s.pipeline.create(workspace_name='<value>', dry_run=False)
 if res.pipeline_name is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -127,6 +129,7 @@ res = s.pipeline.delete(pipeline_name='<value>', workspace_name='<value>')
 if res.any is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -166,6 +169,7 @@ res = s.pipeline.deploy(pipeline_name='<value>', workspace_name='<value>')
 if res.pipeline_indexing is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -205,6 +209,7 @@ res = s.pipeline.get(pipeline_name='<value>', workspace_name='<value>')
 if res.pipeline_indexing is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -249,6 +254,7 @@ res = s.pipeline.get_feedback(req)
 if res.response_200_get_pipeline_feedback_api_v1_workspaces_workspace_name_pipelines_pipeline_name_feedback_get is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -288,6 +294,7 @@ res = s.pipeline.get_files(pipeline_name='<value>', workspace_name='<value>', st
 if res.response_get_pipeline_files_api_v1_workspaces_workspace_name_pipelines_pipeline_name_files_get is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -328,6 +335,7 @@ res = s.pipeline.get_indexing(pipeline_name='<value>', workspace_name='<value>')
 if res.pipeline_indexing_status_detail is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -367,6 +375,7 @@ res = s.pipeline.get_json(pipeline_name='<value>', workspace_name='<value>')
 if res.response_get_pipeline_yaml_as_json_api_v1_workspaces_workspace_name_pipelines_pipeline_name_json_get is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -406,6 +415,7 @@ res = s.pipeline.get_metadata(pipeline_name='<value>', workspace_name='<value>')
 if res.response_200_get_pipeline_index_metadata_api_v1_workspaces_workspace_name_pipelines_pipeline_name_meta_get is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -451,6 +461,7 @@ res = s.pipeline.get_metadata_field_values(req)
 if res.pipeline_field_search_result is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -489,6 +500,7 @@ res = s.pipeline.get_min_max_aggregation_metadata(meta_field='<value>', pipeline
 if res.pipeline_metadata_aggregation is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -529,6 +541,7 @@ res = s.pipeline.get_stats(pipeline_name='<value>', workspace_name='<value>')
 if res.pipeline_statistics is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -568,6 +581,7 @@ res = s.pipeline.get_yaml(pipeline_name='<value>', workspace_name='<value>')
 if res.pipeline_yaml is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -611,6 +625,7 @@ res = s.pipeline.list(req)
 if res.pipeline_pagination is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -654,6 +669,7 @@ res = s.pipeline.search(pipeline_query=components.PipelineQuery(
 if res.search_result is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -699,6 +715,7 @@ res = s.pipeline.search_history(req)
 if res.search_history_pagination is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -737,6 +754,7 @@ res = s.pipeline.set_default(pipeline_name='<value>', workspace_name='<value>')
 if res.any is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -776,6 +794,7 @@ res = s.pipeline.undeploy(pipeline_name='<value>', workspace_name='<value>')
 if res.pipeline_indexing is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -815,6 +834,7 @@ res = s.pipeline.update_yaml(pipeline_name='<value>', workspace_name='<value>')
 if res.pipeline_name is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

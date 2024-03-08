@@ -27,9 +27,10 @@ s = deepset_cloud.DeepsetCloud(
 
 res = s.upload_session.close(close_session=components.CloseSession(), session_id='858bd1fe-535f-4534-856e-5d2a350c163f', workspace_name='<value>')
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -71,6 +72,7 @@ res = s.upload_session.create(create_session=components.CreateSession(), workspa
 if res.upload_session is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -115,6 +117,7 @@ res = s.upload_session.get_files(req)
 if res.paginated_session_file is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -153,6 +156,7 @@ res = s.upload_session.get_status(session_id='7b8c13f1-f508-4288-9a9d-4f095d2fd2
 if res.session_detail is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -196,6 +200,7 @@ res = s.upload_session.list(req)
 if res.paginated_session is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

@@ -24,6 +24,7 @@ res = s.search_session.create(workspace_name='<value>')
 if res.search_session_post_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

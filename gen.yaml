@@ -11,7 +11,7 @@ generation:
     oAuth2ClientCredentialsEnabled: false
   telemetryEnabled: false
 python:
-  version: 3.1.1
+  version: 3.2.0
   additionalDependencies:
     dependencies: {}
     extraDependencies:
@@ -32,3 +32,4 @@ python:
   maxMethodParams: 4
   outputModelSuffix: output
   packageName: deepset-cloud
+  responseFormat: envelope

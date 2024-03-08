@@ -40,6 +40,7 @@ res = s.eval_run.create_eval_run(eval_run_post=components.EvalRunPost(
 if res.eval_run_create_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -82,6 +83,7 @@ res = s.eval_run.create_tag(request_body=operations.CreateTagAPIV1WorkspacesWork
 if res.create_tag_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -118,9 +120,10 @@ s = deepset_cloud.DeepsetCloud(
 
 res = s.eval_run.delete(eval_run_name='<value>', workspace_name='<value>')
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -157,9 +160,10 @@ s = deepset_cloud.DeepsetCloud(
 
 res = s.eval_run.delete_tag(tag_name='<value>', workspace_name='<value>')
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -199,6 +203,7 @@ res = s.eval_run.get(eval_run_name='<value>', workspace_name='<value>')
 if res.single_eval_run_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -244,6 +249,7 @@ res = s.eval_run.get_node_eval_predictions(req)
 if res.response_200_get_node_eval_predictions_api_v1_workspaces_workspace_name_eval_runs_eval_run_name_nodes_node_name_predictions_get is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -286,6 +292,7 @@ res = s.eval_run.list(req)
 if res.eval_runs_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -324,6 +331,7 @@ res = s.eval_run.list_tags(workspace_name='<value>', filter_='<value>')
 if res.get_tags is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -360,9 +368,10 @@ s = deepset_cloud.DeepsetCloud(
 
 res = s.eval_run.start(eval_run_name='<value>', workspace_name='<value>')
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -403,6 +412,7 @@ res = s.eval_run.update(eval_run_patch=components.EvalRunPatch(), eval_run_name=
 if res.eval_run_create_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -443,9 +453,10 @@ res = s.eval_run.update_tag(request_body=operations.UpdateTagAPIV1WorkspacesWork
     name='<value>',
 ), tag_name='<value>', workspace_name='<value>')
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

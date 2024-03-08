@@ -29,6 +29,7 @@ res = s.evaluation_set.delete(evaluation_set_name='<value>', workspace_name='<va
 if res.any is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -68,6 +69,7 @@ res = s.evaluation_set.get(evaluation_set_name='<value>', workspace_name='<value
 if res.label_list is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -107,6 +109,7 @@ res = s.evaluation_set.get_csv(evaluation_set_name='<value>', workspace_name='<v
 if res.two_hundred_application_json_any is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -152,6 +155,7 @@ res = s.evaluation_set.import_evaluation_set(body_import_evaluation_set_api_v1_w
 if res.evaluation_set_import is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -195,6 +199,7 @@ res = s.evaluation_set.list(req)
 if res.evaluation_set_pagination is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -230,9 +235,10 @@ s = deepset_cloud.DeepsetCloud(
 
 res = s.evaluation_set.retrigger(evaluation_set_name='<value>', workspace_name='<value>')
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

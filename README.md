@@ -30,6 +30,7 @@ res = s.eval_run.list(req)
 if res.eval_runs_response is not None:
     # handle response
     pass
+
 ```
 <!-- End SDK Example Usage [usage] -->
 
@@ -214,6 +215,7 @@ except errors.SDKError as e:
 if res.any is not None:
     # handle response
     pass
+
 ```
 <!-- End Error Handling [errors] -->
 
@@ -244,6 +246,7 @@ res = s.health.check()
 if res.response_health_health_get is not None:
     # handle response
     pass
+
 ```
 
 
@@ -264,6 +267,7 @@ res = s.health.check()
 if res.response_health_health_get is not None:
     # handle response
     pass
+
 ```
 <!-- End Server Selection [server] -->
 
@@ -308,6 +312,7 @@ res = s.health.check()
 if res.response_health_health_get is not None:
     # handle response
     pass
+
 ```
 
 ### Per-Operation Security Schemes
@@ -328,6 +333,7 @@ res = s.api_token.create_token(req, operations.CreateTokenAPIV1TokenPostSecurity
 if res.api_token_result is not None:
     # handle response
     pass
+
 ```
 <!-- End Authentication [security] -->
 

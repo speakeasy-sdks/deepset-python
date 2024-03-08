@@ -29,6 +29,7 @@ res = s.document_store.check_connection(index_name='<value>', workspace_name='<v
 if res.document_store is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -69,6 +70,7 @@ res = s.document_store.count_documents(count_documents_params=components.CountDo
 if res.dc_document_count is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -109,6 +111,7 @@ res = s.document_store.get(document_id='<value>', index_name='<value>', workspac
 if res.deepset_cloud_document is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -147,9 +150,10 @@ s = deepset_cloud.DeepsetCloud(
 
 res = s.document_store.list_document_streams(fetch_documents_params=components.FetchDocumentsParams(), index_name='<value>', workspace_name='<value>')
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -190,6 +194,7 @@ res = s.document_store.list_documents(index_name='<value>', workspace_name='<val
 if res.response_get_all_documents_api_v1_workspaces_workspace_name_indexes_index_name_documents_get is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -231,6 +236,7 @@ res = s.document_store.search(query_documents_params=components.QueryDocumentsPa
 if res.response_query_documents_stream_api_v1_workspaces_workspace_name_indexes_index_name_documents_query_post is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

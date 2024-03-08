@@ -25,6 +25,7 @@ res = s.organization.get()
 if res.organization_name is not None:
     # handle response
     pass
+
 ```
 
 
@@ -62,6 +63,7 @@ res = s.organization.invite(request_body=operations.InviteUserToOrganizationAPIV
 if res.any is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

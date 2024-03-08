@@ -36,6 +36,7 @@ res = s.shared_prototype.create(post_shared_prototype=components.PostSharedProto
 if res.shared_prototype is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -75,6 +76,7 @@ res = s.shared_prototype.create_external_user(workspace_name='<value>', existing
 if res.external_user_information is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -114,6 +116,7 @@ res = s.shared_prototype.get(shared_prototype_id='b18d8d81-fd7b-4764-a31e-475cb1
 if res.shared_prototype is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -157,6 +160,7 @@ res = s.shared_prototype.list(req)
 if res.paginated_shared_prototypes is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -195,6 +199,7 @@ res = s.shared_prototype.revoke(shared_prototype_id='db021625-f680-4f7d-9078-89c
 if res.any is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -235,6 +240,7 @@ res = s.shared_prototype.update(patch_shared_prototype=components.PatchSharedPro
 if res.shared_prototype is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

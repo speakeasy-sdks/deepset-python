@@ -25,6 +25,7 @@ res = s.health.check()
 if res.response_health_health_get is not None:
     # handle response
     pass
+
 ```
 
 
@@ -56,6 +57,7 @@ res = s.health.get_openapi()
 if res.any is not None:
     # handle response
     pass
+
 ```
 
 

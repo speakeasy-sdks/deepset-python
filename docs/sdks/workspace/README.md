@@ -34,6 +34,7 @@ res = s.workspace.create(req)
 if res.any is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -69,9 +70,10 @@ s = deepset_cloud.DeepsetCloud(
 
 res = s.workspace.delete(workspace_name='<value>')
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -110,6 +112,7 @@ res = s.workspace.get(workspace_name='<value>')
 if res.workspace is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -148,6 +151,7 @@ res = s.workspace.get_stats(workspace_name='<value>')
 if res.workspace_stats is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -186,6 +190,7 @@ res = s.workspace.list()
 if res.workspace_list is not None:
     # handle response
     pass
+
 ```
 
 
@@ -221,6 +226,7 @@ res = s.workspace.search_count(req)
 if res.search_count_pagination is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -263,6 +269,7 @@ res = s.workspace.search_history(req)
 if res.search_history_pagination is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

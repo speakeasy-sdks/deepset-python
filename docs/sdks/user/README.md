@@ -28,6 +28,7 @@ res = s.user.delete(user_id='8db863f6-ef9b-413a-8a70-cb816b33de6b')
 if res.any is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -66,6 +67,7 @@ res = s.user.get(user_id='b18d8d81-fd7b-4764-a31e-475cb1f36591')
 if res.user is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -106,6 +108,7 @@ res = s.user.list(req)
 if res.user_pagination is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -144,6 +147,7 @@ res = s.user.me()
 if res.user is not None:
     # handle response
     pass
+
 ```
 
 
@@ -175,9 +179,10 @@ res = s.user.update_permission(request_body=operations.UpdateUserPermissionAPIV1
     role=components.RolesToDB.FOUR,
 ), user_id='84cee75e-ce5f-43b3-b5c2-64d5ce1b434e')
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

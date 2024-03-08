@@ -28,6 +28,7 @@ res = s.api_token.create_token(req, operations.CreateTokenAPIV1TokenPostSecurity
 if res.api_token_result is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -67,6 +68,7 @@ res = s.api_token.list(after='c184a429-302e-4aca-80db-f1718b882a50', before='805
 if res.token_pagination is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -108,6 +110,7 @@ res = s.api_token.remove(api_token_id='a2f261fc-5692-4af6-b656-f6d45851282a')
 if res.any is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
