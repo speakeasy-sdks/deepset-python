@@ -46,14 +46,14 @@ class DeepsetCloud:
 
     def __init__(self,
                  http_bearer: Union[Optional[str], Callable[[], Optional[str]]] = None,
-                 server_idx: int = None,
-                 server_url: str = None,
-                 url_params: Dict[str, str] = None,
-                 client: requests_http.Session = None,
-                 retry_config: utils.RetryConfig = None
+                 server_idx: Optional[int] = None,
+                 server_url: Optional[str] = None,
+                 url_params: Optional[Dict[str, str]] = None,
+                 client: Optional[requests_http.Session] = None,
+                 retry_config: Optional[utils.RetryConfig] = None
                  ) -> None:
         """Instantiates the SDK configuring it with the provided parameters.
-        
+
         :param http_bearer: The http_bearer required for authentication
         :type http_bearer: Union[Optional[str], Callable[[], Optional[str]]]
         :param server_idx: The index of the server to use for all operations
@@ -69,18 +69,24 @@ class DeepsetCloud:
         """
         if client is None:
             client = requests_http.Session()
-        
+
         if callable(http_bearer):
             def security():
                 return components.Security(http_bearer = http_bearer())
         else:
             security = components.Security(http_bearer = http_bearer)
-        
+
         if server_url is not None:
             if url_params is not None:
                 server_url = utils.template_url(server_url, url_params)
 
-        self.sdk_configuration = SDKConfiguration(client, security, server_url, server_idx, retry_config=retry_config)
+        self.sdk_configuration = SDKConfiguration(
+            client,
+            security,
+            server_url,
+            server_idx,
+            retry_config=retry_config
+        )
 
         hooks = SDKHooks()
 
@@ -90,10 +96,11 @@ class DeepsetCloud:
             self.sdk_configuration.server_url = server_url
 
         # pylint: disable=protected-access
-        self.sdk_configuration._hooks=hooks
-       
+        self.sdk_configuration._hooks = hooks
+
         self._init_sdks()
-    
+
+
     def _init_sdks(self):
         self.health = Health(self.sdk_configuration)
         self.user = User(self.sdk_configuration)
@@ -111,4 +118,3 @@ class DeepsetCloud:
         self.search_session = SearchSession(self.sdk_configuration)
         self.shared_prototype = SharedPrototype(self.sdk_configuration)
         self.upload_session = UploadSession(self.sdk_configuration)
-    
