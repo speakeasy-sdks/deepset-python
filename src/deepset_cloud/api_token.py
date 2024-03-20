@@ -15,16 +15,19 @@ class APIToken:
         
     
     
-    def create_token(self, request: components.CreateToken, security: operations.CreateTokenAPIV1TokenPostSecurity) -> operations.CreateTokenAPIV1TokenPostResponse:
+    def create_token(self, request: components.CreateToken) -> operations.CreateTokenAPIV1TokenPostResponse:
         r"""Create Token
         Creates the API key that you can use to connect deepset Cloud to your application.
         """
-        hook_ctx = HookContext(operation_id='create_token_api_v1_token_post', oauth2_scopes=[], security_source=security)
+        hook_ctx = HookContext(operation_id='create_token_api_v1_token_post', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = base_url + '/api/v1/token'
         
-        headers, query_params = utils.get_security(security)
+        if callable(self.sdk_configuration.security):
+            headers, query_params = utils.get_security(self.sdk_configuration.security())
+        else:
+            headers, query_params = utils.get_security(self.sdk_configuration.security)
         
         req_content_type, data, form = utils.serialize_request_body(request, components.CreateToken, "request", False, False, 'json')
         if req_content_type is not None and req_content_type not in ('multipart/form-data', 'multipart/mixed'):

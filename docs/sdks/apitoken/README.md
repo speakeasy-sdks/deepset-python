@@ -15,15 +15,15 @@ Creates the API key that you can use to connect deepset Cloud to your applicatio
 
 ```python
 import deepset_cloud
-from deepset_cloud.models import components, operations
+from deepset_cloud.models import components
 
-s = deepset_cloud.DeepsetCloud()
+s = deepset_cloud.DeepsetCloud(
+    http_bearer="<YOUR_BEARER_TOKEN_HERE>",
+)
 
 req = components.CreateToken()
 
-res = s.api_token.create_token(req, operations.CreateTokenAPIV1TokenPostSecurity(
-    http_bearer="<YOUR_BEARER_TOKEN_HERE>",
-))
+res = s.api_token.create_token(req)
 
 if res.api_token_result is not None:
     # handle response
@@ -33,10 +33,9 @@ if res.api_token_result is not None:
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                    | [components.CreateToken](../../models/components/createtoken.md)                                             | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
-| `security`                                                                                                   | [operations.CreateTokenAPIV1TokenPostSecurity](../../models/operations/createtokenapiv1tokenpostsecurity.md) | :heavy_check_mark:                                                                                           | The security requirements to use for the request.                                                            |
+| Parameter                                                        | Type                                                             | Required                                                         | Description                                                      |
+| ---------------------------------------------------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------- |
+| `request`                                                        | [components.CreateToken](../../models/components/createtoken.md) | :heavy_check_mark:                                               | The request object to use for the request.                       |
 
 
 ### Response

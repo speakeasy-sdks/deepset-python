@@ -8,14 +8,6 @@ from typing import Optional
 
 
 @dataclasses.dataclass
-class CreateTokenAPIV1TokenPostSecurity:
-    http_bearer: Optional[str] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
-    http_bearer1: Optional[str] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
-    
-
-
-
-@dataclasses.dataclass
 class CreateTokenAPIV1TokenPostResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""

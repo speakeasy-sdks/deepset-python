@@ -314,27 +314,6 @@ if res.response_health_health_get is not None:
     pass
 
 ```
-
-### Per-Operation Security Schemes
-
-Some operations in this SDK require the security scheme to be specified at the request level. For example:
-```python
-import deepset_cloud
-from deepset_cloud.models import components, operations
-
-s = deepset_cloud.DeepsetCloud()
-
-req = components.CreateToken()
-
-res = s.api_token.create_token(req, operations.CreateTokenAPIV1TokenPostSecurity(
-    http_bearer="<YOUR_BEARER_TOKEN_HERE>",
-))
-
-if res.api_token_result is not None:
-    # handle response
-    pass
-
-```
 <!-- End Authentication [security] -->
 
 <!-- Placeholder for Future Speakeasy SDK Sections -->
