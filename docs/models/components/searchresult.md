@@ -1,0 +1,9 @@
+# SearchResult
+
+
+## Fields
+
+| Field                                                                                              | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `results`                                                                                          | List[[components.DeepsetCloudQueryResponse](../../models/components/deepsetcloudqueryresponse.md)] | :heavy_check_mark:                                                                                 | List of search results.                                                                            |
+| `query_id`                                                                                         | *Optional[str]*                                                                                    | :heavy_minus_sign:                                                                                 | The search query                                                                                   |

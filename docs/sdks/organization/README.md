@@ -1,0 +1,85 @@
+# Organization
+(*organization*)
+
+### Available Operations
+
+* [get](#get) - Get Organization [private]
+* [invite](#invite) - Invite User To Organization [private]
+
+## get
+
+Returns the name of the organization. This is an endpoint we use internally. This means it can change anytime so bear this in mind if you want to use it.
+
+### Example Usage
+
+```python
+import deepset_cloud
+
+s = deepset_cloud.DeepsetCloud(
+    http_bearer="<YOUR_BEARER_TOKEN_HERE>",
+)
+
+
+res = s.organization.get()
+
+if res.organization_name is not None:
+    # handle response
+    pass
+
+```
+
+
+### Response
+
+**[operations.GetOrganizationAPIV1OrganizationGetResponse](../../models/operations/getorganizationapiv1organizationgetresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
+
+## invite
+
+Sends an email to the user inviting them to your deepset Cloud organization. This is an endpoint we use internally. This means it can change anytime so bear this in mind if you want to use it.
+
+### Example Usage
+
+```python
+import deepset_cloud
+from deepset_cloud.models import components, operations
+
+s = deepset_cloud.DeepsetCloud(
+    http_bearer="<YOUR_BEARER_TOKEN_HERE>",
+)
+
+
+res = s.organization.invite(request_body=operations.InviteUserToOrganizationAPIV1OrganizationOrganizationIDInvitationPostInvitationRequest(
+    email='Vivianne9@yahoo.com',
+    family_name='<value>',
+    given_name='<value>',
+    role=components.RolesToDB.FOUR,
+), organization_id='<value>')
+
+if res.any is not None:
+    # handle response
+    pass
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                                                                                              | Type                                                                                                                                                                                                                   | Required                                                                                                                                                                                                               | Description                                                                                                                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request_body`                                                                                                                                                                                                         | [operations.InviteUserToOrganizationAPIV1OrganizationOrganizationIDInvitationPostInvitationRequest](../../models/operations/inviteusertoorganizationapiv1organizationorganizationidinvitationpostinvitationrequest.md) | :heavy_check_mark:                                                                                                                                                                                                     | N/A                                                                                                                                                                                                                    |
+| `organization_id`                                                                                                                                                                                                      | *str*                                                                                                                                                                                                                  | :heavy_check_mark:                                                                                                                                                                                                     | A unique identifier of the organization. You can obtain it from Get Organization.                                                                                                                                      |
+
+
+### Response
+
+**[operations.InviteUserToOrganizationAPIV1OrganizationOrganizationIDInvitationPostResponse](../../models/operations/inviteusertoorganizationapiv1organizationorganizationidinvitationpostresponse.md)**
+### Errors
+
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 4x-5xx                     | */*                        |
